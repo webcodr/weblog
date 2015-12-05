@@ -1,2 +1,5 @@
-steps:
-  - arjen/hugo-build@1.8.0
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: "HEAD"
