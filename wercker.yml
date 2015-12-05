@@ -11,3 +11,4 @@ deploy:
         token: $GIT_TOKEN
         domain: webcodr.github.io
         basedir: public
+        repo: WebCodr/WebCodr.github.io
