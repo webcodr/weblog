@@ -1,0 +1,7 @@
+baseurl: "https://webcodr.de/"
+languageCode: "de-de"
+title: "WebCodr"
+metaDataFormat: "yaml"
+theme: "webcodr"
+permalinks:
+  post: /:year/:month/:title/
