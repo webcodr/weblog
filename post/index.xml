@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on WebCodr</title>
+    <link>https://webcodr.de/post/</link>
+    <description>Recent content in Posts on WebCodr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Fri, 06 Jun 2014 22:31:23 +0100</lastBuildDate>
+    <atom:link href="https://webcodr.de/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tastaturen</title>
+      <link>https://webcodr.de/2014/06/tastaturen/</link>
+      <pubDate>Fri, 06 Jun 2014 22:31:23 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2014/06/tastaturen/</guid>
+      <description>
+
+&lt;p&gt;Für uns Entwickler ist die Tastatur ohne Zweifel das wichtigste Werkzeug. Ohne sie könnten wir keine Zeile Code schreiben und dennoch wird ihr selten Beachtung geschenkt. Sie ist da und funktioniert &amp;ndash; bis man eine Tasse Kaffee darüber schüttet oder sie nach Jahren in Krümeln, anderen Essensresten bzw. Staub ersoffen ist.&lt;/p&gt;
+
+&lt;p&gt;Wenn sie kaputt ist, wird für ein paar Euro eine neue gekauft und gut ist. Manchmal gibt man auch etwas mehr aus, z.B. für ein Apple Keyboard oder ein besseres Modell von Logitech.&lt;/p&gt;
+
+&lt;p&gt;Dabei macht sich aber niemand Gedanken darüber, wie sie eigentlich funktioniert und ob da nicht gerade für uns Vieltipper Verbesserungspotenzial ist.&lt;/p&gt;
+
+&lt;p&gt;Die meisten Tastaturen haben eines gemeinsam: sie nutzen die sog. Rubberdome-Technik. Dabei wird beim Tastendruck eine Gumminoppe mit Kontaktpad nach unten auf die Platine gedrückt und so der Anschlag durch den Kontakt ausgelöst. Alle Noppen befinden sich auf einer Gummifolie, die einfach über die Platine gelegt wird. Kabel ans PCB, Tasten drauf, Gehäuse drumrum und fertig ist die Tastatur.&lt;/p&gt;
+
+&lt;p&gt;Das ist günstig, aber auch gut? Leider nein. Es gibt zwar durchaus ganz gute Vertreter dieser Gattung, aber die Schwachstellen haben sie alle gemein:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Um den Anschlag auszulösen, muss man die Taste vollständig durckdrücken.&lt;/li&gt;
+&lt;li&gt;Der Anschlag ist nicht über alle Tasten konsistent und verändert sich mit der Zeit.&lt;/li&gt;
+&lt;li&gt;Gerade bei den billigen Vertretern, mitunter aber auch bei den teuren ist das Gehäuse nicht verwindungssteif.&lt;/li&gt;
+&lt;li&gt;Geringe Haltbarheit von max. 5 Millionen Anschlägen.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Die ersten drei Punkte fallen insbesondere für Vieltipper deutlich stärker ins Gewicht, als man meinen möchte. Vollständiges Durchdrücken der Tasten lässt die Hände bzw. Finger schnell ermüden &amp;ndash; gleiches gilt, wenn sich die Tastatur beim Tippen verwindet bzw. nach unten verbiegt. Da sich der Anschlag ungleichmäßig über die Zeit und je nach Nutzung der Tasten verändert, kann sich kein Muskelgedächtnis bilden, um schneller tippen zu können.&lt;/p&gt;
+
+&lt;h2 id=&#34;und-jetzt:e2c6ff26fb2834b1d332caafa8b9e323&#34;&gt;Und jetzt?&lt;/h2&gt;
+
+&lt;p&gt;Wie wär&amp;rsquo;s mit einer Alternative? Mechanische Tastaturen!&lt;/p&gt;
+
+&lt;p&gt;Huch? Sind die nicht sauteuer, laut und sperrig? So wie früher diese Totschläger von IBM &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Hach ja, das IBM Model M. Wenn man wollte, könnte man damit wohl wirklich Einbrecher niederschlagen. Zur Selberverteidigung empfehle aber doch eher andere Gerätschaften.&lt;/p&gt;
+
+&lt;p&gt;Ein billiges Vergnügen sind mechanische Tastaturen wirklich nicht, aber sie sind es defintiv wert. Hier geht es schließlich um ein Werkzeug. Handwerker geben sich schließlich auch nicht mit einem Consumer-Akkuschrauber für 20 Euro zufrieden. Warum also sollten wir das bei unseren alltäglichen Helfern tun? Ob sie laut und groß sind, hängt dagegen ganz vom jeweiligen Geschmack ab.&lt;/p&gt;
+
+&lt;h2 id=&#34;aha-und-warum-können-die-dinger-das-nun-besser:e2c6ff26fb2834b1d332caafa8b9e323&#34;&gt;Aha, und warum können die Dinger das nun besser?&lt;/h2&gt;
+
+&lt;p&gt;Um die Kritikpunkte von oben direkt aufzugreifen:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Mechanische Schalter müssen nicht vollständig durchgedrückt werden, um einen Anschlag auszulösen &amp;ndash; die Hälfte genügt. Die verbreitetesten Schalter (Cherry MX) haben einen Hub von insgesamt 4 mm und lösen darum nach 2 mm aus.&lt;/li&gt;
+&lt;li&gt;Der Anschlag verändert sich weder mit der Zeit noch nutzen sich verschiedene Tasten je nach Gebrauch unterschiedlich ab. So bildet sich mit der Zeit ein Muskelgedächtnis, das schnelleres und komfortableres Schreiben ermöglicht.&lt;/li&gt;
+&lt;li&gt;Bei guten mechanischen Tastaturen sind die Schalter auf einer Stahlplatte angebracht, darunter befindet sich die Platine mit der sie verlötet sind. Da verwindet und verbiegt sich nichts.&lt;/li&gt;
+&lt;li&gt;Mechanische Tastaturen halten Jahrzehnte durch. Die durchschnittliche Lebensdauer von Cherry-Schaltern liegt bei ca. 50 Mio. Anschlägen. Unzerstörbar sind sie aber natürlich nicht.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Je nach Schalter-Typ gibt es auch noch zusätzliche Vor- und Nachteile, so dass man sie ganz nach seinen Präferenzen aussuchen kann.&lt;/p&gt;
+
+&lt;h2 id=&#34;schalter-typen:e2c6ff26fb2834b1d332caafa8b9e323&#34;&gt;Schalter-Typen&lt;/h2&gt;
+
+&lt;p&gt;Ich beschränke mich hierbei auf die gängen Varianten von Cherry, da sie am häufigsten verbaut werden.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MX blue: löst mit einem Klick-Geräusch aus und hat dazu beim Anschlag einen spürbaren Widerstand. Betätigungskraft: 60 cN&lt;/li&gt;
+&lt;li&gt;MX brown: löst ohne Klick aus, besitzt aber den gleichen spürbaren Widerstand beim Anschlag wie der MX blue. Betätigungskraft: 55 cN&lt;/li&gt;
+&lt;li&gt;MX black: linearer Schalter, löst beim Anschlag wieder einen Klick noch einen Widerstand aus. Betätigungskraft: 60 cN&lt;/li&gt;
+&lt;li&gt;MX red: wie MX black, nur mit geringerer Betätigungskraft: 45 cN&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Darüber hinaus gibt es noch verschiedene Varianten der MX blue und MX brown mit höherer Betätigungskraft. Man trifft sie allerdings eher selten an, manche davon sind sogar regelrecht rar.&lt;/p&gt;
+
+&lt;p&gt;Grundsätzlich gilt es beim Kauf einer Tastatur zuerst den Schalter-Typ zu wählen. Zum Entwickeln oder Schreiben sind die MX blue definitiv die beste Wahl, da sie ein hör- und spürbares Feedback bieten und daher nach der Eingewöhnung, sehr schnelles und flüssiges Tippen ohne Ermüdungserscheinungen ermöglichen.&lt;/p&gt;
+
+&lt;p&gt;Nun mag natürlich so manchen das Klicken auf die Palme bringen, andere widerrum können nicht mehr ohne. Wer sich daran stört oder die Kollegen im Büro nicht zum Amoklauf treiben will, aber dennoch spüren möchte, wenn der Anschlag ausgelöst wird, sollte zum MX brown greifen. Er tippt sich ein klein wenig leichter und ist ohne den Klick erheblich leiser.&lt;/p&gt;
+
+&lt;p&gt;Findet man dagegen Widerstand zwecklos, sollte man einen Blick auf die MX black oder MX red werfen. Letzterer ist besonders bei Spielern sehr beliebt, da man sehr schnell mehrere Anschläge hintereinander auslösen kann, ohne wie ein Bekloppter auf die Tastatur hämmern zu müssen. Dafür neigt man u.U. eher zu Vertippern.&lt;/p&gt;
+
+&lt;p&gt;Grundsätzlich kann man die Schalter in drei Kategorien aufteilen: Profi-Tipper ohne Klick-Allergie, die eher wenig bis gar nicht spielen, werden mit MX blue am glücklichsten. Möchte man dagegen einen guten Allrounder zum Schreiben und Spielen, ist der MX brown das Mittel der Wahl. Wer mehr spielt als Texte tippt, dürfte mit einem MX black oder MX red am besten klarkommen.&lt;/p&gt;
+
+&lt;p&gt;Ich empfehle aber jedem, verschiedene Schaltertypen auszuprobieren. Es gibt genug Spieler, die sich nicht am Klicken des MX blue stören und den MX red hassen wie die Pest &amp;ndash; und umgekehrt genauso.&lt;/p&gt;
+
+&lt;p&gt;Noch etwas zur Lautstärke: man kann auch mit einem nicht klickenden Schalter schön Krach machen, wenn man auf der Tastatur rumhackt wie ein Irrer. Dazu hängt der Geräuschpegel auch von der Konstruktion bzw. dem Gehäuse ab. Dazu später etwas mehr (dasKeyboard Model S vs. dasKeyboard 4 vs. Corsair K70).&lt;/p&gt;
+
+&lt;h2 id=&#34;was-kostet-der-spaß-und-wo-bekomme-ich-so-ein-teil-her:e2c6ff26fb2834b1d332caafa8b9e323&#34;&gt;Was kostet der Spaß und wo bekomme ich so ein Teil her?&lt;/h2&gt;
+
+&lt;p&gt;Der Preis der gängigen Modelle liegt zwischen 60 und 200 Euro.&lt;/p&gt;
+
+&lt;p&gt;Die definitiv günstigste Wahl gibt&amp;rsquo;s von Cherry selbst mit dem MX Keyboard 3.0. Zu bekommen bei Amazon oder den gängigen Hardware-Händlern.&lt;/p&gt;
+
+&lt;p&gt;Ansonsten ist die Auswahl an Shops eher eingeschränkt. Die EU und insbesondere Deutschland gehören bei mechanischen Tastaturen eher zur dritten Welt.&lt;/p&gt;
+
+&lt;p&gt;Die bisher besten Quellen, die ich neben Amazon ausmachen konnte: &lt;a href=&#34;http://www.getdigital.de/&#34;&gt;GetDigital&lt;/a&gt; (dasKeyboard, Ducky, Filco, Leopold), &lt;a href=&#34;http://www.caseking.de/shop/catalog/&#34;&gt;CaseKing&lt;/a&gt; (Cherry und Ducky), &lt;a href=&#34;http://www.keyboardco.com/&#34;&gt;The Keyboard Company UK&lt;/a&gt; (primär Filco und deren Zubehör).&lt;/p&gt;
+
+&lt;p&gt;Ansonsten stellen diverse bekannte Marken aus dem Spiele-Sektor wie Corsair, Razer, CMstorm, Func und auch Logitech mechanische Tastaturen her, die man auch in gängigen Läden und Shops bekommt.&lt;/p&gt;
+
+&lt;p&gt;Für professionelle Anwender rate ich zu Filco, Ducky oder dasKeyboard, da sie qualitativ etwas mehr bieten. Besonders Ducky und Filco bauen regelrechte Panzer. Grundsätzlich kann mit den anderen aber nicht viel falsch machen. Man sollte aber inzwischen aufpassen, von welchem Hersteller die Switches sind. Da gibt es leider nicht nur Unterschiede in der Schaltcharakteristik, weil inzwischen wegen abgelaufener Patente auch billigere Kopien der MX-Schalter auf dem Markt sind, zu deren Haltbarkeit es noch keine Erfahrungswerte gibt. Die einschlägigen Foren sehen die Sache allerdings weniger gelassen &amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;meine-erfahrung:e2c6ff26fb2834b1d332caafa8b9e323&#34;&gt;Meine Erfahrung&lt;/h2&gt;
+
+&lt;p&gt;Ich hatte mich im November vergangenen Jahres dazu entschlossen eine mechanische Tastatur auszuprobieren und entschied mich für eine Corsair K70 mit MX brown und blauer Hintergrundbeleuchtung. Die Tastatur hing nur an meinem Windows-Rechner, an dem ich eher wenig schreibe und mehr spiele.&lt;/p&gt;
+
+&lt;p&gt;Abgesehen von der Lautstärke durch die offene Konstruktion ohne einen Rahmen, der die Tasten umgibt, war ich mit der K70 sehr zufrieden. Nach einem Tip im Computerbase-Forum, habe ich Gummi-O-Ringe zwischen die Tasten und Schalter montiert, was die Lautstärke deutlich dämpfte. Allerdings verändern solche Maßnahmen den Anschlag &amp;ndash; einfach ausprobieren, die Ringe kann man sehr günstig kaufen.&lt;/p&gt;
+
+&lt;p&gt;Für meine Arbeit als Entwickler, die ich ausschließlich am Mac verrichte, habe ich längere Zeit eine geeignete mechanische Tastatur gesucht. Zum Testen entschied ich mich für ein dasKeyboard Model S Professional for Mac mit MX blue. Leider gibt es dieses Modell nur mit ANSI-Layout, was mich anfangs vom Kauf abgehalten hat und schließlich auch nicht damit zurecht kam. Der ständige Wechsel bringt einen nur durcheinander und das deutsche Tasten-Mapping (ISO-Layout) mit einem ANSI-Layout zu nutzen klappt auch nicht &amp;ndash; da fehlt schließlich eine Taste.&lt;/p&gt;
+
+&lt;p&gt;Die MX blue dagegen haben mich auf Anhieb begeistert. Kurzum: ich habe die Tastatur gegen ein dasKeyboard 4 mit MX blue umgetauscht. Die hat zwar kein Mac-Layout, aber das lässt sich durch den Tausch der Tastenkappen und ein paar Einstellungen in OS X problemlos anpassen. Außerdem funktionieren die Media-Tasten und selbst der Lautstärkeregler ohne jegliche Anpassung mit OS X. Wozu da also noch ein spezielles Mac-Modell?&lt;/p&gt;
+
+&lt;p&gt;Parallel ließ mich leider die K70 im Stich. Innerhalb eines halben Jahres gingen drei LEDs der Hintergrundbeleuchtung kaputt. Nach einer Recherche in den Corsair-Forn scheint das ein verbreitetes Problem mit den blauen LEDs (gibt auch rote) bei der K70 zu sein. Corsair hat das Modell zwischenzeitlich vom Markt genommen und wird wohl demnächst eine überarbeitete Version liefern.&lt;/p&gt;
+
+&lt;p&gt;Amazon nahm die K70 anstandslos zurück und als Ersatz habe ich mich für ein dasKeyboard 4 mit MX brown entschieden und es bisher nicht bereut.&lt;/p&gt;
+
+&lt;p&gt;Zum Abrunden des Portfolios der MX-Schalter, habe ich mir noch als Abwechslung zu den beiden dasKeyboard eine Ducky Shine 3 mit MX black gegönnt. Sie wirkt noch einen Tick solider, hat ein abnehmbares Kabel und zig Beleuchtungsoptionen. Der lineare Gang und höhere Widerstand der Switches ist etwas gewöhnungsbedürftig, aber angenehm, besonders beim Spielen.&lt;/p&gt;
+
+&lt;p&gt;Eine weitere Anmerkung zur Lautstärke: die dasKeyboard 4 haben zwischen ihrer Deckplatte aus Aluminum und der Stahlplatte einen sehr festen Schaumstoff, der die Geräuschkulisse dämpft. Der Unterschied zum Vorgängermodell oder auch der Corsair K70 ist ziemlich gewaltig. Sogar die MX blue-Version ist leiser als die K70 samt Gummi-O-Ringen. Die Ducky liegt durch ihre sehr stabile Konstruktion auch recht gut im Vergleich. Dazu tragen aber auch die MX black sicherlich ihren Teil bei.&lt;/p&gt;
+
+&lt;p&gt;Generell habe ich mit keiner der Tastaturen eine schlechte Tipp-Erfahrung gemacht. Nur das ANSI-Layout und die defekten LEDs haben mich zu einem Umtausch veranlasst.&lt;/p&gt;
+
+&lt;h2 id=&#34;fazit:e2c6ff26fb2834b1d332caafa8b9e323&#34;&gt;Fazit&lt;/h2&gt;
+
+&lt;p&gt;Nach dem ich nun in einem halben Jahr drei Hersteller und drei unteschiedliche Schalter-Typen durch habe, kann ich nur sagen, dass mich mechanische Tastaturen begeistern, wenn sie nicht sogar eine Sammlerwut entfacht haben (ich hoffe nicht, das wäre ein teures Hobby).&lt;/p&gt;
+
+&lt;p&gt;Der Tipp-Komfort und die Zuverlässigkeit sind es mir aber wert. Schließlich sind die Tastaturen auch maßgeblich daran beteiligt, dass ich überhaupt Geld verdiene. Wenn man die Unterschiede erstmal kennt, möchte man nur ungern zu Rubberdome-Tastaturen zurückkehren. Selbst mein früher geliebtes Apple Keyboard lasse ich für eine mechanische Tastatur links liegen.&lt;/p&gt;
+
+&lt;p&gt;Dazu gibt es eine unglaubliche Vielfalt an Individualisierunsmöglichkeiten. Seien es nun Tastenkappen, modifizierte Federn in den Schaltern oder gar  leicht verrückte Dinge wie Tastatur-Bausätze, mit denen man wirklich alles bis ins letzte Detail für sich anpassen und austüfteln kann. Interessenten zu diesen Themen sowie Kaufberatung etc. kann ich das Forum &lt;a href=&#34;http://geekhack.org/&#34;&gt;geekhack&lt;/a&gt; ans Herz legen.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Amplify 2.0</title>
+      <link>https://webcodr.de/2013/07/amplify-2.0/</link>
+      <pubDate>Sat, 27 Jul 2013 22:30:36 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2013/07/amplify-2.0/</guid>
+      <description>&lt;p&gt;Ich habe Amplify grundlegend überarbeitet und mit ein paar neuen Features ausgestattet:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Redcarpet wurde durch kramdown ersetzt und unterstützt damit auch die Markdown-Erweiterungen, die kramdown anbietet.&lt;/li&gt;
+&lt;li&gt;Automatisches Verlinken von URLs&lt;/li&gt;
+&lt;li&gt;HTML-Sanitation&lt;/li&gt;
+&lt;li&gt;Das Syntax-Highlighting übernimmt nun das Gem &amp;lsquo;pygments.rb&amp;rsquo;. Der Umweg über Pygmentizr fällt damit intern weg und verbessert die Reaktionszeiten deutlich.&lt;/li&gt;
+&lt;li&gt;Das Frontend basiert nun auf AngularJS.&lt;/li&gt;
+&lt;li&gt;Komplett überarbeiteter Quelltext.&lt;/li&gt;
+&lt;li&gt;JSON-basierte API&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;kramdown, das automatische Verlinken und die HTML-Sanitation werden über das Gem &amp;lsquo;&lt;a href=&#34;https://github.com/hmans/slodown&#34;&gt;slodown&lt;/a&gt;&amp;rsquo; von Hendrik Mans erledigt.&lt;/p&gt;
+
+&lt;p&gt;Die neue JSON-basierte API ist über eine andere URL erreichbar:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;http://amplify.webcodr.de/api/2.0/transform&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Ein Beispiel-Request via POST:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+ 	&amp;quot;source&amp;quot;: &amp;quot;# Hello World!&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Und die entsprechende Antwort von Amplify:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+	&amp;quot;html&amp;quot;: &amp;quot;&amp;lt;h1 id=\&amp;quot;hello-world\&amp;quot;&amp;gt;Hello World!&amp;lt;/h1&amp;gt;&amp;quot;,
+ 	&amp;quot;source&amp;quot;: &amp;quot;# Hello World!&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Wer, wie früher, ohne JSON auskommen möchte, nutzt bitte folgende URL:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;http://amplify.webcodr.de/api/1.0/transform&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Die bisherige Möglichkeit einfach einen POST-Request auf die Amplify-URL abzusetzen ist nur noch aus Gründen der Kompatibilität zu bestehenden Anwendungen aktiv, wird aber langfristig deaktiviert.&lt;/p&gt;
+
+&lt;p&gt;Zukünftige Features werde ich außerdem nur für die JSON-basierte API 2.0 implementieren.&lt;/p&gt;
+
+&lt;p&gt;Des weiteren plane ich Amplify langfristig nicht mehr auf Heroku laufen zu lassen, da die App einfach zu häufig in den Schlafmodus versetzt wird und anschließend sehr lange braucht, bis sie auf Anfragen reagiert.&lt;/p&gt;
+
+&lt;p&gt;Ich könnte zwar einfach einen Dyno hinzubuchen, aber das ist nicht gerade billig und es gibt wirklich kostengünstigere Möglichkeiten, Ruby-Web-Applikationen zu hosten &amp;ndash; beispielsweise bei &lt;a href=&#34;https://uberspace.de/&#34;&gt;Uberspace.de&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Aus technischer Sicht dürfte noch interessant sein, dass Amplify nun mit Capybara automatisiert getestet wird und auf &lt;a href=&#34;https://travis-ci.org/WebCodr/Amplify&#34;&gt;Travis CI&lt;/a&gt; sowie testweise &lt;a href=&#34;https://circleci.com/&#34;&gt;Circle CI&lt;/a&gt; (mit automatischem Heroku-Deployment) läuft.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Say Hello to Mango</title>
+      <link>https://webcodr.de/2013/04/say-hello-to-mango/</link>
+      <pubDate>Sat, 06 Apr 2013 22:29:53 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2013/04/say-hello-to-mango/</guid>
+      <description>
+
+&lt;h2 id=&#34;was-n-das:3644f6a19a2eedc1ade2ee0f1098483e&#34;&gt;Was&amp;rsquo;n das?&lt;/h2&gt;
+
+&lt;p&gt;Finger weg! Diese Mango schmeckt nicht.&lt;/p&gt;
+
+&lt;p&gt;Mango ist ein Object Document Mapper für MongoDB und PHP.&lt;/p&gt;
+
+&lt;h3 id=&#34;und-mongoappkit:3644f6a19a2eedc1ade2ee0f1098483e&#34;&gt;Und MongoAppKit?&lt;/h3&gt;
+
+&lt;p&gt;MongoAppKit hat ein Problem, denn es ist nicht nur ein ODM und kann noch so einiges mehr. Theoretisch kann man zwar die ODM-Komponente auch ohne den ganzen anderen Krempel nutzen, aber es bleibt eine große Abhängigkeit zu Silex, die man auch nicht so einfach wieder los wird.&lt;/p&gt;
+
+&lt;p&gt;Dies und das im Vergleich schlechte Handling bzw. der geringe Komfort von MongoAppKit, haben mich dazu bewogen mit Mango einen universell einsatzbaren und leicht handzuhabenden ODM zu entwickeln.&lt;/p&gt;
+
+&lt;p&gt;Mango wurde stark von Mongoid für Ruby inspiriert und soll dessen Funktionalität zumindest teilweise in PHP abbilden. Das ist einfacher gesagt als getan, denn Ruby bietet wesentlich elegantere Möglichkeiten diverse Probleme zu lösen, als es mit PHP derzeit machbar ist.&lt;/p&gt;
+
+&lt;h2 id=&#34;los-geht-s:3644f6a19a2eedc1ade2ee0f1098483e&#34;&gt;Los geht&amp;rsquo;s …&lt;/h2&gt;
+
+&lt;h3 id=&#34;installation-via-composer:3644f6a19a2eedc1ade2ee0f1098483e&#34;&gt;Installation via Composer&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ php composer.phar require webcodr/mango:*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;ein-dokument-anzulegen-ist-ein-kinderspiel:3644f6a19a2eedc1ade2ee0f1098483e&#34;&gt;Ein Dokument anzulegen ist ein Kinderspiel&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+namespace MyProject\Model;
+
+use Mango\Document;
+use Mango\DocumentInterface;
+
+class User implements DocumentInterface
+{
+    use Document;
+
+    private function addFields()
+    {
+        $this-&amp;gt;addField(&#39;name&#39;, [&#39;type&#39; =&amp;gt; &#39;String&#39;]);
+        $this-&amp;gt;addField(&#39;email&#39;, [&#39;type&#39; =&amp;gt; &#39;String&#39;]);
+        $this-&amp;gt;addField(&#39;created_at&#39;, [&#39;type&#39; =&amp;gt; &#39;DateTime&#39;, &#39;index&#39; =&amp;gt; true, &#39;default&#39; =&amp;gt; &#39;now&#39;];
+        $this-&amp;gt;addField(&#39;updated_at&#39;, [&#39;type&#39; =&amp;gt; &#39;DateTime&#39;, &#39;index&#39; =&amp;gt; true, &#39;default&#39; =&amp;gt; &#39;now&#39;];
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Es ist lediglich nötig, dass die Model-Klasse das Interface &lt;code&gt;DocumentInterface&lt;/code&gt; implementiert und den Trait &lt;code&gt;Document&lt;/code&gt; einbindet. In der Hook-Methode &lt;code&gt;addFields()&lt;/code&gt; werden anschließend noch die Felder des Dokuments deklariert.&lt;/p&gt;
+
+&lt;p&gt;Mango nutzt etwas Magic: Der Klassenname des Models ist gleichzeitig auch der Name der Collection (klein geschrieben). Soll die Collection anders heißen bzw. das Model eine vorhandene nutzen, muss lediglich die Methode &lt;code&gt;getCollectionName()&lt;/code&gt; überschrieben werden.&lt;/p&gt;
+
+&lt;h3 id=&#34;go-mango-go:3644f6a19a2eedc1ade2ee0f1098483e&#34;&gt;Go, Mango, go!&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+use Mango\Mango;
+use Mango\DocumentManager;
+
+use Document\User;
+
+$mango = new Mango(&#39;mongodb://localhost/galactica&#39;);
+$dm = new DocumentManager($mango);
+$user = new User();
+$user-&amp;gt;name = &#39;William Adama&#39;;
+$user-&amp;gt;email &#39;william.adama@bsg-75.mil&#39;;
+$user-&amp;gt;store();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Das Mango-Object erwartet eine gültige MongoDB URI, falls notwendig inkl. Benutzer, Passwort, Port usw.&lt;/p&gt;
+
+&lt;p&gt;Dem Document Manager kommt eine vergleichbare Aufgabe zu, wie dem Entity Manager in Doctrine2.&lt;/p&gt;
+
+&lt;p&gt;Für mehr Komfort holt sich eine Model-Klasse den Document Manager über eine statische Methode ab. Daher können Methoden wie &lt;code&gt;store()&lt;/code&gt; direkt über die Model-Klasse abgewickelt werden.&lt;/p&gt;
+
+&lt;h3 id=&#34;dokumente-abfragen:3644f6a19a2eedc1ade2ee0f1098483e&#34;&gt;Dokumente abfragen&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+$user = User::where([&#39;name&#39; =&amp;gt; &#39;William Adama&#39;]);
+echo $user-&amp;gt;count(); // = 1
+echo $user-&amp;gt;first()-&amp;gt;email; // = william.adama@bsg-75.mil
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Eine Abfrage kann einfach über die statische Methode &lt;code&gt;where()&lt;/code&gt; ausgeführt werden. Die Syntax der Abfragen entspricht derzeit noch der normalen MongoDB Query API. Für die Zukunft plane ich aber eine Abstraktionsebene für die Abfragen, vergleichbar mit Mongoid.&lt;/p&gt;
+
+&lt;p&gt;Eine Abfrage kit &lt;code&gt;where()&lt;/code&gt; oder &lt;code&gt;find()&lt;/code&gt; gibt immer ein Cursor-Objekt zurück, das anhand der aufgerufenen Methode entscheiden kann, ob der Zugriff auf den MongoCursor oder das Abfrageergebnis in Form einer Instanz von MutableMap erfolgt.&lt;/p&gt;
+
+&lt;p&gt;In obigem Beispiel ist &lt;code&gt;count()&lt;/code&gt; eine Methode des Cursors, während &lt;code&gt;first()&lt;/code&gt; schon auf der Ergebnis zugreift. Wie MongoCursor kann auch die Cursor-Klasse von Mango einfach über das Ergebnis iterieren.&lt;/p&gt;
+
+&lt;p&gt;Durch die dynamische Unterscheidung zwischen MongoCursor- und Datenzugriff, können auf eine Instanz der Cursor-Klasse auch alle Methoden von MutableMap angewandt werden.&lt;/p&gt;
+
+&lt;p&gt;Beispielsweise:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+User::where()-&amp;gt;reverse()-&amp;gt;slice(0, 2)-&amp;gt;each(function($document) {
+    echo $document-&amp;gt;name;
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Natürlich macht dieser Code wenig Sinn, da man das wesentlich effizienter über die Cursor-Methoden erledigen kann. Das Beispiel soll lediglich zeigen, was möglich wäre.&lt;/p&gt;
+
+&lt;h3 id=&#34;hydration:3644f6a19a2eedc1ade2ee0f1098483e&#34;&gt;Hydration&lt;/h3&gt;
+
+&lt;p&gt;Mango sorgt automatisch dafür, dass die Dokumente im Ergebnis immer Instanzen ihrer jeweiligen Model-Klasse sind.&lt;/p&gt;
+
+&lt;p&gt;Die Hydration-Automatik sorgt außerdem dafür, dass die Daten intern als jeweilige Typ-Klasse von Mango gehalten werden.&lt;/p&gt;
+
+&lt;p&gt;Typ-Klassen halten die Daten und können sie in zwei Formaten zurückgeben. Konfiguriert man ein Feld als &lt;code&gt;DateTime&lt;/code&gt; bekommt Mango intern beim Speichern automatisch ein MongoDate-Objekt. Greift man hingegen außerhalb von Mango auf den Wert zu, bekäme man in diesem Fall eine Instanz der Klasse DateTime zurück.&lt;/p&gt;
+
+&lt;p&gt;Soweit zum aktuellen Funktionsumfang von Mango. Es ist bei weitem noch nicht fertig, kann aber für kleine Projekte schon einsetzt werden. Ich verwende es selbst in der aktuellsten Version von CodrPress und es macht wesentlich mehr Spaß als MongoAppKit, ohne ein monströses Schlachtschiff wie Doctrine zu sein.&lt;/p&gt;
+
+&lt;p&gt;Natürlich gibt&amp;rsquo;s Mango auch bei &lt;a href=&#34;https://github.com/WebCodr/Mango&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Services ftw!</title>
+      <link>https://webcodr.de/2013/02/services-ftw/</link>
+      <pubDate>Sat, 02 Feb 2013 22:29:07 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2013/02/services-ftw/</guid>
+      <description>
+
+&lt;p&gt;Wer kennt das nicht? Man findet eine nette Software-Bibliothek in einer bestimmten Sprache, die vom Server der eigenen Web-Applikation nicht unterstützt wird oder nur sehr umständlich auf andere Weise genutzt werden kann.&lt;/p&gt;
+
+&lt;p&gt;So erging es mir mit Tools für Markdown-Rendering und server-basiertem Syntax-Highlighting. Zwar habe ich dafür ja im Oktober die Composer-Pakete SilexMarkdown und Radiant geschrieben, die beide auf bereits vorhandenen Bibliotheken fußen.&lt;/p&gt;
+
+&lt;p&gt;Ich war mit beiden nie recht glücklich. Für Ruby und Python gibt es viel schönere, wesentlich umfangreichere Lösungen:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Pygments ist ein Python geschriebener Syntax-Highlighter, der nahezu jede relevante Sprache unterstützt &amp;ndash; selbst esoterische Merkwürdigkeiten wie Brainfuck.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Redcarpet wurde in Ruby verfasst und bietet einen sehr leicht erweiter- und modifizierbaren Markdown-Renderer.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Gerade für ein Blog-System wie CodrPress liegt es nahe, beide zu kombinieren und damit zumindest teilweise GitHub flavoured Markdown zu unterstützen.&lt;/p&gt;
+
+&lt;p&gt;Wie bekomme ich also drei Programmiersprachen unter einen Hut, ohne dass CodrPress nur auf angepassten Server-Konfigurationen läuft? Ganz einfach: Services!&lt;/p&gt;
+
+&lt;h2 id=&#34;pygmentizr:dfc1f8e14f5afb8a0c077097c423f89f&#34;&gt;Pygmentizr&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://pygmentizr.herokuapp.com/&#34;&gt;Pygmentizr&lt;/a&gt; ist logischerweise in Python geschrieben, um Pygments nutzen zu können.&lt;/p&gt;
+
+&lt;p&gt;Per POST-Anfrage auf die verlinkte URL erreicht man den eigentlichen Service, der als Parameter die Sprache und den Quelltext erwartet. Zurück kommt HTML, das nur noch per CSS hübsch gemacht werden muss.&lt;/p&gt;
+
+&lt;p&gt;Ein entsprechendes Stylesheet für den bekannten Monokai-Stil ist auf der Seite verlinkt oder im GitHub-Repository zu finden.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/MadCatme/Pygmentizr&#34;&gt;Pygmentizr bei GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;amplifyr:dfc1f8e14f5afb8a0c077097c423f89f&#34;&gt;Amplifyr&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://amplifyr.herokuapp.com/&#34;&gt;Amplifyr&lt;/a&gt; nutzt Redcarpet und bindet Pygmentizr als Syntax-Highlighter ein.&lt;/p&gt;
+
+&lt;p&gt;Wie Pygmentizr lässt sich Amplifyr per POST-Anfrage ansprechen und gibt den in HTML konvertierten Markdown-Quelltext zurück.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/MadCatme/Amplifyr&#34;&gt;Amplifyr bei GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Beide Dienste laufen auf der Cloud-Plattform Heroku.&lt;/p&gt;
+
+&lt;h2 id=&#34;codrpress-integration:dfc1f8e14f5afb8a0c077097c423f89f&#34;&gt;CodrPress-Integration&lt;/h2&gt;
+
+&lt;p&gt;Um beide Services in CodrPress nutzen können, habe ich in SilexMarkdown ein paar Umbauten vorgenommen. Beim Registrieren des Service-Providers in einer Silex-Applikation, lässt sich nun ganz einfach übergeben, ob der eingebaute Renderer samt Radiant oder Amplifyr genutzt werden soll. Eine entsprechende Anleitung findet sich in der ReadMe-Datei des SilexMarkdown-Repositories bei GitHub.&lt;/p&gt;
+
+&lt;p&gt;Beide Dienste sind bei Heroku untergebracht und kosten mich keinen Cent. daher gebe ich die Nutzung für jeden frei. Viel Spaß!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Array almighty</title>
+      <link>https://webcodr.de/2013/02/array-almighty/</link>
+      <pubDate>Sat, 02 Feb 2013 22:28:05 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2013/02/array-almighty/</guid>
+      <description>
+
+&lt;p&gt;Wenn man sich zulange nur mit PHP beschäftigt vergisst man schnell, dass man oft Dinge tut, die kaum in andere Sprachen übertragbar sind.&lt;/p&gt;
+
+&lt;p&gt;Letztens habe ich mir Scala etwas näher angesehen. Kurz am Rande: eine schöne Sprache, wenn auch die verschiedenen Syntax-Modi etwas verwirrend oder zumindest recht gewöhnungsbedürftig sind.&lt;/p&gt;
+
+&lt;h2 id=&#34;vorteil-php:c9e236b9d3a313b28d471d02577ce3f9&#34;&gt;Vorteil PHP&lt;/h2&gt;
+
+&lt;p&gt;Scala bietet wie fast jede andere typisierte Sprache verschiedene Listen-Klassen für diverse Nutzungsfälle. In PHP gibt es das nicht. Man hat sein Array, das jederzeit veränderlich ist, jede noch so wilde Mischung von Datentypen akzeptiert und assoziative Schlüssel erlaubt. Es ist einfach umgemein praktisch.&lt;/p&gt;
+
+&lt;h2 id=&#34;vorteil-scala:c9e236b9d3a313b28d471d02577ce3f9&#34;&gt;Vorteil Scala&lt;/h2&gt;
+
+&lt;p&gt;Da PHP leider weit davon entfernt ist vollständig objekt-orientiert zu sein und darum ein Array leider keine Objekt ist, kann man Arrays nur mit diversen Funktionen bearbeiten.&lt;/p&gt;
+
+&lt;p&gt;Zwar funktioniert das einwandfrei, ist aber umständlich. Ein Array-Objekt, das entsprechende Methoden bietet, die sich am besten auch noch verkettet aufrufen lassen, wäre doch toll.&lt;/p&gt;
+
+&lt;h2 id=&#34;php-goes-scala-java-objective-c:c9e236b9d3a313b28d471d02577ce3f9&#34;&gt;PHP goes Scala/Java/Objective-C&lt;/h2&gt;
+
+&lt;p&gt;Daher habe ich mich ans Werk gemacht und die bereits existierende Klasse &lt;code&gt;IterateableList&lt;/code&gt; in MongoAppKit in drei neue Klassen des Namespaces &lt;code&gt;\MongoAppKit\Collection&lt;/code&gt; aufgeteilt: &lt;code&gt;MutableMap&lt;/code&gt; und &lt;code&gt;ArrayMap&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Die Namen orientieren sich an ihren Pendants in Scala, Java oder auch Objective-C. Während alle die SPL-Interfaces &lt;code&gt;Countable&lt;/code&gt; und &lt;code&gt;IteratorAggregate&lt;/code&gt; implementieren, verwendet &lt;code&gt;ArrayMap&lt;/code&gt; zusätzlich das Interface &lt;code&gt;ArrayAccess&lt;/code&gt; und kann damit wie ein PHP-Array verwendet werden.&lt;/p&gt;
+
+&lt;p&gt;Außerdem implementieren alle drei die Magic Methods &lt;code&gt;__get()&lt;/code&gt;, &lt;code&gt;__set()&lt;/code&gt;, &lt;code&gt;__isset()&lt;/code&gt; und &lt;code&gt;__unset&lt;/code&gt;. Das erleichtert z.B. die Verwendung einer Liste in Twig, in dem keine Methode mehr angesprochen werden muss, um innerhalb eines Templates auf die Inhalte zuzugreifen.&lt;/p&gt;
+
+&lt;p&gt;Um diverse Array-Funktionen von PHP abzubilden implementieren alle drei die Methoden:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;first()&lt;/code&gt;: gibt das erste Element der Liste zurück&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;last()&lt;/code&gt;: gibt das letzte Element der Liste zurück&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reverse()&lt;/code&gt;: dreht die Reihenfolge der Elemente innerhalb der Liste um&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;each()&lt;/code&gt;: wendet eine Callback-Funktion mittels &lt;code&gt;array_walk&lt;/code&gt; auf alle Elemente an, in der auch auf die Schlüssel zugegriffen werden kann&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;map()&lt;/code&gt;: wendet eine Callback-Funktion mittels &lt;code&gt;array_map&lt;/code&gt; auf alle Elemente an&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;slice()&lt;/code&gt;: schneidet einen Teil der Elemente heraus und gibt sie in einem neuen Listen-Objekt zurück&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;filter()&lt;/code&gt;: filtert die Elemente einer Liste anhand einer Callback-Funktion und gibt das Ergebnis in einem neuen Listen-Objekt zurück&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;fluent-interface:c9e236b9d3a313b28d471d02577ce3f9&#34;&gt;Fluent Interface&lt;/h2&gt;
+
+&lt;p&gt;Um eine Verkettung von Methodenaufrufen zu ermöglichen gibt jede Methode, die sonst keinen Rückgabewert hätte, eine Referenz auf ihre Klasse zurück. Nur &lt;code&gt;slice()&lt;/code&gt; und &lt;code&gt;filter()&lt;/code&gt; geben eine neue Liste mit den herausgeschnittenen bzw. gefilterten Werten zurück.&lt;/p&gt;
+
+&lt;p&gt;Hier ein kleines Beispiel aus CodrPress, was man damit alles anstellen kann:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+Post::where()-&amp;gt;each(function($document) use ($app) {
+    $md = $document-&amp;gt;getProperty(&#39;body&#39;);
+    $html = $app[&#39;markdown&#39;]-&amp;gt;transform($md);
+    $document-&amp;gt;set(&#39;body_html&#39;, $html)-&amp;gt;save();
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Die statische Methode &lt;code&gt;Post::where()&lt;/code&gt; liefert ohne Quert alle Posts als MutableMap-Objekt zurück. Auf die Rückgabe lässt sich sofort &lt;code&gt;each()&lt;/code&gt; anwenden, das alle Elemente der Liste iteriert und die definierte Closure auf jedes Element einzeln anwendet.&lt;/p&gt;
+
+&lt;p&gt;In diesem Fall wird das rohe Markdown aus dem Feld &lt;code&gt;body&lt;/code&gt; in HTML transformiert und im Feld &lt;code&gt;body_html&lt;/code&gt; abgespeichert.&lt;/p&gt;
+
+&lt;h2 id=&#34;fazit:c9e236b9d3a313b28d471d02577ce3f9&#34;&gt;Fazit&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;MutableMap&lt;/code&gt; und seine Sub-Klassen sparen viel Schreibarbeit durch ein simples und komfortables Fluent Interface &amp;ndash; einer Vorgehensweise, der in PHP leider viel zu wenig Beachtung geschenkt wird.&lt;/p&gt;
+
+&lt;h2 id=&#34;download:c9e236b9d3a313b28d471d02577ce3f9&#34;&gt;Download&lt;/h2&gt;
+
+&lt;p&gt;Die drei Klassen sind nicht länger Teil von MongoAppKit. Ich habe sie in ein separates &lt;a href=&#34;https://github.com/WebCodr/Collection&#34;&gt;GitHub-Repository&lt;/a&gt; und &lt;a href=&#34;https://packagist.org/packages/webcodr/collection&#34;&gt;Composer-Paket&lt;/a&gt; ausgelegt, um eine unkomplizierte Nutzung ohne MongoAppKit zu ermöglichen. Viel Spaß!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PythonPress</title>
+      <link>https://webcodr.de/2012/12/pythonpress/</link>
+      <pubDate>Sun, 02 Dec 2012 22:27:13 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2012/12/pythonpress/</guid>
+      <description>
+
+&lt;p&gt;Da eine neue Sprache nicht genug ist, beschäftige ich mich neben Ruby neuerdings auch noch mit Python.&lt;/p&gt;
+
+&lt;p&gt;Als Lernprojekt setze ich aktuell CodrPress als Python-Version um. Natürlich will ich das nicht das Rad neu erfinden, daher setze ich auf zwei Frameworks, dank denen ich sehr schnell ein vorzeigbares Ergebnis zusammenbauen konnte:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://flask.pocoo.org/&#34;&gt;Flask&lt;/a&gt; ist ein Micro-Framework vergleichbar mit Sinatra (Ruby) oder Silex (PHP). Es kümmert sich also um alles, was man braucht, um eine Website zu bauen. Vom Routing bis hin zur Template Engine (Jinja2).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://mongoengine.org/&#34;&gt;MongoEngine&lt;/a&gt; bietet einen ODM (Object Document Mapper) vergleichbar mit Mongoid (Ruby) oder meinem eigenen Projekt MongoAppKit in PHP.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;routen-definitionen-mit-flask:fbdb25356297ae03f29b65063a85f5c6&#34;&gt;Routen-Definitionen mit Flask&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from flask import Flask
+
+app = Flask(__name__)
+
+@app.route(&#39;/hello/&amp;lt;name&amp;gt;&#39;)
+def hello(name):
+    return &#39;Hello %s!&#39; % name
+
+app.run()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Zu Beginn wird die Klasse &lt;code&gt;Flask&lt;/code&gt; aus dem Package &lt;code&gt;flask&lt;/code&gt; importiert und anschließend eine Instanz erstellt.&lt;/p&gt;
+
+&lt;p&gt;Im Gegensatz zu PHP oder anderen C-Syntax-Sprachen kennt Python das Schlüsselwort new nicht. Um ein neues Objekt zu instanziieren reicht es den Klassennamen samt den Klammern und ggf. den Constructor-Argumenten zu schreiben.&lt;/p&gt;
+
+&lt;p&gt;Es folgt die Routen-Definition. Variable Werte werden in spitze Klammern gesetzt und der anschließenden Methode mit gleichem Namen als Parameter übergeben.&lt;/p&gt;
+
+&lt;p&gt;Wie auch in Silex oder Sinatra wird der Rückgabewert einer Routen-Methode zurück an den Browser geschickt. In diesem Fall ist das nur ein simpler String-Wert.&lt;/p&gt;
+
+&lt;h2 id=&#34;templates-in-flask:fbdb25356297ae03f29b65063a85f5c6&#34;&gt;Templates in Flask&lt;/h2&gt;
+
+&lt;p&gt;Flask nutzt die Template Engine Jinja2. Wer aus der PHP-Welt Twig kennt fühlt sich sofort heimisch. Die Sprachelemente sind nahezu identisch.&lt;/p&gt;
+
+&lt;p&gt;Datei: &lt;code&gt;./templates/hello.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;h1&amp;gt;Hello {{ name }}!&amp;lt;/h1&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In obiger Route müsste die Methode nun so aussehen:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from flask import Flask, render_template
+...
+def hello(name):
+    return render_template(&#39;hello.html&#39;, name = name)
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nicht vergessen: &lt;code&gt;render_template&lt;/code&gt; muss zusätzlich importiert werden!&lt;/p&gt;
+
+&lt;h2 id=&#34;mongoengine:fbdb25356297ae03f29b65063a85f5c6&#34;&gt;MongoEngine&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from mongoengine import *
+
+connect(&#39;test&#39;)
+
+class Post(Document):
+    _id = ObjectIdField()
+    created_at = DateTimeField()
+    published = BooleanField()
+    title = StringField()
+    body = StringField()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Der Aufruf von &lt;code&gt;connect&lt;/code&gt; stellt eine Verbindung zur Datenbank &lt;code&gt;test&lt;/code&gt; her. Da keine Verbindungsdaten angegeben werden, geht MongoEngine automatisch von einem lokalen MongoDB-Server auf dem Standard-Port aus.&lt;/p&gt;
+
+&lt;p&gt;Die Klasse &lt;code&gt;Post&lt;/code&gt; ist eine Sub-Klasse von &lt;code&gt;Document&lt;/code&gt; aus MongoEngine. Anschließend werden die Felder der Klasse definiert. MongoEngine stellt für jeden von MongoDB unterstützten Datentyp entsprechende Klassen zur Verfügung.&lt;/p&gt;
+
+&lt;p&gt;Sofern nicht über das Attribut &lt;code&gt;meta&lt;/code&gt; eine andere Collection definiert wird, greift MongoEngine auf den Klassennamen in Kleinbuchstaben als Collection zu.&lt;/p&gt;
+
+&lt;p&gt;Um ein neues Dokument von Post zu erstellen und zu speichern, reicht schon folgender Code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;post = Post()
+post.published = True
+post.title = &#39;Hello World!&#39;
+post.body = &#39;Hallo, ich ein Test.&#39;
+post.save()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;abfragen-mit-mongoengine:fbdb25356297ae03f29b65063a85f5c6&#34;&gt;Abfragen mit MongoEngine&lt;/h2&gt;
+
+&lt;p&gt;Als vollständiger ODM bietet MongoEngine natürlich auch die Möglichkeit vorhandene Daten abzufragen. In folgendem Beispiel werden die letzten zehn veröffentlichten Einträge absteigend nach der Erstelldatum sortiert, in ein Array geschrieben.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;posts = Post.objects(published = True).order_by(&#39;-created_at&#39;).limit(10)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Abfragen erfolgen statisch, daher ist keine Instanz nötig. Die Methode &lt;code&gt;objects()&lt;/code&gt; enthält die Bedingungen, also in diesem Fall, dass ein Eintrag veröffentlicht wurde. &lt;code&gt;order_by()&lt;/code&gt; erwartet den Feldnamen mit der Sortierrichtung als Präfix. Hierbei steht &lt;code&gt;+&lt;/code&gt; für aufsteigend und &lt;code&gt;-&lt;/code&gt; für absteigend. Zu guter letzt wird das Ergebnis mit &lt;code&gt;limit()&lt;/code&gt; auf 10 Dokumente eingeschränkt.&lt;/p&gt;
+
+&lt;p&gt;Mit diesem Wissen lässt sich nun ganz schnell eine Basis-Applikation bauen, die aus der vorhandenen CodrPress-Collection Einträge ausliest und anzeigt.&lt;/p&gt;
+
+&lt;p&gt;Der bisherige Stand ist natürlich bei &lt;a href=&#34;https://github.com/MadCatme/CodrPressP&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CodrPress</title>
+      <link>https://webcodr.de/2012/10/codrpress/</link>
+      <pubDate>Sun, 21 Oct 2012 22:26:30 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2012/10/codrpress/</guid>
+      <description>
+
+&lt;p&gt;Ich bin mal wieder so wahnsinnig und arbeite an einem Blog-System. Diesmal will ich das Rad aber nicht neu erfinden und ein zweites Wordpress bauen. Stattdessen orientiert sich CodrPress an &lt;a href=&#34;https://github.com/hmans/schnitzelpress&#34;&gt;Schnitzelpress&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Da Schnitzelpress auf Ruby basiert und primär für den Einsatz auf Heroku ausgelegt ist, habe ich mich dazu entschieden mit &lt;a href=&#34;https://github.com/MadCatme/CodrPress&#34;&gt;CodrPress&lt;/a&gt; quasi eine PHP-Version von Schnitzelpress zu entwickeln.&lt;/p&gt;
+
+&lt;p&gt;Natürlich ist das wieder mal einfacher gesagt als getan, vor allem da es für diverse Ruby Gems, die Schnitzelpress nutzt, in der PHP-Welt kaum brauchbaren Ersatz gibt.&lt;/p&gt;
+
+&lt;p&gt;Mit &lt;a href=&#34;https://github.com/vmg/redcarpet&#34;&gt;Redcarpet&lt;/a&gt; und &lt;a href=&#34;https://github.com/rubychan/coderay&#34;&gt;CodeRay&lt;/a&gt; hat Ruby zwei wundervolle Gems, die sich um Markdown-Rendering bzw. Syntax-Highlighting kümmern.&lt;/p&gt;
+
+&lt;p&gt;CodrPress basiert auf meinem Projekt &lt;a href=&#34;https://github.com/MadCatme/mongoappkit&#34;&gt;MongoAppKit&lt;/a&gt;, das widerrum auf &lt;a href=&#34;http://silex.sensiolabs.org/&#34;&gt;Silex&lt;/a&gt; sowie &lt;a href=&#34;http://twig.sensiolabs.org/&#34;&gt;Twig&lt;/a&gt; setzt und seine Abhängigkeiten mit &lt;a href=&#34;http://getcomposer.org/&#34;&gt;Composer&lt;/a&gt; regelt. Keine der PHP-basierten Lösungen, um diese zwei Ruby Gems zu ersetzen, bietet Composer-Unterstützung an und die Strukturen sind z.T. auch nicht &lt;a href=&#34;http://webcodr.de/2012/06/17/php-autoloader-nach-dem-psr-0-standard/&#34;&gt;PSR-0-kompatibel&lt;/a&gt;, so dass ein Autoloading der Klassen nicht möglich ist.&lt;/p&gt;
+
+&lt;p&gt;Daher habe ich zwei neue Projekte aus der Taufe gehoben, die genau diesen Mangel beseitigen:&lt;/p&gt;
+
+&lt;h3 id=&#34;silexmarkdown:5514d3d46a23b28ba67722ec4e7cffe3&#34;&gt;SilexMarkdown&lt;/h3&gt;
+
+&lt;p&gt;Da ich keine Lust und Zeit habe, selbst einen Markdown-Renderer zu schreiben, basiert &lt;a href=&#34;https://github.com/MadCatme/SilexMarkdown&#34;&gt;SilexMarkdown&lt;/a&gt; auf &lt;a href=&#34;https://github.com/michelf/php-markdown/&#34;&gt;php-markdown&lt;/a&gt; von Michel Fortin.&lt;/p&gt;
+
+&lt;p&gt;Ich musste es erstmal in brauchbare Struktur bringen, da das Original leider weder Namespaces nutzt und sogar zwei Klassen in einer Datei besitzt.&lt;/p&gt;
+
+&lt;p&gt;SilexMarkdown stellt nun eine Service-Prodiver-Klasse für Silex und eine entsprechende Twig-Extension zur Verfügung. Dazu wurde es noch mit einer Unterstützung für Code-Blöcke angereichert, um Syntax Highlighting wie in GitHub nutzen zu können.&lt;/p&gt;
+
+&lt;h3 id=&#34;radiant:5514d3d46a23b28ba67722ec4e7cffe3&#34;&gt;Radiant&lt;/h3&gt;
+
+&lt;p&gt;Die Kern-Komponente von &lt;a href=&#34;https://github.com/MadCatme/Radiant&#34;&gt;Radiant&lt;/a&gt; ist ebenfalls nicht auf meinem Mist gewachsen und stammt aus dem Projekt &lt;a href=&#34;https://github.com/ccampbell/nijikodo&#34;&gt;Nijikodo&lt;/a&gt; von Clint Campbell.&lt;/p&gt;
+
+&lt;p&gt;Immerhin war die Grundlage schon mal PSR-0-kompatibel und damit auch relativ leicht Composer-tauglich zu machen.&lt;/p&gt;
+
+&lt;p&gt;Meine Arbeit bestand zum Großteil darin, entsprechende Unit-Tests zu schreiben und einige Fehler zu beseitigen und es in SilexMarkdown einzubinden.&lt;/p&gt;
+
+&lt;h2 id=&#34;qualität:5514d3d46a23b28ba67722ec4e7cffe3&#34;&gt;Qualität&lt;/h2&gt;
+
+&lt;p&gt;Alle genannten Projekte, also MongoAppKit, SilexMarkdown, Radiant und CodrPress werden mittels &lt;a href=&#34;https://github.com/sebastianbergmann/phpunit/&#34;&gt;PHPUnit&lt;/a&gt; laufend von mir und automatisiert via &lt;a href=&#34;https://travis-ci.org/&#34;&gt;Travis CI&lt;/a&gt; getestet. Abgesehen von SilexMarkdown beträgt die Code-Coverage zwischen 70 - 90%.&lt;/p&gt;
+
+&lt;h2 id=&#34;style:5514d3d46a23b28ba67722ec4e7cffe3&#34;&gt;Style&lt;/h2&gt;
+
+&lt;p&gt;Aktuell ist CodrPress mit dem vollständigen &lt;a href=&#34;http://twitter.github.com/bootstrap/&#34;&gt;Twitter Bootstrap&lt;/a&gt; versehen, um auch in der Entwicklunsphase ein halbwegs ahnsehnliches Design zu haben. Später werde ich nur ein paar Komponenten aus Bootstrap nutzen, z.B. das Grid und die responiven Fähigkeiten.&lt;/p&gt;
+
+&lt;p&gt;Für das Syntax-Highlighting habe ich ein Farb-Theme basierend auf meinem Farbschema von PhpStorm geschrieben, das auch Radiant beiliegt. Dank einer recht einfachen Struktur kann man sich auch sehr schnell ein eigenes Theme zusammenstellen.&lt;/p&gt;
+
+&lt;h2 id=&#34;ausblick:5514d3d46a23b28ba67722ec4e7cffe3&#34;&gt;Ausblick&lt;/h2&gt;
+
+&lt;p&gt;Die Frontend-Funktionen von CodrPress sind mit einer gefüllten Datenbank (Schnitzelpress-kompatibel) schon nutzbar. Homepage, Einzeldarstellung von Einträgen, eigene Seiten und das Markdown-Rendering mit Syntax-Highlighting funktionieren soweit einwandfrei.&lt;/p&gt;
+
+&lt;p&gt;Als nächstes werde ich einem Admin-Bereich und anschließend einem ansprechenden Design widmen.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Menlo Park, start your photocopiers ...</title>
+      <link>https://webcodr.de/2012/08/menlo-park-start-your-photocopiers-.../</link>
+      <pubDate>Fri, 24 Aug 2012 22:25:16 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2012/08/menlo-park-start-your-photocopiers-.../</guid>
+      <description>
+
+&lt;h2 id=&#34;oder-warum-software-patente-und-patentkriege-scheiße-sind:638429e5401c31d4904d7ea29429977b&#34;&gt;&amp;hellip; oder warum Software-Patente und Patentkriege scheiße sind.&lt;/h2&gt;
+
+&lt;p&gt;Gestern habe für die Share-Funktionen von Twitter, Google+ und Facebook jeweils ein Modul nach dem &lt;a href=&#34;http://www.commonjs.org/&#34;&gt;CommonJS-Standard&lt;/a&gt; gebaut, um sie in meinem &lt;a href=&#34;http://www.madcatswelt.org/&#34;&gt;privaten Weblog&lt;/a&gt; zu nutzen.&lt;/p&gt;
+
+&lt;p&gt;Daran ist nun nichts besonders, wenn ich nicht eine kleine Entdeckung gemacht hätte. Offenbar hat Facebook den nötigen JavaScript-Code von Twitter kopiert oder Twitter von Facebook.&lt;/p&gt;
+
+&lt;h2 id=&#34;quelltext-vom-twitter:638429e5401c31d4904d7ea29429977b&#34;&gt;Quelltext vom Twitter&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;!function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+
+	if(!d.getElementById(id)) {
+		js = d.createElement(s);
+		js.id = id;
+		js.src = &amp;quot;//platform.twitter.com/widgets.js&amp;quot;;
+		fjs.parentNode.insertBefore(js, fjs);
+	}
+}(document, &amp;quot;script&amp;quot;, &amp;quot;twitter-wjs&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;quelltext-von-facebook:638429e5401c31d4904d7ea29429977b&#34;&gt;Quelltext von Facebook:&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if(d.getElementById(id)) return;
+	js = d.createElement(s);
+	js.id = id;
+	js.src = &amp;quot;//connect.facebook.net/de_DE/all.js#xfbml=1&amp;quot;;
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Zwecks der Lesbarkeit habe ich die Funktionen entsprechend formatiert.&lt;/p&gt;
+
+&lt;p&gt;Selbst Nicht-Programmierern dürften die Ähnlichkeiten kaum entgehen. Die Variablennamen sind identisch und sogar die Art der URL-Angabe ohne Protokoll. Selbst das if-Conditional und damit die Methode das externe JavaScript nicht zweimal einzubinden, stimmen überein &amp;ndash; nur die Schreibweise ist etwas anders.&lt;/p&gt;
+
+&lt;p&gt;Aus meiner Sicht geht dieses Vorgehen das vollkommen in Ordnung. Man muss nicht ständig das Rad neu erfinden. Gerade Programmierer tun das sehr gerne, obwohl es nur selten notwendig ist.&lt;/p&gt;
+
+&lt;p&gt;Twitter und Facebook sind Technologie-Vorreiter, neben Google die zwei wichtigsten im gesamten Netz &amp;ndash; warum sollten sie also nicht gegenseitig voneinander profitieren? Auch wenn es nur um einen Code-Schnippsel geht, der externe JavaScripts lädt.&lt;/p&gt;
+
+&lt;p&gt;Andere Firmen (Hallo, Oracle!) holen selbst bei wesentlich geringeren Quelltext-Ähnlichkeiten gleich die Klage-Keule raus. Durch die Möglichkeit in den USA Patente auf Software zu bekommen, ist sowas sogar oft von Erfolg gekrönt &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Ich bin kein Verfechter von Open Source, auch wenn ich es grundsätzlich für eine gute Sache halte. Noch bin ich der Meinung, dass Software ein Allgemeingut wäre und jedem kostenlos zur Verfügung stehen müsse.&lt;/p&gt;
+
+&lt;p&gt;Jedem Entwickler muss das Recht zustehen, sein Produkt zu verkaufen und es schützen zu dürfen. Im Fall von Trivial-Patenten, geht es nicht mehr darum.&lt;/p&gt;
+
+&lt;p&gt;Man will nur noch der Konkurrenz schaden und Geld rausholen, obwohl man selbst oft mehr als genug hat. Firmen werden gekauft, um an die Patente zu kommen und anschließend andere Firmen mit Klagen zu überziehen.&lt;/p&gt;
+
+&lt;p&gt;Egal, ob Apple, Samsung, Motorola (Google), Nokia oder sonst wer. Hört endlich auf damit! Keiner eurer Kunden will Import-Verbote, absurd hohe Patentabgaben für verkaufte Geräte oder sonstige Auswüchse euer Advokaten-Armeen.&lt;/p&gt;
+
+&lt;p&gt;Aus Apples Sicht ist Android ein geklautes Produkt. Objektiv gesehen kann man dem sogar in Teilen zustimmen. Nur: na und?&lt;/p&gt;
+
+&lt;p&gt;Apple hat gute Ideen, Google hat gute Ideen. Nutzt sie, um euch gegenseitig zu verbessern und stellt diese lächerlichen Grabenkämpfe ein, die euch letztlich mehr schaden als nützen.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Responsive Bilder mit WordPress</title>
+      <link>https://webcodr.de/2012/08/responsive-bilder-mit-wordpress/</link>
+      <pubDate>Mon, 13 Aug 2012 22:23:38 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2012/08/responsive-bilder-mit-wordpress/</guid>
+      <description>
+
+&lt;p&gt;Aktuell wage ich erste Gehversuche mit responsiven Layouts in meinem &lt;a href=&#34;https://github.com/MadCatme/mcw-blue&#34;&gt;WordPress-Theme&lt;/a&gt;. Ziel der Übung ist ein smartphone-taugliches Layout. Leider macht einem WordPress die Arbeit bei Bildern unnötig schwer.&lt;/p&gt;
+
+&lt;h2 id=&#34;automatische-bildskalierung-mit-css:8e3134301024c5ee03cb0ef90bc35483&#34;&gt;Automatische Bildskalierung mit CSS&lt;/h2&gt;
+
+&lt;p&gt;Bilder müssen in responsiven Layouts automatisch mit der Breite des Anzeigegeräts skalieren. Feste Breiten würden hier zwangsläufig zu Darstellungsproblemen führen. Das klingt nun komplizierter als es ist. Mit drei Zeilen CSS lassen sich Bilder abhängig von der Breite ihres Eltern-Elements automatisch skalieren.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;img {
+	max-width: 100%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ein Bild darf also maximal so breit werden, wie seine vorgesehene Weite. Schrumpft das Eltern-Element durch Verkleinern des Viewports, wird das Bild automatisch mitskaliert. Wir müssen uns also um nichts weiter kümmern, da die Browser den Rest erledigen.&lt;/p&gt;
+
+&lt;h2 id=&#34;problemfall-wordpress:8e3134301024c5ee03cb0ef90bc35483&#34;&gt;Problemfall WordPress&lt;/h2&gt;
+
+&lt;p&gt;Leider klappt die automatische Skalierung in WordPress nicht. Wenn man in einem Beitrag Bilder einfügt, setzt WordPress automatisch das &lt;code&gt;width&lt;/code&gt;- bzw. &lt;code&gt;height&lt;/code&gt;-Attribut auf das &lt;code&gt;img&lt;/code&gt;-Element. Sobald auch nur eines von beiden gesetzt ist, wird eine automatische Größenanpassung verhindert. Die Attribute müssen also weg.&lt;/p&gt;
+
+&lt;p&gt;Wie immer, gibt es dafür zig verschiedene Möglichkeiten. Beispielsweise könnte man die überflüssigen Element-Eigenschaften per jQuery-Einzeiler entfernen. Wirklich schön ist das aber nicht. Es wäre doch viel besser, wenn man WordPress dazu bringen könnte, den Quelltext gleich ohne &lt;code&gt;width&lt;/code&gt; und &lt;code&gt;height&lt;/code&gt; auszuliefern.&lt;/p&gt;
+
+&lt;p&gt;Dank des Hook-Systems in WordPress geht das mit ein paar Zeilen Code in der Datei &lt;code&gt;functions.php&lt;/code&gt; des Themes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;add_filter(&#39;the_content&#39;, &#39;removeImageDimensions&#39;);
+
+function removeImageDimensions($html) {
+	return preg_replace(&#39;/(width|height)=\&amp;quot;\d*\&amp;quot;\s/&#39;, &#39;&#39;, $html);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Die Funktion &lt;code&gt;removeImageDimensions()&lt;/code&gt; entfernt per regulärem Ausdruck unsere unerwünchten Gäste &lt;code&gt;width&lt;/code&gt; und &lt;code&gt;height&lt;/code&gt;. Mittels &lt;code&gt;add_filter()&lt;/code&gt; wird der WordPress-Funktion &lt;code&gt;the_content()&lt;/code&gt; (gibt den Inhalt eines Beitrags aus) unsere neue Funktion als Ausgabefilter zugewiesen. WordPress führt nun bei jedem Aufruf von &lt;code&gt;the_content()&lt;/code&gt; unsere neue Funktion &lt;code&gt;removeImageDimensions()&lt;/code&gt; aus, die den Rückgabewert von &lt;code&gt;the_content()&lt;/code&gt; entsprechend verändert.&lt;/p&gt;
+
+&lt;p&gt;Damit steht responsiven Bildbreiten nun nichts mehr im Weg.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Retina-Display-taugliche Icons mit CSS-Hintergrundbildern</title>
+      <link>https://webcodr.de/2012/08/retina-display-taugliche-icons-mit-css-hintergrundbildern/</link>
+      <pubDate>Sun, 12 Aug 2012 22:22:40 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2012/08/retina-display-taugliche-icons-mit-css-hintergrundbildern/</guid>
+      <description>
+
+&lt;p&gt;Besitzer von Apple-Geräten mit Retina-Displays kennen das Dilemma: auf vielen Seiten sehen Hintergrundbilder, insbesondere Icons, reichlich unscharf aus. So erging es mir gleich doppelt mit meinem privaten Blog. Dank neuem iPad und MacBook Pro, vermatschen die Icons für externe Links.&lt;/p&gt;
+
+&lt;p&gt;Es gibt verschiedene Lösungsansätze für dieses Problem, beispielsweise Icons in vektorbasierten Formaten (SVG), die beliebig in jeder Pixeldichte skalieren können.&lt;/p&gt;
+
+&lt;p&gt;Da ich die &lt;a href=&#34;http://www.iconarchive.com/show/farm-fresh-icons-by-fatcow.html&#34;&gt;verwendeten Icons&lt;/a&gt; nur als Bilder vorliegen habe, kommt diese Lösung nicht in Betracht. Dank CSS-Media-Queries ist das aber kein großes Problem.&lt;/p&gt;
+
+&lt;h2 id=&#34;media-queries:fabbe436f000fed8c317f2b203a04ee4&#34;&gt;Media-Queries?&lt;/h2&gt;
+
+&lt;p&gt;Ein Media-Query ermöglicht es, innerhalb eines Stylesheets diverse Informationen zum aktuellen Anzeigegerät abzufragen. Dazu gehören unter Anderem die Minimal-Breite, die Ausrichtung (Portrait, Landscape), der Gerätetyp (Screen, Projection etc.), das Bildverhältnis oder in diesem Fall besonders wichtig, das Verhältnis zwischen vorhandenen und tatsächlich dargestellten Pixeln.&lt;/p&gt;
+
+&lt;h2 id=&#34;was-machen-eigentlich-retina-displays:fabbe436f000fed8c317f2b203a04ee4&#34;&gt;Was machen eigentlich Retina-Displays?&lt;/h2&gt;
+
+&lt;p&gt;Retina-Displays verdoppeln die Auflösung, während die dargestellten Elemente gleich groß bleiben. Bei normalen Displays ist dieses Verhältnis 1:1. Eine Grafik mit 100 Pixeln Breite wird also mit 100 Pixeln auf dem Monitor dargestellt. Auf Apple-Geräten mit Retina-Displays verdoppeln sich die 100 Pixel auf 200 Pixel &amp;ndash; das Verhältnis beträgt also 2:1.&lt;/p&gt;
+
+&lt;p&gt;Ist eine Grafik in der notwendigen Auflösung nicht verfügbar, wird das vorhandene Bild hochgerechnet und wirkt unscharf. Mit einem Media-Query können wir dem Browser eine höher aufgelöste Version zur Verfügung stellen, die genau das verhindert.&lt;/p&gt;
+
+&lt;h2 id=&#34;an-die-arbeit:fabbe436f000fed8c317f2b203a04ee4&#34;&gt;An die Arbeit&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+	#content article .content p a.external {
+		background-image: url(&amp;quot;icons/external-url-32.png&amp;quot;);
+		background-size: 16px auto;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Da die Media-Query-Eigenschaft &lt;code&gt;min-device-pixel-ratio&lt;/code&gt; noch nicht vollständig in allen Browsern implementiert ist, setze ich die entsprechenden Präfix-Versionen vorher ein. So kann man sichergehen, dass die proprietäre als auch die standardisierte Eigenschaft greifen &amp;ndash; je nach aktuellem Stand der Browser-Implementation.&lt;/p&gt;
+
+&lt;p&gt;Mozilla greift hier zu einer recht seltsamen Präfix-Syntax, während Opera und Webkit sich an das bewährte Schema halten. Ob und wann der Internet Explorer die Eigenschaft unterstützt, konnte ich bisher nicht herausfinden.&lt;/p&gt;
+
+&lt;p&gt;Wie oben schon beschrieben, ist das Verhältnis von tatsächlichen Pixeln zu dargestellten Pixeln 2:1, daher wird es in der Bedingung mit einer &lt;code&gt;2&lt;/code&gt; angegeben.&lt;/p&gt;
+
+&lt;p&gt;Innerhalb des Media-Queries kann ganz normales CSS verwendet werden. Ich tausche nun einfach das bisherige Hintergrundbild (16 x 16 Pixel) durch eine größere Version (32 x 32 Pixel) aus und setze die Größe des Hintergrundbildes auf 16 Pixel. Ansonsten würde der Browser eine falsche Annahme treffen und das Bild auf 64 x 64 Pixel hochrechnen. Damit wäre alles für die sprichwörtliche Katz.&lt;/p&gt;
+
+&lt;p&gt;Das war&amp;rsquo;s schon. Sofern man ein passendes Gerät hat und der Browser die Media-Query-Eigenschaft unterstützt, bekommt man nun ein schön hoch aufgelöstes Icon zu sehen, das um Welten besser aussieht als der hochgerechnete Pixelmatsch.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PHP-Autoloader nach dem PSR-0-Standard</title>
+      <link>https://webcodr.de/2012/06/php-autoloader-nach-dem-psr-0-standard/</link>
+      <pubDate>Sun, 17 Jun 2012 22:20:12 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2012/06/php-autoloader-nach-dem-psr-0-standard/</guid>
+      <description>
+
+&lt;p&gt;Wenn&amp;rsquo;s um das Schreiben eines Autoloaders in PHP geht, kochen viele Entwickler gern ihr eigenes Süppchen. Sofern nun mehrere gleichzeitig aktiv sind, kann das zu Problemen führen und ggf. sogar dafür sorgen, dass eine Alternative gesucht werden muss.&lt;/p&gt;
+
+&lt;p&gt;Die &lt;a href=&#34;https://github.com/php-fig/fig-standards&#34;&gt;PHP Framework Interoperability Group&lt;/a&gt; (kurz FIG) hat sich dieses Problems angenommen und eine Spezifikation für Autoloader entwickelt, die Interoperabilität sicherstellt.&lt;/p&gt;
+
+&lt;p&gt;Der &lt;a href=&#34;https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md&#34;&gt;PSR-0-Standard&lt;/a&gt; besteht aus ein paar recht simplen Regeln, die sich sehr einfach umsetzen lassen und z.T. sicher schon von vielen genutzt wurden:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ein qualifizierter Namespace hat folgende Struktur &lt;code&gt;\&amp;lt;Vendor Name&amp;gt;\(&amp;lt;Namespace&amp;gt;\)*&amp;lt;Class Name&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Jeder Namespace hat einen Haupt-Namespace (Vendor Name)&lt;/li&gt;
+&lt;li&gt;Jeder Namespace kann beliebig viele Unter-Namespaces besitzen&lt;/li&gt;
+&lt;li&gt;Jeder Namespace-Separator wird in einen &lt;code&gt;DIRECTOR_SEPARATOR&lt;/code&gt; konvertiert, wenn aus dem Dateisystem geladen wird&lt;/li&gt;
+&lt;li&gt;Das Zeichen &amp;ldquo;_&amp;rdquo; (Underscore) wird in einen &lt;code&gt;DIRECTORY_SEPARATOR&lt;/code&gt; konvertiert und hat keine spezielle Bedeutung.&lt;/li&gt;
+&lt;li&gt;Der qualifizierte Namespace inkl. Klasse bekommt die Endung &amp;ldquo;.php&amp;rdquo; angehängt, um die Datei zu laden.&lt;/li&gt;
+&lt;li&gt;Namespaces, Vendor Names und Klassennamen dürfen alphabetische Zeichen in jeder Kombination aus Groß- und Kleinschreibung enthalten.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;beispiel-implementation:65935d41e013d47fe5b57cff8b4af2dd&#34;&gt;Beispiel-Implementation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+namespace WebCodr;
+
+class Loader {
+
+    public static function registerAutoloader() {
+        return spl_autoload_register(array (&#39;WebCodr\\Loader&#39;, &#39;load&#39;));
+    }
+
+    public static function load($class) {
+        if(substr($class, 0, 7) !== &#39;WebCodr&#39;) {
+            return;
+        }
+
+        $libraryRoot = realpath(__DIR__ . &#39;/../&#39;);
+        $classFileName = str_replace(array(&#39;\\&#39;, &#39;_&#39;), DIRECTORY_SEPARATOR, $class) . &#39;.php&#39;;
+        $fileName = realpath($libraryRoot . DIRECTORY_SEPARATOR . $classFileName);
+
+        if(is_readable($fileName)) {
+            include_once($fileName);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Die Klasse stellt zwei statische Methoden bereit. Mit &lt;code&gt;Loader::registerAutoloader()&lt;/code&gt; wird die Methode &lt;code&gt;Loader::load()&lt;/code&gt; als SPL-Autoloader registriert.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Loader::load()&lt;/code&gt; prüft zuerst, ob sich die angeforderte Klasse überhaupt in Namespace WebCodr befindet. Falls dies nicht der Fall ist, wird durch den leeren Rückgabewert signalisiert, dass die Klasse mit diesem Autoloader nicht geladen werden kann und die SPL geht zum nächsten registrierten Autoloader über.&lt;/p&gt;
+
+&lt;p&gt;Anschließend wird der Pfad zur Klasse zusammengesetzt und die Datei mittels &lt;code&gt;include_once()&lt;/code&gt; eingebunden. Optinal könnte man im Fehlerfall natürlich noch eine Exception werfen.&lt;/p&gt;
+
+&lt;h2 id=&#34;aufruf-des-autoloaders:65935d41e013d47fe5b57cff8b4af2dd&#34;&gt;Aufruf des Autoloaders&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+include_once(&#39;Loader.php&#39;);
+\WebCodr\Loader::registerAutoloader();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;fazit:65935d41e013d47fe5b57cff8b4af2dd&#34;&gt;Fazit&lt;/h2&gt;
+
+&lt;p&gt;PSR-0 ist schnell und einfach implementiert. Für neue Projekte gibt es also keinen Grund, sich nicht daran zu halten. In bestehendem Code könnte es recht aufwendig sein, den Standard umzusetzen &amp;ndash; je nach dem, welche Benamungsschemata und Verzeichnisstrukturen bereits verwendet werden.&lt;/p&gt;
+
+&lt;p&gt;Man sollte den Aufwand aber nicht scheuen. Was bringt einem schon die tollste Library oder ein cooles Framework, wenn es aufgrund eines schlecht implementierten Autoloaders, kaum eingesetzt werden kann?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IHK != agile</title>
+      <link>https://webcodr.de/2012/04/ihk--agile/</link>
+      <pubDate>Sat, 28 Apr 2012 22:19:16 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2012/04/ihk--agile/</guid>
+      <description>
+
+&lt;p&gt;Während der Berufsschule wird einem klassisches Projekt-Management eingetrichtert und immer wieder betont wird, wie wichtig das doch wäre. Dabei wird natürlich nach dem &lt;a href=&#34;http://de.wikipedia.org/wiki/Wasserfallmodell&#34;&gt;Wasserfallmodell&lt;/a&gt; vorgegangen, Gantt-Diagramme gezeichnet (wer braucht bei einer IT-Ausbildung schon Rechner?), mit Netzplänen die Dauer einzelner Schritte in Tagen ausgerechnet (von Hand wohlgemerkt, dementsprechend falsch sind die dann auch meistens) oder die Schüler auf andere Weise mit Dingen malträtiert werden, die zunehmend für die Software-Branche als unbrauchbar betrachtet werden.&lt;/p&gt;
+
+&lt;p&gt;Bei Software-Projekten nach dem Wasserfallmodell vorzugehen, hat sich immer wieder als nicht praktikabel herausgestellt. Für Bau-Ingenieure, bei denen sich alles vorher planen und ausrechnen lässt, mag das wunderbar funktionieren.&lt;/p&gt;
+
+&lt;p&gt;In der Software-Entwicklung lässt sich aber nun mal nichts vollständig planen. Schon gar nicht zeitliche Angaben, wie sie die IHK für das Projekt auf eine halbe Stunde genau will.&lt;/p&gt;
+
+&lt;p&gt;Unvorhergesehene Dinge treten immer auf. Dabei können ganze Lösungsansätze vollkommen eliminiert werden und die Arbeit von Tagen, manchmal sogar Wochen war vergebens.&lt;/p&gt;
+
+&lt;p&gt;Oft verursachen selbst keine Fehler große Verzögerungen. Darum versagen klassische Modelle. In solchen Situationen sind sie zu starr und erlauben keine angemessene Reaktion, um das Problem schnell anzugehen. Seit mittlerweile 20 Jahren werden Alternativen entwickelt bzw. setzen sich zunehmend durch.&lt;/p&gt;
+
+&lt;h2 id=&#34;agil-arbeiten:c4ddaee2568ae100b847ede2b8b4872e&#34;&gt;Agil arbeiten&lt;/h2&gt;
+
+&lt;p&gt;Als Software-Projekte immer größer bzw. komplexer wurden und damit auch die Probleme durch klassisches Projektmanagement, entstanden die Überlegungen zu &lt;a href=&#34;http://de.wikipedia.org/wiki/Agile_Softwareentwicklung&#34;&gt;agilen Entwicklungsmethoden&lt;/a&gt;. Sie sind deutlich flexibler und leichtgewichtiger als klassische Prozesse und widmen sich auch den sozialen Aspekten der Software-Entwicklung.&lt;/p&gt;
+
+&lt;p&gt;An dieser Stelle tiefer in das Thema einzusteigen, würde den Rahmen deutlich sprengen, daher verweise ich auf die Blogs meiner Kollegen &lt;a href=&#34;http://www.agileblog.org/&#34;&gt;Dominik Jungowski&lt;/a&gt; und &lt;a href=&#34;http://proessler.wordpress.com/&#34;&gt;Peter Roessler&lt;/a&gt; sowie &lt;a href=&#34;http://www.agile42.com/en/blog/&#34;&gt;Agile42&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Auch wenn ich erst seit dem Wechsel zu &lt;a href=&#34;http://www.chip.de/&#34;&gt;Chip Online&lt;/a&gt; mit agiler Entwicklung in Berührung gekommen bin, möchte ich nicht mehr darauf verzichten.&lt;/p&gt;
+
+&lt;p&gt;Ich durfte vorher oft genug erleben, wie herkömliche Methoden versagt haben und mir als Programmierer nur Steine in den Weg legten, während agile Methoden Spaß machen und darauf ausgelegt sind, dass ich meine Arbeit angenehmer und besser erledigen kann.&lt;/p&gt;
+
+&lt;p&gt;Genau darum verstehe ich auch nicht, warum während der Ausbildung Dinge gelehrt werden, die in jeder größeren längst Software-Schmiede abgeschafft wurden.&lt;/p&gt;
+
+&lt;p&gt;Zumal es auch öfter der Fall sein dürfte, dass Auszubildende eigentlich agil in ihrem Betrieb arbeiten, aber in der Berufsschule mit klassischem Projektmanagement konfrontiert werden.&lt;/p&gt;
+
+&lt;p&gt;Man sollte noch darauf im Lehrplan eingehen, aber als Negativbeispiel um die Vorteile agiler Entwicklung aufzuzeigen.&lt;/p&gt;
+
+&lt;p&gt;Ich wage sogar zu behaupten, dass ein Auszubildender aus unserem hausinternen Workshop zu agilen Methoden innerhalb eines Tages mehr mitnehmen kann, als nach den 60 Tagen Berufsschule des ersten Jahres, in denen Projektmanagement, Wasserfallmodell &amp;amp; Co über sie herfallen.&lt;/p&gt;
+
+&lt;p&gt;Übrigens: auch den Lehrern könnte etwas mehr Agilität nicht schaden. Es ließen sich ganz andere Wege beschreiten, die Spaß machen und den Schülern Wissen viel effektiver bzw. dauerhaft vermitteln können &amp;hellip; aber das ist ein anderes Thema, über das ich evtl. in einem weiteren Eintrag genauer eingehen werde.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PHP-Tip: Limonade</title>
+      <link>https://webcodr.de/2012/04/php-tip-limonade/</link>
+      <pubDate>Wed, 11 Apr 2012 22:17:38 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2012/04/php-tip-limonade/</guid>
+      <description>&lt;p&gt;Wer sich schon mal mit &lt;a href=&#34;http://symfony.com/&#34;&gt;Symfony&lt;/a&gt; oder ähnlichen PHP-Frameworks beschäftigt hat, kam sicher schnell zur Erkentnis, dass das die Dinger zwar viel können und generell eine tolle Sache sind, aber hohe Einstiegshürden haben bzw. viel Einarbeitungszeit benötigen, sowie für viele Projekte einfach überdimensioniert sind.&lt;/p&gt;
+
+&lt;p&gt;In Ruby hätte man für solche Fälle z.B. &lt;a href=&#34;http://www.sinatrarb.com/&#34;&gt;Sinatra&lt;/a&gt;: übersichtlich, klein, schnell und flexibel. Mit &lt;a href=&#34;http://limonade-php.github.com/&#34;&gt;Limonade&lt;/a&gt; gibt es so ein Micro-Framework nun endlich für PHP, mit dem sich auch ähnlich elegant entwickeln lässt.&lt;/p&gt;
+
+&lt;p&gt;Es reicht eine Datei in ein Script einzubinden, die .htaccess-Datei anzupassen und schon kann man loslegen:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+require_once &#39;vendors/limonade.php&#39;;
+
+// lambda function (&amp;gt;= PHP 5.3)
+dispatch(&#39;/hello/:name&#39;, function() {
+    $name = params(&#39;name&#39;);
+
+    return &amp;quot;Hello, {$name}&amp;quot;;
+});
+
+run();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Das war es schon. Den ganzen Rest erledigt Limonade und das war noch lange nicht alles, was es kann. Die Routen-Definitionen können beispielsweise auch Wildcards oder reguläre Ausdrücke enthalten. Als Callback lassen sich selbstverständlich auch Objekte bzw. deren Methoden aufrufen (auch statisch) oder man gibt in klassischer Manier einen Funktionsnamen als String an.&lt;/p&gt;
+
+&lt;p&gt;Dazu gibt es eine Template Engine mit partiellen Templates, Capture-Möglichkeiten, JSON-Unterstützung, Hooks und Filtern.&lt;/p&gt;
+
+&lt;p&gt;Alles davon lässt sich ohne große Einarbeitung sofort nutzen. Natürlich muss man die integrierte Template Engine nicht nutzen und kann auch stattdessen einfach Twig oder Smarty verwenden.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Schnellere Websites mit RequireJS</title>
+      <link>https://webcodr.de/2012/04/schnellere-websites-mit-requirejs/</link>
+      <pubDate>Fri, 06 Apr 2012 22:16:42 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2012/04/schnellere-websites-mit-requirejs/</guid>
+      <description>
+
+&lt;p&gt;Script-Elemente sind Blocker im Rendering-Prozess. Browser arbeiten den Quelltext einer Seite von oben nach unten durch. Wenn ein script-Element auftaucht, muss es erst ausgeführt werden, bevor der Browser sich um den nachfolgenden Quelltext kümmern kann. Externe JavaScripts können aus diesem Grund massiven Einfluss auf die Ladegeschwindigkeit einer Seite haben, auch wenn die eigentliche Website schon längst vom Web-Server an den Browser ausgeliefert wurde.&lt;/p&gt;
+
+&lt;p&gt;Falls ein externes Script auf einem langsamen Server liegt, muss der Browser warten, bis er es komplett abgerufen und ausgeführt hat. Sollte das aufgerufene Script gar nicht mehr vorhanden sein, wartet der Browser seine Timeout-Einstellung ab, bis er weitermacht. Sicherlich hat jeder schon mal gesehen, dass eine Website nur bis einem gewissen Teil angezeigt wird und erst nach ein paar Sekunden der Rest dargestellt wird. Mit sehr hoher Wahrscheinlichkeit, war dies ein nicht mehr vorhandenes oder nur sehr langsam ladendes JavaScript.&lt;/p&gt;
+
+&lt;p&gt;Asynchrones Abholen findet erst nach dem Rendern der Seite statt und blockiert daher nichts. Dazu lässt sich bei konsequentem Nutzen von RequireJS der Einsatz von script-Elementen weitgehend vermeiden. Im Idealfall gibt es nur noch ein script-Element, das RequireJS lädt und ein weiteres Script startet, um die gesamte JavaScript-Funktionalität einer Seite zu initialisieren.&lt;/p&gt;
+
+&lt;h3 id=&#34;konfiguration:4d136d304a5ae2243241e1894e4fc4ac&#34;&gt;Konfiguration&lt;/h3&gt;
+
+&lt;p&gt;Hier ein simples Beispiel einer Require-JS-Konfiguration mit jQuery:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;(function() {
+    require.config({
+        paths: {
+            &#39;jquery&#39;: &#39;libs/jquery/jquery-1.7.1&#39;
+        }
+    });
+
+    require([&#39;jquery&#39;], function(jQuery){
+      jQuery.noConflict();
+    });
+})();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Zuerst wird RequireJS so konfiguriert, dass &lt;a href=&#34;http://jquery.com/&#34;&gt;jQuery&lt;/a&gt; mittels des Keywords &amp;ldquo;jquery&amp;rdquo; geladen werden kann. Im Konfigurations-Objekt &amp;ldquo;paths&amp;rdquo; wird dafür als Attributsname &amp;ldquo;jquery&amp;rdquo; und als Wert der Pfad (ausgehend vom Verzeichnis des Scripts) zu jQuery gesetzt. Anschließend wird require() aufgerufen und als erster Parameter wird ein Array mit den aufzulösenden Abhängigkeiten erwartet &amp;ndash; hier jQuery. Man kann hier ein unter &amp;ldquo;paths&amp;rdquo; gesetztes Keyword, den Pfad oder auch externe JavaScripts über die URL angeben. Falls es sich um ein Modul handelt, wird auf die Dateiendung &amp;ldquo;.js&amp;rdquo; verzichtet.&lt;/p&gt;
+
+&lt;p&gt;Im zweiten Parameter wird eine Callback-Funktion definiert, deren Aufruf unmittelbar nach dem Laden der Abhängikeiten stattfindet. Als Parameter folgen hier die Rückgaben der angeforderten JavaScript-Dateien. In diesem Fall ist es ein jQuery-Objekt, das sogleich in den No-Conflict-Modus versetzt wird, um nicht mit evtl. anderen geladenen Bibliotheken zu kollidieren. Dieses Verfahren ist besser bekannt als &lt;a href=&#34;http://de.wikipedia.org/wiki/Dependency_Injection&#34;&gt;Dependency Injection&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;module:4d136d304a5ae2243241e1894e4fc4ac&#34;&gt;Module&lt;/h3&gt;
+
+&lt;p&gt;RequireJS bietet über die Modul-Definition eine elegante Lösung, Programmbestandteile zu kapseln und Abhängigkeiten (z.B. jQuery) aufzulösen. Aktuell setze ich hier drei Module ein, die Funktionen für einzelne Beiträge (Syntax Highlighting, Lightbox etc.) übernehmen sowie das Tracking über Piwik bzw. Google Analytics starten.&lt;/p&gt;
+
+&lt;p&gt;Alle Module sind so aufgebaut, dass sie Abhängigkeiten in Form von Bibliotheken oder anderen Modulen erst auflösen, wenn sie gebraucht werden. Gleichzeitig stellt RequireJS sicher, dass eine Abhängikeit nur einmal geladen wird und für jedes andere Modul zur Verfügung steht.&lt;/p&gt;
+
+&lt;p&gt;Ein Beispiel-Modul:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;define([&#39;jquery&#39;], function($) {
+    var exports = {};
+
+    exports.init = function() {
+        $(&#39;body&#39;).append(&#39;&amp;lt;h1&amp;gt;Hello World!&amp;lt;/h1&amp;gt;&#39;);
+    }
+
+    return exports;
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mit define() wird die Moduldefinition gestartet. Anschließend passiert das gleiche, wie in der Funktion require(). Zuerst werden die Abhängigkeiten als Array definiert, danach startet eine Dependecy Injection in die Callback-Funktion. An dieser Stelle wird ein Dollarzeichen als Parameter für die Abhängigkeit verwendet, um jQuery wie gewohnt einsetzen zu können. Anschließend wird das Objekt &amp;ldquo;exports&amp;rdquo; mit der Methode init() erstellt und zurückgegeben. Wird das Modul an anderer Stelle über require() geladen und das exports-Objekt in die Callback-Funktion injiziert, kann man in ihr die init-Methode aufrufen und damit das Modul starten. Natürlich es ist aber auch möglich, darauf zu verzichten und innerhalb der Modul-Callback-Funktion direkt Code auszuführen.&lt;/p&gt;
+
+&lt;p&gt;Um ein Modul an anderer Stelle mit require() zu laden, gibt man den Pfad, ausgehend vom Verzeichnis der RequireJS-Konfiguration, zum Modul an. Wie vorhin schon beschrieben, muss man hierbei auf die Dateiendung &amp;ldquo;.js&amp;rdquo; verzichten.&lt;/p&gt;
+
+&lt;p&gt;Zu guter letzt muss RequireJS selbst samt Konfiguration geladen werden:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script src=&amp;quot;js/libs/require/require.js&amp;quot; data-main=&amp;quot;js/config&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ein simples Script-Element hierzu genügt &amp;ndash; am besten unmittelbar vor dem schließenden body-Element. Zusätzlich wird mit dem Daten-Attribut &amp;ldquo;main&amp;rdquo; noch der Pfad zur Konfiguration mitgegeben. RequireJS bindet das entsprechende JavaScript automatisch ein und startet sie.&lt;/p&gt;
+
+&lt;h3 id=&#34;fazit:4d136d304a5ae2243241e1894e4fc4ac&#34;&gt;Fazit&lt;/h3&gt;
+
+&lt;p&gt;RequireJS ist ein mächtiges Tool, das alleine schon durch die Kapselung in verschiedene Module dem Entwickler sehr viele Vorteile bringt. Durch die immer größer werdende Komplexität von Web-Sites bzw. Web-Applikationen sind andere Formen der Organisation notwendig geworden, die in anderen Programmiersprachen schon von Anfang an vorhanden waren.&lt;/p&gt;
+
+&lt;p&gt;Dank der Module mit ihren von RequireJS automatisch aufgelösten Abhängigkeiten durch Dependency Injection, lassen sich schnell und einfach, neue Funktionalitäten in eine Website implementieren, ohne weitere script-Elemente in den HTML-Quelltext einfügen zu müssen.&lt;/p&gt;
+
+&lt;p&gt;Bis auf RequireJS selbst werden alle definierten Abhängigkeiten bzw. Module asynchron geladen, ohne das Rendern der Seite zu blockieren. Da Browser asynchrone Anfragen parallel abarbeiten können, werden insgesamt alle Scripts schneller geladen und früher ausgeführt, als es bei einer traditionellen Verwendung von JavaScript möglich wäre.&lt;/p&gt;
+
+&lt;p&gt;Das Ergebnis ist ein großer Vorteil für alle Beteiligten. Für den Nutzer wird eine Website mit viel JavaScript deutlich schneller dargestellt, während die Funktionalitäten im Hintergrund nachgeladen werden, ohne dass man etwas davon bemerkt. Aus Sicht der Entwickler bietet RequireJS eine elegante Möglichkeit, schnelle neue Funktionen zu entwickeln, Abhängigkeiten einfach aufzulösen und durch die Module strukturierter zu arbeiten.&lt;/p&gt;
+
+&lt;p&gt;Abgesehen von TypeKit und Disqus laufen alle JavaScript-Bestandteile dieser Seite als Modul. Zwar lässt sich TypeKit problemlos als Modul umsetzen, nur werden die Schriften erst nach dem Rendern der Seite geladen. Für etwa eine halbe Sekunde sind die Fallback-Schriften zu sehen, erst dann die über TypeKit-Schriften dargestellt. Da das nicht Sinn und Zweck von TypeKit und Euch Leser irritiert, wird TypeKit klassisch im head-Element vor den Stylesheets geladen.&lt;/p&gt;
+
+&lt;p&gt;Disqus ist dagegen als Wordpress-Plug-In eingebunden und darauf würde ich auch nur sehr ungern verzichten. Ich könnte das Plug-In zwar anpassen, aber damit wäre die Update-Fähigkeit dahin. Da Disqus seine Scripts selbst asynchron lädt, sehe ich auch keine Notwendigkeit, den ganzen Aufwand zu betreiben und Module zu schreiben. Allerdings habe ich andere Plug-Ins wie die Lightbox und das Syntax Highlighting rausgeworfen und durch RequireJS-Module ersetzt, die nun fester Bestandteil des Themes sind. Geladen werden sie aber nur, wenn auch Beiträge vorhanden sind, die eine der Funktionen brauchen.&lt;/p&gt;
+
+&lt;p&gt;Falls ich Euch Interesse zu RequireJS geweckt habe, könnt Ihr meine Implementierung inkl. eine Ladesystems für Module aus dem HTML-Quelltext heraus im GitHub-Repository meines &lt;a href=&#34;https://github.com/MadCatme/mcw-blue&#34;&gt;Wordpress-Themes&lt;/a&gt; anschauen oder auch einen Fork erstellen, um damit selbst entwickeln zu können. Falls jemand Ideen oder Verbesserungen hat, ich freue mich über jede Anregung und jeden Pull-Request in GitHub.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Upload-Probleme mit PHP via FastCGI</title>
+      <link>https://webcodr.de/2012/04/upload-probleme-mit-php-via-fastcgi/</link>
+      <pubDate>Thu, 05 Apr 2012 22:15:00 +0100</pubDate>
+      
+      <guid>https://webcodr.de/2012/04/upload-probleme-mit-php-via-fastcgi/</guid>
+      <description>&lt;p&gt;Als ich eben eine neue Galerie in mein &lt;a href=&#34;http://www.madcatswelt.org/&#34;&gt;privates Weblog&lt;/a&gt; hochladen wollte, begrüßte mich bei jedem Versuch ein HTTP 500, besser bekannt als Internal Server Error. Die Meldung ist absolut nichtssagend und es lässt nur über Log-Dateien rausfinden, was eigentlich passiert.&lt;/p&gt;
+
+&lt;p&gt;Das Problem besteht offenbar seit dem Umzug auf einen virtuellen Server bei &lt;a href=&#34;http://www.hosteurope.de/&#34;&gt;Host Europe&lt;/a&gt; mit Ubuntu 10.04 LTS und Plesk zur Verwaltung. In Plesk wird PHP standardmäßig via mod_php in den Apache eingebunden. Da das aber u.U. Rechteprobleme zwischen dem Apache-User und dem FTP-User bei von PHP angelegten Dateien geben kann, lasse ich PHP via FastCGI laufen. Das braucht zwar mehr RAM, hat aber den Vorteil, dass der PHP-Prozess und FTP-Zugang über den gleichen Nutzer laufen. Im Gegensatz zu suPHP funktionieren damit auch Opcode Caches wie APC und es muss nicht für jede Anfrage auf ein Script ein neuer PHP-Prozess gestartet werden.&lt;/p&gt;
+
+&lt;p&gt;Nach etwas Recherche, war die Ursache aber schnell klar. Um mit FastCGI arbeiten zu können, verwendet der Apache das Modul mod_fcgid, das folgenden Fehler auslöst:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;mod_fcgid: HTTP request length 1019250 (so far) exceeds MaxRequestLen
+(131072)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sprich: sämtliche HTTP-Anfragen, deren Länge mehr als 128 KB beträgt, werden durch FastCGI nicht zugelassen. Wie man sieht, war der Request knapp 1 MB groß, was bei größeren Bildern in ordentlicher Qualität schnell passiert.&lt;/p&gt;
+
+&lt;p&gt;Um das Limit zu erhöhen, muss man in die Modul-Konfiguration unter /etc/apache2/mods-available/fcgid.conf eingreifen und folgenden Eintrag hinzufügen bzw. entsprechend verändern:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;MaxRequestLen 2097152
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Damit wird die Beschränkung auf 2 MB erhöht. Sollte für die meisten Zwecke mehr als ausreichen. Anschließend muss der Apache neu gestartet werden, damit die Änderung wirksam wird.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
