@@ -26,39 +26,39 @@ Die Symptome:
 
 - Starke Schwankungen bei den Ping-Zeiten, auch ohne Last.
 
-  Ein Vergleich:
+Ein Vergleich:
 
-  **Vodafone**
+**Vodafone**
 
-  ~~~ bash
-  ~ ❯❯❯ ping -c 100 google.de
-  PING google.de (172.217.21.195): 56 data bytes
-  64 bytes from 172.217.21.195: icmp_seq=0 ttl=53 time=21.271 ms
-  ...
-  64 bytes from 172.217.21.195: icmp_seq=99 ttl=53 time=28.892 ms
+~~~ bash
+~ ❯❯❯ ping -c 100 google.de
+PING google.de (172.217.21.195): 56 data bytes
+64 bytes from 172.217.21.195: icmp_seq=0 ttl=53 time=21.271 ms
+...
+64 bytes from 172.217.21.195: icmp_seq=99 ttl=53 time=28.892 ms
 
-  --- google.de ping statistics ---
-  100 packets transmitted, 100 packets received, 0.0% packet loss
-  round-trip min/avg/max/stddev = 19.163/30.845/111.265/15.526 ms
-  ~~~
+--- google.de ping statistics ---
+100 packets transmitted, 100 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 19.163/30.845/111.265/15.526 ms
+~~~
 
-  **Telekom**
+**Telekom**
 
-  ~~~ bash
-  ~ ❯❯❯ ping -c 100 google.de
-  PING google.de (172.217.21.163): 56 data bytes
-  64 bytes from 172.217.21.163: icmp_seq=0 ttl=57 time=21.731 ms
-  ...
-  64 bytes from 172.217.21.163: icmp_seq=99 ttl=57 time=21.594 ms
+~~~ bash
+~ ❯❯❯ ping -c 100 google.de
+PING google.de (172.217.21.163): 56 data bytes
+64 bytes from 172.217.21.163: icmp_seq=0 ttl=57 time=21.731 ms
+...
+64 bytes from 172.217.21.163: icmp_seq=99 ttl=57 time=21.594 ms
 
-  --- google.de ping statistics ---
-  100 packets transmitted, 100 packets received, 0.0% packet loss
-  round-trip min/avg/max/stddev = 21.482/21.760/22.146/0.156 ms
-  ~~~
+--- google.de ping statistics ---
+100 packets transmitted, 100 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 21.482/21.760/22.146/0.156 ms
+~~~
 
-  Mit IPv6 schaut's für Vodafone sogar noch etwas schlechter aus.
+Mit IPv6 schaut's für Vodafone sogar noch etwas schlechter aus.
 
-  Diese Ping-Messungen habe ich an einem frühen Nachmittag ausgeführt, also sollte sich die Last im Segmet bzw. Netz doch in Grenzen gehalten haben.
+Diese Ping-Messungen habe ich an einem frühen Nachmittag ausgeführt, also sollte sich die Last im Segmet bzw. Netz doch in Grenzen gehalten haben.
 
 Meine Diagnose:
 
