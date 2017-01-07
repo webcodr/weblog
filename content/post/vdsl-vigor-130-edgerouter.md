@@ -6,7 +6,7 @@ Meine Fritzbox 6490 ging mir ja schon länger auf den Zeiger, aber seit ca. acht
 
 ## Bisheriges Netzwerk
 
-Die Internet-Verbindung wird über die Fritzbox 6490 aufgebaut, die sonst außer VoIP nichts tut. An der Fritte hängt mein Ubiquiti EdgeRouter X, der dann das eigentliche Netzwerk aufbaut. Das Netz verteilt sich vom Wohnzimmer aus über drei SoHo-Switches von Cisco und zwei Ubiquiti UniFi AC Lite Access Points an die jeweiligen Endgeräte.
+Die Internet-Verbindung wird über die Fritzbox 6490 aufgebaut, die sonst außer VoIP nichts tut. An der Fritte hängt ein Ubiquiti EdgeRouter X, der dann das eigentliche Netzwerk aufbaut. Das Netz verteilt sich vom Wohnzimmer aus über drei SoHo-Switches von Cisco und zwei Ubiquiti UniFi AC Lite Access Points an die jeweiligen Endgeräte.
 
 Diese Konstellation führt zu doppeltem NAT. Hässlich, aber auch nicht weiter tragisch. Der EdgeRouter X kann Hardware-NAT und kostet höchstens 400 - 500 µs. Ein geringer Aufpreis für wesentlich mehr Kontrolle über mein Netzwerk. Nur die IPv6-Konfiguration zwischen Fritbox und EdgeRouter wollte einfach nicht klappen -- diese unendliche Geschichte will ich hier aber nicht weiter ausbreiten, hat sich eh erledigt.
 
