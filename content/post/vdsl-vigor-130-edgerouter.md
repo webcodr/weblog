@@ -46,7 +46,7 @@ Die Option "Only use one LAN" wird deaktiviert. Anschließed wird das Netz für 
 
 Unter "User Setup" verwende ich meine bestehenden User weiter. Sollte der EdgeRouter bisher nie konfiguriert worden sein, empfehle ich aber dringend einen neuen Nutzer mit eigenem Passwort anzulegen. Ein Router sollte nie über seine Standard-Zugangsdaten zugänglich sein.
 
-Nach dem Speichern startet sich der EdgeRouter neu und ist anschließend über die IP 10.0.0.1 an `eth1` wieder erreichbar. Im Dashboard sollte nun relativ bald unter `pppoe0` die öffentliche IPv4-Adresse sichtbar sein und damit auch die Internet-Verbindung bestehen.
+Nach dem Speichern startet sich der EdgeRouter neu und ist anschließend über die IP `10.0.0.1` an `eth1` wieder erreichbar. Im Dashboard sollte nun relativ bald unter `pppoe0` die öffentliche IPv4-Adresse sichtbar sein und damit auch die Internet-Verbindung bestehen.
 
 Grundsätzlich ist's damit getan, wenn einem IPv4 ausreicht.
 
