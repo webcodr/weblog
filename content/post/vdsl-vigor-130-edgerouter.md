@@ -24,6 +24,8 @@ Kommen wir zum Herzstück des Posts, denn die Konfiguration ist zwar grundsätzl
 
 Der gute Vigor wird bereits als Modem inkl. VLAN-Tagging für die Telekom vorkonfiguriert geliefert. Man muss eigentlich nur die neueste Firmware einspielen und das war's.
 
+Falls der Vigor wider erwarten doch nicht als Modem vorkonfiguriert geliefert wird, findet bei [iDomiX Hilfe (Text und Video)](https://idomix.de/draytek-vigor-130-als-vdsl-modem-einrichten).
+
 ### Ubiquiti EdgeRouter
 
 Ausgangsbasis ist der EdgeRouter X mit EdgeOS 1.9.1. Es sollte grundsätzlich genauso mit einem größeren EdgeRouter und neueren EdgeOS-Versionen funktionieren.
