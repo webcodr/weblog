@@ -9,7 +9,7 @@ cd deployment
 echo '[hugo deployment] commit and push new stuff'
 git add -A > /dev/null
 git commit -m "Update blog" --quiet > /dev/null
-git push --quiet > /dev/null
+git push origin master --quiet > /dev/null
 cd ..
 rm -rf deployment
 echo '[hugo deployment] end deployment'
