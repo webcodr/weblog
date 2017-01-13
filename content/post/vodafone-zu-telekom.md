@@ -1,7 +1,10 @@
 ---
-date: 2017-01-07T21:00:00+01:00
-title: Adios, Kabel-Internet
+date: 2017-01-13T17:00:00+01:00
+title: Adios, Kabel-Internet (Update)
 ---
+
+[Zum Nachtrag vom 13.1.2017](#vodafone-update-1)
+
 Wie im Guide zum Vigor 130 bzw. EdgeRouter X schon angedeutet, bin ich von meiner bisherigen Vodafone/Kabel Deutschland-Verbindung zur Telekom mit VDSL 100 gewechselt.
 
 Damit halbiert sich mein Downstream, da Vodafone hier 200 Mbit/s anbietet und VDSL mit Vectoring bekanntlich nur max. 100 Mbit/s hergibt. Als Trostpflaster gibt's aber immerhin 15 Mbit/s mehr Upstream.
@@ -85,3 +88,9 @@ Außerdem kann ich meine Wunsch-Hardware nutzen, auch wenn es nicht viele Vector
 Für die meisten tut's der übliche Speedport, der mir zumindest in seinem Verhalten unter Last besser gefällt als die Fritzbox. Der Vergleich hinkt natürlich etwas, da die Fritte deutlich mehr kann.
 
 In Sachen WLAN sind sie beide ziemlich meh, besonders im Vergleich zu meinen früheren AirPorts oder jetzt UniFi Access Points -- ist natürlich wieder unfair. Gibt weit teurere Consumer-Geräte, die viel schlimmer sind, siehe [Ars Technica](http://arstechnica.com/gadgets/2016/09/the-router-rumble-ars-diy-build-faces-better-tests-tougher-competition/).
+
+<strong id="vodafone-update-1">Nachtrag vom 13.1.2017:</strong>
+
+Nach diesem [Bericht von Golem](http://www.golem.de/news/traffic-shaping-vodafones-kabelnetz-soll-an-backbone-erweiterung-sparen-1701-125572.html) ist mir dann auch klar, warum ich die Probleme mit Vodafone hatte. Traffic Shaping verzögert oder verwirft Pakete einfach, je nach Konfiguration bzw. Last. Das erklärt die schwankenden Ping-Zeiten, den Packet Loss in Spielen, die inkonsistenten Download-Raten usw.
+
+Es ist zwar logisch, dass Vodafone QoS einsetzt, damit das Netz nicht komplett zum Teufel geht. Man kann aber nicht einfach den Backbone-Ausbau verschlafen oder gar sogar absichtlich verzögern, während man den Kabel-Kunden immer mehr Bandbreite anbietet und die DSL-Kunden ins Kabelnetz lockt bzw. mancherorts wohl sogar [drängt](http://www.golem.de/news/ueberlastet-vodafone-raeumt-geringere-vdsl-downstream-raten-ein-1701-125494.html).
