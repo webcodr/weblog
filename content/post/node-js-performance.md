@@ -37,7 +37,7 @@ than my MacBook. Docker on HyperV is incredibly fast and a joy to work with.
 
 The improvement between version 8.2.1 and 8.4.0 is a bummer. V8 6.0  
 does a great job. Node.js 6 used Crankshaft as JIT, Node 8.0 to 8.2 used a combinaton
-of Crankshaft and Turbofan (V6 5.9). As of version 8.3.0 Node.js utilizes only Turbofan with
+of Crankshaft and Turbofan (V8 5.9). As of version 8.3.0 Node.js utilizes only Turbofan with
 V8 6.0.
 
 About 10% improvement with a minor version is a really big step and I'm really
