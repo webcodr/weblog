@@ -10,7 +10,7 @@ LTS version, 6.11.2.
 
 ## Testing methodology
 
-The Webpack build builds contains the following tasks:
+The Webpack build contains the following tasks:
 
 - Building of two stylesheets with SASS and Autoprefixer
 - Transpiling with Babel of a large AngularJS app written in ES2015
