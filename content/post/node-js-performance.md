@@ -1,6 +1,7 @@
 ---
 date: 2017-08-28T22:00:00+02:00
 title: Real-world Node.js Performance Improvements
+displayLanguage: en
 ---
 I just updated from Node.js 8.2.1 to 8.4.0 within my current project. The update
 to V8 6.0 really shines as I noticed some major real-world performance improvements.

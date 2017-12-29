@@ -1,6 +1,7 @@
 ---
 date: 2017-01-08T20:00:00+01:00
 title: Webpack 2 with Pug and SASS
+displayLanguage: en
 ---
 Until now I used some Gulp tasks with Jade and SASS to create the HTML and CSS files as a base for the webcodr blog theme. A crude little setup, but it worked.
 

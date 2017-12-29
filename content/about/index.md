@@ -1,6 +1,7 @@
 ---
 date: 2017-12-29T13:00:00+01:00
 title: "About"
+displayLanguage: en
 ---
 My name is David. I'm a software developer at inovex GmbH in Munich.
 
