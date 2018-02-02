@@ -8,3 +8,4 @@ permalinks:
 canonifyURLs: true
 enableRobotsTXT: true
 googleAnalytics: "UA-30669413-1"
+staticDir: ["static"]
