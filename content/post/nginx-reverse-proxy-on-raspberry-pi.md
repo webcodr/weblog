@@ -25,6 +25,12 @@ sudo certbot certonly --authenticator standalone -d example.com --pre-hook "serv
 ~~~
 
 ~~~ sh
+sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+~~~
+
+This may take a while, depending on your Raspberry Pi version.
+
+~~~ sh
 sudo vim /etc/nginx/sites-enabled/example.com
 ~~~
 
