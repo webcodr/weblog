@@ -18,7 +18,7 @@ Zu meinem großem Glück bin ich dann zufällig über [Sublime Text 2](http://ww
 * Erweiterbar über sog. Packages, die es für so ziemlich alles gibt, von ActionScript über Git bis Zen Coding (ein Großteil der TextMate Bundles ist kompatibel!)
 * Sehr schnell und keine Probleme mit extrem langen Zeilen (TextMate gerät da teilweise unglaublich ins Stocken bishin zum Absturz).
 * Tabs (ja, die kann TextMate auch, aber nur innerhalb von Projekten).
-*Regelmäßige Updates.
+* Regelmäßige Updates.
 
 Wie effizient man mit Sublime Text und ein paar kleinen Tools entwickeln kann, zeigt Andrey Tarantsov in einem sehr schönen [Video](http://tarantsov.com/blog/2012/02/sublime-text-workflow-that-beats-coda-and-espresso/). Da zeigt sich auch mal wieder, dass für Web-Entwickler OS X immer noch die beste Plattform ist — viele Tools gibt es für Windows schlichtweg nicht. Mal davon abgesehen, dass Arbeiten mit einem Terminal immer noch eine Qual ist. [Cygwin](http://www.cygwin.com/) ist hier zwar ein Segen, aber auch nicht allmächtig, da es nicht für alles wichtige kompatible Versionen gibt (Stichwort Ruby Gems …).
 

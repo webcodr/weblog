@@ -152,9 +152,3 @@ Anschließend sollte der Zugriff über die IP-Adresse `192.168.1.1` auf den Vigo
 So, das war's dann eigentlich schon. Ich hoffe, diese kleine Anleitung konnte dem ein oder anderen etwas weiterhelfen.
 
 Da nicht alles davon auf meinem Mist gewachsen ist, möchte mich an dieser Stelle noch beim Autor des Blogs [TauSys](https://blog.tausys.de) bedanken. Falls jemand in og. Konfiguration noch Entertain miteinbeziehen möchte, sei ihm dieser [Post](https://blog.tausys.de/2016/02/22/edgerouter-am-telekom-internetanschluss-mit-entertain-und-ipv6/) wärmstens empfohlen.
-
-Wer Interesse daran hat den Vigor 130 oder den EdgeRouter X zu kaufen und mich unterstützen möchte, kann folgende Amazon-Links benutzen. Vielen Dank!
-
-[DrayTek Vigor 130](https://www.amazon.de/gp/product/B00F9E5LQA/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B00F9E5LQA&linkCode=as2&tag=web0b0-21)
-
-[Ubiquiti EdgeRouter X](https://www.amazon.de/gp/product/B011N1IT2A/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B011N1IT2A&linkCode=as2&tag=web0b0-21)

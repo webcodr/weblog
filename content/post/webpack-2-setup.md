@@ -29,7 +29,7 @@ It depends on your templates how easy or complicated this step is. My template f
 
 ## Using Webpack 2
 
-Webpack 2 isn`t finished yet. The current version is 2.2.0 RC3, but even the Beta version were stable enough to use it for production purposes.
+Webpack 2 isn't finished yet. The current version is 2.2.0 RC3, but even the Beta version were stable enough to use it for production purposes.
 
 Here's my `package.json` file with all necessary modules:
 

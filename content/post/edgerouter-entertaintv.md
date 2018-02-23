@@ -82,15 +82,3 @@ Das war's eigentlich schon. Ihr müsst nur noch einen Commit machen und speicher
 Ich hatte die ganze Konfiguration bereits anhand diverser Blog- und Foren-Posts im Vorraus gemacht und erstaunlicherweise hat sie auf Anhieb funktioniert. Es treten keinerlei Broadcast-Probleme auf. 
 
 Falls Ihr den Verdacht habt, das lässt sich mit Wireshark sehr einfach überprüfen: einfach die aktive Netzwerk-Schnittstelle abfragen und auf Broadcasts bzw. ungewöhnlich viele UDP-Pakete achten, die von den EntertainTV-IP-Adressen kommen.
-
-Wer Interesse hat, einen EdgeRouter X oder ein anderes der genannten Geräte zu kaufen und mich unterstützen möchte, kann folgende Amazon-Links benutzen. Vielen Dank!
-
-[DrayTek Vigor 130](https://www.amazon.de/gp/product/B00F9E5LQA/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B00F9E5LQA&linkCode=as2&tag=web0b0-21)
-
-[Ubiquiti EdgeRouter X](https://www.amazon.de/gp/product/B011N1IT2A/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B011N1IT2A&linkCode=as2&tag=web0b0-21)
-
-[Ubiquiti UniFi AP AC Lite](https://www.amazon.de/Ubiquiti-Networks-2-4GHz-867Mbit-UAP-AC-LITE/dp/B016K4GQVG/ref=as_li_ss_tl?ie=UTF8&qid=1517615751&sr=8-1&keywords=unifi+ap+lite&dpID=31oux4k0ZCL&preST=_SY300_QL70_&dpSrc=srch&linkCode=ll1&tag=web0b0-21&linkId=4062e73def8bd2b9986a2077a000be6d)
-
-[Ubiquiti UniFi US-8](https://www.amazon.de/Ubiquiti-Networks-US-8-UniFiSwitch-8/dp/B01N362YPG/ref=as_li_ss_tl?s=computers&ie=UTF8&qid=1517615825&sr=1-1&keywords=unifi+us-8&dpID=41tiJ33jrSL&preST=_SX300_QL70_&dpSrc=srch&linkCode=ll1&tag=web0b0-21&linkId=aaea6f79bbb3f230cf761ddd61e4f8a8)
-
-[Ubiquiti UniFi US-8-60W POE](https://www.amazon.de/Ubiquiti-US-8-60W-UniFi-Switch-Grau/dp/B004BQCKXO/ref=as_li_ss_tl?s=computers&ie=UTF8&qid=1517615825&sr=1-2&keywords=unifi+us-8&dpID=31ilOcMTfRL&preST=_SX300_QL70_&dpSrc=srch&linkCode=ll1&tag=web0b0-21&linkId=fae5ac376c34e72a5c9d21332ea77898)

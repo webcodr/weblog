@@ -75,9 +75,3 @@ Ich bin mit beiden Geräten sehr zufrieden. Für knapp 60 Euro bekommt man in be
 Nur wer sich glücklich schätzen kann eine Gigabit-Internetverbindung zu besitzen, dürfte mit dem ER-X die schlauere Wahl treffen -- auch wenn in der Realität der Unterschied geringer ausfallen wird. Ganz nebenbei: der hEX hat natürlich auch größere Brüder.
 
 Letztendlich dürfte es für die meisten von uns eine reine Geschmacksfrage sein. Ich werde beide im Wechsel einsetzen und die Entwicklung beobachten. Da beide praktischerweise 24 V Passive PoE unterstützen, lassen sie sich sehr einfach tauschen. Kabel bei einem abstecken, beim anderen anstecken -- fertig.
-
-Wer Interesse daran hat den hEX oder den EdgeRouter X zu kaufen und mich unterstützen möchte, kann folgende Amazon-Links benutzen. Vielen Dank!
-
-[MikroTik hEX (RB350Gr3)](https://www.amazon.de/gp/product/B01MFI3AHQ/ref=as_li_ss_tl?ie=UTF8&psc=1&linkCode=ll1&tag=web0b0-21&linkId=0d11596e9e1bac0abd3c366da4ba57bd)
-
-[Ubiquiti EdgeRouter X](https://www.amazon.de/gp/product/B011N1IT2A/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B011N1IT2A&linkCode=as2&tag=web0b0-21)
