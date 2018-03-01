@@ -2,6 +2,8 @@
 date: 2018-02-28T18:00:00+01:00
 title: Telekom VDSL MTU und MSS Clamping für IPv4 und IPv6
 ---
+[To English Version](#summary-in-english)
+
 Wer schon mal in die USA geflogen ist, kennt sicher das Electronic System for Travel Authorization (ESTA). Jeder Fluggast, der in die USA einreist, dort umsteigt oder sie sogar nur überfliegt, muss sich dort anmelden und eine Erlaubnis einholen. Dieser Spaß kostet 14 US-Dollar und wird via `pay.gov` bezahlt.
 
 Als ich letztes Jahr für eine Reise in USA einen ESTA-Antrag gestellt habe, war `pay.gov` für mich über die Telekom nicht erreichbar. Via Mobilfunk ging es merkwürdigerweise problemlos, also lag für mich das Problem bei der Telekom. Ein kurzer Austausch mit @telekom_hilft bei Twitter brachte leider keine Besserung, da der Zugriff auf `pay.gov` für den Support-Mitarbeiter einwandfrei funktionierte.
