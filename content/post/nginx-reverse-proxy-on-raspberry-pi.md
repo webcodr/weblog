@@ -1,9 +1,9 @@
 ---
 date: 2018-02-17T22:28:05+01:00
-title: NGINX Reverse Proxy on Raspberry Pi with Let's Encrypt
+title: nginx Reverse Proxy on Raspberry Pi with Let's Encrypt
 ---
 
-Another weekend, another guide. This time I will show you, how to setup a reverse proxy with NGINX on a Raspberry Pi and secure the connection with a certificate from Let's Encrypt.
+Another weekend, another guide. This time I will show you, how to setup a reverse proxy with nginx on a Raspberry Pi and secure the connection with a certificate from Let's Encrypt.
 
 ***NOTICE OF CAUTION BEGIN*** 
 
@@ -19,11 +19,11 @@ Still here? Okay, you have been warned. Let's go.
 
 Please make sure, to forward port 80 and 443 from your router to the Raspberry Pi.
 
-## Install NGNIX and Certbot
+## Install nginx and Certbot
 
 This guide assumes that you're running the latest version of Raspian on your Pi. It's based on Debian Stretch. If you're using an older version based Jessie or even Wheezy, please consider a dist upgrade. This is not without risk, so back-up your current installation!
 
-If you're already running a web server on your Pi, you should disable it. Otherwise NGINX will not be able to use port 80 and 443. If you need that other web server, you should configure it to run on other ports and use NGINX to forward the connections.
+If you're already running a web server on your Pi, you should disable it. Otherwise nginx will not be able to use port 80 and 443. If you need that other web server, you should configure it to run on other ports and use nginx to forward the connections.
 
 Now, to the installation:
 
@@ -32,7 +32,7 @@ sudo apt-get update
 sudo apt-get install nginx-full certbot -y
 ~~~
 
-The NGINX service will automatically start after APT finished.
+The nginx service will automatically start after APT finished.
 
 ## Issue a certificate
 
@@ -42,21 +42,21 @@ In order to create a certificate, Certbot will need access to port 80, but that'
 sudo certbot certonly --authenticator standalone -d example.com --pre-hook "service nginx stop" --post-hook "service nginx start"
 ~~~
 
-This tells certbot to issue a certificate for `example.com` by using a standalone web server to validate the domain for the Let's Encrypt service. In order to run the server, you have to shutdown NGINX until certbot is finished. The pre hook and post hook parameters will help you with that.
+This tells certbot to issue a certificate for `example.com` by using a standalone web server to validate the domain for the Let's Encrypt service. In order to run the server, you have to shutdown nginx until certbot is finished. The pre hook and post hook parameters will help you with that.
 
 After the certificate is successfully issued, your new certificate and all other necessary files will be available here: `/etc/letsencrypt/live/example.com`
 
-## Configure NGINX
+## Configure nginx
 
 Don't like vim? Just use whatever editor you prefer instead.
 
-Add a new site config to NGINX:
+Add a new site config to nginx:
 
 ~~~ sh
 sudo vim /etc/nginx/sites-enabled/example.com
 ~~~
 
-All files in `/etc/nginx/sites-enabled/` will be automatically used by NGINX.
+All files in `/etc/nginx/sites-enabled/` will be automatically used by nginx.
 
 Here is a config for `example.com`, that will be forwarded to `10.0.0.2`.
 
@@ -103,7 +103,7 @@ sudo nginx -t
 
 The validator will tell you, if anything is wrong and why it's not working.
 
-No errors? Great, just restart NGINX and your reverse proxy is working.
+No errors? Great, just restart nginx and your reverse proxy is working.
 
 ~~~ sh
 sudo service nginx restart
@@ -133,7 +133,6 @@ Add the following cron job and save.
 0 0 1 * * sudo certbot renew --pre-hook "service nginx stop" --post-hook "service nginx start"
 ~~~
 
-And you're done. From now on, you're certificates will be renewed every month automatically.
+And you're done. From now on, your certificates will be renewed every month automatically.
 
 More domains? No problem, just issue the certificate and add another site config.
-
