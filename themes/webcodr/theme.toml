@@ -1,0 +1,12 @@
+name = "webcodr"
+license = "MIT"
+licenselink = "https://github.com/WebCodr/theme/blob/master/LICENSE.md"
+description = ""
+homepage = ""https://github.com/WebCodr/theme/"
+tags = ["webcodr"]
+features = ["", ""]
+min_version = 0.14
+
+[author]
+  name = "David Henning"
+  homepage = "https://webcodr.de"

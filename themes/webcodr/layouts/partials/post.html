@@ -1,0 +1,11 @@
+<article class="post">
+    {{ if eq .Type "post" }}
+        <p class="post-meta">
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" class="post-date">{{ .Date.Format "2. January 2006" }}</time>
+        </p>
+    {{ end }}
+    <h1 class="post-headline"><a href="{{ .Permalink }}" class="post-link--headline">{{ .Title }}</a></h1>
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+</article>
