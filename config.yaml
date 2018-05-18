@@ -1,6 +1,6 @@
 baseurl: "https://webcodr.io/"
 languageCode: "de-de"
-title: "WebCodr"
+title: "webcodr"
 metaDataFormat: "yaml"
 theme: "webcodr"
 permalinks:
