@@ -25,15 +25,14 @@ import { deliverJson } from 'delivery-guy'
 
 const getItems = async () => {
   try {
-    return await deliverJson('/api/items')
+    const items = await deliverJson('/api/items')
+    console.log(items)
   } catch (e) {
     console.error(e.message)
     console.log('HTTP Status', e.response.status)
     console.log('Response Body'. e.responseBody)
   }
 }
-
-const items = getItems()
 ~~~
 
 ### What's going on here?
