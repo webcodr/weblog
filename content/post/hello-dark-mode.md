@@ -11,7 +11,8 @@ It's quite simple to implement. Every modern browser can evaluate media queries 
 I added the following to my application JavaScript file:
 
 ~~~ JavaScript
-const preferColorSchemeResult = window.matchMedia('(prefers-color-scheme: dark)')
+const preferColorSchemeResult
+  = window.matchMedia('(prefers-color-scheme: dark)')
 
 if (preferColorSchemeResult && preferColorSchemeResult.matches === true) {
   document.documentElement.setAttribute('data-theme', 'dark')
