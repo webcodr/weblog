@@ -10,3 +10,9 @@ enableRobotsTXT: true
 staticDir: ["static"]
 pygmentsCodefences: true
 pygmentsUseClasses: true
+blackfriday:
+  plainIDAnchors: false
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5

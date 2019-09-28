@@ -2,7 +2,7 @@
 date: 2018-02-28T18:00:00+01:00
 title: Telekom VDSL MTU und MSS Clamping für IPv4 und IPv6
 ---
-[To English Version](#summary-in-english)
+[To English Version]({{< relref "#summary-in-english" >}})
 
 Wer schon mal in die USA geflogen ist, kennt sicher das Electronic System for Travel Authorization (ESTA). Jeder Fluggast, der in die USA einreist, dort umsteigt oder sie sogar nur überfliegt, muss sich dort anmelden und eine Erlaubnis einholen. Dieser Spaß kostet 14 US-Dollar und wird via `pay.gov` bezahlt.
 
@@ -51,9 +51,9 @@ Commit und speichern, Problem gelöst.
 
 ## Summary in English
 
-Do you have strange loading problems with certain websites? They do not work at all or the first request takes a long time? Then consider MSS Clamping as a possible solution. 
+Do you have strange loading problems with certain websites? They do not work at all or the first request takes a long time? Then consider MSS Clamping as a possible solution.
 
-In my case, `pay.gov` was impossible to reach via IPv6. If the server sends too big packets, your system can't process them correctly. Wireshark will help you to detect such faulty packets. 
+In my case, `pay.gov` was impossible to reach via IPv6. If the server sends too big packets, your system can't process them correctly. Wireshark will help you to detect such faulty packets.
 
 MSS clamping will alter the packet headers within your router to tell the server the max allowed packet size without the usage of ICMP. It's kind of a hack, but it works fine and is sometimes the only solution, if the server blocks ICMP, as US government websites do.
 
