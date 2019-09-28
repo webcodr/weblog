@@ -8,3 +8,5 @@ permalinks:
 canonifyURLs: true
 enableRobotsTXT: true
 staticDir: ["static"]
+pygmentsCodefences: true
+pygmentsUseClasses: true
