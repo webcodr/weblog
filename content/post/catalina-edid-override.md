@@ -10,9 +10,9 @@ and sometimes blurry fonts.
 If you're having this problem, like me, you know the fix: a patched EDID created with this
 [little Ruby script](https://embdev.net/attachment/168316/patch-edid.rb).
 
-The installation of this EDID override could be tedious since the release El Capitan, as SIP won't let you
-access the necessary system directories. Just disable it in recovery mode, copy the file and enable
-it again. It sucks, but works just fine.
+The installation of this EDID override could be tedious since the release of El Capitan, as SIP won't let you
+access the necessary system files. Just disable it in recovery mode, copy the file and enable
+it again. Sucks, but works just fine.
 
 Now, Catalina is out for a few hours and has a new way to annoy people who need EDID overrides.
 All system-related directories and files are read-only, regardless of the status of SIP.
