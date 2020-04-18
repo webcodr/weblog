@@ -7,7 +7,7 @@
     <div class="container container--main">
         <main class="content">
             {{ range ( .Paginate (where .Data.Pages "Type" "post") ).Pages }}
-            {{ partial "post.html" . }}
+            {{ partial "post.html"  (dict "context" . "location" "list") }}
             {{ end }}
 
             {{ partial "pagination.html" . }}
