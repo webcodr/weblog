@@ -8,7 +8,7 @@ Have you ever tried to write a custom error class in JavaScript? Well, it does w
 
 Here is a little example of a custom error class:
 
-~~~ javascript
+```js
 class MyError extends Error {
   constructor(foo = 'bar', ...params) {
     super(...params)
@@ -31,13 +31,13 @@ try {
   console.log(e instanceof MyError) // -> false
   console.log(e.getFoo()) // -> Uncaught TypeError: e.getFoo is not a function
 }
-~~~
+```
 
 Works fine in any browser with ES6/ES2015 support, but if you transpile the example with Babel to ES5 and execute the code, you will get the results shown in the comments.
 
 ## Why
 
-Due to limitations of ES5 it's not possible to inherit from built-in classes like `Error`, see the [Babel docs](https://babeljs.io/docs/usage/caveats/#classes).
+Due to limitations of ES5 it's not possible to inherit from built-in classes like `Error`, see the [Babel docs][1].
 
 ### Possible solution
 
@@ -50,3 +50,5 @@ If it's not feasable to use the plug-in, you can at least access properties set 
 ## Conclusion
 
 Nothing of this ideal. We have to wait until it's possible to use ES6/ES2015 directly. Yes, we all could set our transpile targets to ES6/ES2015 today, but our clients usually won't allow it. Some customer is always browsing the web with an ancient device/browser.
+
+[1]:	https://babeljs.io/docs/usage/caveats/#classes

@@ -6,7 +6,7 @@
     {{ partial "header.html" . }}
     <div class="container container--main">
         <main class="content">
-            {{ range ( .Paginate (where .Data.Pages "Type" "post") ).Pages }}
+            {{ range ( .Paginate (where .Site.Pages "Type" "post") ).Pages }}
             {{ partial "post.html"  (dict "context" . "location" "list") }}
             {{ end }}
 

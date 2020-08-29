@@ -10,7 +10,7 @@ It's quite simple to implement. Every modern browser can evaluate media queries 
 
 I added the following to my application JavaScript file:
 
-~~~ JavaScript
+```js
 const preferColorSchemeResult
   = window.matchMedia('(prefers-color-scheme: dark)')
 
@@ -19,7 +19,7 @@ if (preferColorSchemeResult && preferColorSchemeResult.matches === true) {
 } else {
   document.documentElement.setAttribute('data-theme', 'light')
 }
-~~~
+```
 
 The script will set the data attribute `theme` on the document element (html) with the possible values
 `dark` or `light` depending on the result of the media query.
@@ -29,7 +29,7 @@ There's no need for a polyfill, even IE 10 supports `window.matchMedia()`
 Stylesheet changes is even simpler, since I already had introduced SCSS color variables a while ago. I just
 had to replace them with CSS variables.
 
-~~~ scss
+```scss
 // colors
 $c_white: #fff;
 $c_dark-grey: #4A4A4A;
@@ -43,7 +43,7 @@ $c_dark-grey: #4A4A4A;
   --container-background-color: #{darken($c_dark-grey, 20%)};
   ...
 }
-~~~
+```
 
 That's basically it. If you use SCSS, please take notice to use interpolations to map the SCSS
 variables to CSS variables. This change in SassScript expressions was necessary to provide full

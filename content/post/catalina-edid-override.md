@@ -8,7 +8,7 @@ will detect your monitor as a TV and set the color space to YCbCr. You will get 
 and sometimes blurry fonts.
 
 If you're having this problem, like me, you know the fix: a patched EDID created with this
-[little Ruby script](https://embdev.net/attachment/168316/patch-edid.rb).
+[little Ruby script][1].
 
 The installation of this EDID override could be tedious since the release of El Capitan, as SIP won't let you
 access the necessary system files. Just disable it in recovery mode, copy the file and enable
@@ -32,10 +32,10 @@ Fortunately Apple was not crazy enough to disable the write access completely.
 
 Here's an example of the shell commands:
 
-~~~ shell
+```bash
 cd /Volumes/Macintosh\ HD/System/Library/Displays/Contents/Resources/Overrides
 cp -rf /Volumes/Macintosh\ HD/Users/webcodr/DisplayVendorID-5a63 .
-~~~
+```
 
 **Don't forget to use the correct volume and user names!**
 
@@ -47,3 +47,5 @@ within the user library as it was possible many years ago. It just sucks to do t
 macOS upgrade and every time you improve system security, it gets harder.
 
 Please, don't forget us powers users ...
+
+[1]:	https://embdev.net/attachment/168316/patch-edid.rb

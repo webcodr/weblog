@@ -40,7 +40,7 @@ Um eine Verkettung von Methodenaufrufen zu ermöglichen gibt jede Methode, die s
 
 Hier ein kleines Beispiel aus CodrPress, was man damit alles anstellen kann:
 
-~~~ php
+```php
 <?php
 
 Post::where()->each(function($document) use ($app) {
@@ -48,7 +48,7 @@ Post::where()->each(function($document) use ($app) {
     $html = $app['markdown']->transform($md);
     $document->set('body_html', $html)->save();
 });
-~~~
+```
 
 Die statische Methode `Post::where()` liefert ohne Quert alle Posts als MutableMap-Objekt zurück. Auf die Rückgabe lässt sich sofort `each()` anwenden, das alle Elemente der Liste iteriert und die definierte Closure auf jedes Element einzeln anwendet.
 
@@ -60,4 +60,7 @@ In diesem Fall wird das rohe Markdown aus dem Feld `body` in HTML transformiert 
 
 ## Download
 
-Die drei Klassen sind nicht länger Teil von MongoAppKit. Ich habe sie in ein separates [GitHub-Repository](https://github.com/WebCodr/Collection) und [Composer-Paket](https://packagist.org/packages/webcodr/collection) ausgelegt, um eine unkomplizierte Nutzung ohne MongoAppKit zu ermöglichen. Viel Spaß!
+Die drei Klassen sind nicht länger Teil von MongoAppKit. Ich habe sie in ein separates [GitHub-Repository][1] und [Composer-Paket][2] ausgelegt, um eine unkomplizierte Nutzung ohne MongoAppKit zu ermöglichen. Viel Spaß!
+
+[1]:	https://github.com/WebCodr/Collection
+[2]:	https://packagist.org/packages/webcodr/collection
