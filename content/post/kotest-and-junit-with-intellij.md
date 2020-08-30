@@ -1,6 +1,6 @@
 ---
 date: 2020-08-29T22:26:07+02:00
-title: "Kotest and JUnit with IntelliJ or: don’t frak up your toolchain upgrades”
+title: "Kotest and JUnit with IntelliJ or: don’t frak up your toolchain upgrades"
 draft: false
 ---
 My team and I recently decided to use Kotlin for new features in our existing project. It was a great choice to implement a new authentication process and we’re now rewriting some older parts of the application from Java to Kotlin.
@@ -126,4 +126,4 @@ Well, that was a long post, but IMO it was necessary to show how this problem ca
 
 ## Gradle
 
-I’m not sure, but this issue could happen with Gradle as well, when you are migrating to JUnit 5. 
+I’m not sure, but this issue could happen with Gradle as well, when you are migrating to JUnit 5.
