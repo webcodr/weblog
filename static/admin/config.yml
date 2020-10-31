@@ -6,11 +6,21 @@ public_folder: /images
 site_url: https://webcodr.io
 display_url: https://webcodr.io
 collections:
-  - name: 'webcodr'
-    label: 'post'
+  - name: 'posts'
+    label: 'posts'
+    label_singular: 'post'
     folder: 'content/post'
     create: true
     slug: '/{{year}}/{{month}}/{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'about'
+    file: 'content/about/index.md'
+    slug: '/{{slug}}'
     editor:
       preview: false
     fields:

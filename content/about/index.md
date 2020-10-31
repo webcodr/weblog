@@ -1,7 +1,6 @@
 ---
 date: 2017-12-29T13:00:00+01:00
 title: "About"
-displayLanguage: en
 ---
 The topics of webcodr include the nerdy stuff. Programming, cool networking hardware, mechanical keyboards, insights into Apple products (planed) and water-cooling hardware (planed).
 
