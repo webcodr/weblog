@@ -3,9 +3,11 @@ backend:
   branch: master
 media_folder: static/images
 public_folder: /images
+site_url: https://webcodr.io
+display_url: https://webcodr.io
 collections:
   - name: 'webcodr'
-    label: 'webcodr'
+    label: 'post'
     folder: 'content/post'
     create: true
     slug: '/{{year}}/{{month}}/{{slug}}'
