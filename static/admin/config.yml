@@ -20,7 +20,8 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'about'
     label: 'about'
-    files: 'content/about/index.md'
+    files:
+      - 'content/about/index.md'
     slug: '/{{slug}}'
     editor:
       preview: false
