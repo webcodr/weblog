@@ -1,5 +1,5 @@
 ---
-title: Ryzen vs Apple Silicon and why Zen 2 is not so bad as you may think
+title: Ryzen vs Apple Silicon and why Zen 3 is not so bad as you may think
 date: 2020-11-18T22:34:23.422Z
 ---
 Apple‘s M1 is a very impressive piece of hardware. If you look at the benchmarks, like SPECperf or Cinebench, it‘s an absolute beast with a ridiculously low power consumption compared with a Ryzen 9 5950X.
