@@ -13,19 +13,19 @@ Here are basic things to know:
 * Apple‘s M1 has four high power cores (Firestorm) and four high efficiency cores (Icestorm), this is called BIG.little architecture.
 * AMD’s Ryzen 9 5950X is a traditional x86 CPU with 16 cores and 32 Threads
 
-So what? The benchmarks are about single core performance and the Ryzen needs 40 W more. What a waste.
+So what? The benchmarks are about single core performance and Ryzen needs 40 W more. What a waste.
 
 Right, but this says nothing about the efficiency of a single core. 
 
-I don‘t have 5950X, but his older brother, the 3950X. Same core count and about the same power usage. While monitoring with HWINFO64 on a single core run of Cinebench R20 the used core needs about 10 - 12 W.
+I don‘t have a 5950X, but it‘s older brother, the 3950X. Same core count and about the same power usage. While monitoring with HWINFO64 on a single core run of Cinebench R20 the used core needs about 10 - 12 W.
 
-## Okay, but what happend to the other 38 watts?
+## Okay, but what happened to the other 38 watts?
 
 As you may know AMD introduced a so called chiplet architecture with Ryzen 3000. A Ryzen 9 5950X has three dies. Two with 8 cores each and a separate chip that handles I/O like PCIe 4, DDR4 memory and the Infinity Fabric links to the CPU dies.
 
 This I/O die consumes 15 to 17 W. It‘s a quite large chip produced in a 12 nm node by GlobalFoundries. That alone is a big reason for higher power usage compared to a modern node like TSMC‘s N7P (7 nm) used for the other two chiplets.
 
-Why 12 nm? It‘s a compromise, since TSMCs 7 nm production capabilities are still somewhat limited and AMD takes a fairly large share of the capacity. All Zen 2 and 3 cores are produced in 7 nm, as is any modern AMD GPU and of course there are other customers as well.
+Why 12 nm? It‘s a compromise, since TSMCs 7 nm production capabilities are still somewhat limited and AMD takes a fairly large share of the capacity. All Zen 2 and 3 cores are produced in 7 nm, as are all modern AMD GPUs and of course there are other customers as well.
 
 I hope AMD will improve the I/O die with Zen 4 (Ryzen 6000) dramatically. A modern process node and a bunch of better energy saving functions would do the trick.
 
@@ -33,25 +33,25 @@ I hope AMD will improve the I/O die with Zen 4 (Ryzen 6000) dramatically. A mode
 
 15 more cores are also unaccounted for. 21 divided by 15: about 1.4 W per core average. Seems a bit high, but possible. It depends on background tasks from the OS, the current Windows power plan etc.
 
-To be fair, AMDs energy saving functions per core could a little bit better. They are not bad at well, but there‘s room for improvements.
+To be fair, AMDs energy saving functions per core could a little bit better. They are not bad but there‘s room for improvements.
 
 ## Process nodes
 
-For a fair comparison we also have to include the process nodes. As mentioned above, Ryzen cores are manufactured in TSMC‘s 7 nm node. Unfortunately Apple is one step ahead in this category. The M1 and it‘s little brother A14 are already on 5 nm, again from TSMC.
+For a fair comparison we also have to include the process nodes. As mentioned above, Ryzen cores are manufactured in TSMC‘s 7 nm node. Apple is one step ahead in this category. The M1 and it‘s little brother A14 are already on 5 nm, again from TSMC.
 
 This alone could account for up to 30% less power usage. There are no exact numbers available, but 20 to 30% would reasonable.
 
 ## Core architecture
 
-Current Zen 3 cores and Apple‘s Firestorm cores have fundamental differences in architecture. Modern x86 cores are quite small but clock quite high. On a single core load like Cinebench R23 you will get about 5 GHz from 5950X while a Firestorm core will only clock to 3.2 GHz.
+Current Zen 3 cores and Apple‘s Firestorm cores have fundamental differences in architecture. Modern x86 cores are small but clock quite high. On a single core load like Cinebench R23 you will get about 5 GHz from 5950X while a Firestorm core will only clock to 3.2 GHz.
 
 Wait, what? Firestorm with 3.2 GHz is about as fast as Zen 3 with 5 GHz? That can‘t be true. Yet it is. According to the benchmarks a Firestorm core can execute about twice the instructions per cycle (IPC) as a Zen 3 core.
 
-Firestorm is an extremely wide core design with many processing units. This is complemented by a absurdly large L1 caches and re-order buffers. Much larger than on any x86 core ever.
+Firestorm is an extremely wide core design with many processing units. This is complemented by absurdly large L1 caches and re-order buffers. Much larger than on any x86 core ever.
 
 This allows Apple to lower the clock speed significantly without compromising performance. Lower clock speeds also mean lower voltage and power usage.
 
-But there‘s more: since the A13 (iPhone 11) Apple has quite many incremental power saving functions within every part their SoCs. They can lower the power usage to an absolute minimum or even can parts of the silicon on and off quite fast, to be ready when the user needs more computational power and as fast they turn it off.
+But there‘s more: since the A13 (iPhone 11) Apple has quite many incremental power saving functions within every part their SoCs. They can lower the power usage to an absolute minimum or even turn parts of the silicon on and off quite fast, to be ready when the user needs more computational power and as fast they turn it off.
 
 Modern x86 CPUs have similar functions but not quite as advanced or in as many parts as current Apple SoCs. Remember AMD‘s I/O which has basically the same power usage all the time.
 
