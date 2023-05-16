@@ -1,6 +1,6 @@
 ---
+title: Awesome tests with Vue and Jest
 date: 2018-04-25T17:27:26+02:00
-title: "Awesome tests with Vue and Jest"
 draft: false
 ---
 
@@ -14,7 +14,7 @@ it has some unique features.
 
 You are using Vue CLI? Consider yourself lucky, the set-up of Jest could not be simpler:
 
-~~~ sh
+~~~ shell
 yarn add --dev jest @vue/cli-plugin-unit-jest
 vue invoke unit-jest
 ~~~
@@ -25,7 +25,7 @@ Vue CLI will do the rest and also create an example spec for the HelloWorld comp
 
 Install all necessary dependencies:
 
-~~~ sh
+~~~ shell
 yarn add --dev @vue/test-utils babel-jest jest jest-serializer-vue vue-jest
 ~~~
 
@@ -60,7 +60,7 @@ You should also add a modern JavaScript preset to your `.babelrc` file:
 
 Add the following line to your `.gitignore` file:
 
-~~~ sh
+~~~ shell
 /coverage
 ~~~
 
@@ -103,7 +103,7 @@ simple, but testing is a little more complex due to the usage of `fetch`, `async
 
 Of course, there are some tools to help us:
 
-~~~ sh
+~~~ shell
 yarn add --dev fetch-mock flush-promises
 ~~~
 
