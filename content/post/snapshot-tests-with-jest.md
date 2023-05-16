@@ -1,6 +1,6 @@
 ---
+title: Snapshot Tests With Jest
 date: 2018-06-13T16:31:12+02:00
-title: "Snapshot Tests With Jest"
 draft: false
 ---
 
@@ -27,7 +27,7 @@ This is really useful with generated HTML and/or testing UI behaviour. Just call
 
 You added something to your code and the snapshot has to be updated? No problem:
 
-~~~ bash
+~~~ shell
 jest --updateSnapshot
 ~~~
 
