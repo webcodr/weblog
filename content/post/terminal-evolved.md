@@ -64,7 +64,7 @@ map cmd+right send_text all \x05
 # Nicer titlebar on macOS
 macos_titlebar_color background
 
-# Make vim the default editor for the kitty config (pico is the default, sigh)
+# Make vim the default editor for the kitty config
 editor vim
 ```
 
@@ -166,7 +166,7 @@ Of course vim has way more navigation possibilities. For example, the cursor can
 
 Netflix developer and Twitch Streamer [ThePrimagen](https://twitter.com/ThePrimeagen) designed a Neovim plug-in to learn the navigation commands as game. it's pretty good and fun: https://github.com/ThePrimeagen/vim-be-good
 
-AstronVim has many plug-in out of the box. Synatx highlighting, linting, auto-formatting etc. are all there, but you need to install the corresponding servers, parsers etc. 
+AstroNvim has many plug-in out of the box. Syntax highlighting, linting, auto-formatting etc. are all there, but you need to install the corresponding servers, parsers etc. 
 
 To do this, enter command line mode and use `LspInstall` followed by the language name for installing a language server protocol. A language server for [Tree-Sitter](https://github.com/tree-sitter/tree-sitter) can be installed with `TSInstall` followed by the language name. If there nothing available, both commands will recommend plug-ins according to your input, if available.
 
