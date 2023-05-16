@@ -4,7 +4,7 @@ title: "webcodr"
 metaDataFormat: "yaml"
 theme: "webcodr"
 permalinks:
-  post: /:year/:month/:title/
+  post: /:year/:month/:slug/
 canonifyURLs: true
 enableRobotsTXT: true
 staticDir: ["static"]

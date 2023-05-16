@@ -1,6 +1,7 @@
 ---
 date: 2012-08-24T22:25:16+01:00
 title: "Menlo Park, start your photocopiers ..."
+slug: "menlo-park-start-your-photocopiers"
 ---
 ## ... oder warum Software-Patente und Patentkriege scheiße sind.
 
