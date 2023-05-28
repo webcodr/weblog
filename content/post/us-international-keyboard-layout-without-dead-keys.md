@@ -10,16 +10,15 @@ Both keyboards work great, but to type German special characters I have to use t
 
 If you press them, nothing will happen at first. Only after pressing the next key, the symbol will appear. So, if you want to type a text wrapped in double quotes, you press the the key and the double quote will appear, as soon as you type the first character of the actual text. It's annoying as fuck and drives me crazy.
 
-## Solution 
+## Solution
 
-Unfortunately Microsoft does not ship an US international layout with dead keys without Windows. Most Linux distributions do exactly that, but I guess that's to easy for a big international corporation like Microsoft. 
+Unfortunately Microsoft does not ship an US international layout without dead keys without Windows. Most Linux distributions do exactly that, but I guess that's to easy for a big international corporation like Microsoft. 
 
 What to do? After a little bit of googling, I found a neat little tool, the Microsoft Keyboard Layout Creator. I've never heard of this program before but it's legit and works fine.
 
 If you're having trouble with the dead keys like me, I recommend the following steps:
 
 1. Download the [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134) from Microsoft's website
-
 2. Open it and load the US international layout via `File` -> `Load Existing Keyboard...` 
 3. All dead keys are shown with a light grey background. You can remove their dead key status via the context menu
 4. Don't forget to activate the shift layer via the checkboxes left of the keyboard layout and disable the dead keys as well
