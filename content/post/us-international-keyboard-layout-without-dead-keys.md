@@ -12,7 +12,7 @@ If you press them, nothing will happen at first. Only after pressing the next ke
 
 ## Solution 
 
-Unfortunately Microsoft does not ship an US international layout with dead keys with Windows. Most Linux distributions do exactly that, but I guess that's to easy for a big international corporation like Microsoft. 
+Unfortunately Microsoft does not ship an US international layout with dead keys without Windows. Most Linux distributions do exactly that, but I guess that's to easy for a big international corporation like Microsoft. 
 
 What to do? After a little bit of googling, I found a neat little tool, the Microsoft Keyboard Layout Creator. I've never heard of this program before but it's legit and works fine.
 
