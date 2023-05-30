@@ -57,6 +57,6 @@ HUGO_VERSION = "0.112.5"
     Content-Security-Policy = "default-src 'self'; script-src 'self' identity.netlify.com; style-src 'self'; img-src *; font-src 'self'"
 
 [[headers]]
-  for = "/admin/*"
+  for = "/admin*"
   [headers.values]
     Content-Security-Policy = ""
