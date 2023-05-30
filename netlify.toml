@@ -18,47 +18,45 @@ command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 HUGO_VERSION = "0.112.5"
 
 [[headers]]
-for = "/*.jpg"
+  for = "/*.jpg"
 
-[headers.values]
-Cache-Control = "public, max-age=604800"
-
-[[headers]]
-for = "/*.png"
-
-[headers.values]
-Cache-Control = "public, max-age=604800"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
 
 [[headers]]
-for = "/*.css"
+  for = "/*.png"
 
-[headers.values]
-Cache-Control = "public, max-age=604800"
-
-[[headers]]
-for = "/*.js"
-
-[headers.values]
-Cache-Control = "public, max-age=604800"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
 
 [[headers]]
-for = "/webfonts/*"
+  for = "/*.css"
 
-[headers.values]
-Cache-Control = "public, max-age=604800"
-
-[[headers]]
-for = "/*"
-
-[headers.values]
-X-Frame-Options = "DENY"
-X-XSS-Protection = "1; mode=block"
-X-Content-Type-Options = "nosniff"
-Referrer-Policy = "no-referrer"
-Content-Security-Policy = "default-src 'self'; script-src 'self' identity.netlify.com; style-src 'self'; img-src *; font-src 'self'"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
 
 [[headers]]
-for = "/admin/*"
+  for = "/*.js"
 
-[headers.values]
-Content-Security-Policy = ""
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/webfonts/*"
+
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' identity.netlify.com; style-src 'self'; img-src *; font-src 'self'"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    Content-Security-Policy = ""
