@@ -32,6 +32,13 @@ Server Runner will execute all server commands defined in the config section `se
 
 ## How do I get it?
 
-Currently you have to clone the [GitHub repository](https://github.com/webcodr/server-runner) and compile Server Runner yourself. I have tested it with macOS and Windows 11, it works well, but is still under development. If something goes wrong, the program will throw a panic event and just exits with error messages, so a graceful error handling is still missing.
+Server Runner is available as a [Cargo Crate](https://crates.io/crates/server-runner) and will be published soon on NPM with executables for macOS (aarch64, x86_64), Linux (aarch64, x86_86) and Windows (x86_64).
 
-After finishing Server Runner, I have to set up some tests and GitHub actions to build executables for macOS, Linux and Windows. I have not decided to distribute the executables yet. Homebrew, apt etc. would be nice, but I would have to add it to multiple package managers for a good availability. NPM is much easier and broadly available, as is a Docker image. 
+### Installation via Cargo
+
+~~~ sh
+cargo add server-runner
+~~~
+
+The source code is available on [GitHub](https://github.com/webcodr/server-runner).
+
