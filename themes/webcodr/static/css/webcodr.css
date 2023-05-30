@@ -610,19 +610,7 @@ h6 {
   padding: 0 1.5em;
 }
 .post-content pre {
-  margin: 1em 10px;<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
-  <title>Content Manager</title>
-</head>
-<body>
-  <!-- Include the script that builds the page and powers Decap CMS -->
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-</body>
-</html>
+  margin: 1em 10px;
 }
 .post-content .chroma code {
   position: relative;
@@ -633,19 +621,7 @@ h6 {
   font-family: "Roboto Mono", monospace;
   font-size: 14px;
   line-height: 1.5em;
-}<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
-  <title>Content Manager</title>
-</head>
-<body>
-  <!-- Include the script that builds the page and powers Decap CMS -->
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-</body>
-</html>
+}
 .post-content p code,
 .post-content ul code,
 .post-content ol code {
@@ -687,19 +663,7 @@ h6 {
 }
 .pagination__item-position-prev {
   text-align: left;
-}<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
-  <title>Content Manager</title>
-</head>
-<body>
-  <!-- Include the script that builds the page and powers Decap CMS -->
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-</body>
-</html>
+}
 .pagination__item-position-next {
   text-align: right;
 }
@@ -710,19 +674,7 @@ h6 {
   h1,
   h2,
   h3,
-  h4,<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
-  <title>Content Manager</title>
-</head>
-<body>
-  <!-- Include the script that builds the page and powers Decap CMS -->
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-</body>
-</html>
+  h4,
   h5,
   h6 {
     padding-left: 0;
