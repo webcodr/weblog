@@ -54,9 +54,3 @@ HUGO_VERSION = "0.112.5"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' identity.netlify.com; style-src 'self'; img-src *; font-src 'self'"
-
-[[headers]]
-  for = "/admin*"
-  [headers.values]
-    Content-Security-Policy = ""
