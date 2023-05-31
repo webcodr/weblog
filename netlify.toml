@@ -68,4 +68,5 @@ HUGO_VERSION = "0.112.5"
 
 [[redirects]]
   from = "/favicon.ico"
+  to = "/"
   status = 204
