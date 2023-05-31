@@ -629,7 +629,7 @@ h6 {
 }
 .post-content th {
   text-align: left;
-  color: var(--headline-tertiary-color);
+  color: var(--headline-base-color);
 }
 .post-content td,
 .post-content th {
