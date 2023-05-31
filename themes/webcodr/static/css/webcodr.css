@@ -381,15 +381,13 @@ textarea {
   --headline-base-color: #a253ec;
   --headline-seconday-color: #ff3e81;
   --headline-tertiary-color: #bd10e0;
-  --code-background-color: #f7f7f7;
-  --code-text-color: #ff3e81;
+  --code-background-color: #24273a;
+  --code-text-color: #f5a97f;
   --blockquote-border-color: #8925e7;
 }
 [data-theme="dark"] {
   --container-background-color: #171717;
   --post-text-color: #fff;
-  --code-background-color: #4a4a4a;
-  --code-text-color: #fff;
 }
 @font-face {
   font-family: Roboto;
@@ -621,7 +619,7 @@ h6 {
   border-radius: 5px;
   padding: 0.2em 0.3em;
   background-color: var(--code-background-color);
-  color: var(--headline-seconday-color);
+  color: var(--code-text-color);
   font-family: "Roboto Mono", monospace;
   font-size: 16px;
 }
@@ -661,7 +659,7 @@ h6 {
   text-align: right;
 }
 .pagination__link:hover {
-  color: var(--hheadline-seconday-color);
+  color: var(--headline-seconday-color);
 }
 @media screen and (min-width: 640px) {
   h1,
