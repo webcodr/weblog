@@ -156,7 +156,7 @@ legend {
 .chroma .ch,
 .chroma .cm,
 .chroma .cs {
-  color: #5b6078;
+  color: #a6da95;
   font-style: italic;
 }
 .chroma .cp,
@@ -629,7 +629,6 @@ h6 {
 }
 .post-content th {
   text-align: left;
-  color: var(--headline-base-color);
 }
 .post-content td,
 .post-content th {

@@ -1,5 +1,5 @@
 baseurl: "https://webcodr.io/"
-languageCode: "de-de"
+languageCode: "en-us"
 title: "webcodr"
 metaDataFormat: "yaml"
 theme: "webcodr"
