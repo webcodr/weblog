@@ -65,3 +65,7 @@ HUGO_VERSION = "0.112.5"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"
+
+[[redirects]]
+  from = "/favicon.ico"
+  status = 204
