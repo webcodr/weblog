@@ -5,7 +5,7 @@ draft: false
 ---
 The builder pattern is a great tool and it's heavily used in many Java projects and dependencies. But in a Kotlin code base it's looks a little odd and out-of-date. In this short post I will show you how to write a micro DSL on top of builder with just a few lines of code.
 
-I'm using Spring's (ResponseCookie)[https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/ResponseCookie.html] class as base for the DSL as it has a builder already on-board.
+I'm using Spring's [ResponseCookie](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/ResponseCookie.html) class as base for the DSL as it has a builder already on-board.
 
 A little example:
 
@@ -32,7 +32,9 @@ Instead of calling the static method `ResponseCookie.from()` that returns a `Res
 
 ~~~ kotlin
 fun createCookie(
-    name: String, value: String, lambda: ResponseCookieBuilder.() -> Unit
+    name: String, 
+    value: String, 
+    lambda: ResponseCookieBuilder.() -> Unit
 ) = ResponseCookie.from(name, value).apply(lambda).build()
 ~~~ 
 
