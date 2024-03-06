@@ -1,6 +1,7 @@
 ---
 title: Awsome CLI Tools
-date: 2024-03-06T21:21:06.644Z
+date: 2024-03-06T20:21:06.644Z
+draft: false
 ---
 
 There are some incredibly useful CLI tools out there. Here's a list with some awesome tools I'm using for my daily work.
