@@ -32,11 +32,11 @@ You're using multiple computers or just want a simple and reliable way to store 
 
 ## starship
 
-You shell looks boring? Theme it with [starship](https://starship.rs/)! There are many themes available and it's pretty easy to build your own. Starship also has integrations for many dev tools to show the current git status or currently active versions of your runtime environments like NodeJS, Rust, Go, Java etc.
+Your shell looks boring? Just theme it with [starship](https://starship.rs/)! It's pretty easy to build your own and if you don't want to, there many themes available. Starship also has integrations for many dev tools to show the current git status or currently active versions of your runtime environments like NodeJS, Rust, Go, Java etc.
 
 ## fzf
 
-Finding files with the usual suspects works fine, but [fzf](https://github.com/junegunn/fzf) can do this faster and much more intuitive. It's a fuzzy finding search within your current directory, processes git commits, history (if you don't like Atuin) and much more.
+Finding files with the usual suspects works fine, but [fzf](https://github.com/junegunn/fzf) can do this faster and much more intuitive. It's a fuzzy finding search within your current directory, processes, git commits, history (if you don't like Atuin) and much more.
 
 ## ripgrep
 
