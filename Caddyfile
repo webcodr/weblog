@@ -1,0 +1,7 @@
+webcodr.io {
+  file_server
+}
+
+www.webcodr.io {
+  redir https://webcodr.io{uri} permanent
+}
