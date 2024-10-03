@@ -1,5 +1,8 @@
 webcodr.io {
   encode zstd gzip
+  header /fonts/* Cache-Control max-age=31536000
+  header /js/* Cache-Control max-age=31536000
+  header /css/* Cache-Control max-age=31536000
   file_server
 }
 
