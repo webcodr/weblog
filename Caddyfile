@@ -9,3 +9,15 @@ webcodr.io {
 www.webcodr.io {
   redir https://webcodr.io{uri} permanent
 }
+
+webcodr.dev {
+  encode zstd gzip
+  header /fonts/* Cache-Control max-age=31536000
+  header /js/* Cache-Control max-age=31536000
+  header /css/* Cache-Control max-age=31536000
+  file_server
+}
+
+www.webcodr.dev {
+  redir https://webcodr.dev{uri} permanent
+}
