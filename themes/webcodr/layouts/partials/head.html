@@ -70,14 +70,5 @@
 
   {{ $href := .Permalink }}
   
-  {{ with and .Page.IsNode .Paginator }}
-    {{ with .Next }}
-      {{ $href = .URL | absURL }}
-    {{ end }}
-
-    {{ with .Prev }}
-      {{ $href = .URL | absURL }}
-    {{ end }}
-  {{ end }}
   <link rel="canonical" href="https://webcodr.io{{ $href }}">
 </head>
