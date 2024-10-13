@@ -68,12 +68,14 @@
   />
   <script src="/js/webcodr.js"></script>
 
-  {{ $paginator := .Paginate (where .Site.RegularPages ".Params.post" "!=" false) }}
-
   {{ $permalink := .Permalink }}
-  {{ with $paginator }}
-    {{ if and (or $.IsHome $.IsNode) (ne .PageNumber 1) }}
-      {{ $permalink = print $permalink "page/" .PageNumber "/" }}
+
+  {{ if .Page.IsNode }}
+    {{ $paginator := .Paginate (where .Site.RegularPages ".Params.post" "!=" false) }}
+    {{ with $paginator }}
+      {{ if and (or $.IsHome $.IsNode) (ne .PageNumber 1) }}
+        {{ $permalink = print $permalink "page/" .PageNumber "/" }}
+      {{ end }}
     {{ end }}
   {{ end }}
 
