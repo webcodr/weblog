@@ -68,7 +68,14 @@
   />
   <script src="/js/webcodr.js"></script>
 
-  {{ $href := .Permalink }}
-  
-  <link rel="canonical" href="https://webcodr.io{{ $href }}">
+  {{ $paginator := .Paginate (where .Site.RegularPages ".Params.post" "!=" false) }}
+
+  {{ $permalink := .Permalink }}
+  {{ with $paginator }}
+    {{ if and (or $.IsHome $.IsNode) (ne .PageNumber 1) }}
+      {{ $permalink = print $permalink "page/" .PageNumber "/" }}
+    {{ end }}
+  {{ end }}
+
+  <link rel="canonical" href="https://webcodr.io{{ $permalink }}">
 </head>
