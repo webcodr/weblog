@@ -612,6 +612,8 @@ h6 {
   font-family: "Roboto Mono", monospace;
   font-size: 14px;
   line-height: 1.5em;
+  scrollbar-color: #4a4a4a var(--code-background-color);
+  scrollbar-width: thin;
 }
 .post-content p code,
 .post-content ul code,
