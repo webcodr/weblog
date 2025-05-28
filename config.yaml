@@ -16,4 +16,4 @@ sitemap:
   changefreq: monthly
   filename: sitemap.xml
   priority: 0.5
-paginate: 5
+pagination.pagerSize: 5
