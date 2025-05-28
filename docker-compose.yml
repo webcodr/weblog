@@ -1,6 +1,6 @@
 services:
   caddy:
-    image: caddy:2.9.1-alpine
+    image: caddy:2.10.0-alpine
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
@@ -19,5 +19,3 @@ services:
 networks:
   caddy:
     enable_ipv6: true
-
-
