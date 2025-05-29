@@ -19,7 +19,7 @@ for (...) {
                 if (somethingElse) {
                     value1 = someConvulutedStreamOperations();
                     value2 = someOtherConvulutedStreamOperations();
-                    // insert 30 more lines here
+                    // imagine 30 more lines here
                 } else {
                     value2 = 0;
                 }
@@ -37,7 +37,7 @@ for (...) {
 }
 ~~~
 
-This was part of a Java class with over 1,000 lines of code. Streams everywhere and sometimes very deep nesting thanks to old-style Java code, so it's not easy to spot any potential pitfalls. After I ran IntelliJ's Kotlin migration tool and cleaned up all errors, it was time to run the unit tests and four out of 24 failed.
+This was part of a Java class with over 1,000 lines of code. Streams with many operations everywhere and sometimes very deep nesting thanks to old-style Java code. The original case for `Enum.FOO` stretches over almost the whole display space, so it's not easy to spot any potential pitfalls. After I ran IntelliJ's Kotlin migration tool and cleaned up all errors, it was time to run the unit tests and four out of 24 failed.
 
 As you can imagine it's not straight forward to find problems in such a large and complex class but I came across a notice of an unused value assignment. Why it was there was also not clear immediately, so I compared the original Java file with the Kotlin version.
 
