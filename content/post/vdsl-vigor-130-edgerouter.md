@@ -2,7 +2,7 @@
 date: 2017-01-07T16:00:00+01:00
 title: VDSL via Vigor 130 und EdgeRouter X
 ---
-Meine Fritzbox 6490 ging mir ja schon länger auf den Zeiger, aber seit ca. acht Wochen geht auch die Verbindung von Vodafone bzw. Kabel Deutschland zunehmend zum Teufel. Passenderweise hat die Telekom hier vor ein paar Wochen den VDSL-Ausbau inkl. Vectoring abgeschlossen. Seit dem 4.1. steht die Leitung und ich bin bisher äußerst angetan. Es halbiert sich zwar die Bandbreite auf 100 Mbit/s down (dafür gibt's 40 statt 25 Mbit/s up), dafür ist die Leitung wesentlich stabiler. <del>Genauers dazu schreibe ich in einem separaten Blog-Post in Kürze.</del> Genaueres dazu [hier]({{< relref "vodafone-zu-telekom.md" >}}).
+Meine Fritzbox 6490 ging mir ja schon länger auf den Zeiger, aber seit ca. acht Wochen geht auch die Verbindung von Vodafone bzw. Kabel Deutschland zunehmend zum Teufel. Passenderweise hat die Telekom hier vor ein paar Wochen den VDSL-Ausbau inkl. Vectoring abgeschlossen. Seit dem 4.1. steht die Leitung und ich bin bisher äußerst angetan. Es halbiert sich zwar die Bandbreite auf 100 Mbit/s down (dafür gibt's 40 statt 25 Mbit/s up), dafür ist die Leitung wesentlich stabiler. ~~Genauers dazu schreibe ich in einem separaten Blog-Post in Kürze.~~ Genaueres dazu [hier]({{< relref "vodafone-zu-telekom.md" >}}).
 
 ## Bisheriges Netzwerk
 
@@ -86,7 +86,7 @@ Damit ist nun das CLI des EdgeRouters offen und man kann loslegen.
 
 Folgendes muss eingegeben werden:
 
-~~~
+~~~ shell
 configure
 
 set interfaces ethernet eth1 ipv6 dup-addr-detect-transmits 1

@@ -89,7 +89,7 @@ Für die meisten tut's der übliche Speedport, der mir zumindest in seinem Verha
 
 In Sachen WLAN sind sie beide ziemlich meh, besonders im Vergleich zu meinen früheren AirPorts oder jetzt UniFi Access Points -- ist natürlich wieder unfair. Gibt weit teurere Consumer-Geräte, die viel schlimmer sind, siehe [Ars Technica](http://arstechnica.com/gadgets/2016/09/the-router-rumble-ars-diy-build-faces-better-tests-tougher-competition/).
 
-<strong id="vodafone-update-1">Nachtrag vom 13.1.2017:</strong>
+#### Nachtrag vom 13.1.2017: {#vodafone-update-1}
 
 Nach diesem [Bericht von Golem](http://www.golem.de/news/traffic-shaping-vodafones-kabelnetz-soll-an-backbone-erweiterung-sparen-1701-125572.html) ist mir dann auch klar, warum ich die Probleme mit Vodafone hatte. Traffic Shaping verzögert oder verwirft Pakete einfach, je nach Konfiguration bzw. Last. Das erklärt die schwankenden Ping-Zeiten, den Packet Loss in Spielen, die inkonsistenten Download-Raten usw.
 
