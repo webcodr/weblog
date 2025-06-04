@@ -46,7 +46,7 @@ Both will accept the same two parameters as `fetch()` does and pass them along.
 
 If the server responds with a HTTP error, DeliveryGuy will throw an error.
 
-Due to the inheritance limitations of built-in classes with ES5 I mentioned in my [last post]({{< relref "why-custom-errors-in-javascript-are-broken.md" >}}), it's only possible to set custom properties of a custom error class.
+Due to the inheritance limitations of built-in classes with ES5 I mentioned in my [last post]({{< relref "2018-04-27_why-custom-errors-in-javascript-are-broken.md" >}}), it's only possible to set custom properties of a custom error class.
 
 DeliveryGuy provides additional two properties on an error object:
 
