@@ -53,7 +53,7 @@ VLAN 10 is now ready to use, but it's not isolated from the other networks. The 
 
   1. Go to `FIREWALL/NAT`, then to `Firewall/NAT Groups` and create a new network group:
   
-    ![Create Network Group](/images/edgerouter-vlan-isolation/create_network_group.png)
+     ![Create Network Group](/images/edgerouter-vlan-isolation/create_network_group.png)
     
   2. Edit the new network group and add all networks except the VLAN:
   
@@ -93,13 +93,13 @@ Direction `IN` means any traffic from `eth1.10` to any other of your EdgeRouter'
   
   4. Add a new firewall rule to drop packets into network group `LAN`:
 
-    ![Create Firewall IN Rule 2 Basic](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in_rule2_basic.png)
+     ![Create Firewall IN Rule 2 Basic](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in_rule2_basic.png)
     
-    ![Create Firewall IN Rule 2 Advanced](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in_rule2_dest.png)
+     ![Create Firewall IN Rule 2 Advanced](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in_rule2_dest.png)
   
   5. Your firewall ruleset should look like this:
   
-    ![Create Firewall IN Rules](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in_rules.png)
+     ![Create Firewall IN Rules](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in_rules.png)
 
 ### Create firewall ruleset VLAN10_ISOLATION_LOCAL
 
@@ -123,13 +123,13 @@ Direction `LOCAL` means any traffic from `eth1.10` directly to your EdgeRouter a
   
   4. Add a new firewall rule to allow DHCP:
 
-    ![Create Firewall LOCAL Rule 2 Basic](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local_rule2_basic.png)
+     ![Create Firewall LOCAL Rule 2 Basic](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local_rule2_basic.png)
     
-    ![Create Firewall LOCAL Rule 2 Advanced](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local_rule2_dest.png)
+     ![Create Firewall LOCAL Rule 2 Advanced](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local_rule2_dest.png)
   
   5. Your firewall ruleset should look like this:
   
-    ![Create Firewall IN Rules](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local_rules.png)
+     ![Create Firewall IN Rules](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local_rules.png)
 
 ### Optional: assign network groups to custom NAT rules
 
