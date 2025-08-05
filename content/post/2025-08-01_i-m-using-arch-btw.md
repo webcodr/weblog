@@ -13,12 +13,12 @@ Setting up Hyprland and plugins on your own can be daunting task and a very time
 
 Omarchy also installs many useful terminal and GUI programs, like Alacritty (terminal emulator), Neovim, Spotify, Lazygit, `fd` etc. All GUI programs are mapped to intuitive hotkeys, f.e. `SUPER` + `M` for Spotify or `SUPER` + `B` for the browser (Chromium by default). `SUPER` + `Space` displays the application launcher (like a simple version of Spotlight or Raycast). There's much more for controlling the current window size to move the focus, switch virtual desktops, fullscreen etc.
 
-All hotkeys are easily customizable in `.config/hypr/hyprland.conf`. You don't like Chromium? Just install your favorite browser with the Pacman (Arch's package manager) and update the variable `$browser` in the Hyprland config. That's it. The browser is also used for webapps mapped on hotkeys, ChatGPT f.e. is mapped on `SUPER` + `A`. 
+All hotkeys are easily customizable in `.config/hypr/bindings.conf`. You don't like Chromium? Just install your favorite browser with the Pacman (Arch's package manager) and update the variable `$browser` in the Hyprland config. That's it. The browser is also used for webapps mapped on hotkeys, ChatGPT f.e. is mapped on `SUPER` + `A`. 
 
 A little example to change the music hotkey to Apple Music as webapp (there is no native Linux version).
 
 ~~~ bash
-bind = SUPER, M, exec, $webapp="https://music.apple.com/de/library/recently-added?l=en"
+bindd = SUPER, M, Apple Music, exec, $webapp="https://music.apple.com/de/library/recently-added?l=en"
 ~~~
 
 Pressing `SUPER` + `M` now opens a browser window without address bar etc. with the Apple Music webapp. Nice. I also changed `SUPER` + `A` from ChatGPT to Theo's awesome [T3.chat](https://t3.chat/).
@@ -28,3 +28,7 @@ That's for from all that Omarchy offers, but would be bit much to list every fea
 ## TL;DR
 
 If you're not afraid of Linux and want a decent base installation of Arch with many developer-focused feature, give Omarchy a chance!
+
+### Updates
+
+1. 2025-08-05: Omarchy 1.11 brings a new Hyprland config file structure and `bindd` command. I updated the file path for key bindings and the example for Apple Music accordingly.
