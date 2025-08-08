@@ -3,7 +3,7 @@ title: I'm using Arch btw
 date: 2025-08-01T20:36:11+00:00
 ---
 
-Well, that escalated quickly. One week ago I would have said never to touch Arch (except SteamOS). Nothing personal, it's just that I am primarily a Mac guy and never stayed with Linux that long. I really enjoyed Pop!_OS, System76 created a really nice flavour of Ubuntu, but it's still Ubuntu, so packages are often out of date and you always have to rely on custom repos or other means to get current versions. 
+Well, that escalated quickly. One week ago I would have said never to touch Arch (except SteamOS). Nothing personal, it's just that I am primarily a Mac guy and never stayed with Linux that long. I really enjoyed Pop!_OS. System76 created a really nice flavor of Ubuntu, but it's still Ubuntu, so packages are often out of date and you always have to rely on custom repos or other means to get current versions. 
 
 With Arch and its rolling release model the latest versions are almost immediately available. Sounds good? Of course there's a catch: breaking changes are also immediately available. Updating all dependencies can break many things at once and that can get very annoying pretty fast. From what I've heard the situation improved over the years, so if you're doing nothing too crazy, it should be okay.
 
@@ -21,9 +21,11 @@ A little example to change the music hotkey to Apple Music as webapp (there is n
 bindd = SUPER, M, Apple Music, exec, $webapp="https://music.apple.com/de/library/recently-added?l=en"
 ~~~
 
-Pressing `SUPER` + `M` now opens a browser window without address bar etc. with the Apple Music webapp. Nice. I also changed `SUPER` + `A` from ChatGPT to Theo's awesome [T3.chat](https://t3.chat/).
+Pressing `SUPER` + `M` now opens a browser window in app mode (no address bar etc.) with the Apple Music website. Nice. I also changed `SUPER` + `A` from ChatGPT to Theo Browne's awesome [T3.chat](https://t3.chat/).
 
-That's for from all that Omarchy offers, but would be bit much to list every feature in this blog post. Omarchy has a pretty good documentation with many useful tips, troubleshooting advice etc. The troubleshooting section even has advice why I couldn't get Bluetooth working on my Minis Forum UM760 (the included MediaTek chipset has no Linux driver).
+That's far from all that Omarchy offers, but would be a bit much to list every feature in this blog post. Omarchy has a pretty good documentation with many useful tips, a troubleshooting section etc. They even have advice on my problems with Bluetooth. The Minis Forum UM760 comes with a MediaTek WiFi card and sadly MediaTek doesn't offer Linux drivers for this particular model. I switched to an Intel AX210 card for a few bucks and now it works like a charm.
+
+According to DHH they will even ship an ISO file with Arch and a custom installer in the near future. It's also planned to switch the default terminal from Alacritty to Ghostty, but there are still some issues to solve.
 
 ## TL;DR
 
