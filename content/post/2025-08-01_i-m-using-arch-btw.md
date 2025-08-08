@@ -3,7 +3,7 @@ title: I'm using Arch btw
 date: 2025-08-01T20:36:11+00:00
 ---
 
-Well, that escalated quickly. One week ago I would have said never to touch Arch (except SteamOS). Nothing personal, it's just that I am primarily a Mac guy and never stayed with Linux that long. I really enjoyed Pop_OS!, System76 created a really nice flavour of Ubuntu, but it's still Ubuntu, so packages are often out of date and you always have to rely on custom repos or other means to get current versions. 
+Well, that escalated quickly. One week ago I would have said never to touch Arch (except SteamOS). Nothing personal, it's just that I am primarily a Mac guy and never stayed with Linux that long. I really enjoyed Pop!_OS, System76 created a really nice flavour of Ubuntu, but it's still Ubuntu, so packages are often out of date and you always have to rely on custom repos or other means to get current versions. 
 
 With Arch and its rolling release model the latest versions are almost immediately available. Sounds good? Of course there's a catch: breaking changes are also immediately available. Updating all dependencies can break many things at once and that can get very annoying pretty fast. From what I've heard the situation improved over the years, so if you're doing nothing too crazy, it should be okay.
 
