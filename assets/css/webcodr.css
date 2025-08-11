@@ -635,6 +635,10 @@ h6 {
 .post-content td {
   padding: 5px;
 }
+.post-content ol,
+.post-content ul {
+  padding-right: 10px;
+}
 .post-content tr th:first-child {
   padding-left: 10px;
 }
@@ -672,6 +676,10 @@ h6 {
   }
   .post-content p {
     padding: 0;
+  }
+  .post-content ol,
+  .post-content ul {
+    padding-right: 0;
   }
   .post-content .chroma code {
     padding: 32px;
