@@ -611,9 +611,6 @@ h6 {
   scrollbar-color: var(--code-scrollback-background-color) var(--code-background-color);
   scrollbar-width: thin;
 }
-.post-content .chroma code .cl .p {
-  color: var(--code-text-color);
-}
 .post-content p code,
 .post-content ul code,
 .post-content ol code {
