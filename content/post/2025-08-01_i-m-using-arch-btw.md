@@ -7,7 +7,9 @@ Well, that escalated quickly. One week ago I would have said never to touch Arch
 
 With Arch and its rolling release model the latest versions are almost immediately available. Sounds good? Of course there's a catch: breaking changes are also immediately available. Updating all dependencies can break many things at once and that can get very annoying pretty fast. From what I've heard the situation improved over the years, so if you're doing nothing too crazy, it should be okay.
 
-A few days ago I discovered [Omarchy](https://omarchy.org/) from DHH (creator of Ruby on Rails). He created an opinionated Arch setup for developers. Just install Arch via `archinstall` and run Omarchy's installation script and you're mostly done. Omarchy ships with Hyprland, a really efficient and fast tiling Wayland compositor that doesn't look like it's from the 1980s. There's all sorts of eyecandy, everything is customizable and there are also many cool plugins.
+A few days ago I discovered [Omarchy](https://omarchy.org/) from DHH (creator of Ruby on Rails). He created an opinionated Arch setup for developers. ~~Just install Arch via `archinstall` and run Omarchy's installation script and you're mostly done.~~ A few days ago Omarchy version 2.0 was released and brings a complete ISO file with its own installer. Just boot the ISO from a USB drive, enter some things like your user name, password, hostname etc. and wait a few minutes. That's it!
+
+Omarchy ships with Hyprland, a really efficient and fast tiling Wayland compositor that doesn't look like it's from the 1980s. There's all sorts of eyecandy, everything is customizable and there are also many cool plugins.
 
 Setting up Hyprland and plugins on your own can be daunting task and a very time-consuming one as well. Omarchy to the rescue! It ships with a really good default configuration and is perfectly useable from the get-go, but that's only the beginning of the journey. DHH considers Omarchy a starting point for you own configuration and therefore made it very easy to customize the configuration for your needs. There is even a special Omarchy configuration tool for switching the global color theme (for Hyprland, Alacritty, Neovim etc.) or setting up fingerprint sensors for biometric authentication (should be working very well with Framework devices). 
 
@@ -34,3 +36,4 @@ If you're not afraid of Linux and want a decent base installation of Arch with m
 ### Updates
 
 1. 2025-08-05: Omarchy 1.11 brings a new Hyprland config file structure and `bindd` command. I updated the file path for key bindings and the example for Apple Music accordingly.
+2. 2025-08-28: a small update about the release of Omarchy 2.0 with its own ISO and installer.
