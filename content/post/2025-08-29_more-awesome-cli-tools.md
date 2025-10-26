@@ -2,11 +2,11 @@
 title: More awesome CLI tools
 date: 2025-08-29T21:34:15+00:00
 ---
-This a follow up article to [Awesome CLI tools]({{< ref "2024-03-06_cli-tools.md" >}}) with even more useful CLI tools. 
+This a follow up article to [Awesome CLI tools]({{\< ref "2024-03-06\_cli-tools.md" \>}}) with even more useful CLI tools. 
 
 ## btop
 
-It's basically `top` on steroids with a beautiful terminal UI. Way more information at a glance and just a joy to use.
+It's `top` on steroids with a beautiful terminal UI. Way more information at a glance and just a joy to use.
 
 ## delta
 
@@ -16,9 +16,9 @@ Do you often look at git diffs? Are you missing syntax highlighting? `delta` is 
 
 Dog is a modern DNS lookup tool with colored output and a simple interface.
 
-## tokei 
+## tokei
 
-Are you a fan of statistics? Tokei will quickly summarize the file types, lines of code, comments or blank spaces of your project.
+Are you a fan of statistics? Tokei can summarize file types, lines of code, comments or blank spaces of your project.
 
 I'm currently converting a large Java project to Kotlin and tokei makes it easy to see the progress.
 
