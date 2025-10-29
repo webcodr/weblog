@@ -9,28 +9,24 @@ The HP ZBook has a quite good trackpad, even compared to MacBooks, but some thin
 
 Turns out, it's not the hardware. It's all configurable in Hyprland. In Omarchy you can find the settings in `.config/hypr/input`, sub-category `input:touchpad`.
 
-To enable two-finger clicks for right clicks, just add this:
+Here are some handy options to tweak the settings:
 
 ~~~ bash
-clickfinger_behaviour = true
-~~~
+input {
+  touchpad {
+    # Enable two-finger clicks for right-clicking
+    clickfinger_behaviour = true
 
-Disable tapping:
+    # Disable tapping
+    tap-to-click = false
 
-~~~ bash
-tap-to-click = false
-~~~
+    # Enable natural scrolling
+    natural_scroll = true
 
-If you like "natural" scrolling:
-
-~~~ bash
-natural_scroll = true
-~~~
-
-In case you like tapping, but are having trouble with accidental taps while typing, you can disable the trackpad while keys are pressed:
-
-~~~ bash
-disable_while_typing = true
+    # Disable the trackpad while typing (accidental tapping etc.)
+    disable_while_typing = true
+  }
+}
 ~~~
 
 There is even more like tapping maps, middle button emulation etc. -- you can find all options [here](https://wiki.hypr.land/Configuring/Variables/#touchpad).
