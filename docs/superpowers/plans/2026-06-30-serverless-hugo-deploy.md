@@ -162,7 +162,14 @@ jobs:
       - name: Prepare remote release directory
         run: |
           REMOTE="${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}"
-          ssh -i ~/.ssh/deploy_key "$REMOTE" "cd ~/projects/weblog && mkdir -p releases && rm -rf '$TEMP_RELEASE_PATH' && mkdir -p '$TEMP_RELEASE_PATH'"
+          ssh -i ~/.ssh/deploy_key "$REMOTE" "bash -s -- '$TEMP_RELEASE_PATH'" <<'REMOTE_SCRIPT'
+          set -eu
+          TEMP_RELEASE_PATH=$1
+          cd ~/projects/weblog
+          mkdir -p releases
+          rm -rf "$TEMP_RELEASE_PATH"
+          mkdir -p "$TEMP_RELEASE_PATH"
+          REMOTE_SCRIPT
 
       - name: Upload built site
         run: |
@@ -172,22 +179,24 @@ jobs:
       - name: Activate release
         run: |
           REMOTE="${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}"
-          ssh -i ~/.ssh/deploy_key "$REMOTE" "
-            set -eu
-            cd ~/projects/weblog
-            test -f '$TEMP_RELEASE_PATH/index.html'
-            if [ -e '$RELEASE_PATH' ]; then
-              test -f '$RELEASE_PATH/index.html'
-              rm -rf '$TEMP_RELEASE_PATH'
-            else
-              mv '$TEMP_RELEASE_PATH' '$RELEASE_PATH'
-            fi
-            ln -sfn '$RELEASE_PATH' current-new
-            mv -Tf current-new current
-            test \"\$(readlink current)\" = '$RELEASE_PATH'
-            touch '$RELEASE_PATH'
-            (ls -1dt releases/* 2>/dev/null | tail -n +6 | xargs -r rm -rf) || true
-          "
+          ssh -i ~/.ssh/deploy_key "$REMOTE" "bash -s -- '$TEMP_RELEASE_PATH' '$RELEASE_PATH'" <<'REMOTE_SCRIPT'
+          set -eu
+          TEMP_RELEASE_PATH=$1
+          RELEASE_PATH=$2
+          cd ~/projects/weblog
+          test -f "$TEMP_RELEASE_PATH/index.html"
+          if [ -e "$RELEASE_PATH" ]; then
+            test -f "$RELEASE_PATH/index.html"
+            rm -rf "$TEMP_RELEASE_PATH"
+          else
+            mv "$TEMP_RELEASE_PATH" "$RELEASE_PATH"
+          fi
+          ln -sfn "$RELEASE_PATH" current-new
+          mv -Tf current-new current
+          test "$(readlink current)" = "$RELEASE_PATH"
+          touch "$RELEASE_PATH"
+          (ls -1dt releases/* 2>/dev/null | tail -n +6 | xargs -r rm -rf) || true
+          REMOTE_SCRIPT
 
       - name: Smoke test production
         run: curl -fsS https://webcodr.io/ >/dev/null

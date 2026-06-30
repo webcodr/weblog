@@ -20,4 +20,5 @@
 ## Deployment
 - Pushes to `main` or manual `workflow_dispatch` runs trigger GitHub Actions to build with Hugo, upload `public/` to `~/projects/weblog/releases/<sha>/`, and atomically repoint `~/projects/weblog/current`.
 - The production server should not need Hugo installed for deploys; it only needs SSH, the repo checkout, the prepared `releases/` directory, the `current` symlink, Docker, and Caddy.
+- The production account's login shell may be fish; remote SSH scripts in GitHub Actions should explicitly invoke `bash -s` before using POSIX shell syntax.
 - `docker-compose.yml` mounts the repo at `/srv` read-only and Caddy serves `/srv/current`; Caddy config is in `Caddyfile` for `webcodr.io`, `www.webcodr.io`, `webcodr.dev`, and `www.webcodr.dev`.

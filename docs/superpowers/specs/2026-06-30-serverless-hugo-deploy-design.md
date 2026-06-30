@@ -59,6 +59,8 @@ ln -sfn "releases/${GITHUB_SHA}" current-new
 mv -Tf current-new current
 ```
 
+Remote SSH scripts should explicitly invoke `bash -s` before using POSIX shell syntax because the production account's login shell may be fish.
+
 ## Error Handling
 
 - If checkout, Hugo install, build, or verification fails, the server is not touched.
