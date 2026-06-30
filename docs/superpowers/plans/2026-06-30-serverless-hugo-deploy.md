@@ -185,6 +185,7 @@ jobs:
             ln -sfn '$RELEASE_PATH' current-new
             mv -Tf current-new current
             test \"\$(readlink current)\" = '$RELEASE_PATH'
+            touch '$RELEASE_PATH'
             (ls -1dt releases/* 2>/dev/null | tail -n +6 | xargs -r rm -rf) || true
           "
 
