@@ -35,9 +35,11 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y rsync openssh-client
 
       - name: Configure SSH
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
         run: |
           mkdir -p ~/.ssh
-          printf '%s\n' "${{ secrets.SSH_KEY }}" > ~/.ssh/deploy_key
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
 
@@ -82,3 +84,7 @@ jobs:
 
       - name: Smoke test production
         run: curl -fsS https://webcodr.io/ >/dev/null
+
+      - name: Clean up SSH key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
