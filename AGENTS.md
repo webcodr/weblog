@@ -10,12 +10,13 @@
 - Build/verify the site exactly as deployment does: `hugo`.
 - For local preview, use Hugo's dev server from the repo root: `hugo server`.
 - There is no configured test, lint, typecheck, formatter, or asset-bundler command in this repo.
+- `k6/load-test.js` is a standalone production URL load check, not part of CI or the Hugo build.
 
 ## Content
-- Blog posts live in `content/post/`; the helper scripts create files named `content/post/YYYY-MM-DD_slug.md` with `title` and UTC `date` front matter.
+- Blog posts live in `content/post/`; `create_post.fish` and `create_post.ps1` create files named `content/post/YYYY-MM-DD_slug.md` with `title` and UTC `date` front matter.
 - The about page is `content/about/index.md`.
 - `static/admin/config.yml` is the CMS config: it writes posts to `content/post`, media to `static/images`, and targets the `main` branch.
 
 ## Deployment
-- Pushes to `main` trigger the GitHub Action, which SSHes to the production host, runs `git pull`, then `hugo` in `~/projects/weblog`.
+- Pushes to `main` or manual `workflow_dispatch` runs trigger the GitHub Action, which SSHes to the production host, runs `git pull`, then `hugo` in `~/projects/weblog`.
 - `docker-compose.yml` serves `./public` through Caddy; Caddy config is in `Caddyfile` for `webcodr.io`, `www.webcodr.io`, `webcodr.dev`, and `www.webcodr.dev`.
