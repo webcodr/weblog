@@ -1,5 +1,5 @@
 baseurl: "/"
-languageCode: "en-us"
+locale: "en-us"
 title: "webcodr"
 metaDataFormat: "yaml"
 theme: "webcodr"
