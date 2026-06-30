@@ -1,4 +1,5 @@
 webcodr.io {
+  root * /srv/current
   encode zstd gzip
   header /fonts/* Cache-Control max-age=31536000
   header /js/* Cache-Control max-age=31536000
@@ -11,6 +12,7 @@ www.webcodr.io {
 }
 
 webcodr.dev {
+  root * /srv/current
   encode zstd gzip
   header /fonts/* Cache-Control max-age=31536000
   header /js/* Cache-Control max-age=31536000
