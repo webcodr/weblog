@@ -10,15 +10,66 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: production
+    env:
+      HUGO_VERSION: "0.162.0"
+      RELEASE_PATH: releases/${{ github.sha }}
+      TEMP_RELEASE_PATH: releases/.${{ github.sha }}.${{ github.run_id }}.tmp
 
     steps:
-      - name: Connect via SSH and Run Commands
-        uses: appleboy/ssh-action@master
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Build site
+        run: hugo
+
+      - name: Verify build output
+        run: test -f public/index.html
+
+      - name: Install deploy dependencies
+        run: sudo apt-get update && sudo apt-get install -y rsync openssh-client
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Prepare remote release directory
+        run: |
+          REMOTE="${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}"
+          ssh -i ~/.ssh/deploy_key "$REMOTE" "cd ~/projects/weblog && mkdir -p releases && rm -rf '$TEMP_RELEASE_PATH' && mkdir -p '$TEMP_RELEASE_PATH'"
+
+      - name: Upload built site
+        run: |
+          REMOTE="${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}"
+          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key" public/ "${REMOTE}:~/projects/weblog/${TEMP_RELEASE_PATH}/"
+
+      - name: Activate release
+        run: |
+          REMOTE="${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}"
+          ssh -i ~/.ssh/deploy_key "$REMOTE" "
+            set -eu
             cd ~/projects/weblog
-            git pull
-            hugo
+            test -f '$TEMP_RELEASE_PATH/index.html'
+            if [ -e '$RELEASE_PATH' ]; then
+              test -f '$RELEASE_PATH/index.html'
+              rm -rf '$TEMP_RELEASE_PATH'
+            else
+              mv '$TEMP_RELEASE_PATH' '$RELEASE_PATH'
+            fi
+            ln -sfn '$RELEASE_PATH' current-new
+            mv -Tf current-new current
+            test \"\$(readlink current)\" = '$RELEASE_PATH'
+            touch '$RELEASE_PATH'
+            (ls -1dt releases/* 2>/dev/null | tail -n +6 | xargs -r rm -rf) || true
+          "
+
+      - name: Smoke test production
+        run: curl -fsS https://webcodr.io/ >/dev/null
