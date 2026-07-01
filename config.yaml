@@ -1,17 +1,16 @@
 baseurl: "/"
 locale: "en-us"
 title: "webcodr"
-metaDataFormat: "yaml"
 theme: "webcodr"
 permalinks:
   post: /:year/:month/:slug/
 canonifyURLs: true
 enableRobotsTXT: true
 staticDir: ["static"]
-pygmentsCodefences: true
-pygmentsUseClasses: true
-blackfriday:
-  plainIDAnchors: false
+markup:
+  highlight:
+    codeFences: true
+    noClasses: false
 sitemap:
   changefreq: monthly
   filename: sitemap.xml
