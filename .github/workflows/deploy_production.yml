@@ -18,10 +18,14 @@ jobs:
     environment: production
     env:
       HUGO_VERSION: "0.162.0"
-      RELEASE_PATH: releases/${{ github.sha }}
-      TEMP_RELEASE_PATH: releases/.${{ github.sha }}.${{ github.run_id }}.tmp
 
     steps:
+      - name: Compute release paths
+        run: |
+          TIMESTAMP=$(date -u +%Y%m%d%H%M%S)
+          echo "RELEASE_PATH=releases/${TIMESTAMP}-${{ github.sha }}" >> "$GITHUB_ENV"
+          echo "TEMP_RELEASE_PATH=releases/.${TIMESTAMP}-${{ github.sha }}.${{ github.run_id }}.tmp" >> "$GITHUB_ENV"
+
       - name: Check out repository
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
 
