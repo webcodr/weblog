@@ -64,8 +64,8 @@ jobs:
           ssh -i ~/.ssh/deploy_key "$REMOTE" "bash -s -- '$TEMP_RELEASE_PATH'" <<'REMOTE_SCRIPT'
           set -eu
           TEMP_RELEASE_PATH=$1
-          cd ~/projects/weblog
-          mkdir -p releases
+          mkdir -p ~/projects/weblog/site/releases
+          cd ~/projects/weblog/site
           rm -rf "$TEMP_RELEASE_PATH"
           mkdir -p "$TEMP_RELEASE_PATH"
           REMOTE_SCRIPT
@@ -76,7 +76,7 @@ jobs:
           SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
         run: |
           REMOTE="${SSH_USERNAME}@${SSH_HOST}"
-          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key" public/ "${REMOTE}:~/projects/weblog/${TEMP_RELEASE_PATH}/"
+          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key" public/ "${REMOTE}:~/projects/weblog/site/${TEMP_RELEASE_PATH}/"
 
       - name: Activate release
         env:
@@ -88,7 +88,7 @@ jobs:
           set -eu
           TEMP_RELEASE_PATH=$1
           RELEASE_PATH=$2
-          cd ~/projects/weblog
+          cd ~/projects/weblog/site
           test -f "$TEMP_RELEASE_PATH/index.html"
           if [ -e "$RELEASE_PATH" ]; then
             test -f "$RELEASE_PATH/index.html"
