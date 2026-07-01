@@ -17,10 +17,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
 
       - name: Install Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
         with:
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
@@ -37,15 +37,19 @@ jobs:
       - name: Configure SSH
         env:
           SSH_KEY: ${{ secrets.SSH_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
           mkdir -p ~/.ssh
           printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
+          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
 
       - name: Prepare remote release directory
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
         run: |
-          REMOTE="${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}"
+          REMOTE="${SSH_USERNAME}@${SSH_HOST}"
           ssh -i ~/.ssh/deploy_key "$REMOTE" "bash -s -- '$TEMP_RELEASE_PATH'" <<'REMOTE_SCRIPT'
           set -eu
           TEMP_RELEASE_PATH=$1
@@ -56,13 +60,19 @@ jobs:
           REMOTE_SCRIPT
 
       - name: Upload built site
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
         run: |
-          REMOTE="${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}"
+          REMOTE="${SSH_USERNAME}@${SSH_HOST}"
           rsync -az --delete -e "ssh -i ~/.ssh/deploy_key" public/ "${REMOTE}:~/projects/weblog/${TEMP_RELEASE_PATH}/"
 
       - name: Activate release
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
         run: |
-          REMOTE="${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}"
+          REMOTE="${SSH_USERNAME}@${SSH_HOST}"
           ssh -i ~/.ssh/deploy_key "$REMOTE" "bash -s -- '$TEMP_RELEASE_PATH' '$RELEASE_PATH'" <<'REMOTE_SCRIPT'
           set -eu
           TEMP_RELEASE_PATH=$1

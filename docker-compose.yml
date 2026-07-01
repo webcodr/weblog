@@ -2,8 +2,6 @@ services:
   caddy:
     image: caddy:2.10.0-alpine
     restart: unless-stopped
-    cap_add:
-      - NET_ADMIN
     ports:
       - "80:80"
       - "443:443"

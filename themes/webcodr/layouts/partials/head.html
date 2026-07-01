@@ -69,7 +69,7 @@
     type="font/woff2"
     crossorigin
   />
-  <script src="{{ $js.Permalink }}"></script>
+  <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 
   {{ $permalink := .Permalink }}
 

@@ -1,25 +1,38 @@
+(security_headers) {
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+		-Server
+	}
+}
+
 webcodr.io {
-  root * /srv/current
-  encode zstd gzip
-  header /fonts/* Cache-Control max-age=31536000
-  header /js/* Cache-Control max-age=31536000
-  header /css/* Cache-Control max-age=31536000
-  file_server
+	root * /srv/current
+	encode zstd gzip
+	import security_headers
+	header /fonts/* Cache-Control max-age=31536000
+	header /js/* Cache-Control max-age=31536000
+	header /css/* Cache-Control max-age=31536000
+	file_server
 }
 
 www.webcodr.io {
-  redir https://webcodr.io{uri} permanent
+	redir https://webcodr.io{uri} permanent
 }
 
 webcodr.dev {
-  root * /srv/current
-  encode zstd gzip
-  header /fonts/* Cache-Control max-age=31536000
-  header /js/* Cache-Control max-age=31536000
-  header /css/* Cache-Control max-age=31536000
-  file_server
+	root * /srv/current
+	encode zstd gzip
+	import security_headers
+	header /fonts/* Cache-Control max-age=31536000
+	header /js/* Cache-Control max-age=31536000
+	header /css/* Cache-Control max-age=31536000
+	file_server
 }
 
 www.webcodr.dev {
-  redir https://webcodr.dev{uri} permanent
+	redir https://webcodr.dev{uri} permanent
 }
