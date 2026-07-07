@@ -2,14 +2,18 @@
 title: Find things even faster with srchr
 date: 2026-07-05T20:28:50+00:00
 ---
-Inspired by my last post about `rgp` and `fdp` I got the idea to combine both into a more powerful and easier to use shell script called `srchr` (well, at least it's short :D). 
+Inspired by my last post about `rgp` and `fdp` I got the idea to combine both into a more powerful and easier tool called `srchr`.
 
-It combines the results of `fd` and `rg` for fuzzy finding with `fzf`. The preview will be handled with `bat` as before, but it will jump to the first matching line if the file contains the search term. Your editor will also be opened on that line, if it supports vim-style line jumps `nvim +<line> <file>`. Otherwise the preview will start at the top of the file and your editor won't get the line jump command.
+It's a TUI written in Rust and uses similar or the same libraries as `rg`, `fd`, `fzf` and `bat`, but in one package. There are no external dependencies and it comes for macOS, Linux and Windows in aarch64 and x86-64.
 
-[You can find the script on GitHub.](https://github.com/webcodr/srchr)
+Currently `srchr` is not available via package managers, but there's an installation script:
 
-## Requirements
+~~~ sh
+curl -fsSL https://raw.githubusercontent.com/webcodr/srchr/main/install.sh | sh
+~~~
 
-- CLI tools: [fd](https://github.com/sharkdp/fd), [rg](https://github.com/BurntSushi/ripgrep), [fzf](https://github.com/junegunn/fzf), [bat](https://github.com/sharkdp/bat)
-- Please use an editor that supports line jumps for opening files like (n)vim or helix and set `$EDITOR` accordingly.
+I will also publish `srchr` on Homebrew, the AUR and perhaps some other package managers.
 
+Beware, it's still under development and the UI is functional, but not finished yet. At the moment there is just a hardcoded Tokyp Night inspired color theme, but this will also change in the near future.
+
+[srchr on GitHub](https://github.com/webcodr/srchr)
