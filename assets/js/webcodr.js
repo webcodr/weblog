@@ -60,59 +60,23 @@ const copyToClipboard = async (text) => {
 		throw new Error("Copy command failed");
 	}
 };
-const createSvgIcon = (paths) => {
-	const svgNamespace = "http://www.w3.org/2000/svg";
-	const icon = document.createElementNS(svgNamespace, "svg");
-	icon.setAttribute("aria-hidden", "true");
-	icon.setAttribute("viewBox", "0 0 16 16");
-
-	for (const pathDefinition of paths) {
-		const path = document.createElementNS(svgNamespace, "path");
-		path.setAttribute("d", pathDefinition.d);
-
-		if (pathDefinition.fillRule) {
-			path.setAttribute("fill-rule", pathDefinition.fillRule);
-		}
-
-		icon.append(path);
-	}
-
-	return icon;
-};
 const setCopyButtonState = (copyButton, state) => {
 	const states = {
 		ready: {
 			label: "Copy code to clipboard",
-			paths: [
-				{
-					d: "M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z",
-					fillRule: "evenodd",
-				},
-			],
 			className: null,
 		},
 		success: {
 			label: "Copied code to clipboard",
-			paths: [
-				{
-					d: "M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z",
-				},
-			],
 			className: "post-content--copy-success",
 		},
 		error: {
 			label: "Could not copy code",
-			paths: [
-				{
-					d: "M7.005 3.1a1 1 0 1 1 1.99 0l-.388 6.35a.61.61 0 0 1-1.214 0zM7 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0",
-				},
-			],
 			className: "post-content--copy-error",
 		},
 	};
 	const buttonState = states[state];
 
-	copyButton.replaceChildren(createSvgIcon(buttonState.paths));
 	copyButton.setAttribute("aria-label", buttonState.label);
 	copyButton.title = buttonState.label;
 	copyButton.classList.remove(

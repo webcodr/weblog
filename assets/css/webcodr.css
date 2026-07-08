@@ -720,6 +720,7 @@ h6 {
 	border: 1px solid rgba(202, 211, 245, 0.35);
 	border-radius: 4px;
 	padding: 0.15rem;
+	--copy-button-icon: url("/icons/copy.svg");
 	background-color: var(--code-background-color);
 	color: var(--post-meta-text-color);
 	cursor: pointer;
@@ -740,18 +741,23 @@ h6 {
 	opacity: 0.85;
 }
 
-.post-content--copy svg {
+.post-content--copy::before {
+	content: "";
 	display: block;
 	width: 1rem;
 	height: 1rem;
-	fill: currentColor;
+	background-color: currentColor;
+	-webkit-mask: var(--copy-button-icon) center / contain no-repeat;
+	mask: var(--copy-button-icon) center / contain no-repeat;
 }
 
 .post-content--copy-success {
+	--copy-button-icon: url("/icons/check.svg");
 	color: var(--headline-base-color);
 }
 
 .post-content--copy-error {
+	--copy-button-icon: url("/icons/exclamation.svg");
 	color: var(--headline-seconday-color);
 }
 
