@@ -623,26 +623,29 @@ h6 {
 .post-content pre {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) calc(2.25rem + 10px);
-	margin: 1em 10px;
+	margin: 0.5em 0 1em 10px;
 	position: relative;
 	overflow: visible;
 }
 .post-content pre::after {
 	content: "";
 	grid-column: 2;
-	grid-row: 2;
-	margin-right: -10px;
+	grid-row: 1;
 	background-color: var(--code-background-color);
 }
+
+.post-content .chroma {
+	margin-left: -10px;
+	padding: 10px 0 10px 20px;
+  background-color: var(--code-background-color);
+}
+
 .post-content .chroma code {
 	display: block;
 	grid-column: 1;
-	grid-row: 2;
+	grid-row: 1;
 	min-width: 0;
-	background-color: var(--code-background-color);
-	margin-left: -10px;
 	margin-right: 0;
-	padding: 10px 0 10px 10px;
 	border-radius: 0;
 	font-family: "Roboto Mono", monospace;
 	font-size: 18px;
@@ -692,11 +695,8 @@ h6 {
 
 .post-content--language {
 	display: block;
-	grid-column: 1 / -1;
-	grid-row: 1;
 	width: fit-content;
-	margin-bottom: 0.5rem;
-	padding-right: 3em;
+  padding-left: 10px;
 	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
 	line-height: 1;
 	font-weight: bold;
@@ -708,15 +708,15 @@ h6 {
 .post-content--copy {
 	display: inline-flex;
 	grid-column: 2;
-	grid-row: 2;
+	grid-row: 1;
 	align-self: start;
 	justify-self: end;
 	z-index: 1;
-	margin-top: 10px;
 	align-items: center;
+  align-self: start;
 	justify-content: center;
-	width: 2rem;
-	height: 2rem;
+	width: 2.25rem;
+	height: 2.25rem;
 	border: none;
 	border-radius: 4px;
 	padding: 0.1rem;
@@ -766,7 +766,7 @@ h6 {
 		padding: 0.2em 0;
 	}
 	.post-content pre {
-		margin: 1em 0;
+		margin: 0.5em 0 1em 0;
 	}
 	.post-content code,
 	.post-content table {
@@ -783,16 +783,21 @@ h6 {
 		padding-right: 0;
 	}
 	.post-content pre::after {
-		margin-right: -32px;
+		margin: -32px -32px -32px 0;
 		border-radius: 0 5px 5px 0;
 	}
-	.post-content .chroma code {
+
+  .post-content .chroma {
 		padding: 32px 0 32px 32px;
-		border-radius: 5px 0 0 5px;
 		margin-left: -32px;
 		margin-right: 0;
+		border-radius: 5px 0 0 5px;
+  }
+
+	.post-content .chroma code {
 	}
 	.post-content--copy {
+		margin-top: -22px;
 		margin-right: -22px;
 	}
 }

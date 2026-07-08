@@ -120,6 +120,8 @@ const setupCodeBlocks = () => {
 	}
 	for (const codeBlock of codeBlocks) {
 		const pre = codeBlock.closest("pre");
+    const parent = pre.parentElement;
+
 		if (!pre) {
 			continue;
 		}
@@ -130,7 +132,7 @@ const setupCodeBlocks = () => {
 			const textNode = document.createTextNode(sanitizeLanguageName(language));
 			nameElement.append(textNode);
 			nameElement.classList.add("post-content--language");
-			pre.prepend(nameElement);
+			parent.prepend(nameElement);
 		}
 
 		if (!pre.querySelector(".post-content--copy")) {
