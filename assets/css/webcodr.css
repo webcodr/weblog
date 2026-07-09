@@ -800,6 +800,10 @@ h6 {
 		margin-top: -22px;
 		margin-right: -22px;
 	}
+
+  .post-content--language {
+    padding-left: 0;
+  }
 }
 .pagination {
 	display: flex;
