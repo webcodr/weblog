@@ -47,6 +47,7 @@
  */
 :where(body) {
 	margin: 0;
+	container-type: inline-size;
 }
 
 /**
@@ -620,24 +621,18 @@ h6 {
 .post-content img {
 	max-width: 100%;
 }
-.post-content pre {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) calc(2.25rem + 10px);
-	margin: 0.5em 0 1em 10px;
-	position: relative;
-	overflow: visible;
-}
-.post-content pre::after {
-	content: "";
-	grid-column: 2;
-	grid-row: 1;
+.post-content .highlight {
+	margin: 0.5em 0 1em;
+	padding: 10px 0 10px 10px;
 	background-color: var(--code-background-color);
 }
 
-.post-content .chroma {
-	margin-left: -10px;
-	padding: 10px 0 10px 20px;
-  background-color: var(--code-background-color);
+.post-content pre {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) calc(2.25rem + 10px);
+	margin: 0.5em 0 0;
+	position: relative;
+	overflow: visible;
 }
 
 .post-content .chroma code {
@@ -696,7 +691,6 @@ h6 {
 .post-content--language {
 	display: block;
 	width: fit-content;
-  padding-left: 10px;
 	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
 	line-height: 1;
 	font-weight: bold;
@@ -766,7 +760,7 @@ h6 {
 		padding: 0.2em 0;
 	}
 	.post-content pre {
-		margin: 0.5em 0 1em 0;
+		margin: 0.5em 0 0;
 	}
 	.post-content code,
 	.post-content table {
@@ -782,28 +776,20 @@ h6 {
 	.post-content ul {
 		padding-right: 0;
 	}
-	.post-content pre::after {
-		margin: -32px -32px -32px 0;
-		border-radius: 0 5px 5px 0;
+	.post-content .highlight {
+		--code-surface-bleed: min(32px, max(0px, calc((100cqw - 800px) / 2)));
+		margin-inline: calc(-1 * var(--code-surface-bleed));
+		padding: 32px;
+		padding-inline: var(--code-surface-bleed);
+		border-radius: 5px;
 	}
-
-  .post-content .chroma {
-		padding: 32px 0 32px 32px;
-		margin-left: -32px;
-		margin-right: 0;
-		border-radius: 5px 0 0 5px;
-  }
-
 	.post-content .chroma code {
+		padding-left: 0;
 	}
 	.post-content--copy {
 		margin-top: -22px;
-		margin-right: -22px;
+		margin-right: calc(-1 * min(22px, var(--code-surface-bleed)));
 	}
-
-  .post-content--language {
-    padding-left: 0;
-  }
 }
 .pagination {
 	display: flex;
@@ -847,7 +833,6 @@ h6 {
 /* PreWrapper */
 .chroma {
 	color: #c0caf5;
-	background-color: #1a1b26;
 }
 
 /* Other */
