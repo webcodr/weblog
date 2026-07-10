@@ -687,6 +687,7 @@ h6 {
 	font-size: 20px;
 	color: var(--code-text-color);
 	text-transform: uppercase;
+  margin-left: 10px;
 }
 
 .post-content--copy {
@@ -780,6 +781,10 @@ h6 {
 		margin-top: -22px;
 		margin-right: calc(-1 * min(22px, var(--code-surface-bleed)));
 	}
+
+  .post-content--language {
+    margin-left: 0;
+  }
 }
 .pagination {
 	display: flex;
