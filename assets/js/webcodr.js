@@ -132,7 +132,7 @@ const setupCodeBlocks = () => {
 			const textNode = document.createTextNode(sanitizeLanguageName(language));
 			nameElement.append(textNode);
 			nameElement.classList.add("post-content--language");
-			parent.prepend(nameElement);
+			parent.before(nameElement);
 		}
 
 		if (!pre.querySelector(".post-content--copy")) {

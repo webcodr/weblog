@@ -630,7 +630,7 @@ h6 {
 .post-content pre {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) calc(2.25rem + 10px);
-	margin: 0.5em 0 0;
+	margin: 0;
 	position: relative;
 	overflow: visible;
 }
@@ -760,7 +760,7 @@ h6 {
 		padding: 0.2em 0;
 	}
 	.post-content pre {
-		margin: 0.5em 0 0;
+		margin: 0;
 	}
 	.post-content code,
 	.post-content table {
@@ -787,7 +787,7 @@ h6 {
 		padding-left: 0;
 	}
 	.post-content--copy {
-		margin-top: -22px;
+		margin-top: -32px;
 		margin-right: calc(-1 * min(22px, var(--code-surface-bleed)));
 	}
 }
