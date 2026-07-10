@@ -777,7 +777,7 @@ h6 {
 		padding-left: 0;
 	}
 	.post-content--copy {
-		margin-top: -32px;
+		margin-top: -22px;
 		margin-right: calc(-1 * min(22px, var(--code-surface-bleed)));
 	}
 }
