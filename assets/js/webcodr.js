@@ -111,6 +111,14 @@ const createCopyButton = (codeBlock) => {
 
 	return copyButton;
 };
+const overlayScrollbar = (codeBlock) => {
+	codeBlock.style.marginBottom = "";
+	const scrollbarHeight = codeBlock.offsetHeight - codeBlock.clientHeight;
+
+	if (scrollbarHeight > 0) {
+		codeBlock.style.marginBottom = `-${scrollbarHeight}px`;
+	}
+};
 const setupCodeBlocks = () => {
 	const codeBlocks = document.querySelectorAll(
 		".post-content .chroma code[data-lang]",
@@ -139,7 +147,15 @@ const setupCodeBlocks = () => {
 		if (!pre.querySelector(".post-content--copy")) {
 			pre.append(createCopyButton(codeBlock));
 		}
+
+		overlayScrollbar(codeBlock);
 	}
+
+	window.addEventListener("resize", () => {
+		for (const codeBlock of codeBlocks) {
+			overlayScrollbar(codeBlock);
+		}
+	});
 };
 document.addEventListener("DOMContentLoaded", () => {
 	setupCodeBlocks();
