@@ -491,7 +491,6 @@ h6 {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: var(--header-title-background-color);
 }
 
 .header-navigation {
