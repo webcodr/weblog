@@ -1,0 +1,8 @@
+<li class="post-index-item">
+  <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" class="post-index-date">{{ .Date.Format "Jan 02" }}</time>
+  <div class="post-index-content">
+    <a href="{{ .RelPermalink }}" class="post-index-link">{{ .Title }}</a>
+    <span class="post-index-reading-time">{{ .ReadingTime }} min read</span>
+    {{ with .Description }}<p class="post-index-description">{{ . }}</p>{{ end }}
+  </div>
+</li>

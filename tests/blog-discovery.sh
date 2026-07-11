@@ -28,5 +28,13 @@ hugo --source "$root" --destination "$output" --quiet
 
 assert_file "$output/topics/index.xml"
 assert_file "$output/topics/developer-tools/index.xml"
+assert_contains "$output/topics/index.html" '<h1 class="post-headline">Topics</h1>'
+assert_contains "$output/topics/index.html" '>Developer Tools<'
+assert_contains "$output/topics/developer-tools/index.html" 'Find things even faster with srchr'
+assert_contains "$output/topics/developer-tools/index.html" 'A cross-platform Rust TUI'
+assert_file "$output/archive/index.html"
+assert_contains "$output/archive/index.html" '<h2 class="archive-year">2026</h2>'
+assert_contains "$output/archive/index.html" 'Find things even faster with srchr'
+assert_contains "$output/archive/index.html" '<h2 class="archive-year">2012</h2>'
 
 printf 'Blog discovery checks passed.\n'
