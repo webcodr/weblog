@@ -49,4 +49,14 @@ assert_contains "$search_post" 'class="table-of-contents"'
 assert_contains "$search_post" 'href="#usage"'
 assert_contains "$arch_post" 'Updated <time datetime="2025-08-28T00:00:00Z"'
 
+legacy_post="$output/2018/04/vue-loader-setup-in-webpack/index.html"
+
+assert_contains "$srchr" 'class="related-posts"'
+assert_contains "$srchr" 'Using fd, rg, fzf and bat to find things fast'
+assert_contains "$srchr" 'class="post-navigation"'
+assert_contains "$srchr" 'class="post-navigation-previous"'
+assert_not_contains "$srchr" 'class="post-navigation-next"'
+assert_not_contains "$legacy_post" 'class="related-posts"'
+assert_contains "$legacy_post" 'class="post-navigation"'
+
 printf 'Blog discovery checks passed.\n'

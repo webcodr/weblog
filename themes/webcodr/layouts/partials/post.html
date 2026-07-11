@@ -9,4 +9,8 @@
     <div class="post-content">
         {{ .context.Content }}
     </div>
+    {{ if and (eq .context.Type "post") (eq .location "single") }}
+    {{ partial "related-posts.html" .context }}
+    {{ partial "post-navigation.html" .context }}
+    {{ end }}
 </article>

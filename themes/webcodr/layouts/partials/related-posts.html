@@ -1,0 +1,13 @@
+{{ with .GetTerms "topics" }}
+  {{ $related := $.Site.RegularPages.Related $ | first 3 }}
+  {{ with $related }}
+    <aside class="related-posts" aria-labelledby="related-posts-title">
+      <h2 id="related-posts-title" class="related-posts-title">Continue reading</h2>
+      <ul class="related-posts-list">
+        {{ range . }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </aside>
+  {{ end }}
+{{ end }}
