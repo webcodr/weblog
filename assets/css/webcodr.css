@@ -488,15 +488,13 @@ h6 {
 }
 
 .header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	display: block;
 }
 
 .header-navigation {
 	display: flex;
 	gap: 1rem;
-	padding: 0 10px;
+	padding: 10px;
 	font-family: var(--monospace-font);
 }
 
@@ -525,17 +523,6 @@ h6 {
 .table-of-contents a:hover,
 .table-of-contents a:focus-visible {
 	color: var(--headline-secondary-color);
-}
-
-@media screen and (max-width: 480px) {
-	.header {
-		align-items: flex-start;
-		flex-direction: column;
-	}
-
-	.header-navigation {
-		padding: 0 10px 10px;
-	}
 }
 
 @media screen and (min-width: 840px) {
