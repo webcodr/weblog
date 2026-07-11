@@ -344,6 +344,7 @@
 	font-family: "Roboto";
 	font-style: normal;
 	font-weight: 400;
+	font-display: swap;
 	src:
 		local("Roboto"),
 		local("Roboto-Regular"),
@@ -355,6 +356,7 @@
 	font-family: "Roboto";
 	font-style: italic;
 	font-weight: 400;
+	font-display: swap;
 	src:
 		local("Roboto Italic"),
 		local("Roboto-Italic"),
@@ -366,6 +368,7 @@
 	font-family: "Roboto";
 	font-style: normal;
 	font-weight: 700;
+	font-display: swap;
 	src:
 		local("Roboto Bold"),
 		local("Roboto-Bold"),
@@ -377,6 +380,7 @@
 	font-family: "Roboto";
 	font-style: italic;
 	font-weight: 700;
+	font-display: swap;
 	src:
 		local("Roboto Bold Italic"),
 		local("Roboto-BoldItalic"),
@@ -388,6 +392,7 @@
 	font-family: "Roboto Condensed";
 	font-style: normal;
 	font-weight: 700;
+	font-display: swap;
 	src:
 		local("Roboto Condensed Bold"),
 		local("RobotoCondensed-Bold"),
@@ -399,6 +404,7 @@
 	font-family: "Roboto Condensed";
 	font-style: italic;
 	font-weight: 700;
+	font-display: swap;
 	src:
 		local("Roboto Condensed Bold Italic"),
 		local("RobotoCondensed-BoldItalic"),
