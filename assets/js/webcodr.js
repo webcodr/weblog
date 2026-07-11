@@ -120,11 +120,12 @@ const setupCodeBlocks = () => {
 	}
 	for (const codeBlock of codeBlocks) {
 		const pre = codeBlock.closest("pre");
-    const parent = pre.parentElement;
 
 		if (!pre) {
 			continue;
 		}
+
+		const parent = pre.parentElement;
 
 		if (!pre.querySelector(".post-content--language")) {
 			const nameElement = document.createElement("span");

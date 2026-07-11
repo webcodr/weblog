@@ -47,7 +47,6 @@
  */
 :where(body) {
 	margin: 0;
-	container-type: inline-size;
 }
 
 /**
@@ -329,13 +328,13 @@
 	--post-text-color: #a9b1d6;
 	--post-meta-text-color: #cad3f5;
 	--headline-base-color: #9ece6a;
-	--headline-seconday-color: #f7768e;
+	--headline-secondary-color: #f7768e;
 	--headline-tertiary-color: #e0af68;
 	--code-background-color: #24283b;
 	--code-text-color: #ff9e64;
 	--code-scrollback-background-color: #4a4a4a;
 	--blockquote-border-color: #bb9af7;
-  --monospace-font: "CaskaydiaMono Nerd Font", "JetBrains Mono", "Fira Code", "Hack", "Source Code Pro", "SF Mono", "Inconsolata", monospace;
+	--monospace-font: "CaskaydiaMono Nerd Font", "JetBrains Mono", "Fira Code", "Hack", "Source Code Pro", "SF Mono", "Inconsolata", monospace;
 }
 
 /* roboto-regular - latin */
@@ -404,10 +403,6 @@
 		url("/fonts/roboto-condensed-v16-latin-700italic.woff2") format("woff2"),
 		url("/fonts/roboto-condensed-v16-latin-700italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-* {
-	box-sizing: border-box;
-}
-
 html {
 	font-family: Roboto, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -431,7 +426,7 @@ h6 {
 
 h1 {
 	font-size: 48px;
-	color: var(--headline-seconday-color);
+	color: var(--headline-secondary-color);
 }
 
 h2 {
@@ -475,30 +470,9 @@ h6 {
 	text-decoration: none;
 }
 
-.theme-toggle {
-	display: flex;
-	margin-top: 1em;
-	margin-right: 10px;
-	justify-content: flex-end;
-}
-
-.theme-toggle__wrapper {
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-}
-
-.theme-toggle__desc {
-	margin-right: 0.5em;
-	line-height: 1em;
-}
-
 @media screen and (min-width: 840px) {
 	.header {
 		padding-top: 1em;
-	}
-	.theme-toggle {
-		margin-right: 0;
 	}
 }
 .footer {
@@ -514,7 +488,6 @@ h6 {
 }
 
 .footer-item {
-	flex-direction: column;
 	list-style-type: none;
 	margin: 1ex 0;
 	width: 100%;
@@ -626,7 +599,7 @@ h6 {
 
 .post-content .chroma code {
 	display: grid;
-  align-items: center;
+	align-items: center;
 	grid-column: 1;
 	grid-row: 1;
 	min-width: 0;
@@ -636,10 +609,9 @@ h6 {
 	font-size: 18px;
 	overflow-x: auto;
 	scrollbar-width: none;
-
-  .line {
-    line-height: 1.5em;
-  }
+}
+.post-content .chroma code .line {
+	line-height: 1.5em;
 }
 .post-content p code,
 .post-content ul code,
@@ -688,7 +660,7 @@ h6 {
 	font-size: 20px;
 	color: var(--code-text-color);
 	text-transform: uppercase;
-  margin-left: 10px;
+	margin-left: 10px;
 }
 
 .post-content--copy {
@@ -698,7 +670,7 @@ h6 {
 	justify-self: end;
 	z-index: 1;
 	align-items: center;
-  align-self: start;
+	align-self: start;
 	justify-content: center;
 	width: 2.25rem;
 	height: 2.25rem;
@@ -715,7 +687,6 @@ h6 {
 
 .post-content--copy:hover,
 .post-content--copy:focus {
-	border-color: var(--code-text-color);
 	background-color: rgba(255, 158, 100, 0.1);
 	color: var(--code-text-color);
 	opacity: 1;
@@ -743,15 +714,12 @@ h6 {
 
 .post-content--copy-error {
 	--copy-button-icon: url("/icons/exclamation.svg");
-	color: var(--headline-seconday-color);
+	color: var(--headline-secondary-color);
 }
 
 @media screen and (min-width: 840px) {
 	.post-meta {
 		padding: 0.2em 0;
-	}
-	.post-content pre {
-		margin: 0;
 	}
 	.post-content code,
 	.post-content table {
@@ -772,9 +740,9 @@ h6 {
 		border-radius: 5px;
 	}
 
-  .post-content--language {
-    margin-left: 0;
-  }
+	.post-content--language {
+		margin-left: 0;
+	}
 }
 .pagination {
 	display: flex;
@@ -782,7 +750,6 @@ h6 {
 }
 
 .pagination__item {
-	flex-direction: row;
 	width: 50%;
 }
 
@@ -800,7 +767,7 @@ h6 {
 }
 
 .pagination__link:hover {
-	color: var(--hheadline-seconday-color);
+	color: var(--headline-secondary-color);
 }
 
 @media screen and (min-width: 840px) {
