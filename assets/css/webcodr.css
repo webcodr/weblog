@@ -529,6 +529,11 @@ h6 {
 	.header {
 		padding-top: 1em;
 	}
+
+	.header-navigation {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 .footer {
 	color: var(--footer-text-color);
