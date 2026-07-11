@@ -34,6 +34,12 @@ assert_count() {
 	[[ "$actual" -eq "$2" ]] || fail "expected $1 to contain $2 occurrences of: $3 (found $actual)"
 }
 
+assert_post_metadata() {
+	local post="$root/content/post/$1"
+	grep -Eq '^topics: \[[a-z0-9-]+(, [a-z0-9-]+){0,2}\]$' "$post" || fail "expected 1-3 normalized topics in $post"
+	grep -Eq '^description: .+[.!?]$' "$post" || fail "expected a punctuated description in $post"
+}
+
 hugo --source "$root" --destination "$output" --quiet
 
 assert_file "$output/topics/index.xml"
@@ -93,5 +99,21 @@ assert_not_contains "$root/assets/css/webcodr.css" 'border-bottom: 2px solid var
 assert_not_contains "$root/assets/css/webcodr.css" '.related-posts-list,'
 assert_contains "$root/assets/css/webcodr.css" '.related-posts-list {'
 assert_contains "$root/assets/css/webcodr.css" 'padding-inline: 0;'
+assert_post_metadata "2015-12-05_amplify-2-0.md"
+assert_post_metadata "2015-12-05_array-almighty.md"
+assert_post_metadata "2015-12-05_codrpress.md"
+assert_post_metadata "2015-12-05_ihk-agile.md"
+assert_post_metadata "2015-12-05_menlo-park-start-your-photocopiers.md"
+assert_post_metadata "2015-12-05_php-autoloader-nach-dem-psr-0-standard.md"
+assert_post_metadata "2015-12-05_php-tip-limonade.md"
+assert_post_metadata "2015-12-05_pythonpress.md"
+assert_post_metadata "2015-12-05_responsive-bilder-mit-wordpress.md"
+assert_post_metadata "2015-12-05_retina-display-taugliche-css-hintergrundbilder.md"
+assert_post_metadata "2015-12-05_say-hello-to-mango.md"
+assert_post_metadata "2015-12-05_schnellere-websites-mit-requirejs.md"
+assert_post_metadata "2015-12-05_services-ftw.md"
+assert_post_metadata "2015-12-05_sublime-text-2.md"
+assert_post_metadata "2015-12-05_tastaturen.md"
+assert_post_metadata "2015-12-05_upload-probleme-mit-php-via-fastcgi.md"
 
 printf 'Blog discovery checks passed.\n'

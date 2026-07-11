@@ -1,6 +1,8 @@
 ---
 date: 2013-04-06T22:29:53+01:00
 title: Say Hello to Mango
+topics: [php, programming]
+description: Mango wird als leichtgewichtiger PHP-ODM für MongoDB mit Models, Abfragen, Hydration und Composer-Installation vorgestellt.
 ---
 ## Was'n das?
 

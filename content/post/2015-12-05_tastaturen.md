@@ -1,6 +1,8 @@
 ---
 date: 2014-06-06T22:31:23+01:00
 title: Tastaturen
+topics: [developer-tools, hardware]
+description: Ein Vergleich erklärt Technik, Schaltertypen und Vorzüge mechanischer Tastaturen für Vieltipper, Entwickler und Spieler.
 ---
 Für uns Entwickler ist die Tastatur ohne Zweifel das wichtigste Werkzeug. Ohne sie könnten wir keine Zeile Code schreiben und dennoch wird ihr selten Beachtung geschenkt. Sie ist da und funktioniert -- bis man eine Tasse Kaffee darüber schüttet oder sie nach Jahren in Krümeln, anderen Essensresten bzw. Staub ersoffen ist.
 

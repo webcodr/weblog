@@ -2,6 +2,8 @@
 date: "2012-04-05T00:00:00+01:00"
 draft: false
 title: "Sublime Text 2"
+topics: [developer-tools]
+description: Sublime Text 2 wird als schneller, plattformübergreifender und umfassend konfigurierbarer Editor empfohlen.
 
 ---
 Als Entwickler ist man ja immer auf der Suche nach noch besseren Werkzeugen, um seine Arbeit schneller, besser und schöner zu erledigen. Das wichtigste Tool dafür ist ein guter Editor. Unter OS X setzte ich immer auf [TextMate](http://macromates.com/) und falls kein Mac zur Verfügung stand, war [Notepad++](http://notepad-plus-plus.org/) unter Windows das Mittel der Wahl.

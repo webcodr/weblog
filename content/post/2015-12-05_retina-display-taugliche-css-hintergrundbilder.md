@@ -1,6 +1,8 @@
 ---
 date: 2012-08-12T22:22:40+01:00
 title: "Retina-Display-taugliche Icons mit CSS-Hintergrundbildern"
+topics: [web-development]
+description: CSS-Media-Queries liefern hochauflösende Hintergrundbilder für Retina-Displays in der gewünschten Darstellungsgröße aus.
 ---
 Besitzer von Apple-Geräten mit Retina-Displays kennen das Dilemma: auf vielen Seiten sehen Hintergrundbilder, insbesondere Icons, reichlich unscharf aus. So erging es mir gleich doppelt mit meinem privaten Blog. Dank neuem iPad und MacBook Pro, vermatschen die Icons für externe Links.
 

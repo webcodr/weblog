@@ -1,6 +1,8 @@
 ---
 date: 2013-02-02T22:28:05+01:00
 title: Array almighty
+topics: [php, programming]
+description: Ein Vergleich mit Scala führt zu PHP-Collection-Klassen, die Array-Zugriffe, Listenoperationen und verkettete Methoden vereinen.
 ---
 Wenn man sich zulange nur mit PHP beschäftigt vergisst man schnell, dass man oft Dinge tut, die kaum in andere Sprachen übertragbar sind.
 

@@ -1,6 +1,8 @@
 ---
 date: 2012-10-21T22:26:30+01:00
 title: "CodrPress"
+topics: [php, web-development]
+description: CodrPress entsteht als PHP-Blogsystem mit Silex, MongoDB, Markdown und Syntax-Highlighting.
 ---
 Ich bin mal wieder so wahnsinnig und arbeite an einem Blog-System. Diesmal will ich das Rad aber nicht neu erfinden und ein zweites Wordpress bauen. Stattdessen orientiert sich CodrPress an [Schnitzelpress](https://github.com/hmans/schnitzelpress).
 

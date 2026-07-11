@@ -1,6 +1,8 @@
 ---
 date: 2013-02-02T22:29:07+01:00
 title: Services ftw!
+topics: [programming, web-development]
+description: HTTP-Dienste verbinden PHP, Python und Ruby für anwendungsunabhängiges Markdown-Rendering und Syntax-Highlighting.
 ---
 Wer kennt das nicht? Man findet eine nette Software-Bibliothek in einer bestimmten Sprache, die vom Server der eigenen Web-Applikation nicht unterstützt wird oder nur sehr umständlich auf andere Weise genutzt werden kann.
 

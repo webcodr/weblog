@@ -1,6 +1,8 @@
 ---
 date: 2012-04-05T22:15:00+01:00
 title: Upload-Probleme mit PHP via FastCGI
+topics: [php, web-development]
+description: Ein zu niedriges MaxRequestLen-Limit von Apache mod_fcgid verursacht Uploadfehler und wird über FastCGI erhöht.
 ---
 Als ich eben eine neue Galerie in mein [privates Weblog](http://www.madcatswelt.org/) hochladen wollte, begrüßte mich bei jedem Versuch ein HTTP 500, besser bekannt als Internal Server Error. Die Meldung ist absolut nichtssagend und es lässt nur über Log-Dateien rausfinden, was eigentlich passiert.
 

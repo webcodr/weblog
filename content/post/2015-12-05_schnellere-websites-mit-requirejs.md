@@ -1,6 +1,8 @@
 ---
 date: 2012-04-06T22:16:42+01:00
 title: Schnellere Websites mit RequireJS
+topics: [javascript, web-development]
+description: RequireJS strukturiert JavaScript in Module, löst Abhängigkeiten auf und lädt Skripte asynchron.
 ---
 Script-Elemente sind Blocker im Rendering-Prozess. Browser arbeiten den Quelltext einer Seite von oben nach unten durch. Wenn ein script-Element auftaucht, muss es erst ausgeführt werden, bevor der Browser sich um den nachfolgenden Quelltext kümmern kann. Externe JavaScripts können aus diesem Grund massiven Einfluss auf die Ladegeschwindigkeit einer Seite haben, auch wenn die eigentliche Website schon längst vom Web-Server an den Browser ausgeliefert wurde.
 

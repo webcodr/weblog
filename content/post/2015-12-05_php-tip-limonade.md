@@ -1,6 +1,8 @@
 ---
 date: 2012-04-11T22:17:38+01:00
 title: "PHP-Tip: Limonade"
+topics: [php, web-development]
+description: Limonade wird als schlankes PHP-Microframework für Routing, Templates, Hooks und JSON vorgestellt.
 ---
 Wer sich schon mal mit [Symfony](http://symfony.com/) oder ähnlichen PHP-Frameworks beschäftigt hat, kam sicher schnell zur Erkentnis, dass das die Dinger zwar viel können und generell eine tolle Sache sind, aber hohe Einstiegshürden haben bzw. viel Einarbeitungszeit benötigen, sowie für viele Projekte einfach überdimensioniert sind.
 
