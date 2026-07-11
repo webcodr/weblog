@@ -1,6 +1,8 @@
 ---
 date: 2017-01-14T16:00:00+01:00
 title: Ubiquiti EdgeRouter X vs. MikroTik hEX
+topics: [edgerouter, hardware, networking]
+description: EdgeRouter X und MikroTik hEX im Vergleich mit Ausstattung, Bedienung und Routing-Leistung mit und ohne Hardware-NAT.
 ---
 Da ich auch mal Router testen wollte und den EdgeRouter X (ER-X) eh schon besitze, habe ich mir ein vergleichbares Gerät von MikroTik besorgt, den hEX bzw. den RB350Gr3 (dritte Generation des hEX).
 

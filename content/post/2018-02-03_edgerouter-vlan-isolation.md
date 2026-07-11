@@ -1,6 +1,8 @@
 ---
 date: 2018-02-03T00:00:00+01:00
 title: EdgeRouter VLAN isolation
+topics: [edgerouter, networking]
+description: A step-by-step EdgeRouter guide to creating a VLAN and isolating it from local networks and router services.
 displayLanguage: en
 ---
 In this post I will show you, how to create a VLAN with your EdgeRouter and how to fully isolate it from all your other networks.
@@ -138,4 +140,3 @@ Direction `LOCAL` means any traffic from `eth1.10` directly to your EdgeRouter a
 If you're using custom NAT rules, you have to add your new network group to the rules to exclude the VLAN. Firewall rules alone will not isolate any networks from custom NAT rules.
      
 That's it. VLAN 10 is now fully isolated from all other networks. The firewall will drop all packages from `eth.10` to the network group and my custom NAT rule will only work from networks of the group.
-      

@@ -1,6 +1,8 @@
 ---
 date: 2017-01-13T17:00:00+01:00
 title: Adios, Kabel-Internet (Update)
+topics: [networking, vdsl]
+description: Ein Erfahrungsbericht über den Wechsel von Vodafone-Kabel zu Telekom VDSL wegen Überlastung, Packet Loss und schlechtem Peering.
 ---
 
 [Zum Nachtrag vom 13.1.2017](#vodafone-update-1)

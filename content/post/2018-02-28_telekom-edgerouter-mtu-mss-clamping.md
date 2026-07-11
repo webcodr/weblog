@@ -1,6 +1,8 @@
 ---
 date: 2018-02-28T18:00:00+01:00
 title: Telekom VDSL MTU und MSS Clamping für IPv4 und IPv6
+topics: [edgerouter, networking, vdsl]
+description: MSS-Clamping für IPv4 und IPv6 behebt TLS- und Verbindungsprobleme auf EdgeRoutern an Telekom-VDSL-Anschlüssen.
 ---
 [To English Version]({{< relref "#summary-in-english" >}})
 
@@ -78,4 +80,3 @@ ubnt@ubnt# show firewall options mss-clamp
 - `MSS`: 1,492 bytes (MTU value) - 40 bytes (TCP/IPv4 header size) or 60 bytes (TCP/IPv6 header size) = 1,452 bytes (IPv4) or 1,432 bytes (IPv6)
 
 For other connection types without PPPoE, you don't have to subtract the PPPoE header size. Cable connections should work fine with 1,460 bytes for IPv4 and respectively 1,440 bytes for IPv6.
-

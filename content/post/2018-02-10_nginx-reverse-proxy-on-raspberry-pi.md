@@ -1,6 +1,8 @@
 ---
 date: 2018-02-17T22:28:05+01:00
 title: nginx Reverse Proxy on Raspberry Pi with Let's Encrypt
+topics: [lets-encrypt, linux, networking]
+description: A guide to running an nginx reverse proxy on a Raspberry Pi with Let's Encrypt certificates and automatic renewal.
 ---
 
 Another weekend, another guide. This time I will show you, how to setup a reverse proxy with nginx on a Raspberry Pi and secure the connection with a certificate from Let's Encrypt.

@@ -1,6 +1,8 @@
 ---
 date: 2017-08-28T22:00:00+02:00
 title: Real-world Node.js Performance Improvements
+topics: [javascript, performance]
+description: A real-world benchmark compares Webpack build performance across Node.js 6.11.2, 8.2.1, and 8.4.0.
 displayLanguage: en
 ---
 I just updated from Node.js 8.2.1 to 8.4.0 within my current project. The update
