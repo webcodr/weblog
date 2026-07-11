@@ -621,12 +621,12 @@ h6 {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) calc(2.25rem + 10px);
 	margin: 0;
-	position: relative;
 	overflow: visible;
 }
 
 .post-content .chroma code {
-	display: block;
+	display: grid;
+  align-items: center;
 	grid-column: 1;
 	grid-row: 1;
 	min-width: 0;
@@ -695,7 +695,6 @@ h6 {
 	display: inline-flex;
 	grid-column: 2;
 	grid-row: 1;
-	align-self: start;
 	justify-self: end;
 	z-index: 1;
 	align-items: center;
@@ -769,18 +768,8 @@ h6 {
 		padding-right: 0;
 	}
 	.post-content .highlight {
-		--code-surface-bleed: min(32px, max(0px, calc((100cqw - 800px) / 2)));
-		margin-inline: calc(-1 * var(--code-surface-bleed));
-		padding: 24px 32px;
-		padding-inline: var(--code-surface-bleed);
+		padding: 10px;
 		border-radius: 5px;
-	}
-	.post-content .chroma code {
-		padding-left: 0;
-	}
-	.post-content--copy {
-		margin-top: -12px;
-		margin-right: calc(-1 * min(22px, var(--code-surface-bleed)));
 	}
 
   .post-content--language {
