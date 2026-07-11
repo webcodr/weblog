@@ -17,6 +17,7 @@
 	header /fonts/* Cache-Control "max-age=31536000, immutable"
 	header /js/* Cache-Control "max-age=31536000, immutable"
 	header /css/* Cache-Control "max-age=31536000, immutable"
+	header /icons/* Cache-Control "max-age=31536000, immutable"
 	file_server
 }
 
