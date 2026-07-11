@@ -14,6 +14,10 @@ assert_file() {
 	[[ -f "$1" ]] || fail "expected file $1"
 }
 
+assert_not_file() {
+	[[ ! -e "$1" ]] || fail "expected no file at $1"
+}
+
 assert_contains() {
 	grep -Fq -- "$2" "$1" || fail "expected $1 to contain: $2"
 }
@@ -22,6 +26,12 @@ assert_not_contains() {
 	if grep -Fq -- "$2" "$1"; then
 		fail "expected $1 not to contain: $2"
 	fi
+}
+
+assert_count() {
+	local actual
+	actual=$(grep -Fc -- "$3" "$1")
+	[[ "$actual" -eq "$2" ]] || fail "expected $1 to contain $2 occurrences of: $3 (found $actual)"
 }
 
 hugo --source "$root" --destination "$output" --quiet
@@ -58,5 +68,20 @@ assert_contains "$srchr" 'class="post-navigation-previous"'
 assert_not_contains "$srchr" 'class="post-navigation-next"'
 assert_not_contains "$legacy_post" 'class="related-posts"'
 assert_contains "$legacy_post" 'class="post-navigation"'
+
+home="$output/index.html"
+
+assert_contains "$home" 'class="header-navigation"'
+assert_contains "$home" 'href="/topics/"'
+assert_contains "$home" 'href="/archive/"'
+assert_contains "$home" 'Inspired by my last post about'
+assert_contains "$home" 'rel="alternate" type="application/rss&#43;xml"'
+assert_count "$home" 5 '<article class="post">'
+assert_contains "$output/topics/index.html" 'class="topic-list"'
+assert_contains "$output/archive/index.html" 'class="post-index"'
+assert_not_file "$output/archive/page/2/index.html"
+assert_not_file "$output/topics/page/2/index.html"
+assert_not_file "$output/topics/developer-tools/page/2/index.html"
+assert_not_file "$output/404/page/2/index.html"
 
 printf 'Blog discovery checks passed.\n'

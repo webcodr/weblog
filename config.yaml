@@ -18,7 +18,8 @@ sitemap:
 services:
   rss:
     limit: 20
-pagination.pagerSize: 5
+pagination:
+  pagerSize: 5
 taxonomies:
   topic: topics
 related:

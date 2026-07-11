@@ -69,12 +69,10 @@
 
   {{ $permalink := .Permalink }}
 
-  {{ if .Page.IsNode }}
-    {{ $paginator := .Paginate (where .Site.RegularPages ".Params.post" "!=" false) }}
-    {{ with $paginator }}
-      {{ if and (or $.IsHome $.IsNode) (ne .PageNumber 1) }}
-        {{ $permalink = print $permalink "page/" .PageNumber "/" }}
-      {{ end }}
+  {{ if .IsHome }}
+    {{ $paginator := .Paginate .Site.RegularPages }}
+    {{ if ne $paginator.PageNumber 1 }}
+      {{ $permalink = print $permalink "page/" $paginator.PageNumber "/" }}
     {{ end }}
   {{ end }}
 
