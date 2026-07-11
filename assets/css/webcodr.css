@@ -332,7 +332,7 @@
 	--headline-tertiary-color: #e0af68;
 	--code-background-color: #24283b;
 	--code-text-color: #ff9e64;
-	--code-scrollback-background-color: #4a4a4a;
+	--code-scrollback-background-color: #414868;
 	--blockquote-border-color: #bb9af7;
 	--monospace-font: "CaskaydiaMono Nerd Font", "JetBrains Mono", "Fira Code", "Hack", "Source Code Pro", "SF Mono", "Inconsolata", monospace;
 }
@@ -608,7 +608,8 @@ h6 {
 	font-family: var(--monospace-font);
 	font-size: 18px;
 	overflow-x: auto;
-	scrollbar-width: none;
+	scrollbar-width: thin;
+	scrollbar-color: var(--code-scrollback-background-color) var(--code-background-color);
 }
 .post-content .chroma code .line {
 	line-height: 1.5em;
