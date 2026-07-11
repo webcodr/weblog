@@ -37,4 +37,16 @@ assert_contains "$output/archive/index.html" '<h2 class="archive-year">2026</h2>
 assert_contains "$output/archive/index.html" 'Find things even faster with srchr'
 assert_contains "$output/archive/index.html" '<h2 class="archive-year">2012</h2>'
 
+srchr="$output/2026/07/find-things-even-faster-with-srchr/index.html"
+search_post="$output/2026/07/using-fd-rg-fzf-and-bat-to-find-things-fast/index.html"
+arch_post="$output/2025/08/im-using-arch-btw/index.html"
+
+assert_contains "$srchr" 'Published <time datetime="2026-07-05T20:28:50Z"'
+assert_contains "$srchr" '>Developer Tools</a>'
+assert_not_contains "$srchr" 'Updated <time'
+assert_not_contains "$srchr" 'class="table-of-contents"'
+assert_contains "$search_post" 'class="table-of-contents"'
+assert_contains "$search_post" 'href="#usage"'
+assert_contains "$arch_post" 'Updated <time datetime="2025-08-28T00:00:00Z"'
+
 printf 'Blog discovery checks passed.\n'
