@@ -15,4 +15,7 @@ sitemap:
   changefreq: monthly
   filename: sitemap.xml
   priority: 0.5
+services:
+  rss:
+    limit: 20
 pagination.pagerSize: 5

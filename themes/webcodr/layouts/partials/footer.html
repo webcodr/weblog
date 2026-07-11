@@ -4,6 +4,11 @@
       <li class="footer-item">
         <a class="footer-link" href="https://bsky.app/profile/webcodr.bsky.social">Bluesky</a>
       </li>
+      {{ with (.Site.Home.OutputFormats.Get "RSS") }}
+        <li class="footer-item">
+          <a href="{{ .RelPermalink }}" class="footer-link">RSS</a>
+        </li>
+      {{ end }}
       <li class="footer-item">
         <a href="/about" class="footer-link">About</a>
       </li>

@@ -20,6 +20,9 @@
     content="Kotlin, Rust, Developer Productivity, Mechanical Keyboards"
   />
   <meta charset="UTF-8" />
+  {{ with (.Site.Home.OutputFormats.Get "RSS") }}
+    <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}" />
+  {{ end }}
   <link
     rel="preload"
     href="/fonts/roboto-v18-latin-regular.woff2"
