@@ -323,10 +323,10 @@
 :root {
 	--container-background-color: #1a1b26;
 	--header-title-background-color: #ff9e64;
-	--header-title-text-color: #fff;
+	--header-title-text-color: #1a1b26;
 	--footer-text-color: #a9b1d6;
 	--post-text-color: #a9b1d6;
-	--post-meta-text-color: #cad3f5;
+	--post-meta-text-color: #c0caf5;
 	--headline-base-color: #9ece6a;
 	--headline-secondary-color: #f7768e;
 	--headline-tertiary-color: #e0af68;
@@ -994,7 +994,7 @@ h6 {
 
 /* LiteralStringDoc */
 .chroma .sd {
-	color: #414868;
+	color: #737aa2;
 }
 
 /* LiteralStringDouble */
@@ -1009,7 +1009,7 @@ h6 {
 
 /* LiteralStringHeredoc */
 .chroma .sh {
-	color: #414868;
+	color: #737aa2;
 }
 
 /* LiteralStringInterpol */
@@ -1087,43 +1087,43 @@ h6 {
 /* Punctuation */
 /* Comment */
 .chroma .c {
-	color: #414868;
+	color: #737aa2;
 	font-style: italic;
 }
 
 /* CommentHashbang */
 .chroma .ch {
-	color: #414868;
+	color: #737aa2;
 	font-style: italic;
 }
 
 /* CommentMultiline */
 .chroma .cm {
-	color: #414868;
+	color: #737aa2;
 	font-style: italic;
 }
 
 /* CommentSingle */
 .chroma .c1 {
-	color: #414868;
+	color: #737aa2;
 	font-style: italic;
 }
 
 /* CommentSpecial */
 .chroma .cs {
-	color: #414868;
+	color: #737aa2;
 	font-style: italic;
 }
 
 /* CommentPreproc */
 .chroma .cp {
-	color: #414868;
+	color: #737aa2;
 	font-style: italic;
 }
 
 /* CommentPreprocFile */
 .chroma .cpf {
-	color: #414868;
+	color: #737aa2;
 	font-weight: bold;
 	font-style: italic;
 }
