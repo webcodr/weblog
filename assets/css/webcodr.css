@@ -322,8 +322,10 @@
 
 :root {
 	--container-background-color: #1a1b26;
-	--header-title-background-color: #ff9e64;
-	--header-title-text-color: #1a1b26;
+	--header-title-background-color: #24283b;
+	--header-title-text-color: #ff9e64;
+	--header-prompt-path-color: #9ece6a;
+	--header-prompt-chevron-color: #7aa2f7;
 	--footer-text-color: #a9b1d6;
 	--post-text-color: #a9b1d6;
 	--post-meta-text-color: #c0caf5;
@@ -458,9 +460,10 @@ h6 {
 .header-title {
 	margin: 0;
 	padding: 10px;
-	font-size: 36px;
-	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
-	font-weight: 500;
+	font-size: 28px;
+	font-family: var(--monospace-font);
+	font-weight: 700;
+	line-height: 1;
 	background: var(--header-title-background-color);
 	color: var(--header-title-text-color);
 }
@@ -468,6 +471,14 @@ h6 {
 .header-link {
 	color: inherit;
 	text-decoration: none;
+}
+
+.header-prompt--path {
+	color: var(--header-prompt-path-color);
+}
+
+.header-prompt--chevron {
+	color: var(--header-prompt-chevron-color);
 }
 
 @media screen and (min-width: 840px) {
