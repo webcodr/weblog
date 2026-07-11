@@ -1,6 +1,9 @@
 ---
 title: Using fd, rg, fzf and bat to find things fast
 date: 2026-07-05T17:05:03+00:00
+topics: [developer-tools]
+description: Build interactive file and content search helpers with fd, rg, fzf, and bat.
+toc: true
 ---
 
 Modern terminal programs like `fd` or `rg` make it really easy to find stuff, but there's still room for improvement. In this post I will show you how to use fish to write to small functions with `fd`, `rg`, `fzf` and `bat` to search for file names and file content with an interactive list and even a preview in the terminal.

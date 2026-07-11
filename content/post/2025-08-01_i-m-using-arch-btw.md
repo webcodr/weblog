@@ -1,6 +1,9 @@
 ---
 title: I'm using Arch btw
 date: 2025-08-01T20:36:11+00:00
+topics: [linux, omarchy]
+toc: true
+lastmod: 2025-08-28T00:00:00+00:00
 ---
 
 Well, that escalated quickly. One week ago I would have said never to touch Arch (except SteamOS). Nothing personal, it's just that I am primarily a Mac guy and never stayed with Linux that long. I really enjoyed Pop!_OS. System76 created a really nice flavor of Ubuntu, but it's still Ubuntu, so packages are often out of date and you always have to rely on custom repos or other means to get current versions. 

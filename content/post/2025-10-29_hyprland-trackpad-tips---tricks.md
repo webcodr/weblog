@@ -1,6 +1,7 @@
 ---
 title: Hyprland Trackpad Tips & Tricks
 date: 2025-10-29T22:57:34+00:00
+topics: [linux, omarchy]
 ---
 
 For first time in my life I bought a PC notebook. I didn't even consider to boot in the pre-installed Windows 11 and installed Omarchy right away.

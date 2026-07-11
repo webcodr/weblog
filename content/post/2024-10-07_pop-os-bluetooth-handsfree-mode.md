@@ -2,6 +2,7 @@
 date: 2024-10-07T20:00:00+02:00
 title: "Fixing no A2DP with Bluetooth headsets on Linux"
 draft: false
+topics: [linux]
 ---
 
 **Please beware that the following instructions are suitable for media consumption only! After this changes your headset can't make any calls without a dedicated microphone until you undo them.**

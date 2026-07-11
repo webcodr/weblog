@@ -1,6 +1,8 @@
 ---
 title: Find things even faster with srchr
 date: 2026-07-05T20:28:50+00:00
+topics: [developer-tools, rust]
+description: A cross-platform Rust TUI for finding files and searching their contents.
 ---
 Inspired by my last post about `rgp` and `fdp` I got the idea to combine both into a more powerful and easier tool called `srchr`.
 

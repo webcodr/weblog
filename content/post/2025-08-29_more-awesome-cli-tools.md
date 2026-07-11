@@ -1,6 +1,8 @@
 ---
 title: More awesome CLI tools
 date: 2025-08-29T21:34:15+00:00
+topics: [developer-tools]
+toc: true
 ---
 This a follow up article to [Awesome CLI tools]({{< ref "2024-03-06_cli-tools.md" >}}) with even more useful CLI tools. 
 
@@ -33,4 +35,3 @@ One of my favorites. Lazygit is a dead simple, yet powerful and elegant to use t
 ## sd
 
 Do you use `sed`? Do you like it? I don't. `sd` is better, much better.
-
