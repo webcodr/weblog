@@ -83,5 +83,8 @@ assert_not_file "$output/archive/page/2/index.html"
 assert_not_file "$output/topics/page/2/index.html"
 assert_not_file "$output/topics/developer-tools/page/2/index.html"
 assert_not_file "$output/404/page/2/index.html"
+assert_count "$root/assets/css/webcodr.css" 2 'font-family: Roboto, Helvetica, Arial, sans-serif;'
+assert_contains "$root/assets/css/webcodr.css" 'a[href]:hover,'
+assert_contains "$root/assets/css/webcodr.css" 'a[href]:focus-visible {'
 
 printf 'Blog discovery checks passed.\n'

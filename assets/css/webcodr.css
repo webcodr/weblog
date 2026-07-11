@@ -495,7 +495,7 @@ h6 {
 	display: flex;
 	gap: 1rem;
 	padding: 10px;
-	font-family: var(--monospace-font);
+	font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
 .header-navigation-link,
@@ -508,20 +508,8 @@ h6 {
 	color: var(--post-text-color);
 }
 
-.header-navigation-link:hover,
-.header-navigation-link:focus-visible,
-.post-topic-link:hover,
-.post-topic-link:focus-visible,
-.post-index-link:hover,
-.post-index-link:focus-visible,
-.topic-list-link:hover,
-.topic-list-link:focus-visible,
-.related-posts a:hover,
-.related-posts a:focus-visible,
-.post-navigation a:hover,
-.post-navigation a:focus-visible,
-.table-of-contents a:hover,
-.table-of-contents a:focus-visible {
+a[href]:hover,
+a[href]:focus-visible {
 	color: var(--headline-secondary-color);
 }
 
@@ -917,10 +905,6 @@ h6 {
 .pagination__link {
 	color: var(--post-text-color);
 	text-decoration: none;
-}
-
-.pagination__link:hover {
-	color: var(--headline-secondary-color);
 }
 
 @media screen and (min-width: 840px) {
