@@ -617,8 +617,7 @@ a[href]:focus-visible {
 }
 .post-content a {
 	color: var(--post-text-color);
-	text-decoration: none;
-	border-bottom: 2px solid var(--post-text-color);
+	text-decoration: underline;
 }
 .post-content li {
 	margin: 0.3em 0 0.3em 0;
@@ -805,10 +804,14 @@ a[href]:focus-visible {
 
 .topic-list,
 .post-index,
-.related-posts-list,
 .table-of-contents ul {
 	list-style: none;
 	padding: 0 10px;
+}
+
+.related-posts-list {
+	list-style: none;
+	padding: 0;
 }
 
 .topic-list-item,
@@ -851,6 +854,10 @@ a[href]:focus-visible {
 	font-size: 24px;
 }
 
+.related-posts-title {
+	padding-inline: 0;
+}
+
 .table-of-contents,
 .related-posts,
 .post-navigation {
@@ -874,7 +881,6 @@ a[href]:focus-visible {
 	.post-updated,
 	.topic-list,
 	.post-index,
-	.related-posts-list,
 	.table-of-contents ul,
 	.table-of-contents,
 	.related-posts,
