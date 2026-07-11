@@ -609,6 +609,10 @@ h6 {
 	font-size: 18px;
 	overflow-x: auto;
 	scrollbar-width: thin;
+	scrollbar-color: transparent transparent;
+}
+.post-content .chroma code:hover,
+.post-content .chroma code:focus-visible {
 	scrollbar-color: var(--code-scrollback-background-color) var(--code-background-color);
 }
 .post-content .chroma code .line {
