@@ -994,7 +994,7 @@ h6 {
 
 /* LiteralStringDoc */
 .chroma .sd {
-	color: #737aa2;
+	color: #9aa5ce;
 }
 
 /* LiteralStringDouble */
@@ -1009,7 +1009,7 @@ h6 {
 
 /* LiteralStringHeredoc */
 .chroma .sh {
-	color: #737aa2;
+	color: #9aa5ce;
 }
 
 /* LiteralStringInterpol */
@@ -1087,43 +1087,43 @@ h6 {
 /* Punctuation */
 /* Comment */
 .chroma .c {
-	color: #737aa2;
+	color: #9aa5ce;
 	font-style: italic;
 }
 
 /* CommentHashbang */
 .chroma .ch {
-	color: #737aa2;
+	color: #9aa5ce;
 	font-style: italic;
 }
 
 /* CommentMultiline */
 .chroma .cm {
-	color: #737aa2;
+	color: #9aa5ce;
 	font-style: italic;
 }
 
 /* CommentSingle */
 .chroma .c1 {
-	color: #737aa2;
+	color: #9aa5ce;
 	font-style: italic;
 }
 
 /* CommentSpecial */
 .chroma .cs {
-	color: #737aa2;
+	color: #9aa5ce;
 	font-style: italic;
 }
 
 /* CommentPreproc */
 .chroma .cp {
-	color: #737aa2;
+	color: #9aa5ce;
 	font-style: italic;
 }
 
 /* CommentPreprocFile */
 .chroma .cpf {
-	color: #737aa2;
+	color: #9aa5ce;
 	font-weight: bold;
 	font-style: italic;
 }
