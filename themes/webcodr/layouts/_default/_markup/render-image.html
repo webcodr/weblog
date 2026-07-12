@@ -1,0 +1,8 @@
+{{- $src := .Destination -}}
+{{- $localPath := print "static" $src -}}
+{{- if and (strings.HasPrefix $src "/") (fileExists $localPath) -}}
+{{- $dims := imageConfig $localPath -}}
+<img src="{{ $src | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} width="{{ $dims.Width }}" height="{{ $dims.Height }}" loading="lazy" decoding="async" />
+{{- else -}}
+<img src="{{ $src | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async" />
+{{- end -}}

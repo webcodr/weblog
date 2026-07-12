@@ -281,7 +281,7 @@ git commit -m "feat: publish full-content rss feed"
 - Create: `themes/webcodr/layouts/_default/_markup/render-image.html`
 - Modify: `assets/css/webcodr.css`
 
-- [ ] **Step 1: Write the failing rendering smoke test**
+- [x] **Step 1: Write the failing rendering smoke test**
 
 Create `tests/content-rendering.sh` with the same helper/build scaffold as the other tests:
 
@@ -298,13 +298,13 @@ assert_contains "$router_post" 'alt="Ubiquiti EdgeRouter X"'
 printf 'Content rendering checks passed.\n'
 ```
 
-- [ ] **Step 2: Run the test and verify RED**
+- [x] **Step 2: Run the test and verify RED**
 
 Run: `bash tests/content-rendering.sh`
 
 Expected: FAIL on `loading="lazy"`.
 
-- [ ] **Step 3: Create the image render hook**
+- [x] **Step 3: Create the image render hook**
 
 Create `themes/webcodr/layouts/_default/_markup/render-image.html`. Post images are static files referenced as `/images/...`, so dimensions come from `imageConfig` guarded by `fileExists`; external or missing images fall back to a plain lazy image:
 
@@ -319,23 +319,23 @@ Create `themes/webcodr/layouts/_default/_markup/render-image.html`. Post images 
 {{- end -}}
 ```
 
-- [ ] **Step 4: Keep explicit dimensions responsive**
+- [x] **Step 4: Keep explicit dimensions responsive**
 
 In `assets/css/webcodr.css`, verify the `.post-content` image rules include both `max-width: 100%` and `height: auto`; add whichever is missing so the new `width`/`height` attributes reserve layout space without breaking scaling on narrow viewports.
 
-- [ ] **Step 5: Run the test and verify GREEN**
+- [x] **Step 5: Run the test and verify GREEN**
 
 Run: `bash tests/content-rendering.sh`
 
 Expected: `Content rendering checks passed.`
 
-- [ ] **Step 6: Visually verify one image-heavy post**
+- [x] **Step 6: Visually verify one image-heavy post**
 
 Run: `hugo server`
 
 Open `http://localhost:1313/2018/02/edgerouter-vlan-isolation/` and confirm images render at correct proportions on desktop and narrow widths.
 
-- [ ] **Step 7: Run the full site verification and commit**
+- [x] **Step 7: Run the full site verification and commit**
 
 Run: `bash tests/seo-metadata.sh && bash tests/blog-discovery.sh && hugo && git diff --check`
 

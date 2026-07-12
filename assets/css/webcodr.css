@@ -630,6 +630,7 @@ a[href]:focus-visible {
 }
 .post-content img {
 	max-width: 100%;
+	height: auto;
 }
 .post-content .highlight {
 	margin: 0.5em 0 1em;
