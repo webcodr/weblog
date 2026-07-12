@@ -44,4 +44,12 @@ assert_contains "$srchr" 'application/ld+json'
 assert_contains "$srchr" '"@type": "BlogPosting"'
 assert_not_contains "$output/index.html" 'name="keywords"'
 
+feed="$output/index.xml"
+assert_file "$feed"
+assert_contains "$feed" '<content:encoded>'
+assert_contains "$feed" '<link>https://webcodr.io/2026/07/find-things-even-faster-with-srchr/</link>'
+assert_contains "$feed" 'xmlns:content="http://purl.org/rss/1.0/modules/content/"'
+item_count=$(grep -Fc '<item>' "$feed")
+[[ "$item_count" -le 20 && "$item_count" -ge 1 ]] || fail "expected 1-20 feed items, found $item_count"
+
 printf 'SEO metadata checks passed.\n'

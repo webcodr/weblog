@@ -196,7 +196,7 @@ git commit -m "feat: add per-page seo and social metadata"
 - Modify: `tests/seo-metadata.sh`
 - Create: `themes/webcodr/layouts/_default/rss.xml`
 
-- [ ] **Step 1: Extend the smoke test with feed assertions**
+- [x] **Step 1: Extend the smoke test with feed assertions**
 
 Append to `tests/seo-metadata.sh` (before the final `printf`):
 
@@ -210,13 +210,13 @@ item_count=$(grep -Fc '<item>' "$feed")
 [[ "$item_count" -le 20 && "$item_count" -ge 1 ]] || fail "expected 1-20 feed items, found $item_count"
 ```
 
-- [ ] **Step 2: Run the test and verify RED**
+- [x] **Step 2: Run the test and verify RED**
 
 Run: `bash tests/seo-metadata.sh`
 
 Expected: FAIL on `<content:encoded>` (the built-in template is summary-only).
 
-- [ ] **Step 3: Create the custom RSS template**
+- [x] **Step 3: Create the custom RSS template**
 
 Create `themes/webcodr/layouts/_default/rss.xml`, modeled on Hugo's embedded template but with absolute item URLs (matching the hardcoded canonical-host precedent) and full content:
 
@@ -253,19 +253,19 @@ Create `themes/webcodr/layouts/_default/rss.xml`, modeled on Hugo's embedded tem
 
 The existing feed-discovery link in `head.html` and the footer RSS link resolve through `.OutputFormats.Get "RSS"` and need no changes. `services.rss.limit: 20` in `config.yaml` keeps applying through `$limit`.
 
-- [ ] **Step 4: Run the test and verify GREEN**
+- [x] **Step 4: Run the test and verify GREEN**
 
 Run: `bash tests/seo-metadata.sh`
 
 Expected: `SEO metadata checks passed.`
 
-- [ ] **Step 5: Validate the feed shape**
+- [x] **Step 5: Validate the feed shape**
 
 Run: `hugo --destination /tmp/rss-check --quiet && head -30 /tmp/rss-check/index.xml && rm -rf /tmp/rss-check`
 
 Expected: well-formed XML, absolute `https://webcodr.io/...` links, CDATA-wrapped HTML content.
 
-- [ ] **Step 6: Run the full site verification and commit**
+- [x] **Step 6: Run the full site verification and commit**
 
 Run: `bash tests/blog-discovery.sh && hugo && git diff --check`
 
