@@ -25,6 +25,9 @@
   <meta name="description" content="{{ $description }}" />
   <meta charset="UTF-8" />
   {{ partial "seo.html" (dict "page" . "canonical" $canonical "title" $title "description" $description) }}
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   {{ with (.Site.Home.OutputFormats.Get "RSS") }}
     <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}" />
   {{ end }}
