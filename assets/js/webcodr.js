@@ -157,6 +157,84 @@ const setupCodeBlocks = () => {
 		}
 	});
 };
+const setupSearch = () => {
+	const input = document.querySelector("#search-input");
+	const resultsList = document.querySelector("#search-results");
+	const status = document.querySelector("#search-status");
+
+	if (!input || !resultsList || !status) {
+		return;
+	}
+
+	let pagefindPromise = null;
+	const loadPagefind = () => {
+		pagefindPromise ??= import("/pagefind/pagefind.js").then(
+			async (pagefind) => {
+				await pagefind.init();
+				return pagefind;
+			},
+		);
+		return pagefindPromise;
+	};
+
+	const renderResults = (results, total) => {
+		resultsList.replaceChildren();
+		status.textContent =
+			total === 0 ? "No results found." : `${total} result${total === 1 ? "" : "s"}`;
+
+		for (const result of results) {
+			const item = document.createElement("li");
+			item.classList.add("search-result");
+
+			const link = document.createElement("a");
+			link.href = result.url;
+			link.textContent = result.meta.title;
+			link.classList.add("search-result--title");
+
+			const excerpt = document.createElement("p");
+			excerpt.classList.add("search-result--excerpt");
+			excerpt.innerHTML = result.excerpt;
+
+			item.append(link, excerpt);
+			resultsList.append(item);
+		}
+	};
+
+	let debounceTimer = null;
+	input.addEventListener("input", () => {
+		clearTimeout(debounceTimer);
+		debounceTimer = setTimeout(async () => {
+			const query = input.value.trim();
+
+			if (query.length < 2) {
+				resultsList.replaceChildren();
+				status.textContent = "";
+				return;
+			}
+
+			let pagefind;
+
+			try {
+				pagefind = await loadPagefind();
+			} catch (_) {
+				status.textContent = "Search is unavailable.";
+				return;
+			}
+
+			const search = await pagefind.search(query);
+			const results = await Promise.all(
+				search.results.slice(0, 10).map((result) => result.data()),
+			);
+
+			if (input.value.trim() !== query) {
+				return;
+			}
+
+			renderResults(results, search.results.length);
+		}, 150);
+	});
+};
 document.addEventListener("DOMContentLoaded", () => {
 	setupCodeBlocks();
+	setupSearch();
 });

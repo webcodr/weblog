@@ -435,7 +435,7 @@ git commit -m "feat: add heading anchor links"
 - Modify: `.github/workflows/deploy_production.yml`
 - Modify: `Caddyfile`
 
-- [ ] **Step 1: Write the failing search smoke test**
+- [x] **Step 1: Write the failing search smoke test**
 
 Create `tests/search.sh` with the shared scaffold. Pagefind itself runs only in CI, so the test asserts the static contract:
 
@@ -457,13 +457,13 @@ assert_contains "$root/Caddyfile" "'wasm-unsafe-eval'"
 printf 'Search checks passed.\n'
 ```
 
-- [ ] **Step 2: Run the test and verify RED**
+- [x] **Step 2: Run the test and verify RED**
 
 Run: `bash tests/search.sh`
 
 Expected: FAIL because `/search/` does not exist.
 
-- [ ] **Step 3: Create the search page**
+- [x] **Step 3: Create the search page**
 
 Create `content/search/_index.md`:
 
@@ -500,7 +500,7 @@ Create `themes/webcodr/layouts/search/list.html`, modeled on `themes/webcodr/lay
 </html>
 ```
 
-- [ ] **Step 4: Scope the Pagefind index to single post bodies**
+- [x] **Step 4: Scope the Pagefind index to single post bodies**
 
 In `themes/webcodr/layouts/partials/post.html:1`, tag the article root only in the single-post location so Pagefind indexes exactly one page per post (once any `data-pagefind-body` exists, untagged pages are excluded automatically):
 
@@ -510,7 +510,7 @@ In `themes/webcodr/layouts/partials/post.html:1`, tag the article root only in t
 
 Add `data-pagefind-ignore` to the root element of `post-meta.html`, `table-of-contents.html`, `related-posts.html`, and `post-navigation.html` so navigation chrome inside the article never pollutes excerpts.
 
-- [ ] **Step 5: Add the header navigation link**
+- [x] **Step 5: Add the header navigation link**
 
 In `themes/webcodr/layouts/partials/header.html`, add after the Archive link:
 
@@ -518,7 +518,7 @@ In `themes/webcodr/layouts/partials/header.html`, add after the Archive link:
 <a href="/search/" class="header-navigation-link">Search</a>
 ```
 
-- [ ] **Step 6: Implement search behavior in `webcodr.js`**
+- [x] **Step 6: Implement search behavior in `webcodr.js`**
 
 Add to `assets/js/webcodr.js`, following the file's existing const-arrow style, and call `setupSearch()` inside the existing `DOMContentLoaded` listener:
 
@@ -604,11 +604,11 @@ const setupSearch = () => {
 
 Notes: the dynamic `import("/pagefind/pagefind.js")` is same-origin (CSP-clean) and fails gracefully under `hugo server`, where no index exists. `result.excerpt` HTML comes from our own build-time index, so `innerHTML` is safe here.
 
-- [ ] **Step 7: Style the search page**
+- [x] **Step 7: Style the search page**
 
 Add `.search-form`, `.search-label`, `.search-input` (including focus state), `.search-status`, `.search-results`, `.search-result`, `.search-result--title`, `.search-result--excerpt`, and `.search-result--excerpt mark` rules to `assets/css/webcodr.css` using the existing `:root` custom properties (e.g. `--code-background-color` for the input surface, `--headline-tertiary-color` for `mark` highlights) so the page matches the Tokyo Night look.
 
-- [ ] **Step 8: Generate the index in CI**
+- [x] **Step 8: Generate the index in CI**
 
 In `.github/workflows/deploy_production.yml`, add after the `Build site` step and extend `Verify build output`:
 
@@ -622,17 +622,17 @@ In `.github/workflows/deploy_production.yml`, add after the `Build site` step an
           test -f public/pagefind/pagefind.js
 ```
 
-- [ ] **Step 9: Allow Pagefind's WebAssembly in the CSP**
+- [x] **Step 9: Allow Pagefind's WebAssembly in the CSP**
 
 In `Caddyfile`, change the CSP directive `script-src 'self'` to `script-src 'self' 'wasm-unsafe-eval'` (Pagefind compiles a WASM module at runtime; nothing else changes).
 
-- [ ] **Step 10: Run the test and verify GREEN**
+- [x] **Step 10: Run the test and verify GREEN**
 
 Run: `bash tests/search.sh`
 
 Expected: `Search checks passed.`
 
-- [ ] **Step 11: Verify search end-to-end locally**
+- [x] **Step 11: Verify search end-to-end locally**
 
 ```bash
 hugo --destination /tmp/search-check --quiet
@@ -642,7 +642,7 @@ python3 -m http.server 8080 -d /tmp/search-check
 
 Open `http://localhost:8080/search/`, search for "srchr" and "edgerouter", and confirm ranked results with highlighted excerpts appear and result links resolve. Then stop the server and `rm -rf /tmp/search-check`.
 
-- [ ] **Step 12: Run the full site verification and commit**
+- [x] **Step 12: Run the full site verification and commit**
 
 Run: `bash tests/seo-metadata.sh && bash tests/content-rendering.sh && bash tests/blog-discovery.sh && hugo && git diff --check`
 

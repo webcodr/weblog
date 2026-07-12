@@ -1,5 +1,5 @@
 {{ if or .PrevInSection .NextInSection }}
-  <nav class="post-navigation" aria-label="Article navigation">
+  <nav class="post-navigation" aria-label="Article navigation" data-pagefind-ignore>
     {{ with .PrevInSection }}
       <div class="post-navigation-previous"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
     {{ end }}

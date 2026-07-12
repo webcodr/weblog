@@ -1,4 +1,4 @@
-<article class="post">
+<article class="post"{{ if and (eq .context.Type "post") (eq .location "single") }} data-pagefind-body{{ end }}>
     <h1 class="post-headline"><a href="{{ .context.Permalink }}" class="post-link--headline">{{ .context.Title }}</a></h1>
     {{ if and (eq .context.Type "post") (eq .location "single") }}
     {{ partial "post-meta.html" .context }}
