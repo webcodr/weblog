@@ -632,6 +632,22 @@ a[href]:focus-visible {
 	max-width: 100%;
 	height: auto;
 }
+.heading-anchor {
+	margin-left: 0.5rem;
+	color: var(--headline-secondary-color);
+	text-decoration: none;
+	opacity: 0;
+	transition: opacity 0.15s ease-in-out;
+}
+:is(h2, h3, h4, h5, h6):hover > .heading-anchor,
+.heading-anchor:focus-visible {
+	opacity: 1;
+}
+@media (hover: none) {
+	.heading-anchor {
+		opacity: 1;
+	}
+}
 .post-content .highlight {
 	margin: 0.5em 0 1em;
 	padding: 10px 0 10px 10px;

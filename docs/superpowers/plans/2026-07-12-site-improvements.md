@@ -351,7 +351,7 @@ git commit -m "feat: lazy-load post images with intrinsic dimensions"
 - Create: `themes/webcodr/layouts/_default/_markup/render-heading.html`
 - Modify: `assets/css/webcodr.css`
 
-- [ ] **Step 1: Extend the rendering test**
+- [x] **Step 1: Extend the rendering test**
 
 Append to `tests/content-rendering.sh` (before the final `printf`):
 
@@ -365,13 +365,13 @@ assert_contains "$search_post" 'class="table-of-contents"'
 
 The last assertion guards the existing TOC contract: the render hook must keep emitting the same `id` values `.TableOfContents` links to.
 
-- [ ] **Step 2: Run the test and verify RED**
+- [x] **Step 2: Run the test and verify RED**
 
 Run: `bash tests/content-rendering.sh`
 
 Expected: FAIL on `class="heading-anchor"`.
 
-- [ ] **Step 3: Create the heading render hook**
+- [x] **Step 3: Create the heading render hook**
 
 Create `themes/webcodr/layouts/_default/_markup/render-heading.html`:
 
@@ -379,7 +379,7 @@ Create `themes/webcodr/layouts/_default/_markup/render-heading.html`:
 <h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}<a href="#{{ .Anchor | safeURL }}" class="heading-anchor" aria-label="Link to this section">#</a></h{{ .Level }}>
 ```
 
-- [ ] **Step 4: Style the anchors**
+- [x] **Step 4: Style the anchors**
 
 Add to `assets/css/webcodr.css` near the other post-content styles, reusing the Tokyo Night custom properties from `:root` (`assets/css/webcodr.css:323`):
 
@@ -406,13 +406,13 @@ Add to `assets/css/webcodr.css` near the other post-content styles, reusing the 
 
 Align the hover/focus treatment with the unified site link styles (see commit `56ad125`).
 
-- [ ] **Step 5: Run the test and verify GREEN**
+- [x] **Step 5: Run the test and verify GREEN**
 
 Run: `bash tests/content-rendering.sh`
 
 Expected: `Content rendering checks passed.`
 
-- [ ] **Step 6: Run the full site verification and commit**
+- [x] **Step 6: Run the full site verification and commit**
 
 Run: `bash tests/seo-metadata.sh && bash tests/blog-discovery.sh && hugo && git diff --check`
 
