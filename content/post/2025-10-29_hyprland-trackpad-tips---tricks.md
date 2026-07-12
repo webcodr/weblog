@@ -2,6 +2,7 @@
 title: Hyprland Trackpad Tips & Tricks
 date: 2025-10-29T22:57:34+00:00
 topics: [linux, omarchy]
+description: Configure Hyprland trackpad clicks, tapping, natural scrolling, and typing protection for a more comfortable laptop experience.
 ---
 
 For first time in my life I bought a PC notebook. I didn't even consider to boot in the pre-installed Windows 11 and installed Omarchy right away.

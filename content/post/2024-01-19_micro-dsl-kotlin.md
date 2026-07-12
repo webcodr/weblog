@@ -3,6 +3,7 @@ date: 2024-01-19T14:33:07+02:00
 title: "Micro DSLs for builders with Kotlin"
 draft: false
 topics: [programming, kotlin]
+description: Use Kotlin lambdas with receivers to turn conventional builders into concise, readable, and extensible micro DSLs.
 ---
 The builder pattern is a great tool and it's heavily used in many Java projects and dependencies. But in a Kotlin code base it's looks a little odd and out-of-date. In this short post I will show you how to write a micro DSL on top of builder with just a few lines of code.
 

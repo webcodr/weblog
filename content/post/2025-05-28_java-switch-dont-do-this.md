@@ -3,6 +3,7 @@ date: 2025-05-28T20:22:07+02:00
 title: "Please don't do this with switch statements"
 draft: false
 topics: [programming, kotlin]
+description: A subtle Java switch fall-through shows why deeply nested control flow can cause bugs during Kotlin migrations.
 ---
 
 The classic C-like switch statement is fine, but it has its flaws. It's no coincidence that modern languages like Kotlin or Rust offer alternatives like `when` or `match` or a more fine-tuned version of `switch` like Zig.

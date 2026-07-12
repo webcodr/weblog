@@ -1,5 +1,7 @@
 ---
 title: US International Keyboard Layout Without Dead Keys
+topics: [hardware]
+description: Create and install a Windows US International keyboard layout that supports special characters without dead keys.
 date: 2023-05-27T21:36:06.644Z
 ---
 Depending on your country's keyboard layout writing code can be quite annoying. The German ISO layout is an exceptional pain in the ass, as almost all relevant symbols require a modifier key, sometimes even two (I'm looking at you, Apple). German has some special characters (ä. ö, ü, ß) and it makes sense to have them readily available without modifier keys, but it just sucks for programming.

@@ -2,6 +2,7 @@
 title: Fix Omarchy Gaming (Vulkan)
 date: 2025-10-31T21:48:59+00:00
 topics: [linux, omarchy]
+description: Fix silently crashing Steam and Proton games on Radeon-based Omarchy systems by installing the missing Vulkan packages.
 ---
 
 After setting up my new notebook, I wanted to try some games on Steam. Works like a charm on my mini PC with Omarchy, but not this time. After starting a game, it takes a few seconds and nothing, the game silently crashes.

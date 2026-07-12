@@ -3,6 +3,7 @@ date: 2024-10-07T20:00:00+02:00
 title: "Fixing no A2DP with Bluetooth headsets on Linux"
 draft: false
 topics: [linux]
+description: Disable Bluetooth hands-free profiles in WirePlumber to restore high-quality A2DP audio on Ubuntu-based Linux systems.
 ---
 
 **Please beware that the following instructions are suitable for media consumption only! After this changes your headset can't make any calls without a dedicated microphone until you undo them.**

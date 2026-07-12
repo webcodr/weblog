@@ -2,6 +2,7 @@
 title: I'm using Arch btw
 date: 2025-08-01T20:36:11+00:00
 topics: [linux, omarchy]
+description: An introduction to Omarchy's developer-focused Arch Linux setup, Hyprland defaults, applications, and customization options.
 toc: true
 lastmod: 2025-08-28T00:00:00+00:00
 ---

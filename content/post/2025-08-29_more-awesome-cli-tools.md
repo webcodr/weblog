@@ -2,6 +2,7 @@
 title: More awesome CLI tools
 date: 2025-08-29T21:34:15+00:00
 topics: [developer-tools]
+description: More useful terminal tools for monitoring systems, inspecting Git changes, querying DNS, counting code, and managing processes.
 toc: true
 ---
 This a follow up article to [Awesome CLI tools]({{< ref "2024-03-06_cli-tools.md" >}}) with even more useful CLI tools. 

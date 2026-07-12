@@ -1,5 +1,7 @@
 ---
 title: Real-world performance of the Apple M1 in software development
+topics: [hardware, performance]
+description: Real-world build and test benchmarks compare an M1 MacBook Air with Intel and AMD development machines.
 date: 2021-01-21T20:39:53.206Z
 ---
 There are enough videos on YouTube out there to show how awesome the new Macs are, but I want to share my perspective as a software developer.

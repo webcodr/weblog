@@ -1,5 +1,7 @@
 ---
 title: Introducing Server Runner
+topics: [developer-tools, rust]
+description: Server Runner starts configured services, waits until they are ready, runs a command, and cleans up afterward.
 date: 2023-05-26T23:53:33.353Z
 ---
 In my recent adventures with Rust, I planned to write a REST API with the help of the excellent book "Zero To Production In Rest" from Luca Palmieri. That's still happing, but as small side project, I wanted to write some kind of CLI tool.
@@ -41,4 +43,3 @@ cargo add server-runner
 ~~~
 
 The source code is available on [GitHub](https://github.com/webcodr/server-runner).
-

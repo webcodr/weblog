@@ -1,5 +1,7 @@
 ---
 title: Terminal evolved
+topics: [developer-tools, linux]
+description: A practical introduction to building a productive terminal workflow with Kitty, tmux, and Neovim.
 date: 2023-05-15T19:22:14.215Z
 ---
 
