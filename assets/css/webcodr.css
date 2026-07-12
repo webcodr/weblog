@@ -648,6 +648,17 @@ a[href]:focus-visible {
 		opacity: 1;
 	}
 }
+@media screen and (min-width: 880px) {
+	:is(h2, h3, h4, h5, h6) {
+		position: relative;
+	}
+	.heading-anchor {
+		position: absolute;
+		right: 100%;
+		margin-left: 0;
+		margin-right: 0.5rem;
+	}
+}
 .post-content .highlight {
 	margin: 0.5em 0 1em;
 	padding: 10px 0 10px 10px;
