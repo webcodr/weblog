@@ -12,7 +12,7 @@
 
 - The Caddy CSP (`Caddyfile`) is `script-src 'self'` with no `unsafe-inline`: no inline event handlers, no inline executable scripts. JSON-LD is safe (non-executable data block). Pagefind's WebAssembly needs `'wasm-unsafe-eval'` added to `script-src`.
 - `baseurl` is `/` (the site serves both webcodr.io and webcodr.dev); absolute URLs are hardcoded to `https://webcodr.io` following the existing canonical-link precedent in `head.html:79`.
-- The 2026-07-12 metadata backfill touched every post, so git-derived lastmod is "today" for all posts. Therefore the visible "Updated" line in `post-meta.html` stays gated on explicit front matter `lastmod`; git info only feeds the sitemap and `article:modified_time`.
+- The 2026-07-12 metadata backfill touched every post, so git-derived lastmod is "today" for all posts. The visible "Updated" line in `post-meta.html` must stay opt-in and independent of git. **Correction found during Task 6 implementation:** gating on `.Params.lastmod` does not work for this, because Hugo mirrors the resolved `.Lastmod` value (including git-derived dates) back into `.Params.lastmod` for every page, not only pages with an explicit front matter `lastmod` key — so once `enableGitInfo` is on, `.Params.lastmod` is truthy everywhere and the "Updated" line would render on all 54 posts. The actual fix uses a front matter field named `updated` (not one of Hugo's four reserved date keys: `date`, `lastmod`, `publishdate`, `expirydate`), parsed in the template with `time.AsTime`, fully decoupled from `.Lastmod`/git. The one post that previously used `lastmod:` (`content/post/2025-08-01_i-m-using-arch-btw.md`) was migrated to `updated:`. Git info feeds only the sitemap and `article:modified_time`, as intended.
 - Post images live in `static/images/` (not page bundles), so the image render hook reads dimensions with `imageConfig`/`fileExists` instead of Hugo's asset pipeline. No `srcset` — out of scope.
 - Deploys only rsync `public/`; the `Caddyfile` change in Task 5 needs a one-time manual pull + Caddy reload on the production server.
 
@@ -660,7 +660,7 @@ git commit -m "feat: add client-side search with pagefind"
 - Modify: `config.yaml`
 - Modify: `.github/workflows/deploy_production.yml`
 
-- [ ] **Step 1: Extend the smoke test**
+- [x] **Step 1: Extend the smoke test**
 
 Append to `tests/seo-metadata.sh` (before the final `printf`):
 
@@ -670,13 +670,13 @@ sitemap_lastmod=$(awk '/edgerouter-x-vs-mikrotik-hex/{found=1} found && /<lastmo
 [[ "$sitemap_lastmod" != *"<lastmod>2017-"* ]] || fail "expected git-derived lastmod, found publication date: $sitemap_lastmod"
 ```
 
-- [ ] **Step 2: Run the test and verify RED**
+- [x] **Step 2: Run the test and verify RED**
 
 Run: `bash tests/seo-metadata.sh`
 
 Expected: FAIL because without git info `.Lastmod` falls back to the 2017 publication date.
 
-- [ ] **Step 3: Enable git info with explicit front matter priority**
+- [x] **Step 3: Enable git info with explicit front matter priority**
 
 Add to `config.yaml`:
 
@@ -688,7 +688,7 @@ frontmatter:
 
 The explicit order makes front matter `lastmod` win over git (Hugo's default with `enableGitInfo` puts `:git` first). The visible "Updated" line in `post-meta.html:11` stays gated on `.Params.lastmod` and must NOT be changed to `.Lastmod`: the 2026-07-12 metadata backfill touched every post, so git dates would falsely mark all posts as freshly updated. Git info feeds only the sitemap and the `article:modified_time` meta from Task 1.
 
-- [ ] **Step 4: Give CI full git history**
+- [x] **Step 4: Give CI full git history**
 
 In `.github/workflows/deploy_production.yml`, extend the checkout step (a shallow clone would stamp every page with the latest commit date):
 
@@ -699,19 +699,19 @@ In `.github/workflows/deploy_production.yml`, extend the checkout step (a shallo
           fetch-depth: 0
 ```
 
-- [ ] **Step 5: Run the test and verify GREEN**
+- [x] **Step 5: Run the test and verify GREEN**
 
 Run: `bash tests/seo-metadata.sh`
 
 Expected: `SEO metadata checks passed.`
 
-- [ ] **Step 6: Confirm no visible regression**
+- [x] **Step 6: Confirm no visible regression**
 
 Run: `hugo --destination /tmp/lastmod-check --quiet`
 
 Verify `/tmp/lastmod-check/2017/01/edgerouter-x-vs-mikrotik-hex/index.html` still contains no `Updated <time` line, then `rm -rf /tmp/lastmod-check`.
 
-- [ ] **Step 7: Run the full site verification and commit**
+- [x] **Step 7: Run the full site verification and commit**
 
 Run: `bash tests/content-rendering.sh && bash tests/search.sh && bash tests/blog-discovery.sh && bash tests/post-generators.sh && hugo && git diff --check`
 
@@ -722,6 +722,8 @@ git commit -m "feat: derive sitemap lastmod from git history"
 
 ---
 
+
+> **Deviation note:** Step 3's `frontmatter.lastmod` config and `enableGitInfo` were applied as written and work correctly for the sitemap/`article:modified_time` goal. However Step 3's claim that `post-meta.html`'s existing `.Params.lastmod` gate would keep working was wrong — see the corrected constraint above. `post-meta.html` was changed to gate on a new `updated` front matter field via `time.AsTime` instead of `.Params.lastmod`, and `content/post/2025-08-01_i-m-using-arch-btw.md` was migrated from `lastmod:` to `updated:`. Step 6's verification path was also corrected to the post's actual slug, `/2017/01/ubiquiti-edgerouter-x-vs.-mikrotik-hex/index.html` (the permalink slug is derived from the title, not the filename).
 ## Post-Deploy Verification
 
 After the first production deploy with all tasks merged:

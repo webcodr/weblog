@@ -2,6 +2,9 @@ baseurl: "/"
 locale: "en-us"
 title: "webcodr"
 theme: "webcodr"
+enableGitInfo: true
+frontmatter:
+  lastmod: ["lastmod", ":git", "date", "publishDate"]
 params:
   description: >-
     WebCodr is a blog that covers a wide range of programming topics,

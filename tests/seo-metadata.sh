@@ -52,4 +52,8 @@ assert_contains "$feed" 'xmlns:content="http://purl.org/rss/1.0/modules/content/
 item_count=$(grep -Fc '<item>' "$feed")
 [[ "$item_count" -le 20 && "$item_count" -ge 1 ]] || fail "expected 1-20 feed items, found $item_count"
 
+sitemap_lastmod=$(awk '/mikrotik-hex/{found=1} found && /<lastmod>/{print; exit}' "$output/sitemap.xml")
+[[ -n "$sitemap_lastmod" ]] || fail "expected a lastmod entry for the 2017 router post in sitemap.xml"
+[[ "$sitemap_lastmod" != *"<lastmod>2017-"* ]] || fail "expected git-derived lastmod, found publication date: $sitemap_lastmod"
+
 printf 'SEO metadata checks passed.\n'

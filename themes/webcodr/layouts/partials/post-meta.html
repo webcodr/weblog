@@ -8,8 +8,9 @@
     </span>
   {{ end }}
 </p>
-{{ with .Params.lastmod }}
-  {{ if ne ($.Date.Format "2006-01-02") ($.Lastmod.Format "2006-01-02") }}
-    <p class="post-updated" data-pagefind-ignore>Updated <time datetime="{{ $.Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ $.Lastmod.Format "January 2, 2006" }}</time></p>
+{{ with .Params.updated }}
+  {{ $updated := . | time.AsTime }}
+  {{ if ne ($.Date.Format "2006-01-02") ($updated.Format "2006-01-02") }}
+    <p class="post-updated" data-pagefind-ignore>Updated <time datetime="{{ $updated.Format "2006-01-02T15:04:05Z07:00" }}">{{ $updated.Format "January 2, 2006" }}</time></p>
   {{ end }}
 {{ end }}
