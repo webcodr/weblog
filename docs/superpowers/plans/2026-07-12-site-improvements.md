@@ -653,6 +653,8 @@ git commit -m "feat: add client-side search with pagefind"
 
 > **Operational follow-up (manual, after merge to main):** the deploy pipeline only uploads `public/`, so the Caddyfile change must be applied on the production server once: pull the repo checkout there and reload Caddy (e.g. `docker compose exec caddy caddy reload --config /etc/caddy/Caddyfile`). Search will be blocked by the old CSP until this happens. Verify afterwards that `https://webcodr.io/search/` returns results and the browser console shows no CSP violations.
 
+> **Follow-up (post-implementation):** the CI pin in `.github/workflows/deploy_production.yml` was bumped from `pagefind@1.3.0` to `pagefind@1.5.2` (latest stable at the time). Checked `gh release view` for `v1.4.0`, `v1.5.0`, and `v1.5.2` in `CloudCannon/pagefind`/`Pagefind/pagefind`: the changes are additive (title/metadata search, Web Worker search, an opt-in Component UI, new `plain_excerpt`/`matchedMetaFields` result fields) with no breaking changes to the low-level `init()`/`search()`/`result.data()` API this site's hand-rolled UI uses. Re-verified end-to-end with a real 1.5.2-generated index via headless Chromium (Playwright against the system `/usr/bin/chromium`, same approach as the original Task 5 verification): both `srchr` and `edgerouter` queries return ranked, highlighted results with working links; no CSP violations. The step commands above still show `1.3.0` as a record of what actually ran during the original implementation — treat `deploy_production.yml` as the source of truth for the current pinned version.
+
 ### Task 6: Git-Derived Sitemap Freshness
 
 **Files:**

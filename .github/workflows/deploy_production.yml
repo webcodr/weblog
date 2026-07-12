@@ -41,7 +41,7 @@ jobs:
         run: hugo
 
       - name: Build search index
-        run: npx -y pagefind@1.3.0 --site public
+        run: npx -y pagefind@1.5.2 --site public
 
       - name: Verify build output
         run: |
