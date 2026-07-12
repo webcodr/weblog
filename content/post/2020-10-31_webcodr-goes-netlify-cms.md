@@ -1,5 +1,7 @@
 ---
 title: webcodr goes Netlify CMS
+topics: [developer-tools, web-development]
+description: Add Netlify CMS to a Hugo site for a Git-based publishing workflow that works across desktop and iPad.
 date: 2020-10-31T22:54:24.430Z
 ---
 Until today posts on webcodr were published via a simple git-based workflow. If I wanted to create a new posts, I had to open the repository in Visual Studio Code and created a markdown file. After pushing the commit with the new file, a GitHub hook notified Netlify to pull the repo and build and publish the site.

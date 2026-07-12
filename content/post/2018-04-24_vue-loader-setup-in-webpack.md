@@ -1,6 +1,8 @@
 ---
 date: 2018-04-24T16:21:49+02:00
 title: "Vue Loader Setup in Webpack"
+topics: [javascript, web-development]
+description: Set up vue-loader manually in Webpack, add Vue entry points, and split dependencies into dedicated vendor chunks.
 draft: false
 ---
 

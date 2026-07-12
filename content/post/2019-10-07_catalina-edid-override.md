@@ -1,5 +1,7 @@
 ---
 title: macOS Catalina EDID Override AKA HDMI color fix
+topics: [hardware, macos]
+description: Restore correct HDMI colors in macOS Catalina by installing a patched EDID override from Recovery Mode.
 date: 2019-10-07T22:26:07+02:00
 draft: false
 ---

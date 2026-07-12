@@ -1,5 +1,7 @@
 ---
 title: Awesome tests with Vue and Jest
+topics: [javascript, testing]
+description: Configure Jest for Vue components and test asynchronous Fetch behavior with mocks, shallow rendering, and async/await.
 date: 2018-04-25T17:27:26+02:00
 draft: false
 ---
@@ -158,4 +160,4 @@ Setting up Jest for Vue is easy, even if you have to do it manually.
 The current AngularJS app of our customer can't be tested with Jest, at least for now. The AngularJS HTTP mock does not work and I haven't figured out the problem yet.
 
 But enough of Angular: the real deal comes with the testing itself. Async/await is a nice and simple way for testing asynchronous behaviour. 
-I don't think this could be easier and it's a reliable method with the power of modern JavaScript. Try to imagine what the demo test would look like in ES5 ... 
+I don't think this could be easier and it's a reliable method with the power of modern JavaScript. Try to imagine what the demo test would look like in ES5 ...

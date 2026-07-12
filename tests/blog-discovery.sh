@@ -72,7 +72,7 @@ assert_contains "$srchr" 'Using fd, rg, fzf and bat to find things fast'
 assert_contains "$srchr" 'class="post-navigation"'
 assert_contains "$srchr" 'class="post-navigation-previous"'
 assert_not_contains "$srchr" 'class="post-navigation-next"'
-assert_not_contains "$legacy_post" 'class="related-posts"'
+assert_contains "$legacy_post" 'class="related-posts"'
 assert_contains "$legacy_post" 'class="post-navigation"'
 assert_not_contains "$root/themes/webcodr/layouts/partials/post-navigation.html" '&larr;'
 assert_not_contains "$root/themes/webcodr/layouts/partials/post-navigation.html" '&rarr;'
@@ -128,5 +128,16 @@ assert_post_metadata "2018-02-18_how-to-use-wireshark-with-an-edgerouter.md"
 assert_post_metadata "2018-02-23_webcodr.io.md"
 assert_post_metadata "2018-02-28_telekom-edgerouter-mtu-mss-clamping.md"
 assert_post_metadata "2018-04-19_wildcard-certificates-lets-encrypt-cloudflare.md"
+assert_post_metadata "2018-04-22_pimp-your-vscode.md"
+assert_post_metadata "2018-04-24_vue-loader-setup-in-webpack.md"
+assert_post_metadata "2018-04-25_Testing-on-steroids-Vue-and-Jest.md"
+assert_post_metadata "2018-04-27_introducing-delivery-guy.md"
+assert_post_metadata "2018-04-27_why-custom-errors-in-javascript-are-broken.md"
+assert_post_metadata "2018-06-13_snapshot-tests-with-jest.md"
+assert_post_metadata "2019-09-25_hello-dark-mode.md"
+assert_post_metadata "2019-10-07_catalina-edid-override.md"
+assert_post_metadata "2020-08-29_kotest-and-junit-with-intellij.md"
+assert_post_metadata "2020-10-31_webcodr-goes-netlify-cms.md"
+assert_post_metadata "2020-11-18_ryzen-vs-apple-silicon-and-why-zen-2-is-not-so-bad-as-you-may-think.md"
 
 printf 'Blog discovery checks passed.\n'

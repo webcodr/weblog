@@ -1,6 +1,8 @@
 ---
 date: 2019-09-25T22:20:12+02:00
 title: "Hello, Dark Mode"
+topics: [javascript, web-development]
+description: Implement automatic dark mode with prefers-color-scheme, matchMedia, and CSS custom properties backed by SCSS.
 draft: false
 ---
 Dark mode for Android and iOS? Hold my beer ...

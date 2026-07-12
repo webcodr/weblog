@@ -1,6 +1,8 @@
 ---
 date: 2018-04-27T23:10:16+02:00
 title: "Introducing DeliveryGuy"
+topics: [javascript, web-development]
+description: DeliveryGuy wraps the Fetch API to reject HTTP errors and provide convenient access to response bodies and metadata.
 draft: false
 ---
 

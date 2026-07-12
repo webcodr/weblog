@@ -1,6 +1,8 @@
 ---
 date: 2018-04-21T15:30:10+02:00
 title: "Pimp Your Visual Studio Code"
+topics: [developer-tools]
+description: A curated collection of Visual Studio Code extensions, themes, and icons for a more productive and polished editor.
 draft: false
 ---
 

@@ -1,5 +1,7 @@
 ---
 title: Snapshot Tests With Jest
+topics: [javascript, testing]
+description: Use Jest snapshots to compare serialized output, handle generated values, update snapshots, and avoid common testing mistakes.
 date: 2018-06-13T16:31:12+02:00
 draft: false
 ---

@@ -1,6 +1,8 @@
 ---
 date: 2018-04-27T10:50:35+02:00
 title: "Why custom errors in JavaScript with Babel are broken"
+topics: [javascript, programming]
+description: Learn why Babel-transpiled custom JavaScript errors lose inheritance in ES5 and what limited workarounds remain.
 draft: false
 ---
 

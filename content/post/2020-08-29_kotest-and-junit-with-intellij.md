@@ -1,6 +1,8 @@
 ---
 date: 2020-08-29T22:26:07+02:00
 title: "Kotest and JUnit with IntelliJ or: don’t frak up your toolchain upgrades"
+topics: [developer-tools, kotlin, testing]
+description: Combine Kotest, MockK, and JUnit 5 in IntelliJ, and fix missing test discovery by adding the Jupiter engine.
 draft: false
 ---
 My team and I recently decided to use Kotlin for new features in our existing project. It was a great choice to implement a new authentication process and we’re now rewriting some older parts of the application from Java to Kotlin.
