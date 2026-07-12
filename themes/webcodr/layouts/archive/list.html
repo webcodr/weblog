@@ -12,7 +12,7 @@
             <h2 class="archive-year">{{ .Key }}</h2>
             <ul class="post-index">
               {{ range .Pages }}
-                {{ partial "post-index-entry.html" . }}
+                {{ partial "post-index-entry.html" (dict "page" . "dateFormat" "Jan 02") }}
               {{ end }}
             </ul>
           </section>

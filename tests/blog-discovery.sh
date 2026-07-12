@@ -54,6 +54,7 @@ assert_contains "$output/topics/developer-tools/index.html" 'Find things even fa
 assert_contains "$output/topics/developer-tools/index.html" 'A cross-platform Rust TUI'
 assert_tree_contains "$output/topics/networking" 'VDSL via Vigor 130 und EdgeRouter X'
 assert_tree_contains "$output/topics/javascript" 'Snapshot Tests With Jest'
+assert_contains "$output/topics/javascript/index.html" '>Sep 25, 2019</time>'
 assert_tree_contains "$output/topics/hardware" 'Tastaturen'
 assert_tree_contains "$output/topics/php" 'Array almighty'
 assert_file "$output/archive/index.html"
