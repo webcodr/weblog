@@ -22,6 +22,10 @@ assert_contains() {
 	grep -Fq -- "$2" "$1" || fail "expected $1 to contain: $2"
 }
 
+assert_tree_contains() {
+	grep -RFq -- "$2" "$1" || fail "expected $1 to contain: $2"
+}
+
 assert_not_contains() {
 	if grep -Fq -- "$2" "$1"; then
 		fail "expected $1 not to contain: $2"
@@ -48,6 +52,10 @@ assert_contains "$output/topics/index.html" '<h1 class="post-headline">Topics</h
 assert_contains "$output/topics/index.html" '>Developer Tools<'
 assert_contains "$output/topics/developer-tools/index.html" 'Find things even faster with srchr'
 assert_contains "$output/topics/developer-tools/index.html" 'A cross-platform Rust TUI'
+assert_tree_contains "$output/topics/networking" 'VDSL via Vigor 130 und EdgeRouter X'
+assert_tree_contains "$output/topics/javascript" 'Snapshot Tests With Jest'
+assert_tree_contains "$output/topics/hardware" 'Tastaturen'
+assert_tree_contains "$output/topics/php" 'Array almighty'
 assert_file "$output/archive/index.html"
 assert_contains "$output/archive/index.html" '<h2 class="archive-year">2026</h2>'
 assert_contains "$output/archive/index.html" 'Find things even faster with srchr'
@@ -99,57 +107,9 @@ assert_not_contains "$root/assets/css/webcodr.css" 'border-bottom: 2px solid var
 assert_not_contains "$root/assets/css/webcodr.css" '.related-posts-list,'
 assert_contains "$root/assets/css/webcodr.css" '.related-posts-list {'
 assert_contains "$root/assets/css/webcodr.css" 'padding-inline: 0;'
-assert_post_metadata "2015-12-05_amplify-2-0.md"
-assert_post_metadata "2015-12-05_array-almighty.md"
-assert_post_metadata "2015-12-05_codrpress.md"
-assert_post_metadata "2015-12-05_ihk-agile.md"
-assert_post_metadata "2015-12-05_menlo-park-start-your-photocopiers.md"
-assert_post_metadata "2015-12-05_php-autoloader-nach-dem-psr-0-standard.md"
-assert_post_metadata "2015-12-05_php-tip-limonade.md"
-assert_post_metadata "2015-12-05_pythonpress.md"
-assert_post_metadata "2015-12-05_responsive-bilder-mit-wordpress.md"
-assert_post_metadata "2015-12-05_retina-display-taugliche-css-hintergrundbilder.md"
-assert_post_metadata "2015-12-05_say-hello-to-mango.md"
-assert_post_metadata "2015-12-05_schnellere-websites-mit-requirejs.md"
-assert_post_metadata "2015-12-05_services-ftw.md"
-assert_post_metadata "2015-12-05_sublime-text-2.md"
-assert_post_metadata "2015-12-05_tastaturen.md"
-assert_post_metadata "2015-12-05_upload-probleme-mit-php-via-fastcgi.md"
-assert_post_metadata "2017-01-07_vdsl-vigor-130-edgerouter.md"
-assert_post_metadata "2017-01-07_vodafone-zu-telekom.md"
-assert_post_metadata "2017-01-09_webpack-2-setup.md"
-assert_post_metadata "2017-01-15_edgerouter-x-vs-mikrotik-hex.md"
-assert_post_metadata "2017-08-28_node-js-performance.md"
-assert_post_metadata "2018-01-25_synology-lets-encrypt.md"
-assert_post_metadata "2018-02-03_edgerouter-vlan-isolation.md"
-assert_post_metadata "2018-02-07_edgerouter-entertaintv.md"
-assert_post_metadata "2018-02-10_nginx-reverse-proxy-on-raspberry-pi.md"
-assert_post_metadata "2018-02-18_how-to-use-wireshark-with-an-edgerouter.md"
-assert_post_metadata "2018-02-23_webcodr.io.md"
-assert_post_metadata "2018-02-28_telekom-edgerouter-mtu-mss-clamping.md"
-assert_post_metadata "2018-04-19_wildcard-certificates-lets-encrypt-cloudflare.md"
-assert_post_metadata "2018-04-22_pimp-your-vscode.md"
-assert_post_metadata "2018-04-24_vue-loader-setup-in-webpack.md"
-assert_post_metadata "2018-04-25_Testing-on-steroids-Vue-and-Jest.md"
-assert_post_metadata "2018-04-27_introducing-delivery-guy.md"
-assert_post_metadata "2018-04-27_why-custom-errors-in-javascript-are-broken.md"
-assert_post_metadata "2018-06-13_snapshot-tests-with-jest.md"
-assert_post_metadata "2019-09-25_hello-dark-mode.md"
-assert_post_metadata "2019-10-07_catalina-edid-override.md"
-assert_post_metadata "2020-08-29_kotest-and-junit-with-intellij.md"
-assert_post_metadata "2020-10-31_webcodr-goes-netlify-cms.md"
-assert_post_metadata "2020-11-18_ryzen-vs-apple-silicon-and-why-zen-2-is-not-so-bad-as-you-may-think.md"
-assert_post_metadata "2021-01-21_real-world-performance-of-the-apple-m1-in-software-development.md"
-assert_post_metadata "2023-05-15_terminal-evolved.md"
-assert_post_metadata "2023-05-26_introducing-server-runner.md"
-assert_post_metadata "2023-05-27_us-international-keyboard-layout-without-dead-keys.md"
-assert_post_metadata "2024-01-19_micro-dsl-kotlin.md"
-assert_post_metadata "2024-03-06_cli-tools.md"
-assert_post_metadata "2024-10-07_pop-os-bluetooth-handsfree-mode.md"
-assert_post_metadata "2025-05-28_java-switch-dont-do-this.md"
-assert_post_metadata "2025-08-01_i-m-using-arch-btw.md"
-assert_post_metadata "2025-08-29_more-awesome-cli-tools.md"
-assert_post_metadata "2025-10-29_hyprland-trackpad-tips---tricks.md"
-assert_post_metadata "2025-10-31_fix-omarchy-gaming--vulkan-.md"
+for post in "$root"/content/post/*.md; do
+	[[ "$(basename "$post")" == "_index.md" ]] && continue
+	assert_post_metadata "$(basename "$post")"
+done
 
 printf 'Blog discovery checks passed.\n'
