@@ -632,19 +632,29 @@ a[href]:focus-visible {
 	max-width: 100%;
 	height: auto;
 }
-.heading-anchor {
+.post-content .heading-anchor {
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.15s ease-in-out;
+}
+.post-content .heading-anchor:hover,
+.post-content .heading-anchor:focus-visible {
+	color: var(--headline-secondary-color);
+	text-decoration: underline;
+}
+.heading-anchor-hash {
+	display: inline-block;
 	margin-left: 0.5rem;
 	color: var(--headline-secondary-color);
-	text-decoration: none;
 	opacity: 0;
 	transition: opacity 0.15s ease-in-out;
 }
-:is(h2, h3, h4, h5, h6):hover > .heading-anchor,
-.heading-anchor:focus-visible {
+.heading-anchor:hover .heading-anchor-hash,
+.heading-anchor:focus-visible .heading-anchor-hash {
 	opacity: 1;
 }
 @media (hover: none) {
-	.heading-anchor {
+	.heading-anchor-hash {
 		opacity: 1;
 	}
 }
@@ -652,7 +662,7 @@ a[href]:focus-visible {
 	:is(h2, h3, h4, h5, h6) {
 		position: relative;
 	}
-	.heading-anchor {
+	.heading-anchor-hash {
 		position: absolute;
 		right: 100%;
 		margin-left: 0;
