@@ -1,25 +1,30 @@
 {{ $css := resources.Get "css/webcodr.css" | resources.Fingerprint "sha512"}}
 {{ $js := resources.Get "js/webcodr.js" | resources.Fingerprint "sha512"}}
 
+{{ $permalink := .Permalink }}
+
+{{ if .IsHome }}
+  {{ $paginator := .Paginate .Site.RegularPages }}
+  {{ if ne $paginator.PageNumber 1 }}
+    {{ $permalink = print $permalink "page/" $paginator.PageNumber "/" }}
+  {{ end }}
+{{ end }}
+
+{{ $canonical := print "https://webcodr.io" $permalink }}
+{{ $title := site.Title }}
+{{ if not .IsHome }}{{ $title = print .Title " · " site.Title }}{{ end }}
+{{ $description := .Description | default site.Params.description }}
+
 <head>
-  <title>{{ .Title }}</title>
+  <title>{{ $title }}</title>
   <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen" />
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=5"
   />
-  <meta
-    name="description"
-    content="
-    Webcodr is a blog that covers a wide range of programming topics,
-    including the Kotlin and Rust programming languages and ways to improve 
-    developer productivity."
-  />
-  <meta
-    name="keywords"
-    content="Kotlin, Rust, Developer Productivity, Mechanical Keyboards"
-  />
+  <meta name="description" content="{{ $description }}" />
   <meta charset="UTF-8" />
+  {{ partial "seo.html" (dict "page" . "canonical" $canonical "title" $title "description" $description) }}
   {{ with (.Site.Home.OutputFormats.Get "RSS") }}
     <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}" />
   {{ end }}
@@ -67,14 +72,5 @@
   />
   <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 
-  {{ $permalink := .Permalink }}
-
-  {{ if .IsHome }}
-    {{ $paginator := .Paginate .Site.RegularPages }}
-    {{ if ne $paginator.PageNumber 1 }}
-      {{ $permalink = print $permalink "page/" $paginator.PageNumber "/" }}
-    {{ end }}
-  {{ end }}
-
-  <link rel="canonical" href="https://webcodr.io{{ $permalink }}">
+  <link rel="canonical" href="{{ $canonical }}">
 </head>
