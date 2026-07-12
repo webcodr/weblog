@@ -10,6 +10,8 @@ function create_post
     echo "---" > $filename
     echo "title: "$title"" >> $filename
     echo "date: $date" >> $filename
+    echo "topics: []" >> $filename
+    echo 'description: ""' >> $filename
     echo "---" >> $filename
 end
 
