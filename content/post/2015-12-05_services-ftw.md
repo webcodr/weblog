@@ -21,21 +21,19 @@ Wie bekomme ich also drei Programmiersprachen unter einen Hut, ohne dass CodrPre
 
 ## Pygmentizr
 
-[Pygmentizr](http://pygmentizr.herokuapp.com/) ist logischerweise in Python geschrieben, um Pygments nutzen zu können.
+[Pygmentizr](https://web.archive.org/web/20140516204904/http://pygmentizr.herokuapp.com/) ist logischerweise in Python geschrieben, um Pygments nutzen zu können.
 
 Per POST-Anfrage auf die verlinkte URL erreicht man den eigentlichen Service, der als Parameter die Sprache und den Quelltext erwartet. Zurück kommt HTML, das nur noch per CSS hübsch gemacht werden muss.
 
 Ein entsprechendes Stylesheet für den bekannten Monokai-Stil ist auf der Seite verlinkt oder im GitHub-Repository zu finden.
 
-[Pygmentizr bei GitHub](https://github.com/MadCatme/Pygmentizr)
+[Pygmentizr bei GitHub](https://web.archive.org/web/20131210082228/https://github.com/MadCatme/Pygmentizr)
 
 ## Amplifyr
 
-[Amplifyr](http://amplifyr.herokuapp.com/) nutzt Redcarpet und bindet Pygmentizr als Syntax-Highlighter ein.
+Amplifyr nutzt Redcarpet und bindet Pygmentizr als Syntax-Highlighter ein.
 
 Wie Pygmentizr lässt sich Amplifyr per POST-Anfrage ansprechen und gibt den in HTML konvertierten Markdown-Quelltext zurück.
-
-[Amplifyr bei GitHub](https://github.com/MadCatme/Amplifyr)
 
 Beide Dienste laufen auf der Cloud-Plattform Heroku.
 

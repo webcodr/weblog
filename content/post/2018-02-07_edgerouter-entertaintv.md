@@ -23,7 +23,7 @@ Folgende Punkte beschreiben die Konfiguration der UniFi-Hardware und des EdgeRou
 
 Der einfache Teil vorweg: für die UniFi-Geräte reicht es, IGMP Snooping in den Einstellungen unter `Networks` bzw. `Wireless Networks` für das jeweilige Netz zu aktivieren und die Geräte neu zu provisionieren.
 
-Falls jemand ein UniFi Security Gateway als Router verwenden sollte, müssen noch weitere Einstellungen im CLI des Controllers vorgenommen werden, damit der IGMP Proxy läuft. Eine Anleitung dazu gibt's [hier](https://schreibers-blog.de/entertain-mit-unifi-hardware-und-switch/).
+Falls jemand ein UniFi Security Gateway als Router verwenden sollte, müssen noch weitere Einstellungen im CLI des Controllers vorgenommen werden, damit der IGMP Proxy läuft. Eine Anleitung dazu gibt's [hier](https://web.archive.org/web/20230606014804/https://schreibers-blog.de/entertain-mit-unifi-hardware-und-switch/).
 
 ### EdgeRouter
 

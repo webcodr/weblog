@@ -7,7 +7,7 @@ slug: "menlo-park-start-your-photocopiers"
 ---
 ## ... oder warum Software-Patente und Patentkriege scheiße sind.
 
-Gestern habe für die Share-Funktionen von Twitter, Google+ und Facebook jeweils ein Modul nach dem [CommonJS-Standard](http://www.commonjs.org/) gebaut, um sie in meinem [privaten Weblog](http://www.madcatswelt.org/) zu nutzen.
+Gestern habe für die Share-Funktionen von Twitter, Google+ und Facebook jeweils ein Modul nach dem [CommonJS-Standard](http://www.commonjs.org/) gebaut, um sie in meinem privaten Weblog zu nutzen.
 
 Daran ist nun nichts besonders, wenn ich nicht eine kleine Entdeckung gemacht hätte. Offenbar hat Facebook den nötigen JavaScript-Code von Twitter kopiert oder Twitter von Facebook.
 

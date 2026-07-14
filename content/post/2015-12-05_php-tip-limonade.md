@@ -6,7 +6,7 @@ description: Limonade wird als schlankes PHP-Microframework für Routing, Templa
 ---
 Wer sich schon mal mit [Symfony](http://symfony.com/) oder ähnlichen PHP-Frameworks beschäftigt hat, kam sicher schnell zur Erkentnis, dass das die Dinger zwar viel können und generell eine tolle Sache sind, aber hohe Einstiegshürden haben bzw. viel Einarbeitungszeit benötigen, sowie für viele Projekte einfach überdimensioniert sind.
 
-In Ruby hätte man für solche Fälle z.B. [Sinatra](http://www.sinatrarb.com/): übersichtlich, klein, schnell und flexibel. Mit [Limonade](http://limonade-php.github.com/) gibt es so ein Micro-Framework nun endlich für PHP, mit dem sich auch ähnlich elegant entwickeln lässt.
+In Ruby hätte man für solche Fälle z.B. [Sinatra](http://www.sinatrarb.com/): übersichtlich, klein, schnell und flexibel. Mit [Limonade](https://limonade-php.github.io/) gibt es so ein Micro-Framework nun endlich für PHP, mit dem sich auch ähnlich elegant entwickeln lässt.
 
 Es reicht eine Datei in ein Script einzubinden, die .htaccess-Datei anzupassen und schon kann man loslegen:
 

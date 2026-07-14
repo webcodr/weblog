@@ -73,7 +73,7 @@ Die definitiv günstigste Wahl gibt's von Cherry selbst mit dem MX Keyboard 3.0.
 
 Ansonsten ist die Auswahl an Shops eher eingeschränkt. Die EU und insbesondere Deutschland gehören bei mechanischen Tastaturen eher zur dritten Welt.
 
-Die bisher besten Quellen, die ich neben Amazon ausmachen konnte: [GetDigital](http://www.getdigital.de/) (dasKeyboard, Ducky, Filco, Leopold), [CaseKing](http://www.caseking.de/shop/catalog/) (Cherry und Ducky), [The Keyboard Company UK](http://www.keyboardco.com/) (primär Filco und deren Zubehör).
+Die bisher besten Quellen, die ich neben Amazon ausmachen konnte: [GetDigital](http://www.getdigital.de/) (dasKeyboard, Ducky, Filco, Leopold), [CaseKing](https://www.caseking.de/) (Cherry und Ducky), [The Keyboard Company UK](http://www.keyboardco.com/) (primär Filco und deren Zubehör).
 
 Ansonsten stellen diverse bekannte Marken aus dem Spiele-Sektor wie Corsair, Razer, CMstorm, Func und auch Logitech mechanische Tastaturen her, die man auch in gängigen Läden und Shops bekommt.
 

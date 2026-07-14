@@ -4,7 +4,7 @@ title: "Responsive Bilder mit WordPress"
 topics: [php, web-development]
 description: Ein WordPress-Filter entfernt feste Bildabmessungen, damit eingebettete Bilder in responsiven Layouts per CSS mitskalieren.
 ---
-Aktuell wage ich erste Gehversuche mit responsiven Layouts in meinem [WordPress-Theme](https://github.com/MadCatme/mcw-blue). Ziel der Übung ist ein smartphone-taugliches Layout. Leider macht einem WordPress die Arbeit bei Bildern unnötig schwer.
+Aktuell wage ich erste Gehversuche mit responsiven Layouts in meinem [WordPress-Theme](https://web.archive.org/web/20131210084100/https://github.com/MadCatme/mcw-blue). Ziel der Übung ist ein smartphone-taugliches Layout. Leider macht einem WordPress die Arbeit bei Bildern unnötig schwer.
 
 ## Automatische Bildskalierung mit CSS
 

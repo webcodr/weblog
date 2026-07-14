@@ -31,4 +31,4 @@ input {
 }
 ~~~
 
-There is even more like tapping maps, middle button emulation etc. -- you can find all options [here](https://wiki.hypr.land/Configuring/Variables/#touchpad).
+There is even more like tapping maps, middle button emulation etc. -- you can find all options [here](https://wiki.hypr.land/Configuring/Basics/Variables/#touchpad).

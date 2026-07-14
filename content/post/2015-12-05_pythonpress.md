@@ -100,4 +100,4 @@ Abfragen erfolgen statisch, daher ist keine Instanz nötig. Die Methode `objects
 
 Mit diesem Wissen lässt sich nun ganz schnell eine Basis-Applikation bauen, die aus der vorhandenen CodrPress-Collection Einträge ausliest und anzeigt.
 
-Der bisherige Stand ist natürlich bei [GitHub](https://github.com/MadCatme/CodrPressP).
+Der bisherige Stand ist natürlich bei [GitHub](https://web.archive.org/web/20131210082353/https://github.com/MadCatme/CodrPressP).

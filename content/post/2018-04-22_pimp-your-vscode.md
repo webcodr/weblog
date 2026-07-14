@@ -32,7 +32,7 @@ Share your coding styles between editors, IDEs etc. on a per project basis. It's
 
 Bracket madness? No more!
 
-[Download](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+*Update: The extension has been delisted, since VS Code now ships native bracket pair colorization — see the `editor.bracketPairColorization.enabled` setting.*
 
 ### Markdown All in One
 
@@ -54,7 +54,7 @@ Matches nicely with Cobalt2 or other darker themes. There are a ton of icons for
 
 [Download](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
-But that's not the end. VS Code can do much more, you can find some other very useful tips and tricks on [vscodecandothat.com](https://vscodecandothat.com/).
+But that's not the end. VS Code can do much more, you can find some other very useful tips and tricks on [vscodecandothat.com](https://web.archive.org/web/2018/https://vscodecandothat.com/) (now offline, linked via the Wayback Machine).
 
 ## Dear GitHub
 

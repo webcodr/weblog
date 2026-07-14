@@ -136,7 +136,7 @@ eth1         10.0.0.1/24                       u/u  Local 2
 ...
 ~~~
 
-Alle Geräte im Netzwerk sollten nun eine oder mehrere IPv6-Adressen besitzen und via IPv6 ins Internet kommen. Das lässt sich sehr einfach über die Seite [ipv6-test.com](http://ipv6-test.com/) herausfinden.
+Alle Geräte im Netzwerk sollten nun eine oder mehrere IPv6-Adressen besitzen und via IPv6 ins Internet kommen. Das lässt sich sehr einfach über die Seite [test-ipv6.com](https://test-ipv6.com/) herausfinden.
 
 #### Zugang zum Vigor-Web-Interface
 
