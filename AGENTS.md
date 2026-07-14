@@ -6,7 +6,7 @@
 - `public/` is generated build output and is gitignored; do not edit or commit it.
 
 ## Commands
-- Requires the Hugo CLI on `PATH` for local verification; CI pins Hugo Extended `0.163.3` for production builds.
+- Requires the Hugo CLI on `PATH` for local verification; CI pins Hugo Extended `0.164.0` for production builds.
 - Build/verify the site locally with `hugo`.
 - For local preview, use Hugo's dev server from the repo root: `hugo server`.
 - There is no configured test, lint, typecheck, formatter, or asset-bundler command in this repo.
