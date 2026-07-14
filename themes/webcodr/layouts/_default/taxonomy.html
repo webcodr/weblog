@@ -4,7 +4,7 @@
 <body>
   {{ partial "header.html" . }}
   <div class="container container--main">
-    <main class="content">
+    <main id="main" class="content">
       <article class="post">
         <h1 class="post-headline">{{ if eq .Data.Singular "series" }}{{ .Title }}{{ else }}{{ .Title | humanize | title }}{{ end }}</h1>
         {{ with .OutputFormats.Get "RSS" }}

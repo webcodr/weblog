@@ -463,6 +463,21 @@ h6 {
 		padding-right: 0;
 	}
 }
+.skip-link {
+	position: absolute;
+	top: -100vh;
+	left: 0;
+	z-index: 10;
+	padding: 10px;
+	font-family: var(--monospace-font);
+	background: var(--header-title-background-color);
+	color: var(--header-title-text-color);
+}
+
+.skip-link:focus {
+	top: 0;
+}
+
 .header-title {
 	margin: 0;
 	padding: 10px;

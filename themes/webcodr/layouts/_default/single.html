@@ -5,7 +5,7 @@
 <body>
     {{ partial "header.html" . }}
     <div class="container container--main">
-        <main class="content">
+        <main id="main" class="content">
             {{ partial "post.html"  (dict "context" . "location" "single") }}
         </main>
     </div>
