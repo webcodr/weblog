@@ -26,6 +26,17 @@ sitemap:
 services:
   rss:
     limit: 20
+mediaTypes:
+  application/feed+json:
+    suffixes: ["json"]
+outputFormats:
+  jsonfeed:
+    mediaType: application/feed+json
+    baseName: feed
+    isPlainText: true
+    rel: alternate
+outputs:
+  home: ["html", "rss", "jsonfeed"]
 pagination:
   pagerSize: 5
 taxonomies:

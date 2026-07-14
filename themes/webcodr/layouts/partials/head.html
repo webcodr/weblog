@@ -31,6 +31,14 @@
   {{ with (.Site.Home.OutputFormats.Get "RSS") }}
     <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}" />
   {{ end }}
+  {{ with (.Site.Home.OutputFormats.Get "jsonfeed") }}
+    <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }} (JSON Feed)" />
+  {{ end }}
+  {{ if eq .Kind "term" }}
+    {{ with .OutputFormats.Get "RSS" }}
+      <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Title | humanize | title }} · {{ $.Site.Title }}" />
+    {{ end }}
+  {{ end }}
   <link
     rel="preload"
     href="/fonts/roboto-v18-latin-regular.woff2"

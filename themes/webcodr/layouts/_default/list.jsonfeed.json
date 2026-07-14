@@ -1,0 +1,26 @@
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- $pages := site.RegularPages -}}
+{{- if ge $limit 1 }}{{ $pages = $pages | first $limit }}{{ end -}}
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": {{ site.Title | jsonify }},
+  "home_page_url": "https://webcodr.io/",
+  "feed_url": "https://webcodr.io/feed.json",
+  "description": {{ site.Params.description | jsonify }},
+  "language": "en-us",
+  "authors": [{ "name": "David Henning" }],
+  "items": [
+    {{- range $i, $p := $pages }}{{ if $i }},{{ end }}
+    {
+      "id": {{ printf "https://webcodr.io%s" $p.RelPermalink | jsonify }},
+      "url": {{ printf "https://webcodr.io%s" $p.RelPermalink | jsonify }},
+      "title": {{ $p.Title | jsonify }},
+      "summary": {{ $p.Summary | plainify | jsonify }},
+      "content_html": {{ $p.Content | jsonify }},
+      "date_published": {{ $p.Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+      "date_modified": {{ $p.Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+      "tags": {{ $p.Params.topics | default slice | jsonify }}
+    }
+    {{- end }}
+  ]
+}

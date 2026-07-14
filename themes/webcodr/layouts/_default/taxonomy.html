@@ -7,6 +7,9 @@
     <main class="content">
       <article class="post">
         <h1 class="post-headline">{{ .Title | humanize | title }}</h1>
+        {{ with .OutputFormats.Get "RSS" }}
+          <p class="post-meta"><a href="{{ .RelPermalink }}">RSS feed for this {{ $.Data.Singular }}</a></p>
+        {{ end }}
         {{ $pages := .Pages.ByDate.Reverse }}
         {{ if eq .Data.Singular "series" }}
           {{ $pages = .Pages.ByDate }}
