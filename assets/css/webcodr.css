@@ -969,10 +969,14 @@ a[href]:focus-visible {
 	.table-of-contents ul,
 	.table-of-contents,
 	.related-posts,
-	.series-box,
 	.post-navigation {
 		padding-left: 0;
 		padding-right: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.series-box {
 		margin-left: 0;
 		margin-right: 0;
 	}
