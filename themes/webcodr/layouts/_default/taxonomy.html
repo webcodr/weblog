@@ -6,7 +6,7 @@
   <div class="container container--main">
     <main class="content">
       <article class="post">
-        <h1 class="post-headline">{{ .Title | humanize | title }}</h1>
+        <h1 class="post-headline">{{ if eq .Data.Singular "series" }}{{ .Title }}{{ else }}{{ .Title | humanize | title }}{{ end }}</h1>
         {{ with .OutputFormats.Get "RSS" }}
           <p class="post-meta"><a href="{{ .RelPermalink }}">RSS feed for this {{ $.Data.Singular }}</a></p>
         {{ end }}

@@ -2,6 +2,7 @@
 date: 2018-02-07T22:00:00+01:00
 title: Telekom EntertainTV mit Ubiquiti EdgeRouter X
 topics: [edgerouter, networking]
+series: ["EdgeRouter & Telekom VDSL"]
 description: Anleitung für Telekom EntertainTV mit EdgeRouter und UniFi einschließlich IGMP Proxy, Firewall und Multicast.
 ---
 Da bei Sky Deutschland nun auch noch die Formel 1 entfällt und zusätzlich in den letzten Jahren diverse Rechte, z.B. die Premier League, auch abhanden gekommen sind, habe ich mich dazu entschlossen auf EntertainTV von der Telekom umzusteigen.

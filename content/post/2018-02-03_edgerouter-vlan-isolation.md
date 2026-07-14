@@ -2,6 +2,7 @@
 date: 2018-02-03T00:00:00+01:00
 title: EdgeRouter VLAN isolation
 topics: [edgerouter, networking]
+series: ["EdgeRouter & Telekom VDSL"]
 description: A step-by-step EdgeRouter guide to creating a VLAN and isolating it from local networks and router services.
 displayLanguage: en
 ---

@@ -2,6 +2,7 @@
 date: 2018-02-18T19:00:05+01:00
 title: Interface monitoring with Wireshark on an EdgeRouter
 topics: [edgerouter, networking]
+series: ["EdgeRouter & Telekom VDSL"]
 description: Monitor EdgeRouter interfaces remotely by piping tcpdump captures over SSH directly into Wireshark.
 ---
 Here is just a neat little trick to use Wireshark for monitoring interfaces on your EdgeRouter. This is incredibly useful for debugging purposes.

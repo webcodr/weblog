@@ -2,7 +2,7 @@
 title: Using fd, rg, fzf and bat to find things fast
 date: 2026-07-05T17:05:03+00:00
 topics: [developer-tools]
-series: [finding-things-fast]
+series: ["Finding Things Fast"]
 description: Build interactive file and content search helpers with fd, rg, fzf, and bat.
 toc: true
 ---

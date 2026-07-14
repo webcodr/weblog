@@ -1,6 +1,7 @@
 ---
 title: Ryzen vs Apple Silicon and why Zen 3 is not so bad as you may think
 topics: [hardware, performance]
+series: ["Apple Silicon"]
 description: Compare Ryzen Zen 3 and Apple M1 efficiency through chiplets, process nodes, core design, and instruction sets.
 date: 2020-11-18T22:34:23.422Z
 ---

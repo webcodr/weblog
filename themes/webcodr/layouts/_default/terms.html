@@ -6,11 +6,12 @@
   <div class="container container--main">
     <main class="content">
       <article class="post">
-        <h1 class="post-headline">Topics</h1>
+        <h1 class="post-headline">{{ .Title }}</h1>
         <ul class="topic-list">
           {{ range .Data.Terms.ByCount }}
             <li class="topic-list-item">
-              <a href="{{ .Page.RelPermalink }}" class="topic-list-link">{{ .Page.LinkTitle | humanize | title }}</a>
+              {{/* Series terms carry their display form verbatim; topic slugs get humanized. */}}
+              <a href="{{ .Page.RelPermalink }}" class="topic-list-link">{{ if eq $.Data.Singular "series" }}{{ .Page.LinkTitle }}{{ else }}{{ .Page.LinkTitle | humanize | title }}{{ end }}</a>
               <span class="topic-list-count">{{ .Count }}</span>
             </li>
           {{ end }}
