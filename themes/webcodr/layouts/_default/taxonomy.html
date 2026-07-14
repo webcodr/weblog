@@ -7,8 +7,13 @@
     <main class="content">
       <article class="post">
         <h1 class="post-headline">{{ .Title | humanize | title }}</h1>
+        {{ $pages := .Pages.ByDate.Reverse }}
+        {{ if eq .Data.Singular "series" }}
+          {{ $pages = .Pages.ByDate }}
+          <p class="post-meta">A series in {{ len .Pages }} parts, oldest first.</p>
+        {{ end }}
         <ul class="post-index">
-          {{ range .Pages.ByDate.Reverse }}
+          {{ range $pages }}
             {{ partial "post-index-entry.html" (dict "page" . "dateFormat" "Jan 02, 2006") }}
           {{ end }}
         </ul>

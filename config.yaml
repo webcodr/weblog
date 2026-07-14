@@ -30,6 +30,7 @@ pagination:
   pagerSize: 5
 taxonomies:
   topic: topics
+  series: series
 related:
   includeNewer: true
   threshold: 80

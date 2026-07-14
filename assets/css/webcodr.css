@@ -902,6 +902,36 @@ a[href]:focus-visible {
 	margin: 2rem 10px;
 }
 
+.series-box {
+	margin: 2rem 10px;
+	padding: 1rem 1.25rem;
+	background-color: var(--code-background-color);
+	border-left: 4px solid var(--header-prompt-chevron-color);
+	border-radius: 5px;
+}
+
+.series-title {
+	margin: 0;
+	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.series-parts {
+	list-style: decimal;
+	margin: 0.75rem 0 0;
+	padding-left: 1.5rem;
+}
+
+.series-part {
+	margin-bottom: 0.4rem;
+}
+
+.series-part--current {
+	color: var(--headline-base-color);
+	font-weight: 700;
+}
+
 .post-navigation {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -922,6 +952,7 @@ a[href]:focus-visible {
 	.table-of-contents ul,
 	.table-of-contents,
 	.related-posts,
+	.series-box,
 	.post-navigation {
 		padding-left: 0;
 		padding-right: 0;

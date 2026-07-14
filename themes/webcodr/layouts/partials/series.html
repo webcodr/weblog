@@ -1,0 +1,27 @@
+{{/* Renders a "Part N of X" box when the post belongs to a series.
+     Only the first series term is used — posts belong to one series. */}}
+{{ with .GetTerms "series" }}
+  {{ $current := $ }}
+  {{ $term := index . 0 }}
+  {{ $parts := $term.Pages.ByDate }}
+  {{ $total := len $parts }}
+  {{ $position := 0 }}
+  {{ range $i, $p := $parts }}
+    {{ if eq $p.Permalink $current.Permalink }}{{ $position = add $i 1 }}{{ end }}
+  {{ end }}
+  <aside class="series-box" data-pagefind-ignore>
+    <p class="series-title">
+      Part {{ $position }} of {{ $total }} in the series
+      <a href="{{ $term.RelPermalink }}" class="series-link">{{ $term.LinkTitle | humanize | title }}</a>
+    </p>
+    <ol class="series-parts">
+      {{ range $parts }}
+        {{ if eq .Permalink $current.Permalink }}
+          <li class="series-part series-part--current" aria-current="page">{{ .Title }}</li>
+        {{ else }}
+          <li class="series-part"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      {{ end }}
+    </ol>
+  </aside>
+{{ end }}
