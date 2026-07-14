@@ -1,0 +1,23 @@
+{{/* Generates a 1200x630 Open Graph card for a post and returns the
+     image resource. images.Text wraps only at the image edge, so the
+     title is rendered onto a narrower transparent canvas and overlaid
+     to keep an 80px margin on both sides. */}}
+{{ $font := resources.Get "fonts/RobotoCondensed-Bold.ttf" }}
+{{ $template := resources.Get "img/og-template.png" }}
+{{ $title := .Title }}
+
+{{ $size := 68 }}
+{{ if gt (strings.RuneCount $title) 40 }}{{ $size = 56 }}{{ end }}
+{{ if gt (strings.RuneCount $title) 80 }}{{ $size = 46 }}{{ end }}
+
+{{ $canvas := (resources.Get "img/og-text-canvas.png").Resize "1040x400 png" }}
+{{ $text := $canvas.Filter (images.Text $title (dict
+    "font" $font
+    "color" "#c0caf5"
+    "size" $size
+    "linespacing" 14
+    "x" 0
+    "y" 0
+)) }}
+{{ $img := $template.Filter (images.Overlay $text 80 210) }}
+{{ return $img }}
