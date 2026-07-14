@@ -39,7 +39,7 @@ assert_contains "$srchr" '<meta property="og:title" content="Find things even fa
 assert_contains "$srchr" '<meta property="og:type" content="article" />'
 assert_contains "$srchr" '<meta property="og:url" content="https://webcodr.io/2026/07/find-things-even-faster-with-srchr/" />'
 assert_contains "$srchr" '<meta property="article:published_time" content="2026-07-05T20:28:50Z" />'
-assert_contains "$srchr" '<meta name="twitter:card" content="summary" />'
+assert_contains "$srchr" '<meta name="twitter:card" content="summary_large_image" />'
 assert_contains "$srchr" 'application/ld+json'
 assert_contains "$srchr" '"@type": "BlogPosting"'
 assert_not_contains "$output/index.html" 'name="keywords"'

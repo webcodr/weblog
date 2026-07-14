@@ -103,7 +103,7 @@ assert_not_file "$output/404/page/2/index.html"
 assert_count "$root/assets/css/webcodr.css" 2 'font-family: Roboto, Helvetica, Arial, sans-serif;'
 assert_contains "$root/assets/css/webcodr.css" 'a[href]:hover,'
 assert_contains "$root/assets/css/webcodr.css" 'a[href]:focus-visible {'
-assert_count "$root/assets/css/webcodr.css" 5 'text-decoration: underline;'
+assert_count "$root/assets/css/webcodr.css" 6 'text-decoration: underline;'
 assert_not_contains "$root/assets/css/webcodr.css" 'border-bottom: 2px solid var(--post-text-color);'
 assert_not_contains "$root/assets/css/webcodr.css" '.related-posts-list,'
 assert_contains "$root/assets/css/webcodr.css" '.related-posts-list {'
