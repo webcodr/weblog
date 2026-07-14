@@ -505,6 +505,7 @@ h6 {
 .related-posts a,
 .post-navigation a,
 .series-box a,
+.feed-link,
 .table-of-contents a {
 	color: var(--post-text-color);
 }
