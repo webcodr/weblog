@@ -1,44 +1,58 @@
-{{ $css := resources.Get "css/webcodr.css" | resources.Fingerprint "sha512"}}
-{{ $js := resources.Get "js/webcodr.js" | resources.Fingerprint "sha512"}}
-
-{{ $permalink := .Permalink }}
-
-{{ if .IsHome }}
-  {{ $paginator := .Paginate .Site.RegularPages }}
-  {{ if ne $paginator.PageNumber 1 }}
-    {{ $permalink = print $permalink "page/" $paginator.PageNumber "/" }}
-  {{ end }}
-{{ end }}
-
-{{ $canonical := print "https://webcodr.io" $permalink }}
-{{ $title := site.Title }}
-{{ if not .IsHome }}{{ $title = print .Title " · " site.Title }}{{ end }}
-{{ $description := .Description | default site.Params.description }}
+{{ $css := resources.Get "css/webcodr.css" | resources.Fingerprint "sha512"}} {{
+$js := resources.Get "js/webcodr.js" | resources.Fingerprint "sha512"}} {{
+$themeInit := resources.Get "js/theme-init.js" | resources.Fingerprint
+"sha512"}} {{ $permalink := .Permalink }} {{ if .IsHome }} {{ $paginator :=
+.Paginate .Site.RegularPages }} {{ if ne $paginator.PageNumber 1 }} {{
+$permalink = print $permalink "page/" $paginator.PageNumber "/" }} {{ end }} {{
+end }} {{ $canonical := print "https://webcodr.io" $permalink }} {{ $title :=
+site.Title }} {{ if not .IsHome }}{{ $title = print .Title " · " site.Title }}{{
+end }} {{ $description := .Description | default site.Params.description }}
 
 <head>
   <title>{{ $title }}</title>
-  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen" />
+  <script
+    src="{{ $themeInit.Permalink }}"
+    integrity="{{ $themeInit.Data.Integrity }}"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="{{ $css.Permalink }}"
+    integrity="{{ $css.Data.Integrity }}"
+    media="screen"
+  />
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=5"
   />
   <meta name="description" content="{{ $description }}" />
   <meta charset="UTF-8" />
-  {{ partial "seo.html" (dict "page" . "canonical" $canonical "title" $title "description" $description) }}
+  {{ partial "seo.html" (dict "page" . "canonical" $canonical "title" $title
+  "description" $description) }}
   <link rel="icon" href="/favicon.ico" sizes="48x48" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   {{ with (.Site.Home.OutputFormats.Get "RSS") }}
-    <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}" />
-  {{ end }}
-  {{ with (.Site.Home.OutputFormats.Get "jsonfeed") }}
-    <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }} (JSON Feed)" />
-  {{ end }}
-  {{ if eq .Kind "term" }}
-    {{ with .OutputFormats.Get "RSS" }}
-      <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Title | humanize | title }} · {{ $.Site.Title }}" />
-    {{ end }}
-  {{ end }}
+  <link
+    rel="alternate"
+    type="{{ .MediaType.Type }}"
+    href="{{ .RelPermalink }}"
+    title="{{ $.Site.Title }}"
+  />
+  {{ end }} {{ with (.Site.Home.OutputFormats.Get "jsonfeed") }}
+  <link
+    rel="alternate"
+    type="{{ .MediaType.Type }}"
+    href="{{ .RelPermalink }}"
+    title="{{ $.Site.Title }} (JSON Feed)"
+  />
+  {{ end }} {{ if eq .Kind "term" }} {{ with .OutputFormats.Get "RSS" }}
+  <link
+    rel="alternate"
+    type="{{ .MediaType.Type }}"
+    href="{{ .RelPermalink }}"
+    title="{{ $.Title | humanize | title }} · {{ $.Site.Title }}"
+  />
+  {{ end }} {{ end }}
   <link
     rel="preload"
     href="/fonts/roboto-v18-latin-regular.woff2"
@@ -81,7 +95,11 @@
     type="font/woff2"
     crossorigin
   />
-  <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  <script
+    src="{{ $js.Permalink }}"
+    integrity="{{ $js.Data.Integrity }}"
+    defer
+  ></script>
 
-  <link rel="canonical" href="{{ $canonical }}">
+  <link rel="canonical" href="{{ $canonical }}" />
 </head>

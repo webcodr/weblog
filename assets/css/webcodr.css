@@ -321,6 +321,7 @@
 }
 
 :root {
+	color-scheme: dark;
 	--container-background-color: #1a1b26;
 	--header-title-background-color: #24283b;
 	--header-title-text-color: #ff9e64;
@@ -336,9 +337,97 @@
 	--code-text-color: #ff9e64;
 	--code-scrollback-background-color: #414868;
 	--blockquote-border-color: #bb9af7;
+	--copy-button-hover-background-color: rgba(255, 158, 100, 0.1);
+	--syntax-background-color: #1a1b26;
+	--syntax-foreground-color: #c0caf5;
+	--syntax-error-color: #db4b4b;
+	--syntax-highlight-color: #414868;
+	--syntax-gutter-color: #a9b1d6;
+	--syntax-keyword-color: #bb9af7;
+	--syntax-yellow-color: #e0af68;
+	--syntax-purple-color: #9d7cd8;
+	--syntax-cyan-color: #7dcfff;
+	--syntax-type-color: #41a6b5;
+	--syntax-blue-color: #7aa2f7;
+	--syntax-orange-color: #ff9e64;
+	--syntax-green-color: #9ece6a;
+	--syntax-comment-color: #9aa5ce;
+	--syntax-diff-background-color: #15161e;
 	--monospace-font:
 		"CaskaydiaMono Nerd Font", "JetBrains Mono", "Fira Code", "Hack",
 		"Source Code Pro", "SF Mono", "Inconsolata", monospace;
+}
+
+:root[data-theme="light"] {
+	color-scheme: light;
+	--container-background-color: #e1e2e7;
+	--header-title-background-color: #d0d5e3;
+	--header-title-text-color: #b15c00;
+	--header-prompt-path-color: #587539;
+	--header-prompt-chevron-color: #2e7de9;
+	--footer-text-color: #6172b0;
+	--post-text-color: #3760bf;
+	--post-meta-text-color: #6172b0;
+	--headline-base-color: #587539;
+	--headline-secondary-color: #c64343;
+	--headline-tertiary-color: #8c6c3e;
+	--code-background-color: #d0d5e3;
+	--code-text-color: #b15c00;
+	--code-scrollback-background-color: #b4b5b9;
+	--blockquote-border-color: #7847bd;
+	--copy-button-hover-background-color: rgba(177, 92, 0, 0.12);
+	--syntax-background-color: #e1e2e7;
+	--syntax-foreground-color: #3760bf;
+	--syntax-error-color: #c64343;
+	--syntax-highlight-color: #a1a6c5;
+	--syntax-gutter-color: #6172b0;
+	--syntax-keyword-color: #9854f1;
+	--syntax-yellow-color: #8c6c3e;
+	--syntax-purple-color: #9d7cd8;
+	--syntax-cyan-color: #007197;
+	--syntax-type-color: #0db9d7;
+	--syntax-blue-color: #2e7de9;
+	--syntax-orange-color: #b15c00;
+	--syntax-green-color: #587539;
+	--syntax-comment-color: #a1a6c5;
+	--syntax-diff-background-color: #e9e9ed;
+}
+
+@media (prefers-color-scheme: light) {
+	:root:not([data-theme]) {
+		color-scheme: light;
+		--container-background-color: #e1e2e7;
+		--header-title-background-color: #d0d5e3;
+		--header-title-text-color: #b15c00;
+		--header-prompt-path-color: #587539;
+		--header-prompt-chevron-color: #2e7de9;
+		--footer-text-color: #6172b0;
+		--post-text-color: #3760bf;
+		--post-meta-text-color: #6172b0;
+		--headline-base-color: #587539;
+		--headline-secondary-color: #c64343;
+		--headline-tertiary-color: #8c6c3e;
+		--code-background-color: #d0d5e3;
+		--code-text-color: #b15c00;
+		--code-scrollback-background-color: #b4b5b9;
+		--blockquote-border-color: #7847bd;
+		--copy-button-hover-background-color: rgba(177, 92, 0, 0.12);
+		--syntax-background-color: #e1e2e7;
+		--syntax-foreground-color: #3760bf;
+		--syntax-error-color: #c64343;
+		--syntax-highlight-color: #a1a6c5;
+		--syntax-gutter-color: #6172b0;
+		--syntax-keyword-color: #9854f1;
+		--syntax-yellow-color: #8c6c3e;
+		--syntax-purple-color: #9d7cd8;
+		--syntax-cyan-color: #007197;
+		--syntax-type-color: #0db9d7;
+		--syntax-blue-color: #2e7de9;
+		--syntax-orange-color: #b15c00;
+		--syntax-green-color: #587539;
+		--syntax-comment-color: #a1a6c5;
+		--syntax-diff-background-color: #e9e9ed;
+	}
 }
 
 /* roboto-regular - latin */
@@ -510,9 +599,59 @@ h6 {
 
 .header-navigation {
 	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 	gap: 1rem;
 	padding: 10px;
 	font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.theme-selector {
+	display: flex;
+	gap: 0.125rem;
+	margin-left: auto;
+	border: 1px solid var(--code-scrollback-background-color);
+	border-radius: 5px;
+	padding: 0.125rem;
+	background: var(--code-background-color);
+}
+
+.theme-selector[hidden] {
+	display: none;
+}
+
+.theme-selector-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	border: 0;
+	border-radius: 3px;
+	padding: 0;
+	background: transparent;
+	color: var(--post-meta-text-color);
+	cursor: pointer;
+}
+
+.theme-selector-button:hover {
+	background: var(--copy-button-hover-background-color);
+	color: var(--headline-secondary-color);
+}
+
+.theme-selector-button[aria-pressed="true"] {
+	background: var(--post-text-color);
+	color: var(--container-background-color);
+}
+
+.theme-selector-button:focus-visible {
+	outline: 2px solid var(--headline-secondary-color);
+	outline-offset: 1px;
+}
+
+.theme-selector-icon {
+	width: 1.1rem;
+	height: 1.1rem;
 }
 
 .header-navigation-link,
@@ -805,7 +944,7 @@ a[href]:focus-visible {
 
 .post-content--copy:hover,
 .post-content--copy:focus {
-	background-color: rgba(255, 158, 100, 0.1);
+	background-color: var(--copy-button-hover-background-color);
 	color: var(--code-text-color);
 	opacity: 1;
 }
@@ -1489,3 +1628,115 @@ a[href]:focus-visible {
 }
 
 /* TextWhitespace */
+
+/* Theme-aware overrides for the generated Chroma styles. */
+.bg {
+	color: var(--syntax-foreground-color);
+	background-color: var(--syntax-background-color);
+}
+
+.chroma {
+	color: var(--syntax-foreground-color);
+}
+
+.chroma .err,
+.chroma .gd,
+.chroma .gr,
+.chroma .gt {
+	color: var(--syntax-error-color);
+}
+
+.chroma .hl {
+	background-color: var(--syntax-highlight-color);
+}
+
+.chroma .lnt,
+.chroma .ln {
+	color: var(--syntax-gutter-color);
+}
+
+.chroma .k,
+.chroma .kp,
+.chroma .kr,
+.chroma .nt {
+	color: var(--syntax-keyword-color);
+}
+
+.chroma .kc,
+.chroma .ne,
+.chroma .nn,
+.chroma .py,
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .il,
+.chroma .mo,
+.chroma .gh,
+.chroma .gu {
+	color: var(--syntax-yellow-color);
+}
+
+.chroma .kd,
+.chroma .sa {
+	color: var(--syntax-purple-color);
+}
+
+.chroma .kn,
+.chroma .ni,
+.chroma .sr {
+	color: var(--syntax-cyan-color);
+}
+
+.chroma .kt {
+	color: var(--syntax-type-color);
+}
+
+.chroma .na,
+.chroma .nd,
+.chroma .nf,
+.chroma .fm,
+.chroma .dl,
+.chroma .se {
+	color: var(--syntax-blue-color);
+}
+
+.chroma .nc,
+.chroma .no {
+	color: var(--syntax-orange-color);
+}
+
+.chroma .nl,
+.chroma .nb,
+.chroma .bp,
+.chroma .s,
+.chroma .sb,
+.chroma .sc,
+.chroma .s2,
+.chroma .si,
+.chroma .sx,
+.chroma .s1,
+.chroma .ss,
+.chroma .o,
+.chroma .ow,
+.chroma .gi {
+	color: var(--syntax-green-color);
+}
+
+.chroma .sd,
+.chroma .sh,
+.chroma .c,
+.chroma .ch,
+.chroma .cm,
+.chroma .c1,
+.chroma .cs,
+.chroma .cp,
+.chroma .cpf {
+	color: var(--syntax-comment-color);
+}
+
+.chroma .gd,
+.chroma .gi {
+	background-color: var(--syntax-diff-background-color);
+}

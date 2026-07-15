@@ -31,6 +31,78 @@
 		fetch(link.href, fetchOpts);
 	}
 })();
+const themeStorageKey = "webcodr-theme";
+const explicitThemes = new Set(["light", "dark"]);
+const getThemePreference = () => {
+	try {
+		const theme = localStorage.getItem(themeStorageKey);
+		return explicitThemes.has(theme) ? theme : "system";
+	} catch (_) {
+		return "system";
+	}
+};
+const persistThemePreference = (theme) => {
+	try {
+		if (theme === "system") {
+			localStorage.removeItem(themeStorageKey);
+		} else {
+			localStorage.setItem(themeStorageKey, theme);
+		}
+	} catch (_) {
+		// Theme switching still works for the current page if storage is blocked.
+	}
+};
+const applyThemePreference = (theme, persist = true) => {
+	if (explicitThemes.has(theme)) {
+		document.documentElement.dataset.theme = theme;
+	} else {
+		delete document.documentElement.dataset.theme;
+	}
+
+	if (persist) {
+		persistThemePreference(theme);
+	}
+};
+const updateThemeButtons = (buttons, theme) => {
+	for (const button of buttons) {
+		button.setAttribute(
+			"aria-pressed",
+			String(button.dataset.themeValue === theme),
+		);
+	}
+};
+const setupThemeSelector = () => {
+	const selector = document.querySelector("#theme-selector");
+
+	if (!selector) {
+		return;
+	}
+
+	const buttons = selector.querySelectorAll("[data-theme-value]");
+	const selectTheme = (theme, persist = true) => {
+		applyThemePreference(theme, persist);
+		updateThemeButtons(buttons, theme);
+	};
+	selectTheme(getThemePreference(), false);
+	selector.hidden = false;
+
+	for (const button of buttons) {
+		button.addEventListener("click", () => {
+			selectTheme(button.dataset.themeValue);
+		});
+	}
+
+	window.addEventListener("storage", (event) => {
+		if (event.key !== themeStorageKey) {
+			return;
+		}
+
+		const updatedTheme = explicitThemes.has(event.newValue)
+			? event.newValue
+			: "system";
+		selectTheme(updatedTheme, false);
+	});
+};
 const languageAliases = {
 	golang: "go",
 	sh: "bash",
@@ -157,6 +229,22 @@ const setupCodeBlocks = () => {
 		}
 	});
 };
+const createSearchExcerpt = (html) => {
+	const parsed = new DOMParser().parseFromString(html, "text/html");
+	const fragment = document.createDocumentFragment();
+
+	for (const node of parsed.body.childNodes) {
+		if (node.nodeType === Node.ELEMENT_NODE && node.tagName === "MARK") {
+			const mark = document.createElement("mark");
+			mark.textContent = node.textContent;
+			fragment.append(mark);
+		} else {
+			fragment.append(document.createTextNode(node.textContent ?? ""));
+		}
+	}
+
+	return fragment;
+};
 const setupSearch = () => {
 	const input = document.querySelector("#search-input");
 	const resultsList = document.querySelector("#search-results");
@@ -180,7 +268,9 @@ const setupSearch = () => {
 	const renderResults = (results, total) => {
 		resultsList.replaceChildren();
 		status.textContent =
-			total === 0 ? "No results found." : `${total} result${total === 1 ? "" : "s"}`;
+			total === 0
+				? "No results found."
+				: `${total} result${total === 1 ? "" : "s"}`;
 
 		for (const result of results) {
 			const item = document.createElement("li");
@@ -193,7 +283,7 @@ const setupSearch = () => {
 
 			const excerpt = document.createElement("p");
 			excerpt.classList.add("search-result--excerpt");
-			excerpt.innerHTML = result.excerpt;
+			excerpt.append(createSearchExcerpt(result.excerpt));
 
 			item.append(link, excerpt);
 			resultsList.append(item);
@@ -235,6 +325,7 @@ const setupSearch = () => {
 	});
 };
 document.addEventListener("DOMContentLoaded", () => {
+	setupThemeSelector();
 	setupCodeBlocks();
 	setupSearch();
 });
