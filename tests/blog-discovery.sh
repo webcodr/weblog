@@ -67,6 +67,8 @@ search_post="$output/2026/07/using-fd-rg-fzf-and-bat-to-find-things-fast/index.h
 arch_post="$output/2025/08/im-using-arch-btw/index.html"
 
 assert_contains "$srchr" 'Published <time datetime="2026-07-05T20:28:50Z"'
+assert_contains "$srchr" '<article class="post" lang="en" data-pagefind-body>'
+assert_contains "$srchr" '<span class="post-language" lang="en">English</span>'
 assert_contains "$srchr" '>Developer Tools</a>'
 assert_not_contains "$srchr" 'Updated <time'
 assert_not_contains "$srchr" 'class="table-of-contents"'
@@ -75,7 +77,12 @@ assert_contains "$search_post" 'href="#usage"'
 assert_contains "$arch_post" 'Updated <time datetime="2025-08-28T00:00:00Z"'
 
 legacy_post="$output/2018/04/vue-loader-setup-in-webpack/index.html"
+german_post="$output/2017/01/ubiquiti-edgerouter-x-vs.-mikrotik-hex/index.html"
 
+assert_contains "$german_post" '<article class="post" lang="de" data-pagefind-body>'
+assert_contains "$german_post" '<span class="post-language" lang="de">Deutsch</span>'
+assert_contains "$output/archive/index.html" 'class="post-language" lang="de">Deutsch</span>'
+assert_contains "$output/archive/index.html" 'class="post-language" lang="en">English</span>'
 assert_contains "$srchr" 'class="related-posts"'
 assert_contains "$srchr" 'Using fd, rg, fzf and bat to find things fast'
 assert_contains "$srchr" 'class="post-navigation"'
@@ -93,7 +100,7 @@ assert_contains "$home" 'href="/topics/"'
 assert_contains "$home" 'href="/archive/"'
 assert_contains "$home" 'Inspired by my last post about'
 assert_contains "$home" 'rel="alternate" type="application/rss&#43;xml"'
-assert_count "$home" 5 '<article class="post">'
+assert_count "$home" 5 '<article class="post" lang="'
 assert_contains "$output/topics/index.html" 'class="topic-list"'
 assert_contains "$output/archive/index.html" 'class="post-index"'
 assert_not_file "$output/archive/page/2/index.html"

@@ -3,6 +3,7 @@ date: 2012-08-13T22:23:38+01:00
 title: "Responsive Bilder mit WordPress"
 topics: [php, web-development]
 description: Ein WordPress-Filter entfernt feste Bildabmessungen, damit eingebettete Bilder in responsiven Layouts per CSS mitskalieren.
+language: de
 ---
 Aktuell wage ich erste Gehversuche mit responsiven Layouts in meinem [WordPress-Theme](https://web.archive.org/web/20131210084100/https://github.com/MadCatme/mcw-blue). Ziel der Übung ist ein smartphone-taugliches Layout. Leider macht einem WordPress die Arbeit bei Bildern unnötig schwer.
 
@@ -12,7 +13,7 @@ Bilder müssen in responsiven Layouts automatisch mit der Breite des Anzeigeger�
 
 ~~~ css
 img {
-	max-width: 100%;
+ max-width: 100%;
 }
 ~~~
 
@@ -30,7 +31,7 @@ Dank des Hook-Systems in WordPress geht das mit ein paar Zeilen Code in der Date
 add_filter('the_content', 'removeImageDimensions');
 
 function removeImageDimensions($html) {
-	return preg_replace('/(width|height)=\"\d*\"\s/', '', $html);
+ return preg_replace('/(width|height)=\"\d*\"\s/', '', $html);
 }
 ~~~
 

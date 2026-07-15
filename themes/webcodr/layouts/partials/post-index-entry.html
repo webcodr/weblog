@@ -2,7 +2,10 @@
   <time datetime="{{ .page.Date.Format "2006-01-02T15:04:05Z07:00" }}" class="post-index-date">{{ .page.Date.Format .dateFormat }}</time>
   <div class="post-index-content">
     <a href="{{ .page.RelPermalink }}" class="post-index-link">{{ .page.Title }}</a>
-    <span class="post-index-reading-time">{{ .page.ReadingTime }} min read</span>
+    <span class="post-index-reading-time">
+      {{ .page.ReadingTime }} min read
+      <span aria-hidden="true"> · </span>{{ partial "language-label.html" .page }}
+    </span>
     {{ with .page.Description }}<p class="post-index-description">{{ . }}</p>{{ end }}
   </div>
 </li>

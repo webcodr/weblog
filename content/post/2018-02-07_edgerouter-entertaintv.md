@@ -4,6 +4,7 @@ title: Telekom EntertainTV mit Ubiquiti EdgeRouter X
 topics: [edgerouter, networking]
 series: ["EdgeRouter & Telekom VDSL"]
 description: Anleitung für Telekom EntertainTV mit EdgeRouter und UniFi einschließlich IGMP Proxy, Firewall und Multicast.
+language: de
 ---
 Da bei Sky Deutschland nun auch noch die Formel 1 entfällt und zusätzlich in den letzten Jahren diverse Rechte, z.B. die Premier League, auch abhanden gekommen sind, habe ich mich dazu entschlossen auf EntertainTV von der Telekom umzusteigen.
 
@@ -82,6 +83,6 @@ Entertain bzw. EntertainTV funktionieren aktuell nur via IPv4, daher ist eine IP
 
 Das war's eigentlich schon. Ihr müsst nur noch einen Commit machen und speichern. Der IGMP Proxy sollte damit automatisch starten.
 
-Ich hatte die ganze Konfiguration bereits anhand diverser Blog- und Foren-Posts im Vorraus gemacht und erstaunlicherweise hat sie auf Anhieb funktioniert. Es treten keinerlei Broadcast-Probleme auf. 
+Ich hatte die ganze Konfiguration bereits anhand diverser Blog- und Foren-Posts im Vorraus gemacht und erstaunlicherweise hat sie auf Anhieb funktioniert. Es treten keinerlei Broadcast-Probleme auf.
 
 Falls Ihr den Verdacht habt, das lässt sich mit Wireshark sehr einfach überprüfen: einfach die aktive Netzwerk-Schnittstelle abfragen und auf Broadcasts bzw. ungewöhnlich viele UDP-Pakete achten, die von den EntertainTV-IP-Adressen kommen.

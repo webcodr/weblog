@@ -3,6 +3,7 @@ date: 2013-02-02T22:28:05+01:00
 title: Array almighty
 topics: [php, programming]
 description: Ein Vergleich mit Scala führt zu PHP-Collection-Klassen, die Array-Zugriffe, Listenoperationen und verkettete Methoden vereinen.
+language: de
 ---
 Wenn man sich zulange nur mit PHP beschäftigt vergisst man schnell, dass man oft Dinge tut, die kaum in andere Sprachen übertragbar sind.
 
@@ -64,5 +65,5 @@ In diesem Fall wird das rohe Markdown aus dem Feld `body` in HTML transformiert 
 
 Die drei Klassen sind nicht länger Teil von MongoAppKit. Ich habe sie in ein separates [GitHub-Repository][1] und [Composer-Paket][2] ausgelegt, um eine unkomplizierte Nutzung ohne MongoAppKit zu ermöglichen. Viel Spaß!
 
-[1]:	https://github.com/WebCodr/Collection
-[2]:	https://packagist.org/packages/webcodr/collection
+[1]: https://github.com/WebCodr/Collection
+[2]: https://packagist.org/packages/webcodr/collection

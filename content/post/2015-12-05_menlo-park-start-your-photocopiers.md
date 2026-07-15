@@ -3,9 +3,10 @@ date: 2012-08-24T22:25:16+01:00
 title: "Menlo Park, start your photocopiers ..."
 topics: [software-industry]
 description: Ähnliche JavaScript-Schnipsel von Twitter und Facebook dienen als Plädoyer gegen Trivialpatente und schädliche Patentkriege.
+language: de
 slug: "menlo-park-start-your-photocopiers"
 ---
-## ... oder warum Software-Patente und Patentkriege scheiße sind.
+## ... oder warum Software-Patente und Patentkriege scheiße sind
 
 Gestern habe für die Share-Funktionen von Twitter, Google+ und Facebook jeweils ein Modul nach dem [CommonJS-Standard](http://www.commonjs.org/) gebaut, um sie in meinem privaten Weblog zu nutzen.
 
@@ -15,27 +16,27 @@ Daran ist nun nichts besonders, wenn ich nicht eine kleine Entdeckung gemacht h�
 
 ~~~ javascript
 !function(d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0];
+ var js, fjs = d.getElementsByTagName(s)[0];
 
-	if(!d.getElementById(id)) {
-		js = d.createElement(s);
-		js.id = id;
-		js.src = "//platform.twitter.com/widgets.js";
-		fjs.parentNode.insertBefore(js, fjs);
-	}
+ if(!d.getElementById(id)) {
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "//platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ }
 }(document, "script", "twitter-wjs");
 ~~~
 
-## Quelltext von Facebook:
+## Quelltext von Facebook
 
 ~~~ javascript
 (function(d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if(d.getElementById(id)) return;
-	js = d.createElement(s);
-	js.id = id;
-	js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
-	fjs.parentNode.insertBefore(js, fjs);
+ var js, fjs = d.getElementsByTagName(s)[0];
+ if(d.getElementById(id)) return;
+ js = d.createElement(s);
+ js.id = id;
+ js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
+ fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 ~~~
 

@@ -4,6 +4,7 @@ title: Say Hello to Mango
 topics: [php, programming]
 series: ["Building CodrPress"]
 description: Mango wird als leichtgewichtiger PHP-ODM für MongoDB mit Models, Abfragen, Hydration und Composer-Installation vorgestellt.
+language: de
 ---
 ## Was'n das?
 
@@ -24,7 +25,7 @@ Mango wurde stark von Mongoid für Ruby inspiriert und soll dessen Funktionalit�
 ### Installation via Composer
 
 ~~~ bash
-$ php composer.phar require webcodr/mango:*
+php composer.phar require webcodr/mango:*
 ~~~
 
 ### Ein Dokument anzulegen ist ein Kinderspiel
@@ -55,7 +56,7 @@ Es ist lediglich nötig, dass die Model-Klasse das Interface `DocumentInterface`
 
 Mango nutzt etwas Magic: Der Klassenname des Models ist gleichzeitig auch der Name der Collection (klein geschrieben). Soll die Collection anders heißen bzw. das Model eine vorhandene nutzen, muss lediglich die Methode `getCollectionName()` überschrieben werden.
 
-### Go, Mango, go!
+### Go, Mango, go
 
 ~~~ php
 <?php

@@ -4,6 +4,7 @@ title: Ubiquiti EdgeRouter X vs. MikroTik hEX
 topics: [edgerouter, hardware, networking]
 series: ["EdgeRouter & Telekom VDSL"]
 description: EdgeRouter X und MikroTik hEX im Vergleich mit Ausstattung, Bedienung und Routing-Leistung mit und ohne Hardware-NAT.
+language: de
 ---
 Da ich auch mal Router testen wollte und den EdgeRouter X (ER-X) eh schon besitze, habe ich mir ein vergleichbares Gerät von MikroTik besorgt, den hEX bzw. den RB350Gr3 (dritte Generation des hEX).
 
@@ -65,7 +66,7 @@ In allen anderen Szenarien war der Mac als Server am WAN-Port des jeweiligen Rou
 
 ![Benchmark Results](/images/router-benchmark/chart.png)
 
-Das Hardware-NAT des ER-X schlägt richtig ein, während die Leistung ohne Hardware-Unterstützung ungewöhnlich inkonsistent ist. Das volle Potenzial wird erst mit mehreren Verbindungen wirklich genutzt. Der hEX dagegen skaliert in dieser Situation wie man es erwartet. 
+Das Hardware-NAT des ER-X schlägt richtig ein, während die Leistung ohne Hardware-Unterstützung ungewöhnlich inkonsistent ist. Das volle Potenzial wird erst mit mehreren Verbindungen wirklich genutzt. Der hEX dagegen skaliert in dieser Situation wie man es erwartet.
 
 Da beide die gleiche CPU verwenden ist das Ergebnis bei nur einer Verbindung umso erstaunlicher. Es wäre durchaus möglich, dass es sich hier um einen Bug handelt. Ein ähnliches Problem gab es im Sommer mit dem UniFi Security Gateway, das auf der Hardware des EdgeRouter Lite basiert.
 

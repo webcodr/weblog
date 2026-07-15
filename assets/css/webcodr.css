@@ -336,7 +336,9 @@
 	--code-text-color: #ff9e64;
 	--code-scrollback-background-color: #414868;
 	--blockquote-border-color: #bb9af7;
-	--monospace-font: "CaskaydiaMono Nerd Font", "JetBrains Mono", "Fira Code", "Hack", "Source Code Pro", "SF Mono", "Inconsolata", monospace;
+	--monospace-font:
+		"CaskaydiaMono Nerd Font", "JetBrains Mono", "Fira Code", "Hack",
+		"Source Code Pro", "SF Mono", "Inconsolata", monospace;
 }
 
 /* roboto-regular - latin */
@@ -609,9 +611,17 @@ a[href]:focus-visible {
 }
 
 .post-language {
-	position: relative;
-	top: 2px;
-	font-size: 17px;
+	display: inline-block;
+	border: 1px solid var(--code-scrollback-background-color);
+	border-radius: 0.25rem;
+	padding: 0.05rem 0.35rem;
+	color: var(--post-meta-text-color);
+	font-family: var(--monospace-font);
+	font-size: 0.75em;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	line-height: 1.4;
+	vertical-align: 0.1em;
 }
 
 .post-headline {
@@ -715,7 +725,8 @@ a[href]:focus-visible {
 }
 .post-content .chroma code:hover,
 .post-content .chroma code:focus-visible {
-	scrollbar-color: var(--code-scrollback-background-color) var(--code-background-color);
+	scrollbar-color: var(--code-scrollback-background-color)
+		var(--code-background-color);
 }
 .post-content .chroma code .line {
 	line-height: 1.5em;

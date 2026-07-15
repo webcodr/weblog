@@ -4,6 +4,7 @@ title: Adios, Kabel-Internet (Update)
 topics: [networking, vdsl]
 series: ["EdgeRouter & Telekom VDSL"]
 description: Ein Erfahrungsbericht über den Wechsel von Vodafone-Kabel zu Telekom VDSL wegen Überlastung, Packet Loss und schlechtem Peering.
+language: de
 ---
 
 [Zum Nachtrag vom 13.1.2017](#vodafone-update-1)

@@ -4,6 +4,7 @@ title: PythonPress
 topics: [programming, web-development]
 series: ["Building CodrPress"]
 description: Ein Lernprojekt zeigt, wie mit Flask, Jinja2 und MongoEngine eine Python-Version von CodrPress auf MongoDB entsteht.
+language: de
 ---
 Da eine neue Sprache nicht genug ist, beschäftige ich mich neben Ruby neuerdings auch noch mit Python.
 

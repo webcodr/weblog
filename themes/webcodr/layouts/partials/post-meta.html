@@ -1,6 +1,7 @@
 <p class="post-meta" data-pagefind-ignore>
   Published <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" class="post-date">{{ .Date.Format "January 2, 2006" }}</time>
   <span aria-hidden="true"> · </span>{{ .ReadingTime }} min read
+  <span aria-hidden="true"> · </span>{{ partial "language-label.html" . }}
   {{ with .GetTerms "topics" }}
     <span aria-hidden="true"> · </span>
     <span class="post-topics">

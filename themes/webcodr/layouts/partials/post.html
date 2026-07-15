@@ -1,11 +1,14 @@
-<article class="post"{{ if and (eq .context.Type "post") (eq .location "single") }} data-pagefind-body{{ end }}>
+{{ $language := .context.Params.language | default "en" }}
+<article class="post" lang="{{ $language }}"{{ if and (eq .context.Type "post") (eq .location "single") }} data-pagefind-body{{ end }}>
     <h1 class="post-headline"><a href="{{ .context.Permalink }}" class="post-link--headline">{{ .context.Title }}</a></h1>
     {{ if and (eq .context.Type "post") (eq .location "single") }}
     {{ partial "post-meta.html" .context }}
     {{ partial "series.html" .context }}
     {{ partial "table-of-contents.html" .context }}
     {{ else }}
-    <p class="post-meta"><strong>Reading Time:</strong> {{ .context.ReadingTime }} minutes</p>
+    <p class="post-meta"><strong>Reading Time:</strong> {{ .context.ReadingTime }} minutes
+      <span aria-hidden="true"> · </span>{{ partial "language-label.html" .context }}
+    </p>
     {{ end }}
     <div class="post-content">
         {{ .context.Content }}

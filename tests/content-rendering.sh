@@ -28,6 +28,7 @@ assert_contains "$router_post" 'loading="lazy"'
 assert_contains "$router_post" 'decoding="async"'
 grep -Eq 'width="[0-9]+" height="[0-9]+"' "$router_post" || fail "expected intrinsic image dimensions in $router_post"
 assert_contains "$router_post" 'alt="Ubiquiti EdgeRouter X"'
+assert_contains "$router_post" '<span class="post-language" lang="de">Deutsch</span>'
 
 search_post="$output/2026/07/using-fd-rg-fzf-and-bat-to-find-things-fast/index.html"
 

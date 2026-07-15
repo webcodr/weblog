@@ -8,7 +8,7 @@ displayLanguage: en
 I just updated from Node.js 8.2.1 to 8.4.0 within my current project. The update
 to V8 6.0 really shines as I noticed some major real-world performance improvements.
 
-So I decided to do some tests with the above mentioned versions and the latest 
+So I decided to do some tests with the above mentioned versions and the latest
 LTS version, 6.11.2.
 
 ## Testing methodology

@@ -39,13 +39,13 @@ The IPTV VLAN will be on `eth1` with VLAN ID 10 and will be terminated on a UniF
 ### Create the VLAN
 
   1. Go to the dashboard of your EdgeRouter, click on `Add Interface` and select `VLAN`:
-       
+
      ![Create VLAN](/images/edgerouter-vlan-isolation/create_vlan.png)
-     
+
   2. Go to section `SERVICES` and click `Add DHCP server`:
   
      ![Create VLAN DHCP server](/images/edgerouter-vlan-isolation/create_vlan_dhcp_server.png)
-    
+
   3. Stay in `SERVICES`, go to the tab `DNS`, `Add Listen interface` and choose the interface of your VLAN:
   
      ![Create VLAN DNS forwarding](/images/edgerouter-vlan-isolation/create_vlan_dns_forwarding.png)
@@ -57,14 +57,14 @@ VLAN 10 is now ready to use, but it's not isolated from the other networks. The 
   1. Go to `FIREWALL/NAT`, then to `Firewall/NAT Groups` and create a new network group:
   
      ![Create Network Group](/images/edgerouter-vlan-isolation/create_network_group.png)
-    
+
   2. Edit the new network group and add all networks except the VLAN:
   
      ![Create Network Group Add Networks](/images/edgerouter-vlan-isolation/create_network_group_add_networks.png)
 
 ### A quick guide to firewall directions
 
-Before you create the firewall rulesets, you should know and understand the firewall ruleset directions: 
+Before you create the firewall rulesets, you should know and understand the firewall ruleset directions:
 
 - `IN`: traffic entering the router from an interface
 - `OUT`: traffic exiting the router to an interface
@@ -83,21 +83,21 @@ Direction `IN` means any traffic from `eth1.10` to any other of your EdgeRouter'
   1. Go to `Firewall Policies` and click `Add Ruleset`:
   
      ![Create Firewall Ruleset IN](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in.png)
-     
+
   2. Edit the new ruleset and setup the interfaces:
   
      ![Create Firewall Ruleset IN Interfaces](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in_interfaces.png)
-     
+
   3. Add a new firewall rule to allow established and related packets:
   
      ![Create Firewall IN Rule 1 Basic](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in_rule1_basic.png)
-     
+
      ![Create Firewall IN Rule 1 Advanced](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in_rule1_adv.png)
   
   4. Add a new firewall rule to drop packets into network group `LAN`:
 
      ![Create Firewall IN Rule 2 Basic](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in_rule2_basic.png)
-    
+
      ![Create Firewall IN Rule 2 Advanced](/images/edgerouter-vlan-isolation/create_firewall_ruleset_in_rule2_dest.png)
   
   5. Your firewall ruleset should look like this:
@@ -106,28 +106,28 @@ Direction `IN` means any traffic from `eth1.10` to any other of your EdgeRouter'
 
 ### Create firewall ruleset VLAN10_ISOLATION_LOCAL
 
-This ruleset will block any traffic to your EdgeRouters services, with the exception of DNS and DHCP. 
+This ruleset will block any traffic to your EdgeRouters services, with the exception of DNS and DHCP.
 
 Direction `LOCAL` means any traffic from `eth1.10` directly to your EdgeRouter and its services.
 
   1. Create another firewall ruleset like `VLAN10_ISOLATION_IN`:
   
      ![Create Firewall Ruleset LOCAL](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local.png)
-     
+
   2. Edit the new ruleset and setup the interfaces:
   
      ![Create Firewall Ruleset LOCAL Interfaces](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local_interfaces.png)
-     
+
   3. Add a new firewall rule to allow DNS:
   
      ![Create Firewall LOCAL Rule 1 Basic](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local_rule1_basic.png)
-     
+
      ![Create Firewall LOCAL Rule 1 Advanced](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local_rule1_dest.png)
   
   4. Add a new firewall rule to allow DHCP:
 
      ![Create Firewall LOCAL Rule 2 Basic](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local_rule2_basic.png)
-    
+
      ![Create Firewall LOCAL Rule 2 Advanced](/images/edgerouter-vlan-isolation/create_firewall_ruleset_local_rule2_dest.png)
   
   5. Your firewall ruleset should look like this:
@@ -139,5 +139,5 @@ Direction `LOCAL` means any traffic from `eth1.10` directly to your EdgeRouter a
 ![Edit NAT rule configuration](/images/edgerouter-vlan-isolation/edit_nat_rule_configuration.png)
 
 If you're using custom NAT rules, you have to add your new network group to the rules to exclude the VLAN. Firewall rules alone will not isolate any networks from custom NAT rules.
-     
+
 That's it. VLAN 10 is now fully isolated from all other networks. The firewall will drop all packages from `eth.10` to the network group and my custom NAT rule will only work from networks of the group.

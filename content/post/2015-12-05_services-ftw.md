@@ -4,6 +4,7 @@ title: Services ftw!
 topics: [programming, web-development]
 series: ["Building CodrPress"]
 description: HTTP-Dienste verbinden PHP, Python und Ruby für anwendungsunabhängiges Markdown-Rendering und Syntax-Highlighting.
+language: de
 ---
 Wer kennt das nicht? Man findet eine nette Software-Bibliothek in einer bestimmten Sprache, die vom Server der eigenen Web-Applikation nicht unterstützt wird oder nur sehr umständlich auf andere Weise genutzt werden kann.
 

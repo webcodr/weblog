@@ -3,6 +3,7 @@ date: 2012-06-17T22:20:12+01:00
 title: "PHP-Autoloader nach dem PSR-0-Standard"
 topics: [php, programming]
 description: Der Beitrag erklärt PSR-0 und implementiert einen interoperablen PHP-Autoloader für Namespaces und Klassen.
+language: de
 ---
 Wenn's um das Schreiben eines Autoloaders in PHP geht, kochen viele Entwickler gern ihr eigenes Süppchen. Sofern nun mehrere gleichzeitig aktiv sind, kann das zu Problemen führen und ggf. sogar dafür sorgen, dass eine Alternative gesucht werden muss.
 
