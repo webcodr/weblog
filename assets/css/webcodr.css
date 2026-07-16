@@ -708,11 +708,6 @@ a[href]:focus-visible {
 	text-decoration: underline;
 }
 
-.footer-copyright {
-	margin: 0.5ex 0 0;
-	font-size: 0.9rem;
-}
-
 @media screen and (min-width: 840px) {
 	.footer {
 		margin: 0;
@@ -1157,6 +1152,12 @@ a[href]:focus-visible {
 	margin-bottom: 0.3rem;
 	color: var(--post-meta-text-color);
 	font-size: 0.9rem;
+}
+
+.post-navigation-icon {
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
 }
 
 @media screen and (min-width: 840px) {
