@@ -68,7 +68,7 @@ arch_post="$output/2025/08/im-using-arch-btw/index.html"
 
 assert_contains "$srchr" 'Published <time datetime="2026-07-05T20:28:50Z"'
 assert_contains "$srchr" '<article class="post" lang="en" data-pagefind-body>'
-assert_contains "$srchr" '<span class="post-language" lang="en">English</span>'
+assert_not_contains "$srchr" 'class="post-language"'
 assert_contains "$srchr" '>Developer Tools</a>'
 assert_not_contains "$srchr" 'Updated <time'
 assert_not_contains "$srchr" 'class="table-of-contents"'
@@ -82,7 +82,7 @@ german_post="$output/2017/01/ubiquiti-edgerouter-x-vs.-mikrotik-hex/index.html"
 assert_contains "$german_post" '<article class="post" lang="de" data-pagefind-body>'
 assert_contains "$german_post" '<span class="post-language" lang="de">Deutsch</span>'
 assert_contains "$output/archive/index.html" 'class="post-language" lang="de">Deutsch</span>'
-assert_contains "$output/archive/index.html" 'class="post-language" lang="en">English</span>'
+assert_not_contains "$output/archive/index.html" 'class="post-language" lang="en">English</span>'
 assert_contains "$srchr" 'class="related-posts"'
 assert_contains "$srchr" 'Using fd, rg, fzf and bat to find things fast'
 assert_contains "$srchr" 'class="post-navigation"'
@@ -112,8 +112,8 @@ assert_contains "$root/assets/css/webcodr.css" 'a[href]:hover,'
 assert_contains "$root/assets/css/webcodr.css" 'a[href]:focus-visible {'
 assert_count "$root/assets/css/webcodr.css" 6 'text-decoration: underline;'
 assert_not_contains "$root/assets/css/webcodr.css" 'border-bottom: 2px solid var(--post-text-color);'
-assert_not_contains "$root/assets/css/webcodr.css" '.related-posts-list,'
-assert_contains "$root/assets/css/webcodr.css" '.related-posts-list {'
+assert_not_contains "$root/assets/css/webcodr.css" '.related-posts-list'
+assert_contains "$root/themes/webcodr/layouts/partials/related-posts.html" 'class="post-index post-index--full-date"'
 assert_contains "$root/assets/css/webcodr.css" 'padding-inline: 0;'
 for post in "$root"/content/post/*.md; do
 	[[ "$(basename "$post")" == "_index.md" ]] && continue
