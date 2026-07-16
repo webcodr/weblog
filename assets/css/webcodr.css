@@ -1154,7 +1154,8 @@ a[href]:focus-visible {
 	font-size: 0.9rem;
 }
 
-.post-navigation-icon {
+.post-navigation-icon,
+.pagination__icon {
 	width: 1em;
 	height: 1em;
 	vertical-align: -0.15em;

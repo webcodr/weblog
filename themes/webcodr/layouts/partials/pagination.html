@@ -2,15 +2,14 @@
   <div class="pagination">
     <div class="pagination__item pagination__item-position-prev">
         {{ if (.Paginator.HasPrev) }}
-          <a href="{{ .Paginator.Prev.URL }}" class="pagination__link">&larr; newer posts</a>
+          <a href="{{ .Paginator.Prev.URL }}" class="pagination__link">{{ partial "arrow-icon.html" (dict "direction" "left" "class" "pagination__icon") }} newer posts</a>
         {{ end }}
     </div>
 
     <div class="pagination__item pagination__item-position-next">
       {{ if (.Paginator.HasNext) }}
-        <a href="{{ .Paginator.Next.URL }}" class="pagination__link">older posts &rarr;</a>
+        <a href="{{ .Paginator.Next.URL }}" class="pagination__link">older posts {{ partial "arrow-icon.html" (dict "direction" "right" "class" "pagination__icon") }}</a>
       {{ end }}
     </div>
   </div>
 {{ end }}
-
