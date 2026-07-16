@@ -24,7 +24,10 @@ generated=$(printf '%s\n' "$workspace"/content/post/*_generator-metadata-test.md
 [[ -f "$generated" ]] || fail "expected Fish generator output at $generated"
 assert_contains "$generated" 'topics: []'
 assert_contains "$generated" 'description: ""'
-mapfile -t generated_lines < "$generated"
+generated_lines=()
+while IFS= read -r line || [[ -n "$line" ]]; do
+	generated_lines+=("$line")
+done < "$generated"
 [[ "${generated_lines[3]}" == 'topics: []' ]] || fail "expected topics after date in Fish output"
 [[ "${generated_lines[4]}" == 'description: ""' ]] || fail "expected description after topics in Fish output"
 [[ "${generated_lines[5]}" == '---' ]] || fail "expected closing delimiter after description in Fish output"
