@@ -14,7 +14,7 @@
   {{ end }}
   <aside class="series-box" data-pagefind-ignore>
     <p class="series-title">
-      Part {{ $position }} of {{ $total }} in the series
+      <span class="series-title-label">Series · Part {{ $position }} of {{ $total }}</span>
       <a href="{{ $term.RelPermalink }}" class="series-link">{{ $term.LinkTitle }}</a>
     </p>
     <ol class="series-parts">

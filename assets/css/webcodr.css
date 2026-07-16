@@ -358,6 +358,7 @@
 	--monospace-font:
 		"CaskaydiaMono Nerd Font", "JetBrains Mono", "Fira Code", "Hack",
 		"Source Code Pro", "SF Mono", "Inconsolata", monospace;
+	--mobile-gutter: 20px;
 }
 
 :root[data-theme="light"] {
@@ -537,7 +538,7 @@ h6 {
 	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	margin: 1em 0;
-	padding: 0 10px 0 10px;
+	padding: 0 var(--mobile-gutter);
 }
 
 h1 {
@@ -765,7 +766,7 @@ a[href]:focus-visible {
 	letter-spacing: 0.1em;
 	font-size: 18px;
 	margin: 0 0 3em 0;
-	padding: 0.2em 10px;
+	padding: 0.2em var(--mobile-gutter);
 }
 
 .post-date {
@@ -815,7 +816,7 @@ a[href]:focus-visible {
 }
 
 .terminal-error {
-	margin: 0 10px 1.5em;
+	margin: 0 var(--mobile-gutter) 1.5em;
 	padding: 1rem 1.25rem;
 	background-color: var(--code-background-color);
 	border-left: 4px solid var(--syntax-error-color);
@@ -855,7 +856,7 @@ a[href]:focus-visible {
 }
 .post-content p {
 	margin-bottom: 1em;
-	padding: 0 10px;
+	padding: 0 var(--mobile-gutter);
 }
 .post-content a {
 	color: var(--link-color);
@@ -913,7 +914,7 @@ a[href]:focus-visible {
 }
 .post-content .highlight {
 	margin: 0.5em 0 1em;
-	padding: 10px 0 10px 10px;
+	padding: 10px 0 10px var(--mobile-gutter);
 	background-color: var(--code-background-color);
 }
 
@@ -1000,19 +1001,19 @@ a[href]:focus-visible {
 }
 .post-content ol,
 .post-content ul {
-	padding-right: 10px;
+	padding-right: var(--mobile-gutter);
 }
 .post-content tr th:first-child {
-	padding-left: 10px;
+	padding-left: var(--mobile-gutter);
 }
 .post-content tr th:last-child {
-	padding-right: 10px;
+	padding-right: var(--mobile-gutter);
 }
 .post-content tr td:first-child {
-	padding-left: 10px;
+	padding-left: var(--mobile-gutter);
 }
 .post-content tr td:last-child {
-	padding-right: 10px;
+	padding-right: var(--mobile-gutter);
 }
 
 .post-content--language {
@@ -1024,7 +1025,7 @@ a[href]:focus-visible {
 	font-size: 20px;
 	color: var(--code-text-color);
 	text-transform: uppercase;
-	margin-left: 10px;
+	margin-left: var(--mobile-gutter);
 }
 
 .post-content--copy {
@@ -1113,14 +1114,14 @@ a[href]:focus-visible {
 }
 .post-updated {
 	margin: -2.5em 0 3em;
-	padding: 0 10px;
+	padding: 0 var(--mobile-gutter);
 	color: var(--post-meta-text-color);
 }
 
 .topic-list,
 .post-index {
 	list-style: none;
-	padding: 0 10px;
+	padding: 0 var(--mobile-gutter);
 }
 
 .topic-list-item,
@@ -1177,39 +1178,72 @@ a[href]:focus-visible {
 }
 
 .post-navigation {
-	margin: 2rem 10px;
+	margin: 2rem var(--mobile-gutter);
+}
+
+.related-posts,
+.table-of-contents,
+.series-box {
+	margin: 3rem var(--mobile-gutter);
+	padding: 1.25rem 1.5rem;
+	background-color: var(--code-background-color);
+	border-radius: 5px;
 }
 
 .related-posts {
-	margin: 2rem 10px;
-	padding: 1rem 1.25rem;
-	background-color: var(--code-background-color);
 	border-left: 4px solid var(--headline-base-color);
-	border-radius: 5px;
-}
-
-.related-posts-title {
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
 }
 
 .table-of-contents {
-	margin: 2rem 10px;
-	padding: 1rem 1.25rem;
-	background-color: var(--code-background-color);
 	border-left: 4px solid var(--headline-tertiary-color);
-	border-radius: 5px;
+}
+
+.series-box {
+	border-left: 4px solid var(--header-prompt-chevron-color);
+}
+
+.related-posts-title,
+.table-of-contents-title,
+.series-title-label {
+	font-family: Roboto, Helvetica, Arial, sans-serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.related-posts-title,
+.table-of-contents-title,
+.series-title {
+	margin: 0;
+	padding: 0;
+}
+
+.related-posts-title {
+	color: var(--headline-base-color);
 }
 
 .table-of-contents-title {
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
+	color: var(--headline-tertiary-color);
+}
+
+.series-title-label {
+	display: block;
+	color: var(--header-prompt-chevron-color);
+	font-size: 1rem;
+}
+
+.series-box .series-link {
+	display: block;
+	margin-top: 0.35rem;
+	color: var(--link-color);
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.3;
+	text-decoration: underline;
 }
 
 .table-of-contents nav {
-	margin-top: 0.75rem;
+	margin-top: 1rem;
 }
 
 .table-of-contents ul ul {
@@ -1224,24 +1258,9 @@ a[href]:focus-visible {
 	margin-bottom: 0;
 }
 
-.series-box {
-	margin: 2rem 10px;
-	padding: 1rem 1.25rem;
-	background-color: var(--code-background-color);
-	border-left: 4px solid var(--header-prompt-chevron-color);
-	border-radius: 5px;
-}
-
-.series-title {
-	margin: 0;
-	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
-	font-weight: 700;
-	font-size: 20px;
-}
-
 .series-parts {
 	list-style: decimal;
-	margin: 0.75rem 0 0;
+	margin: 1rem 0 0;
 	padding-left: 1.5rem;
 }
 
