@@ -3,9 +3,9 @@
   {{ with $related }}
     <aside class="related-posts" aria-labelledby="related-posts-title" data-pagefind-ignore>
       <h2 id="related-posts-title" class="related-posts-title">Continue reading</h2>
-      <ul class="related-posts-list">
+      <ul class="post-index post-index--full-date">
         {{ range . }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ partial "post-index-entry.html" (dict "page" . "dateFormat" "Jan 02, 2006" "showDescription" false) }}
         {{ end }}
       </ul>
     </aside>

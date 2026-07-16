@@ -1,10 +1,16 @@
 {{ if or .PrevInSection .NextInSection }}
   <nav class="post-navigation" aria-label="Article navigation" data-pagefind-ignore>
     {{ with .PrevInSection }}
-      <div class="post-navigation-previous"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+      <div class="post-navigation-previous">
+        <span class="post-navigation-label"><span aria-hidden="true">←</span> Older</span>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
     {{ end }}
     {{ with .NextInSection }}
-      <div class="post-navigation-next"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+      <div class="post-navigation-next">
+        <span class="post-navigation-label">Newer <span aria-hidden="true">→</span></span>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
     {{ end }}
   </nav>
 {{ end }}

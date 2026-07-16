@@ -1,4 +1,6 @@
-{{- $code := .Params.language | default "en" -}} {{- $labels := dict "de"
-"Deutsch" "en" "English" -}} {{- $label := index $labels $code | default ($code
-| upper) -}}
-<span class="post-language" lang="{{ $code }}">{{ $label }}</span>
+{{- $code := .Params.language | default "en" -}}
+{{- if ne $code "en" -}}
+{{- $labels := dict "de" "Deutsch" "en" "English" -}}
+{{- $label := index $labels $code | default ($code | upper) -}}
+<span aria-hidden="true"> · </span><span class="post-language" lang="{{ $code }}">{{ $label }}</span>
+{{- end -}}

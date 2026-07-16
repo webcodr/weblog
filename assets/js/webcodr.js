@@ -183,6 +183,13 @@ const createCopyButton = (codeBlock) => {
 
 	return copyButton;
 };
+const updateOverflowFade = (codeBlock) => {
+	const pre = codeBlock.closest("pre");
+	const hasClippedContent =
+		codeBlock.scrollLeft + codeBlock.clientWidth < codeBlock.scrollWidth - 1;
+
+	pre.classList.toggle("post-content--overflow-right", hasClippedContent);
+};
 const overlayScrollbar = (codeBlock) => {
 	codeBlock.style.marginBottom = "";
 	const scrollbarHeight = codeBlock.offsetHeight - codeBlock.clientHeight;
@@ -220,12 +227,20 @@ const setupCodeBlocks = () => {
 			pre.append(createCopyButton(codeBlock));
 		}
 
+		codeBlock.addEventListener(
+			"scroll",
+			() => updateOverflowFade(codeBlock),
+			{ passive: true },
+		);
+
 		overlayScrollbar(codeBlock);
+		updateOverflowFade(codeBlock);
 	}
 
 	window.addEventListener("resize", () => {
 		for (const codeBlock of codeBlocks) {
 			overlayScrollbar(codeBlock);
+			updateOverflowFade(codeBlock);
 		}
 	});
 };

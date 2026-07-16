@@ -330,6 +330,7 @@
 	--footer-text-color: #a9b1d6;
 	--post-text-color: #a9b1d6;
 	--post-meta-text-color: #c0caf5;
+	--link-color: #7aa2f7;
 	--headline-base-color: #9ece6a;
 	--headline-secondary-color: #f7768e;
 	--headline-tertiary-color: #e0af68;
@@ -366,8 +367,9 @@
 	--header-prompt-path-color: #587539;
 	--header-prompt-chevron-color: #2e7de9;
 	--footer-text-color: #6172b0;
-	--post-text-color: #3760bf;
+	--post-text-color: #414868;
 	--post-meta-text-color: #6172b0;
+	--link-color: #2e7de9;
 	--headline-base-color: #587539;
 	--headline-secondary-color: #c64343;
 	--headline-tertiary-color: #8c6c3e;
@@ -402,8 +404,9 @@
 		--header-prompt-path-color: #587539;
 		--header-prompt-chevron-color: #2e7de9;
 		--footer-text-color: #6172b0;
-		--post-text-color: #3760bf;
+		--post-text-color: #414868;
 		--post-meta-text-color: #6172b0;
+		--link-color: #2e7de9;
 		--headline-base-color: #587539;
 		--headline-secondary-color: #c64343;
 		--headline-tertiary-color: #8c6c3e;
@@ -524,12 +527,12 @@ h6 {
 }
 
 h1 {
-	font-size: 48px;
+	font-size: clamp(32px, 9vw, 48px);
 	color: var(--headline-secondary-color);
 }
 
 h2 {
-	font-size: 36px;
+	font-size: clamp(26px, 7vw, 36px);
 	color: var(--headline-tertiary-color);
 }
 
@@ -688,20 +691,26 @@ a[href]:focus-visible {
 }
 
 .footer-menu {
+	margin: 0;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
+	gap: 0.4rem 1.5rem;
 }
 
 .footer-item {
 	list-style-type: none;
 	margin: 1ex 0;
-	width: 100%;
 }
 
 .footer-link {
 	color: inherit;
 	text-decoration: underline;
+}
+
+.footer-copyright {
+	margin: 0.5ex 0 0;
+	font-size: 0.9rem;
 }
 
 @media screen and (min-width: 840px) {
@@ -765,7 +774,9 @@ a[href]:focus-visible {
 
 .post-headline {
 	margin: 0 0 0.5em 0;
-	line-height: 1em;
+	font-size: clamp(32px, 9vw, 48px);
+	line-height: 1.1;
+	color: var(--headline-secondary-color);
 }
 
 .post-link--headline {
@@ -782,7 +793,7 @@ a[href]:focus-visible {
 	padding: 0 10px;
 }
 .post-content a {
-	color: var(--post-text-color);
+	color: var(--link-color);
 	text-decoration: underline;
 }
 .post-content li {
@@ -790,7 +801,7 @@ a[href]:focus-visible {
 }
 .post-content blockquote {
 	border-left: 4px solid var(--blockquote-border-color);
-	margin: 1.5em 0 0 1.5em;
+	margin: 1.5em 0;
 	padding: 0 1.5em;
 	font-style: italic;
 }
@@ -842,10 +853,34 @@ a[href]:focus-visible {
 }
 
 .post-content pre {
+	position: relative;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) calc(2.25rem + 10px);
 	margin: 0;
 	overflow: visible;
+}
+
+/* Fades out horizontally clipped code at the right edge of the scroll area;
+   scripts toggle the class depending on the scroll position. */
+.post-content pre::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: calc(2.25rem + 10px);
+	width: 3em;
+	background: linear-gradient(
+		to right,
+		transparent,
+		var(--code-background-color)
+	);
+	opacity: 0;
+	transition: opacity 0.15s ease-in-out;
+	pointer-events: none;
+}
+
+.post-content pre.post-content--overflow-right::after {
+	opacity: 1;
 }
 
 .post-content .chroma code {
@@ -1014,11 +1049,6 @@ a[href]:focus-visible {
 	padding: 0 10px;
 }
 
-.related-posts-list {
-	list-style: none;
-	padding: 0;
-}
-
 .topic-list-item,
 .post-index-item {
 	display: flex;
@@ -1038,6 +1068,16 @@ a[href]:focus-visible {
 
 .post-index-date {
 	flex: 0 0 3.5rem;
+}
+
+.post-index--full-date .post-index-date {
+	flex-basis: 6.5rem;
+}
+
+/* .related-posts already provides the horizontal margin on small screens. */
+.related-posts .post-index {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .post-index-content {
@@ -1110,6 +1150,13 @@ a[href]:focus-visible {
 .post-navigation-next {
 	grid-column: 2;
 	text-align: right;
+}
+
+.post-navigation-label {
+	display: block;
+	margin-bottom: 0.3rem;
+	color: var(--post-meta-text-color);
+	font-size: 0.9rem;
 }
 
 @media screen and (min-width: 840px) {

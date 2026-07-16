@@ -3,9 +3,8 @@
   <div class="post-index-content">
     <a href="{{ .page.RelPermalink }}" class="post-index-link">{{ .page.Title }}</a>
     <span class="post-index-reading-time">
-      {{ .page.ReadingTime }} min read
-      <span aria-hidden="true"> · </span>{{ partial "language-label.html" .page }}
+      {{ .page.ReadingTime }} min read{{ partial "language-label.html" .page }}
     </span>
-    {{ with .page.Description }}<p class="post-index-description">{{ . }}</p>{{ end }}
+    {{ if ne .showDescription false }}{{ with .page.Description }}<p class="post-index-description">{{ . }}</p>{{ end }}{{ end }}
   </div>
 </li>
