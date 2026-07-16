@@ -7,11 +7,12 @@
     <div class="container container--main">
         <main id="main" class="content">
             <article class="post">
-                <h1 class="post-headline post-headline--terminal">
-                    <span class="header-prompt--path" aria-hidden="true">~</span>
-                    <span class="header-prompt--chevron" aria-hidden="true">❯</span>
-                    webcodr: page: No such file or directory
-                </h1>
+                <h1 class="visually-hidden">Page not found</h1>
+                <div class="terminal-error">
+                    <p><span class="header-prompt--path" aria-hidden="true">~</span> <span class="header-prompt--chevron" aria-hidden="true">❯</span> open ./page</p>
+                    <p class="terminal-error-output"><span class="terminal-error-name">open:</span> ./page: No such file or directory</p>
+                    <p class="terminal-error-exit">exit status 404</p>
+                </div>
                 <p>Maybe search can find it:</p>
                 <div class="search-form">
                     <label class="search-label" for="search-input">Search posts</label>
