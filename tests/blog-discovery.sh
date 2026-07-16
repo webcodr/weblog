@@ -114,7 +114,8 @@ assert_count "$root/assets/css/webcodr.css" 6 'text-decoration: underline;'
 assert_not_contains "$root/assets/css/webcodr.css" 'border-bottom: 2px solid var(--post-text-color);'
 assert_not_contains "$root/assets/css/webcodr.css" '.related-posts-list'
 assert_contains "$root/themes/webcodr/layouts/partials/related-posts.html" 'class="post-index post-index--full-date"'
-assert_contains "$root/assets/css/webcodr.css" 'padding-inline: 0;'
+assert_contains "$root/assets/css/webcodr.css" 'border-left: 4px solid var(--headline-tertiary-color);'
+assert_contains "$root/assets/css/webcodr.css" 'border-left: 4px solid var(--headline-base-color);'
 for post in "$root"/content/post/*.md; do
 	[[ "$(basename "$post")" == "_index.md" ]] && continue
 	assert_post_metadata "$(basename "$post")"
