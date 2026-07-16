@@ -331,6 +331,7 @@
 	--post-text-color: #a9b1d6;
 	--post-meta-text-color: #c0caf5;
 	--link-color: #7aa2f7;
+	--selection-background-color: #283457;
 	--headline-base-color: #9ece6a;
 	--headline-secondary-color: #f7768e;
 	--headline-tertiary-color: #e0af68;
@@ -370,6 +371,7 @@
 	--post-text-color: #414868;
 	--post-meta-text-color: #6172b0;
 	--link-color: #2e7de9;
+	--selection-background-color: #c4c8da;
 	--headline-base-color: #587539;
 	--headline-secondary-color: #c64343;
 	--headline-tertiary-color: #8c6c3e;
@@ -407,6 +409,7 @@
 		--post-text-color: #414868;
 		--post-meta-text-color: #6172b0;
 		--link-color: #2e7de9;
+		--selection-background-color: #c4c8da;
 		--headline-base-color: #587539;
 		--headline-secondary-color: #c64343;
 		--headline-tertiary-color: #8c6c3e;
@@ -511,6 +514,17 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 	color: var(--post-text-color);
 	background: var(--container-background-color);
+}
+
+::selection {
+	background-color: var(--selection-background-color);
+}
+
+/* Cross-fade between pages in browsers that support view transitions. */
+@media (prefers-reduced-motion: no-preference) {
+	@view-transition {
+		navigation: auto;
+	}
 }
 
 h1,
@@ -669,9 +683,18 @@ h6 {
 	color: var(--post-text-color);
 }
 
+a[href] {
+	transition: color 0.15s ease-in-out;
+}
+
 a[href]:hover,
 a[href]:focus-visible {
 	color: var(--headline-secondary-color);
+}
+
+a[href]:focus-visible {
+	outline: 2px solid var(--headline-secondary-color);
+	outline-offset: 2px;
 }
 
 @media screen and (min-width: 840px) {
@@ -777,6 +800,12 @@ a[href]:focus-visible {
 .post-link--headline {
 	color: inherit;
 	text-decoration: none;
+}
+
+.post-headline--terminal {
+	font-family: var(--monospace-font);
+	font-size: clamp(18px, 4.5vw, 28px);
+	color: var(--post-text-color);
 }
 
 .post-content {
@@ -910,16 +939,23 @@ a[href]:focus-visible {
 	font-family: var(--monospace-font);
 	font-size: 16px;
 }
+.post-content .table-wrapper {
+	overflow-x: auto;
+}
 .post-content table {
 	width: 100%;
 }
 .post-content th {
 	text-align: left;
 	color: var(--headline-tertiary-color);
+	border-bottom: 1px solid var(--post-text-color);
+}
+.post-content td {
+	border-bottom: 1px solid var(--code-scrollback-background-color);
 }
 .post-content th,
 .post-content td {
-	padding: 5px;
+	padding: 0.4em 1em 0.4em 0;
 }
 .post-content ol,
 .post-content ul {
@@ -1012,8 +1048,11 @@ a[href]:focus-visible {
 	.post-content table {
 		margin: 0;
 	}
-	.post-content th {
-		border-bottom: 1px solid var(--post-text-color);
+	.post-content tr :is(th, td):first-child {
+		padding-left: 0;
+	}
+	.post-content tr :is(th, td):last-child {
+		padding-right: 0;
 	}
 	.post-content p {
 		padding: 0;
