@@ -1,0 +1,6 @@
+{{- /* Series terms carry their display form verbatim; topic slugs get humanized. */ -}}
+{{- $title := .Title -}}
+{{- if ne .Data.Singular "series" -}}
+  {{- $title = .Title | humanize | title -}}
+{{- end -}}
+{{- return $title -}}

@@ -1,27 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-{{ partial "head.html" . }}
-<body>
-  {{ partial "header.html" . }}
-  <div class="container container--main">
-    <main id="main" class="content">
-      <article class="post">
-        <h1 class="post-headline">{{ .Title }}</h1>
-        <ul class="topic-list">
-          {{ range .Data.Terms.ByCount }}
-            {{/* Single-part series stay hidden until a second part ships, like the series box. */}}
-            {{ if or (ne $.Data.Singular "series") (gt .Count 1) }}
-            <li class="topic-list-item">
-              {{/* Series terms carry their display form verbatim; topic slugs get humanized. */}}
-              <a href="{{ .Page.RelPermalink }}" class="topic-list-link">{{ if eq $.Data.Singular "series" }}{{ .Page.LinkTitle }}{{ else }}{{ .Page.LinkTitle | humanize | title }}{{ end }}</a>
-              <span class="topic-list-count">{{ .Count }}</span>
-            </li>
-            {{ end }}
-          {{ end }}
-        </ul>
-      </article>
-    </main>
-  </div>
-  {{ partial "footer.html" . }}
-</body>
-</html>
+{{ define "main" }}
+<article class="post">
+  <h1 class="post-headline">{{ .Title }}</h1>
+  <ul class="topic-list">
+    {{ range .Data.Terms.ByCount }}
+      {{/* Single-part series stay hidden until a second part ships, like the series box. */}}
+      {{ if or (ne $.Data.Singular "series") (gt .Count 1) }}
+      <li class="topic-list-item">
+        <a href="{{ .Page.RelPermalink }}" class="topic-list-link">{{ partial "term-title.html" .Page }}</a>
+        <span class="topic-list-count">{{ .Count }}</span>
+      </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</article>
+{{ end }}

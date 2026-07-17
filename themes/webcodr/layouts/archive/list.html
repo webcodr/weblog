@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-{{ partial "head.html" . }}
-<body>
-  {{ partial "header.html" . }}
-  <div class="container container--main">
-    <main id="main" class="content">
-      <article class="post">
-        <h1 class="post-headline">{{ .Title }}</h1>
-        {{ range (where .Site.RegularPages "Type" "post").GroupByDate "2006" }}
-          <section class="archive-group">
-            <h2 class="archive-year">{{ .Key }}</h2>
-            <ul class="post-index">
-              {{ range .Pages }}
-                {{ partial "post-index-entry.html" (dict "page" . "dateFormat" "Jan 02") }}
-              {{ end }}
-            </ul>
-          </section>
+{{ define "main" }}
+<article class="post">
+  <h1 class="post-headline">{{ .Title }}</h1>
+  {{ range (where .Site.RegularPages "Type" "post").GroupByDate "2006" }}
+    <section class="archive-group">
+      <h2 class="archive-year">{{ .Key }}</h2>
+      <ul class="post-index">
+        {{ range .Pages }}
+          {{ partial "post-index-entry.html" (dict "page" . "dateFormat" "Jan 02") }}
         {{ end }}
-      </article>
-    </main>
-  </div>
-  {{ partial "footer.html" . }}
-</body>
-</html>
+      </ul>
+    </section>
+  {{ end }}
+</article>
+{{ end }}

@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-{{ partial "head.html" . }}
-
-<body>
-    {{ partial "header.html" . }}
-    <div class="container container--main">
-        <main id="main" class="content">
-            <article class="post">
-                <h1 class="visually-hidden">Page not found</h1>
-                <div class="terminal-error">
-                    <p><span class="header-prompt--path" aria-hidden="true">~</span> <span class="header-prompt--chevron" aria-hidden="true">❯</span> open ./page</p>
-                    <p class="terminal-error-output"><span class="terminal-error-name">open:</span> ./page: No such file or directory</p>
-                    <p class="terminal-error-exit">exit status 404</p>
-                </div>
-                <p>Maybe search can find it:</p>
-                <div class="search-form">
-                    <label class="search-label" for="search-input">Search posts</label>
-                    <input type="search" id="search-input" class="search-input" placeholder="Type to search…" autocomplete="off" />
-                </div>
-                <p id="search-status" class="search-status" role="status"></p>
-                <ol id="search-results" class="search-results"></ol>
-            </article>
-        </main>
+{{ define "main" }}
+<article class="post">
+    <h1 class="visually-hidden">Page not found</h1>
+    <div class="terminal-error">
+        <p><span class="header-prompt--path" aria-hidden="true">~</span> <span class="header-prompt--chevron" aria-hidden="true">❯</span> open ./page</p>
+        <p class="terminal-error-output"><span class="terminal-error-name">open:</span> ./page: No such file or directory</p>
+        <p class="terminal-error-exit">exit status 404</p>
     </div>
-    {{ partial "footer.html" . }}
-</body>
-
-</html>
+    <p>Maybe search can find it:</p>
+    {{ partial "search-form.html" . }}
+</article>
+{{ end }}

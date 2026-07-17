@@ -6,7 +6,8 @@ $themeInit := resources.Get "js/theme-init.js" | resources.Fingerprint
 $permalink = print $permalink "page/" $paginator.PageNumber "/" }} {{
 $pageSuffix = print " · page " $paginator.PageNumber }} {{ end }} {{
 end }} {{ $canonical := print "https://webcodr.io" $permalink }} {{ $title :=
-print site.Title $pageSuffix }} {{ if not .IsHome }}{{ $title = print .Title " · " site.Title }}{{
+print site.Title $pageSuffix }} {{ if eq .Kind "term" }}{{ $title = print (partial
+"term-title.html" .) " · " site.Title }}{{ else if not .IsHome }}{{ $title = print .Title " · " site.Title }}{{
 end }} {{ $description := .Description | default site.Params.description }}
 
 <head>
@@ -51,7 +52,7 @@ end }} {{ $description := .Description | default site.Params.description }}
     rel="alternate"
     type="{{ .MediaType.Type }}"
     href="{{ .RelPermalink }}"
-    title="{{ $.Title }} · {{ $.Site.Title }}"
+    title="{{ partial "term-title.html" $ }} · {{ $.Site.Title }}"
   />
   {{ end }} {{ end }}
   <link

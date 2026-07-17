@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-{{ partial "head.html" . }}
-<body>
-  {{ partial "header.html" . }}
-  <div class="container container--main">
-    <main id="main" class="content">
-      <article class="post">
-        <h1 class="post-headline">{{ if eq .Data.Singular "series" }}{{ .Title }}{{ else }}{{ .Title | humanize | title }}{{ end }}</h1>
-        {{ with .OutputFormats.Get "RSS" }}
-          <p class="post-meta"><a href="{{ .RelPermalink }}" class="feed-link">RSS feed for this {{ $.Data.Singular }}</a></p>
-        {{ end }}
-        {{ $pages := .Pages.ByDate.Reverse }}
-        {{ if eq .Data.Singular "series" }}
-          {{ $pages = .Pages.ByDate }}
-          <p class="post-meta">A series in {{ len .Pages }} parts, oldest first.</p>
-        {{ end }}
-        <ul class="post-index post-index--full-date">
-          {{ range $pages }}
-            {{ partial "post-index-entry.html" (dict "page" . "dateFormat" "Jan 02, 2006") }}
-          {{ end }}
-        </ul>
-      </article>
-    </main>
-  </div>
-  {{ partial "footer.html" . }}
-</body>
-</html>
+{{ define "main" }}
+<article class="post">
+  <h1 class="post-headline">{{ partial "term-title.html" . }}</h1>
+  {{ with .OutputFormats.Get "RSS" }}
+    <p class="post-meta"><a href="{{ .RelPermalink }}" class="feed-link">RSS feed for this {{ $.Data.Singular }}</a></p>
+  {{ end }}
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ if eq .Data.Singular "series" }}
+    {{ $pages = .Pages.ByDate }}
+    <p class="post-meta">A series in {{ len .Pages }} parts, oldest first.</p>
+  {{ end }}
+  <ul class="post-index post-index--full-date">
+    {{ range $pages }}
+      {{ partial "post-index-entry.html" (dict "page" . "dateFormat" "Jan 02, 2006") }}
+    {{ end }}
+  </ul>
+</article>
+{{ end }}
