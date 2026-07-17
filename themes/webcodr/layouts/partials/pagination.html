@@ -1,5 +1,5 @@
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-  <div class="pagination">
+  <nav class="pagination" aria-label="Pagination">
     <div class="pagination__item pagination__item-position-prev">
         {{ if (.Paginator.HasPrev) }}
           <a href="{{ .Paginator.Prev.URL }}" class="pagination__link">{{ partial "arrow-icon.html" (dict "direction" "left" "class" "pagination__icon") }} newer posts</a>
@@ -11,5 +11,5 @@
         <a href="{{ .Paginator.Next.URL }}" class="pagination__link">older posts {{ partial "arrow-icon.html" (dict "direction" "right" "class" "pagination__icon") }}</a>
       {{ end }}
     </div>
-  </div>
+  </nav>
 {{ end }}

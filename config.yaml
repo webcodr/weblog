@@ -12,9 +12,7 @@ params:
     developer productivity.
 permalinks:
   post: /:year/:month/:slug/
-canonifyURLs: true
 enableRobotsTXT: true
-staticDir: ["static"]
 markup:
   highlight:
     codeFences: true

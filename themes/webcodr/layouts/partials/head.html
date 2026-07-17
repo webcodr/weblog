@@ -1,11 +1,12 @@
 {{ $css := resources.Get "css/webcodr.css" | resources.Fingerprint "sha512"}} {{
 $js := resources.Get "js/webcodr.js" | resources.Fingerprint "sha512"}} {{
 $themeInit := resources.Get "js/theme-init.js" | resources.Fingerprint
-"sha512"}} {{ $permalink := .Permalink }} {{ if .IsHome }} {{ $paginator :=
+"sha512"}} {{ $permalink := .Permalink }} {{ $pageSuffix := "" }} {{ if .IsHome }} {{ $paginator :=
 .Paginate (where .Site.RegularPages "Type" "post") }} {{ if ne $paginator.PageNumber 1 }} {{
-$permalink = print $permalink "page/" $paginator.PageNumber "/" }} {{ end }} {{
+$permalink = print $permalink "page/" $paginator.PageNumber "/" }} {{
+$pageSuffix = print " · page " $paginator.PageNumber }} {{ end }} {{
 end }} {{ $canonical := print "https://webcodr.io" $permalink }} {{ $title :=
-site.Title }} {{ if not .IsHome }}{{ $title = print .Title " · " site.Title }}{{
+print site.Title $pageSuffix }} {{ if not .IsHome }}{{ $title = print .Title " · " site.Title }}{{
 end }} {{ $description := .Description | default site.Params.description }}
 
 <head>
@@ -50,7 +51,7 @@ end }} {{ $description := .Description | default site.Params.description }}
     rel="alternate"
     type="{{ .MediaType.Type }}"
     href="{{ .RelPermalink }}"
-    title="{{ $.Title | humanize | title }} · {{ $.Site.Title }}"
+    title="{{ $.Title }} · {{ $.Site.Title }}"
   />
   {{ end }} {{ end }}
   <link
