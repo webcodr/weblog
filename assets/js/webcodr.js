@@ -83,22 +83,22 @@ const copyToClipboard = async (text) => {
 
 	await navigator.clipboard.writeText(text);
 };
+const copyButtonStates = {
+	ready: {
+		label: "Copy code to clipboard",
+		className: null,
+	},
+	success: {
+		label: "Copied code to clipboard",
+		className: "post-content--copy-success",
+	},
+	error: {
+		label: "Could not copy code",
+		className: "post-content--copy-error",
+	},
+};
 const setCopyButtonState = (copyButton, state) => {
-	const states = {
-		ready: {
-			label: "Copy code to clipboard",
-			className: null,
-		},
-		success: {
-			label: "Copied code to clipboard",
-			className: "post-content--copy-success",
-		},
-		error: {
-			label: "Could not copy code",
-			className: "post-content--copy-error",
-		},
-	};
-	const buttonState = states[state];
+	const buttonState = copyButtonStates[state];
 
 	copyButton.setAttribute("aria-label", buttonState.label);
 	copyButton.title = buttonState.label;
@@ -149,6 +149,10 @@ const overlayScrollbar = (codeBlock) => {
 		codeBlock.style.marginBottom = `-${scrollbarHeight}px`;
 	}
 };
+const refreshCodeBlock = (codeBlock) => {
+	overlayScrollbar(codeBlock);
+	updateOverflowFade(codeBlock);
+};
 const setupCodeBlocks = () => {
 	const codeBlocks = [
 		...document.querySelectorAll(".post-content .chroma code[data-lang]"),
@@ -162,9 +166,7 @@ const setupCodeBlocks = () => {
 
 		if (!pre.querySelector(".post-content--language")) {
 			const nameElement = document.createElement("span");
-			const language = codeBlock.getAttribute("data-lang");
-			const textNode = document.createTextNode(sanitizeLanguageName(language));
-			nameElement.append(textNode);
+			nameElement.textContent = sanitizeLanguageName(codeBlock.dataset.lang);
 			nameElement.classList.add("post-content--language");
 			parent.before(nameElement);
 		}
@@ -179,18 +181,14 @@ const setupCodeBlocks = () => {
 			{ passive: true },
 		);
 
-		overlayScrollbar(codeBlock);
-		updateOverflowFade(codeBlock);
+		refreshCodeBlock(codeBlock);
 	}
 
 	let resizeTimer;
 	window.addEventListener("resize", () => {
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(() => {
-			for (const codeBlock of codeBlocks) {
-				overlayScrollbar(codeBlock);
-				updateOverflowFade(codeBlock);
-			}
+			codeBlocks.forEach(refreshCodeBlock);
 		}, 150);
 	});
 };
