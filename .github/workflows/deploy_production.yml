@@ -73,7 +73,7 @@ jobs:
           TEMP_RELEASE_PATH=$1
           mkdir -p ~/projects/weblog/site/releases
           cd ~/projects/weblog/site
-          rm -rf "$TEMP_RELEASE_PATH"
+          find releases -mindepth 1 -maxdepth 1 -name '.*.tmp' -exec rm -rf {} +
           mkdir -p "$TEMP_RELEASE_PATH"
           REMOTE_SCRIPT
 
@@ -86,11 +86,17 @@ jobs:
           rsync -az --delete -e "ssh -i ~/.ssh/deploy_key" public/ "${REMOTE}:~/projects/weblog/site/${TEMP_RELEASE_PATH}/"
 
       - name: Activate release
+        id: activate
         env:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
         run: |
           REMOTE="${SSH_USERNAME}@${SSH_HOST}"
+          PREVIOUS_RELEASE=$(ssh -i ~/.ssh/deploy_key "$REMOTE" "readlink ~/projects/weblog/site/current 2>/dev/null || true")
+          case "$PREVIOUS_RELEASE" in
+            releases/*) echo "PREVIOUS_RELEASE=$PREVIOUS_RELEASE" >> "$GITHUB_ENV" ;;
+            *) echo "no previous release to roll back to" ;;
+          esac
           ssh -i ~/.ssh/deploy_key "$REMOTE" "bash -s -- '$TEMP_RELEASE_PATH' '$RELEASE_PATH'" <<'REMOTE_SCRIPT'
           set -eu
           TEMP_RELEASE_PATH=$1
@@ -111,9 +117,34 @@ jobs:
           REMOTE_SCRIPT
 
       - name: Smoke test production
+        id: smoke
         run: |
           curl -fsS https://webcodr.io/ >/dev/null
           curl -fsS https://webcodr.dev/ >/dev/null
+
+      - name: Roll back to previous release
+        if: ${{ failure() && steps.smoke.outcome == 'failure' && env.PREVIOUS_RELEASE != '' }}
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+        run: |
+          REMOTE="${SSH_USERNAME}@${SSH_HOST}"
+          ssh -i ~/.ssh/deploy_key "$REMOTE" "bash -s -- '$PREVIOUS_RELEASE'" <<'REMOTE_SCRIPT'
+          set -eu
+          PREVIOUS_RELEASE=$1
+          case "$PREVIOUS_RELEASE" in
+            releases/*) ;;
+            *) echo "refusing to roll back to '$PREVIOUS_RELEASE'" >&2; exit 1 ;;
+          esac
+          cd ~/projects/weblog/site
+          test -f "$PREVIOUS_RELEASE/index.html"
+          ln -sfn "$PREVIOUS_RELEASE" current-new
+          mv -Tf current-new current
+          test "$(readlink current)" = "$PREVIOUS_RELEASE"
+          REMOTE_SCRIPT
+          curl -fsS https://webcodr.io/ >/dev/null
+          curl -fsS https://webcodr.dev/ >/dev/null
+          echo "Rolled back to $PREVIOUS_RELEASE"
 
       - name: Clean up SSH key
         if: always()
