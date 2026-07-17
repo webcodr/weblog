@@ -20,7 +20,7 @@
       <link>https://webcodr.io{{ .RelPermalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
       <guid>https://webcodr.io{{ .RelPermalink }}</guid>
-      <description>{{ .Summary | plainify | html }}</description>
+      <description>{{ .Summary | plainify | htmlUnescape | html }}</description>
       <content:encoded>{{ printf "<![CDATA[%s]]>" .Content | safeHTML }}</content:encoded>
     </item>
     {{ end }}

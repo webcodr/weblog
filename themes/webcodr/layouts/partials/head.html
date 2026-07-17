@@ -2,7 +2,7 @@
 $js := resources.Get "js/webcodr.js" | resources.Fingerprint "sha512"}} {{
 $themeInit := resources.Get "js/theme-init.js" | resources.Fingerprint
 "sha512"}} {{ $permalink := .Permalink }} {{ if .IsHome }} {{ $paginator :=
-.Paginate .Site.RegularPages }} {{ if ne $paginator.PageNumber 1 }} {{
+.Paginate (where .Site.RegularPages "Type" "post") }} {{ if ne $paginator.PageNumber 1 }} {{
 $permalink = print $permalink "page/" $paginator.PageNumber "/" }} {{ end }} {{
 end }} {{ $canonical := print "https://webcodr.io" $permalink }} {{ $title :=
 site.Title }} {{ if not .IsHome }}{{ $title = print .Title " · " site.Title }}{{
