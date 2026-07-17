@@ -368,16 +368,16 @@
 	--header-title-text-color: #b15c00;
 	--header-prompt-path-color: #587539;
 	--header-prompt-chevron-color: #2e7de9;
-	--footer-text-color: #6172b0;
+	--footer-text-color: #5062a1;
 	--post-text-color: #414868;
-	--post-meta-text-color: #6172b0;
-	--link-color: #2e7de9;
+	--post-meta-text-color: #5062a1;
+	--link-color: #1561ca;
 	--selection-background-color: #c4c8da;
 	--headline-base-color: #587539;
 	--headline-secondary-color: #c64343;
 	--headline-tertiary-color: #8c6c3e;
 	--code-background-color: #d0d5e3;
-	--code-text-color: #b15c00;
+	--code-text-color: #8f4b00;
 	--code-scrollback-background-color: #b4b5b9;
 	--blockquote-border-color: #7847bd;
 	--copy-button-hover-background-color: rgba(177, 92, 0, 0.12);
@@ -394,7 +394,7 @@
 	--syntax-blue-color: #2e7de9;
 	--syntax-orange-color: #b15c00;
 	--syntax-green-color: #587539;
-	--syntax-comment-color: #a1a6c5;
+	--syntax-comment-color: #737aa2;
 	--syntax-diff-background-color: #e9e9ed;
 }
 
@@ -406,16 +406,16 @@
 		--header-title-text-color: #b15c00;
 		--header-prompt-path-color: #587539;
 		--header-prompt-chevron-color: #2e7de9;
-		--footer-text-color: #6172b0;
+		--footer-text-color: #5062a1;
 		--post-text-color: #414868;
-		--post-meta-text-color: #6172b0;
-		--link-color: #2e7de9;
+		--post-meta-text-color: #5062a1;
+		--link-color: #1561ca;
 		--selection-background-color: #c4c8da;
 		--headline-base-color: #587539;
 		--headline-secondary-color: #c64343;
 		--headline-tertiary-color: #8c6c3e;
 		--code-background-color: #d0d5e3;
-		--code-text-color: #b15c00;
+		--code-text-color: #8f4b00;
 		--code-scrollback-background-color: #b4b5b9;
 		--blockquote-border-color: #7847bd;
 		--copy-button-hover-background-color: rgba(177, 92, 0, 0.12);
@@ -432,7 +432,7 @@
 		--syntax-blue-color: #2e7de9;
 		--syntax-orange-color: #b15c00;
 		--syntax-green-color: #587539;
-		--syntax-comment-color: #a1a6c5;
+		--syntax-comment-color: #737aa2;
 		--syntax-diff-background-color: #e9e9ed;
 	}
 }
