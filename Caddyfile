@@ -17,7 +17,16 @@
 	@versioned path /fonts/* /js/* /css/*
 	header @versioned Cache-Control "max-age=31536000, immutable"
 	header /icons/* Cache-Control "max-age=86400"
-	@pages not path /fonts/* /js/* /css/* /icons/*
+	@pagefind_immutable path /pagefind/fragment/* /pagefind/index/* /pagefind/*.pf_meta
+	header @pagefind_immutable Cache-Control "max-age=31536000, immutable"
+	@pagefind_entry path /pagefind/pagefind-entry.json
+	header @pagefind_entry Cache-Control "no-cache"
+	@pagefind_static {
+		path /pagefind/*
+		not path /pagefind/fragment/* /pagefind/index/* /pagefind/*.pf_meta /pagefind/pagefind-entry.json
+	}
+	header @pagefind_static Cache-Control "max-age=3600"
+	@pages not path /fonts/* /js/* /css/* /icons/* /pagefind/*
 	header @pages Cache-Control "no-cache"
 	file_server
 
