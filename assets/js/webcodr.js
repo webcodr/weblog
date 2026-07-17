@@ -1,36 +1,3 @@
-(function polyfill() {
-	const relList = document.createElement("link").relList;
-	if (relList && relList.supports && relList.supports("modulepreload")) return;
-	for (const link of document.querySelectorAll('link[rel="modulepreload"]'))
-		processPreload(link);
-	new MutationObserver((mutations) => {
-		for (const mutation of mutations) {
-			if (mutation.type !== "childList") continue;
-			for (const node of mutation.addedNodes)
-				if (node.tagName === "LINK" && node.rel === "modulepreload")
-					processPreload(node);
-		}
-	}).observe(document, {
-		childList: true,
-		subtree: true,
-	});
-	function getFetchOpts(link) {
-		const fetchOpts = {};
-		if (link.integrity) fetchOpts.integrity = link.integrity;
-		if (link.referrerPolicy) fetchOpts.referrerPolicy = link.referrerPolicy;
-		if (link.crossOrigin === "use-credentials")
-			fetchOpts.credentials = "include";
-		else if (link.crossOrigin === "anonymous") fetchOpts.credentials = "omit";
-		else fetchOpts.credentials = "same-origin";
-		return fetchOpts;
-	}
-	function processPreload(link) {
-		if (link.ep) return;
-		link.ep = true;
-		const fetchOpts = getFetchOpts(link);
-		fetch(link.href, fetchOpts);
-	}
-})();
 const themeStorageKey = "webcodr-theme";
 const explicitThemes = new Set(["light", "dark"]);
 const getThemePreference = () => {
@@ -108,29 +75,13 @@ const languageAliases = {
 	sh: "bash",
 };
 const sanitizeLanguageName = (language) =>
-	(languageAliases[language.toLowerCase()] ??= language);
+	languageAliases[language.toLowerCase()] ?? language;
 const copyToClipboard = async (text) => {
-	if (navigator.clipboard && window.isSecureContext) {
-		await navigator.clipboard.writeText(text);
-		return;
+	if (!navigator.clipboard) {
+		throw new Error("Clipboard API unavailable");
 	}
 
-	const textArea = document.createElement("textarea");
-	textArea.value = text;
-	textArea.style.position = "fixed";
-	textArea.style.top = "0";
-	textArea.style.left = "0";
-	textArea.style.opacity = "0";
-	document.body.append(textArea);
-	textArea.focus();
-	textArea.select();
-
-	const success = document.execCommand("copy");
-	textArea.remove();
-
-	if (!success) {
-		throw new Error("Copy command failed");
-	}
+	await navigator.clipboard.writeText(text);
 };
 const setCopyButtonState = (copyButton, state) => {
 	const states = {
@@ -199,19 +150,14 @@ const overlayScrollbar = (codeBlock) => {
 	}
 };
 const setupCodeBlocks = () => {
-	const codeBlocks = document.querySelectorAll(
-		".post-content .chroma code[data-lang]",
-	);
+	const codeBlocks = [
+		...document.querySelectorAll(".post-content .chroma code[data-lang]"),
+	].filter((codeBlock) => codeBlock.closest("pre"));
 	if (codeBlocks.length === 0) {
 		return;
 	}
 	for (const codeBlock of codeBlocks) {
 		const pre = codeBlock.closest("pre");
-
-		if (!pre) {
-			continue;
-		}
-
 		const parent = pre.parentElement;
 
 		if (!pre.querySelector(".post-content--language")) {
@@ -237,11 +183,15 @@ const setupCodeBlocks = () => {
 		updateOverflowFade(codeBlock);
 	}
 
+	let resizeTimer;
 	window.addEventListener("resize", () => {
-		for (const codeBlock of codeBlocks) {
-			overlayScrollbar(codeBlock);
-			updateOverflowFade(codeBlock);
-		}
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(() => {
+			for (const codeBlock of codeBlocks) {
+				overlayScrollbar(codeBlock);
+				updateOverflowFade(codeBlock);
+			}
+		}, 150);
 	});
 };
 const createSearchExcerpt = (html) => {
