@@ -9,7 +9,8 @@
 - Requires the Hugo CLI on `PATH` for local verification; CI pins Hugo Extended `0.164.0` for production builds.
 - Build/verify the site locally with `hugo`.
 - For local preview, use Hugo's dev server from the repo root: `hugo server`.
-- There is no configured test, lint, typecheck, formatter, or asset-bundler command in this repo.
+- Shell-based smoke tests live in `tests/*.sh`; run them all with `for t in tests/*.sh; do bash "$t"; done` (CI runs them via `.github/workflows/ci.yml` on every push and PR). They assert against built output and source files, so string-level changes to CSS/templates can require test updates.
+- There is no configured lint, typecheck, formatter, or asset-bundler command in this repo.
 - `k6/load-test.js` is a standalone production URL load check, not part of CI or the Hugo build.
 
 ## Content
