@@ -1,12 +1,12 @@
 name = "webcodr"
 license = "MIT"
 licenselink = "https://github.com/WebCodr/theme/blob/master/LICENSE.md"
-description = ""
+description = "Terminal-inspired Tokyo Night theme for the WebCodr blog"
 homepage = "https://github.com/WebCodr/theme/"
-tags = ["webcodr"]
-features = ["", ""]
-min_version = 0.14
+tags = ["blog", "dark", "light", "terminal"]
+features = ["syntax highlighting", "search", "og images", "rss", "json feed"]
+min_version = "0.164.0"
 
 [author]
-  name = "David"
+  name = "David Henning"
   homepage = "https://webcodr.io"

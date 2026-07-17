@@ -3,6 +3,6 @@ resources/
 .idea/
 .superpowers/
 .worktrees/
-current
-releases/
 site/
+.hugo_build.lock
+.DS_Store

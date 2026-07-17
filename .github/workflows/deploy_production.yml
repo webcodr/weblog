@@ -48,14 +48,12 @@ jobs:
           test -f public/index.html
           test -f public/pagefind/pagefind.js
 
-      - name: Install deploy dependencies
-        run: sudo apt-get update && sudo apt-get install -y rsync openssh-client
-
       - name: Configure SSH
         env:
           SSH_KEY: ${{ secrets.SSH_KEY }}
           SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
         run: |
+          umask 077
           mkdir -p ~/.ssh
           printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key

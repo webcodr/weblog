@@ -14,10 +14,11 @@
 	root * /srv/current
 	encode zstd gzip
 	import security_headers
-	header /fonts/* Cache-Control "max-age=31536000, immutable"
-	header /js/* Cache-Control "max-age=31536000, immutable"
-	header /css/* Cache-Control "max-age=31536000, immutable"
-	header /icons/* Cache-Control "max-age=31536000, immutable"
+	@versioned path /fonts/* /js/* /css/*
+	header @versioned Cache-Control "max-age=31536000, immutable"
+	header /icons/* Cache-Control "max-age=86400"
+	@pages not path /fonts/* /js/* /css/* /icons/*
+	header @pages Cache-Control "no-cache"
 	file_server
 
 	handle_errors {
