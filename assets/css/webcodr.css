@@ -583,7 +583,7 @@ h6 {
 
 .header-title {
 	margin: 0;
-	padding: 10px;
+	padding: 10px var(--mobile-gutter);
 	font-size: 28px;
 	font-family: var(--monospace-font);
 	font-weight: 700;
@@ -614,7 +614,7 @@ h6 {
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 1rem;
-	padding: 10px;
+	padding: 10px var(--mobile-gutter);
 	font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -704,7 +704,7 @@ a[href]:focus-visible {
 }
 .footer {
 	color: var(--footer-text-color);
-	margin: 0 10px;
+	margin: 0 var(--mobile-gutter);
 	padding: 0.5ex 0 1em 0;
 }
 
@@ -1306,7 +1306,7 @@ a[href]:focus-visible {
 }
 .pagination {
 	display: flex;
-	margin: 0 10px;
+	margin: 0 var(--mobile-gutter);
 }
 
 .pagination__item {
@@ -1333,7 +1333,7 @@ a[href]:focus-visible {
 }
 
 .search-form {
-	margin: 1.5rem 10px;
+	margin: 1.5rem var(--mobile-gutter);
 }
 
 .search-label {
@@ -1359,13 +1359,13 @@ a[href]:focus-visible {
 }
 
 .search-status {
-	margin: 1rem 10px;
+	margin: 1rem var(--mobile-gutter);
 	color: var(--post-meta-text-color);
 }
 
 .search-results {
 	list-style: none;
-	padding: 0 10px;
+	padding: 0 var(--mobile-gutter);
 	margin: 0;
 }
 
