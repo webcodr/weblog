@@ -838,7 +838,10 @@ a[href]:focus-visible {
 	text-decoration: none;
 	transition: color 0.15s ease-in-out;
 }
-.post-content .heading-anchor:hover,
+.post-content .heading-anchor:hover {
+	color: inherit;
+	text-decoration: none;
+}
 .post-content .heading-anchor:focus-visible {
 	color: var(--headline-secondary-color);
 	text-decoration: underline;
