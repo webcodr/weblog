@@ -305,9 +305,53 @@ const setupHeadingAnchors = () => {
 		anchor.parentElement.append(createHeadingAnchorButton(url));
 	}
 };
+const setupReadingProgress = () => {
+	const progressBar = document.querySelector("#reading-progress");
+	const article = document.querySelector("article.post[data-pagefind-body]");
+
+	if (!progressBar || !article) {
+		return;
+	}
+
+	let ticking = false;
+	const updateProgress = () => {
+		const articleTop = article.offsetTop;
+		const articleHeight = article.offsetHeight;
+		const windowHeight = window.innerHeight;
+		const scrollY = window.scrollY;
+
+		const totalScrollable = articleHeight - windowHeight;
+
+		if (totalScrollable <= 0) {
+			progressBar.style.width = "0%";
+			ticking = false;
+			return;
+		}
+
+		const progress = Math.max(
+			0,
+			Math.min(100, ((scrollY - articleTop) / totalScrollable) * 100),
+		);
+		progressBar.style.width = `${progress}%`;
+		ticking = false;
+	};
+
+	const onScroll = () => {
+		if (!ticking) {
+			requestAnimationFrame(updateProgress);
+			ticking = true;
+		}
+	};
+
+	window.addEventListener("scroll", onScroll, { passive: true });
+	window.addEventListener("resize", onScroll, { passive: true });
+	updateProgress();
+};
+
 document.addEventListener("DOMContentLoaded", () => {
 	setupThemeSelector();
 	setupCodeBlocks();
 	setupHeadingAnchors();
 	setupSearch();
+	setupReadingProgress();
 });
