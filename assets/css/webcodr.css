@@ -555,7 +555,7 @@ h6 {
 	left: 0;
 	width: 0%;
 	height: 3px;
-	background: var(--headline-secondary-color);
+	background: var(--link-color);
 	z-index: 1000;
 	pointer-events: none;
 	transition: width 0.1s linear;
