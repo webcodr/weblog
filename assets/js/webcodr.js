@@ -287,8 +287,61 @@ const setupSearch = () => {
 		}, 150);
 	});
 };
+const showToast = (() => {
+	let toast = null;
+	let hideTimer = null;
+
+	return (message, variant = "success") => {
+		if (!toast) {
+			toast = document.createElement("div");
+			toast.className = "toast";
+			toast.setAttribute("role", "status");
+			toast.setAttribute("aria-live", "polite");
+			toast.setAttribute("aria-atomic", "true");
+			document.body.append(toast);
+		}
+
+		toast.textContent = message;
+		toast.classList.toggle("toast--error", variant === "error");
+		// Force reflow so re-triggering restarts the fade-in transition.
+		void toast.offsetWidth;
+		toast.classList.add("toast--visible");
+
+		clearTimeout(hideTimer);
+		hideTimer = setTimeout(() => {
+			toast.classList.remove("toast--visible");
+		}, 2000);
+	};
+})();
+const createHeadingAnchorButton = (url) => {
+	const button = document.createElement("button");
+	button.type = "button";
+	button.classList.add("heading-anchor-copy");
+	button.setAttribute("aria-label", "Copy link to this section");
+	button.title = "Copy link to this section";
+	button.addEventListener("click", async () => {
+		try {
+			await copyToClipboard(url);
+			showToast("Link copied");
+		} catch (_) {
+			showToast("Couldn't copy link", "error");
+		}
+	});
+
+	return button;
+};
+const setupHeadingAnchors = () => {
+	const anchors = document.querySelectorAll(".post-content .heading-anchor");
+
+	for (const anchor of anchors) {
+		const url = new URL(anchor.getAttribute("href"), window.location.href)
+			.href;
+		anchor.parentElement.append(createHeadingAnchorButton(url));
+	}
+};
 document.addEventListener("DOMContentLoaded", () => {
 	setupThemeSelector();
 	setupCodeBlocks();
+	setupHeadingAnchors();
 	setupSearch();
 });
