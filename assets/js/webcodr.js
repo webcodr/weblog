@@ -219,6 +219,16 @@ const setupSearch = () => {
 		}
 	};
 
+	if (new URLSearchParams(window.location.search).has("focus")) {
+		input.focus();
+	}
+
+	input.addEventListener("keydown", (event) => {
+		if (event.key === "Escape") {
+			input.blur();
+		}
+	});
+
 	let debounceTimer = null;
 	input.addEventListener("input", () => {
 		clearTimeout(debounceTimer);
@@ -251,6 +261,39 @@ const setupSearch = () => {
 
 			renderResults(results, search.results.length);
 		}, 150);
+	});
+};
+const setupSearchShortcut = () => {
+	document.addEventListener("keydown", (event) => {
+		const isCmdK =
+			(event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k";
+		const isSlash =
+			event.key === "/" && !event.metaKey && !event.ctrlKey && !event.altKey;
+
+		if (!isCmdK && !isSlash) {
+			return;
+		}
+
+		const activeElement = document.activeElement;
+		const isInputActive =
+			activeElement &&
+			(activeElement.tagName === "INPUT" ||
+				activeElement.tagName === "TEXTAREA" ||
+				activeElement.isContentEditable);
+
+		if (isInputActive) {
+			return;
+		}
+
+		event.preventDefault();
+
+		const input = document.querySelector("#search-input");
+		if (input) {
+			input.focus();
+			input.select();
+		} else {
+			window.location.href = "/search/?focus=1";
+		}
 	});
 };
 const showToast = (() => {
@@ -353,5 +396,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	setupCodeBlocks();
 	setupHeadingAnchors();
 	setupSearch();
+	setupSearchShortcut();
 	setupReadingProgress();
 });

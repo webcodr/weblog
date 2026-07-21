@@ -39,5 +39,6 @@ assert_not_contains "$output/index.html" 'data-pagefind-body'
 assert_contains "$post_page" 'data-pagefind-ignore'
 assert_contains "$root/.github/workflows/deploy_production.yml" 'pagefind'
 assert_contains "$root/Caddyfile" "'wasm-unsafe-eval'"
+assert_contains "$root/assets/js/webcodr.js" 'setupSearchShortcut'
 
 printf 'Search checks passed.\n'
