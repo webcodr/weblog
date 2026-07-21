@@ -876,6 +876,7 @@ a[href]:focus-visible {
 		background-color: currentColor;
 		-webkit-mask: var(--heading-anchor-icon) center / contain no-repeat;
 		mask: var(--heading-anchor-icon) center / contain no-repeat;
+		transform: rotate(45deg);
 	}
 
 	.heading-anchor-copy:hover,
