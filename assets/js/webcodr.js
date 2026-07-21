@@ -55,7 +55,9 @@ const setupThemeSelector = () => {
 
 	for (const button of buttons) {
 		button.addEventListener("click", () => {
-			selectTheme(button.dataset.themeValue);
+			const theme = button.dataset.themeValue;
+			selectTheme(theme);
+			showToast(`Theme set to ${theme}`);
 		});
 	}
 
@@ -322,12 +324,15 @@ const showToast = (() => {
 		}, 2000);
 	};
 })();
-const createHeadingAnchorButton = (url) => {
+const createHeadingAnchorButton = (url, headingText = "") => {
 	const button = document.createElement("button");
 	button.type = "button";
 	button.classList.add("heading-anchor-copy");
-	button.setAttribute("aria-label", "Copy link to this section");
-	button.title = "Copy link to this section";
+	const label = headingText
+		? `Copy link to section "${headingText}"`
+		: "Copy link to section";
+	button.setAttribute("aria-label", label);
+	button.title = label;
 	button.addEventListener("click", async () => {
 		try {
 			await copyToClipboard(url);
@@ -345,7 +350,10 @@ const setupHeadingAnchors = () => {
 	for (const anchor of anchors) {
 		const url = new URL(anchor.getAttribute("href"), window.location.href)
 			.href;
-		anchor.parentElement.append(createHeadingAnchorButton(url));
+		const headingText = anchor.parentElement
+			? anchor.parentElement.textContent.replace(/#/g, "").trim()
+			: "";
+		anchor.parentElement.append(createHeadingAnchorButton(url, headingText));
 	}
 };
 const setupReadingProgress = () => {

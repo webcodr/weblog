@@ -12,7 +12,7 @@
   {{ range $i, $p := $parts }}
     {{ if eq $p.Permalink $current.Permalink }}{{ $position = add $i 1 }}{{ end }}
   {{ end }}
-  <aside class="series-box" data-pagefind-ignore>
+  <aside class="series-box" aria-label="Article series" data-pagefind-ignore>
     <p class="series-title">
       <span class="series-title-label">Series · Part {{ $position }} of {{ $total }}</span>
       <a href="{{ $term.RelPermalink }}" class="series-link">{{ $term.LinkTitle }}</a>
