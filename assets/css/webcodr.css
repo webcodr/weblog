@@ -853,8 +853,8 @@ a[href]:focus-visible {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		width: 1.6rem;
-		height: 1.6rem;
+		width: 2rem;
+		height: 2rem;
 		margin-left: 0.5rem;
 		border: none;
 		border-radius: 4px;
@@ -871,8 +871,8 @@ a[href]:focus-visible {
 	.heading-anchor-copy::before {
 		content: "";
 		display: block;
-		width: 1rem;
-		height: 1rem;
+		width: 1.25rem;
+		height: 1.25rem;
 		background-color: currentColor;
 		-webkit-mask: var(--heading-anchor-icon) center / contain no-repeat;
 		mask: var(--heading-anchor-icon) center / contain no-repeat;
@@ -896,7 +896,9 @@ a[href]:focus-visible {
 	.heading-anchor-copy {
 		position: absolute;
 		right: 100%;
+		top: 50%;
 		margin: 0 0.5rem 0 0;
+		transform: translateY(-50%);
 	}
 }
 
