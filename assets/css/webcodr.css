@@ -900,6 +900,17 @@ a[href]:focus-visible {
 		margin: 0 0.5rem 0 0;
 		transform: translateY(-50%);
 	}
+
+	/* Transparent bridge over the gap so the hover state persists when the
+	   cursor moves between the button and the heading text. */
+	.heading-anchor-copy::after {
+		content: "";
+		position: absolute;
+		left: 100%;
+		top: 0;
+		bottom: 0;
+		width: 0.5rem;
+	}
 }
 
 /* Touch devices: no hash, no replacement. */
