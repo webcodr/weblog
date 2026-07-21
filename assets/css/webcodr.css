@@ -1109,11 +1109,6 @@ a[href]:focus-visible {
 	opacity: 1;
 }
 
-.post-content--copy:disabled {
-	cursor: default;
-	opacity: 0.85;
-}
-
 .post-content--copy::before {
 	content: "";
 	display: block;
@@ -1122,16 +1117,6 @@ a[href]:focus-visible {
 	background-color: currentColor;
 	-webkit-mask: var(--copy-button-icon) center / contain no-repeat;
 	mask: var(--copy-button-icon) center / contain no-repeat;
-}
-
-.post-content--copy-success {
-	--copy-button-icon: url("/icons/check.svg");
-	color: var(--headline-base-color);
-}
-
-.post-content--copy-error {
-	--copy-button-icon: url("/icons/exclamation.svg");
-	color: var(--headline-secondary-color);
 }
 
 @media screen and (min-width: 840px) {

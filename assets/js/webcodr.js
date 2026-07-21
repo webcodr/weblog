@@ -83,53 +83,19 @@ const copyToClipboard = async (text) => {
 
 	await navigator.clipboard.writeText(text);
 };
-const copyButtonStates = {
-	ready: {
-		label: "Copy code to clipboard",
-		className: null,
-	},
-	success: {
-		label: "Copied code to clipboard",
-		className: "post-content--copy-success",
-	},
-	error: {
-		label: "Could not copy code",
-		className: "post-content--copy-error",
-	},
-};
-const setCopyButtonState = (copyButton, state) => {
-	const buttonState = copyButtonStates[state];
-
-	copyButton.setAttribute("aria-label", buttonState.label);
-	copyButton.title = buttonState.label;
-	copyButton.classList.remove(
-		"post-content--copy-success",
-		"post-content--copy-error",
-	);
-
-	if (buttonState.className) {
-		copyButton.classList.add(buttonState.className);
-	}
-};
 const createCopyButton = (codeBlock) => {
 	const copyButton = document.createElement("button");
 	copyButton.type = "button";
 	copyButton.classList.add("post-content--copy");
-	setCopyButtonState(copyButton, "ready");
+	copyButton.setAttribute("aria-label", "Copy code to clipboard");
+	copyButton.title = "Copy code to clipboard";
 	copyButton.addEventListener("click", async () => {
-		copyButton.disabled = true;
-
 		try {
 			await copyToClipboard(codeBlock.textContent);
-			setCopyButtonState(copyButton, "success");
+			showToast("Code copied");
 		} catch (_) {
-			setCopyButtonState(copyButton, "error");
+			showToast("Couldn't copy code", "error");
 		}
-
-		setTimeout(() => {
-			copyButton.disabled = false;
-			setCopyButtonState(copyButton, "ready");
-		}, 2000);
 	});
 
 	return copyButton;
