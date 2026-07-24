@@ -4,7 +4,7 @@
   {{ with .GetTerms "topics" }}
     <span aria-hidden="true"> · </span>
     <span class="post-topics">
-      {{ range $index, $topic := . }}{{ if $index }}, {{ end }}<a href="{{ $topic.RelPermalink }}" class="post-topic-link">{{ $topic.LinkTitle | humanize | title }}</a>{{ end }}
+      {{ range $index, $topic := . }}{{ if $index }}, {{ end }}<a href="{{ $topic.RelPermalink }}" class="post-topic-link">{{ partial "term-title.html" $topic }}</a>{{ end }}
     </span>
   {{ end }}
 </p>

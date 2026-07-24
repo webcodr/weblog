@@ -1,6 +1,4 @@
-{{- /* Series terms carry their display form verbatim; topic slugs get humanized. */ -}}
-{{- $title := .Title -}}
-{{- if ne .Data.Singular "series" -}}
-  {{- $title = .Title | humanize | title -}}
-{{- end -}}
-{{- return $title -}}
+{{- /* Series terms and content-backed terms (e.g. "AI") carry their display
+form verbatim; bare topic slugs get humanized. */ -}} {{- $title := .Title -}}
+{{- if and (ne .Data.Singular "series") (not .File) -}} {{- $title = .Title |
+humanize | title -}} {{- end -}} {{- return $title -}}

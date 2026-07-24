@@ -65,6 +65,7 @@ assert_contains "$output/archive/index.html" '<h2 class="archive-year">2012</h2>
 srchr="$output/2026/07/find-things-even-faster-with-srchr/index.html"
 search_post="$output/2026/07/using-fd-rg-fzf-and-bat-to-find-things-fast/index.html"
 arch_post="$output/2025/08/im-using-arch-btw/index.html"
+jwtd_post="$output/2026/07/jwdt-your-fully-local-cli-jwt-decoder/index.html"
 
 assert_contains "$srchr" 'Published <time datetime="2026-07-05T20:28:50Z"'
 assert_contains "$srchr" '<article class="post" lang="en" data-pagefind-body>'
@@ -87,7 +88,9 @@ assert_contains "$srchr" 'class="related-posts"'
 assert_contains "$srchr" 'Using fd, rg, fzf and bat to find things fast'
 assert_contains "$srchr" 'class="post-navigation"'
 assert_contains "$srchr" 'class="post-navigation-previous"'
-assert_not_contains "$srchr" 'class="post-navigation-next"'
+assert_contains "$srchr" 'class="post-navigation-next"'
+assert_contains "$jwtd_post" 'class="post-navigation-previous"'
+assert_not_contains "$jwtd_post" 'class="post-navigation-next"'
 assert_contains "$legacy_post" 'class="related-posts"'
 assert_contains "$legacy_post" 'class="post-navigation"'
 assert_not_contains "$root/themes/webcodr/layouts/partials/post-navigation.html" '&larr;'
