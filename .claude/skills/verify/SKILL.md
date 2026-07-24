@@ -37,5 +37,3 @@ same image checks syntax only, not behavior.
   --screenshot=out.png <url>` works. To show `:focus` styling, copy a built
   page into the served dir with `autofocus` sed-ed onto the element and
   screenshot that harness page (file:// harnesses can't load the site CSS).
-- Test suite: `for t in tests/*.sh; do bash "$t"; done` — needs `hugo` and
-  `fish` on PATH. CI runs this in `.github/workflows/ci.yml`.
