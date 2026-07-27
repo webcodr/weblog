@@ -10,13 +10,13 @@ language: de
 
 Wer schon mal in die USA geflogen ist, kennt sicher das Electronic System for Travel Authorization (ESTA). Jeder Fluggast, der in die USA einreist, dort umsteigt oder sie sogar nur überfliegt, muss sich dort anmelden und eine Erlaubnis einholen. Dieser Spaß kostet 14 US-Dollar und wird via `pay.gov` bezahlt.
 
-Als ich letztes Jahr für eine Reise in USA einen ESTA-Antrag gestellt habe, war `pay.gov` für mich über die Telekom nicht erreichbar. Via Mobilfunk ging es merkwürdigerweise problemlos, also lag für mich das Problem bei der Telekom. Ein kurzer Austausch mit @telekom_hilft bei Twitter brachte leider keine Besserung, da der Zugriff auf `pay.gov` für den Support-Mitarbeiter einwandfrei funktionierte.
+Als ich letztes Jahr für eine Reise in die USA einen ESTA-Antrag gestellt habe, war `pay.gov` für mich über die Telekom nicht erreichbar. Via Mobilfunk ging es merkwürdigerweise problemlos, also lag für mich das Problem bei der Telekom. Ein kurzer Austausch mit @telekom_hilft bei Twitter brachte leider keine Besserung, da der Zugriff auf `pay.gov` für den Support-Mitarbeiter einwandfrei funktionierte.
 
 Ich hatte das Problem nicht groß weiter verfolgt, aber immer wieder mal ausprobiert, ob die Seite erreichbar ist. Bisher war das nie der Fall und es hat mich dann in den letzten Tagen der Ehrgeiz gepackt, endlich die Ursache zu finden.
 
 Nach ein paar Google-Recherchen stand schnell fest, dass die Probleme nur mit IPv6 auftreten. Über IPv4 ging alles einwandfrei. IPv6 kam für mich als Ursache nicht in Frage, weil die DNS-Einträge für `pay.gov` keinen AAAA Resource Record aufweisen. Da man im Browser den Request nicht im Inspector verfolgen kann, weil die Verbindung bzw. der TLS Handshake gar nicht erst aufgebaut werden konnten, musste Wireshark ran.
 
-Siehe da, der Zugriff erfolgt über IPv6 und die Pakete von `pay.gov` werden verworfen, weil sie ungültig sind. Nach weiteren Google-Suchen stand fest, dass die Ursachen mit der Maximum Transfer Unit (MTU) bzw. der Maximum Segment Size (MSS) zusammenhängen können. Die MTU-Größe liegt bei DSL-Zugängen bei 1.492 Byte: maximale MTU-Größe abzüglich PPPoE-Header-Größe, also 1.500 Byte - 8 Byte. Zur Berechnung des Schwellenwertes für MSS Clamping, wird von der tatsächlich MTU-Größe zusätzlich die maximale TCP/IP-Header-Größe abzogen: 1.492 Byte - 40 Byte = 1.452 Byte
+Siehe da, der Zugriff erfolgt über IPv6 und die Pakete von `pay.gov` werden verworfen, weil sie ungültig sind. Nach weiteren Google-Suchen stand fest, dass die Ursachen mit der Maximum Transfer Unit (MTU) bzw. der Maximum Segment Size (MSS) zusammenhängen können. Die MTU-Größe liegt bei DSL-Zugängen bei 1.492 Byte: maximale MTU-Größe abzüglich PPPoE-Header-Größe, also 1.500 Byte - 8 Byte. Zur Berechnung des Schwellenwertes für MSS Clamping, wird von der tatsächlichen MTU-Größe zusätzlich die maximale TCP/IP-Header-Größe abgezogen: 1.492 Byte - 40 Byte = 1.452 Byte
 
 Ich hatte daher die MTU- und MSS-Werte im EdgeRouter überprüft und sie waren in Ordnung. Nach weiteren Recherchen war klar, dass der EdgeRouter den Wert für MSS Clamping standardmäßig nur für IPv4 einstellt, da der Wert für IPv6 separat eingestellt werden muss. Gesagt, getan. Und? Nichts, der Verbindungsaufbau misslingt nach wie vor.
 
@@ -47,11 +47,11 @@ ubnt@ubnt# show firewall options mss-clamp
  mss 1452
 ~~~
 
-Statt dem Interface Type `pppoe` kann auch `all` aktiv sein, das betrifft neben PPPoE dann z.B. auch relevanten VPN-Protokolle.
+Statt des Interface Types `pppoe` kann auch `all` aktiv sein, das betrifft neben PPPoE dann z.B. auch relevante VPN-Protokolle.
 
 Commit und speichern, Problem gelöst.
 
-**Hinweis:** Die MSS-Werte beziehen sich nur auf DSL-Verbindungen. Bei allen anderen Verbindungstypen, die kein PPPoE nutzen (z.B. Kabel), muss man die 8 Byte für den PPPoE-Header nicht abziehen und kommt auf auf 1.460 bzw. 1.440 Byte.
+**Hinweis:** Die MSS-Werte beziehen sich nur auf DSL-Verbindungen. Bei allen anderen Verbindungstypen, die kein PPPoE nutzen (z.B. Kabel), muss man die 8 Byte für den PPPoE-Header nicht abziehen und kommt auf 1.460 bzw. 1.440 Byte.
 
 ## Summary in English
 

@@ -13,7 +13,7 @@ Wie im Guide zum Vigor 130 bzw. EdgeRouter X schon angedeutet, bin ich von meine
 
 Damit halbiert sich mein Downstream, da Vodafone hier 200 Mbit/s anbietet und VDSL mit Vectoring bekanntlich nur max. 100 Mbit/s hergibt. Als Trostpflaster gibt's aber immerhin 15 Mbit/s mehr Upstream.
 
-Für Entscheidung war das aber alles zweitranging. In den letzten Monaten gab es immer mehr Probleme mit der Kabel-Verbindung, sei's durch merkwürdiges Verhalten der Fritzbox 6490, zunehmender Last im Kabelsegment oder mit Routing/Peering der Kabel-Infrastruktur.
+Für die Entscheidung war das aber alles zweitrangig. In den letzten Monaten gab es immer mehr Probleme mit der Kabel-Verbindung, sei's durch merkwürdiges Verhalten der Fritzbox 6490, zunehmender Last im Kabelsegment oder mit Routing/Peering der Kabel-Infrastruktur.
 
 Gerade letzteres habe ich eigentlich erst richtig gemerkt, als der Vergleich zur Telekom möglich war.
 
@@ -21,11 +21,11 @@ Die Symptome:
 
 - Als der Anschluss auf 200 Mbit/s geschaltet wurde, waren stabile Downloadraten von 23 - 25 MB/s in Steam die Regel. Inzwischen sind sie nur noch die Ausnahme und nur außerhalb der Hauptlastzeiten möglich. Gilt nicht nur für Steam, generell für alle Downloads.
 
-- Wenn Steam die Bandbreite nicht auslasten kann, öffnet es zusätzliche TCP-Verbindungen. Können schon mal an die 50 - 70 Stück sein. Ab dem Punkt steigt   die Fritzbox langsam aus, weil sie mit NAT nicht mehr hinterher kommt. Ping-Zeiten steigen deutlich an, Surfen nebenbei macht keinen Spaß mehr ... der EdgeRouter X lächelt dank Hardware-NAT nur müde.
+- Wenn Steam die Bandbreite nicht auslasten kann, öffnet es zusätzliche TCP-Verbindungen. Können schon mal an die 50 - 70 Stück sein. Ab dem Punkt steigt die Fritzbox langsam aus, weil sie mit NAT nicht mehr hinterher kommt. Ping-Zeiten steigen deutlich an, Surfen nebenbei macht keinen Spaß mehr ... der EdgeRouter X lächelt dank Hardware-NAT nur müde.
 
 - Teils massive Probleme mit Ping-Zeiten und Packet Loss in Battlefield 1, manchmal völlig unspielbar. Lag für mich immer an EA, bis ich ein paar Runden via VDSL gespielt habe ...
 
-- Apple Music war richtig lahm, Streaming von Filmen aus dem iTunes Store war auf PC und Mac ein Graus bis unbrauchbar, Downloads im App Store waren mal pfeilschnell, dann wieder unglaublich langsam usw. -- hatte ich alles auf Apple geschoben, aber wie schon bei Battlefield 1 lag's an Vodafone. Gleiches gilt auch für teils extrem langsam Downloads aus dem PlayStattion Network.
+- Apple Music war richtig lahm, Streaming von Filmen aus dem iTunes Store war auf PC und Mac ein Graus bis unbrauchbar, Downloads im App Store waren mal pfeilschnell, dann wieder unglaublich langsam usw. -- hatte ich alles auf Apple geschoben, aber wie schon bei Battlefield 1 lag's an Vodafone. Gleiches gilt auch für teils extrem langsame Downloads aus dem PlayStation Network.
 
 - Ich schaue gerne die Reviews von [SF Debris](http://sfdebris.com/), es war aber zunehmend schwer sich die Videos überhaupt anzusehen. Die Seite lädt im Vodafone-Netz extrem lahm und die Videos brauchen gefühlte Ewigkeit, bis mal ein bisschen matschiges 240p zu sehen ist. Über die Telekom starten die Videos sofort -- in HD.
 
@@ -65,7 +65,7 @@ round-trip min/avg/max/stddev = 21.482/21.760/22.146/0.156 ms
 
 Mit IPv6 schaut's für Vodafone sogar noch etwas schlechter aus.
 
-Diese Ping-Messungen habe ich an einem frühen Nachmittag ausgeführt, also sollte sich die Last im Segmet bzw. Netz doch in Grenzen gehalten haben.
+Diese Ping-Messungen habe ich an einem frühen Nachmittag ausgeführt, also sollte sich die Last im Segment bzw. Netz doch in Grenzen gehalten haben.
 
 Meine Diagnose:
 
@@ -85,7 +85,7 @@ Man hat es hier mit den Angeboten für 200 Mbit/s bzw. in vielen Haushalten auch
 
 Zumindest im Mobilfunk-Bereich hat Vodafone in den letzten Jahren einiges deutlich verbessert. Schaffen sie im Kabelnetz hoffentlich auch noch. Konkurrenz belebt das Geschäft.
 
-Solange bin ich aber wieder Telekom-Kunde. VDSL mit Vectoring ist nur eine Übergangslösung bis FTTH im großen Stil kommt, aber bin nicht mehr auf ein Shared Medium wie Kabel angewiesen und ab dem MSAN hängt man im BNG, dem neuen, verdammt flotten Backbone-Netz der Telekom.
+Solange bin ich aber wieder Telekom-Kunde. VDSL mit Vectoring ist nur eine Übergangslösung bis FTTH im großen Stil kommt, aber ich bin nicht mehr auf ein Shared Medium wie Kabel angewiesen und ab dem MSAN hängt man im BNG, dem neuen, verdammt flotten Backbone-Netz der Telekom.
 
 Außerdem kann ich meine Wunsch-Hardware nutzen, auch wenn es nicht viele Vectoring-taugliche DSL-Modems da draußen gibt.
 

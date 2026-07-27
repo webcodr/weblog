@@ -8,7 +8,7 @@ language: de
 ---
 Da eine neue Sprache nicht genug ist, beschäftige ich mich neben Ruby neuerdings auch noch mit Python.
 
-Als Lernprojekt setze ich aktuell CodrPress als Python-Version um. Natürlich will ich das nicht das Rad neu erfinden, daher setze ich auf zwei Frameworks, dank denen ich sehr schnell ein vorzeigbares Ergebnis zusammenbauen konnte:
+Als Lernprojekt setze ich aktuell CodrPress als Python-Version um. Natürlich will ich nicht das Rad neu erfinden, daher setze ich auf zwei Frameworks, dank denen ich sehr schnell ein vorzeigbares Ergebnis zusammenbauen konnte:
 
 - [Flask](http://flask.pocoo.org/) ist ein Micro-Framework vergleichbar mit Sinatra (Ruby) oder Silex (PHP). Es kümmert sich also um alles, was man braucht, um eine Website zu bauen. Vom Routing bis hin zur Template Engine (Jinja2).
 
@@ -85,19 +85,19 @@ Um ein neues Dokument von Post zu erstellen und zu speichern, reicht schon folge
 post = Post()
 post.published = True
 post.title = 'Hello World!'
-post.body = 'Hallo, ich ein Test.'
+post.body = 'Hallo, ich bin ein Test.'
 post.save()
 ~~~
 
 ## Abfragen mit MongoEngine
 
-Als vollständiger ODM bietet MongoEngine natürlich auch die Möglichkeit vorhandene Daten abzufragen. In folgendem Beispiel werden die letzten zehn veröffentlichten Einträge absteigend nach der Erstelldatum sortiert, in ein Array geschrieben.
+Als vollständiger ODM bietet MongoEngine natürlich auch die Möglichkeit vorhandene Daten abzufragen. In folgendem Beispiel werden die letzten zehn veröffentlichten Einträge absteigend nach dem Erstelldatum sortiert, in ein Array geschrieben.
 
 ~~~ python
 posts = Post.objects(published = True).order_by('-created_at').limit(10)
 ~~~
 
-Abfragen erfolgen statisch, daher ist keine Instanz nötig. Die Methode `objects()` enthält die Bedingungen, also in diesem Fall, dass ein Eintrag veröffentlicht wurde. `order_by()` erwartet den Feldnamen mit der Sortierrichtung als Präfix. Hierbei steht `+` für aufsteigend und `-` für absteigend. Zu guter letzt wird das Ergebnis mit `limit()` auf 10 Dokumente eingeschränkt.
+Abfragen erfolgen statisch, daher ist keine Instanz nötig. Die Methode `objects()` enthält die Bedingungen, also in diesem Fall, dass ein Eintrag veröffentlicht wurde. `order_by()` erwartet den Feldnamen mit der Sortierrichtung als Präfix. Hierbei steht `+` für aufsteigend und `-` für absteigend. Zu guter Letzt wird das Ergebnis mit `limit()` auf 10 Dokumente eingeschränkt.
 
 Mit diesem Wissen lässt sich nun ganz schnell eine Basis-Applikation bauen, die aus der vorhandenen CodrPress-Collection Einträge ausliest und anzeigt.
 

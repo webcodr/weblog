@@ -46,8 +46,8 @@ class User implements DocumentInterface
     {
         $this->addField('name', ['type' => 'String']);
         $this->addField('email', ['type' => 'String']);
-        $this->addField('created_at', ['type' => 'DateTime', 'index' => true, 'default' => 'now'];
-        $this->addField('updated_at', ['type' => 'DateTime', 'index' => true, 'default' => 'now'];
+        $this->addField('created_at', ['type' => 'DateTime', 'index' => true, 'default' => 'now']);
+        $this->addField('updated_at', ['type' => 'DateTime', 'index' => true, 'default' => 'now']);
     }
 }
 ~~~
@@ -70,7 +70,7 @@ $mango = new Mango('mongodb://localhost/galactica');
 $dm = new DocumentManager($mango);
 $user = new User();
 $user->name = 'William Adama';
-$user->email 'william.adama@bsg-75.mil';
+$user->email = 'william.adama@bsg-75.mil';
 $user->store();
 ~~~
 
@@ -92,9 +92,9 @@ echo $user->first()->email; // = william.adama@bsg-75.mil
 
 Eine Abfrage kann einfach über die statische Methode `where()` ausgeführt werden. Die Syntax der Abfragen entspricht derzeit noch der normalen MongoDB Query API. Für die Zukunft plane ich aber eine Abstraktionsebene für die Abfragen, vergleichbar mit Mongoid.
 
-Eine Abfrage kit `where()` oder `find()` gibt immer ein Cursor-Objekt zurück, das anhand der aufgerufenen Methode entscheiden kann, ob der Zugriff auf den MongoCursor oder das Abfrageergebnis in Form einer Instanz von MutableMap erfolgt.
+Eine Abfrage mit `where()` oder `find()` gibt immer ein Cursor-Objekt zurück, das anhand der aufgerufenen Methode entscheiden kann, ob der Zugriff auf den MongoCursor oder das Abfrageergebnis in Form einer Instanz von MutableMap erfolgt.
 
-In obigem Beispiel ist `count()` eine Methode des Cursors, während `first()` schon auf der Ergebnis zugreift. Wie MongoCursor kann auch die Cursor-Klasse von Mango einfach über das Ergebnis iterieren.
+In obigem Beispiel ist `count()` eine Methode des Cursors, während `first()` schon auf das Ergebnis zugreift. Wie MongoCursor kann auch die Cursor-Klasse von Mango einfach über das Ergebnis iterieren.
 
 Durch die dynamische Unterscheidung zwischen MongoCursor- und Datenzugriff, können auf eine Instanz der Cursor-Klasse auch alle Methoden von MutableMap angewandt werden.
 
@@ -118,6 +118,6 @@ Die Hydration-Automatik sorgt außerdem dafür, dass die Daten intern als jeweil
 
 Typ-Klassen halten die Daten und können sie in zwei Formaten zurückgeben. Konfiguriert man ein Feld als `DateTime` bekommt Mango intern beim Speichern automatisch ein MongoDate-Objekt. Greift man hingegen außerhalb von Mango auf den Wert zu, bekäme man in diesem Fall eine Instanz der Klasse DateTime zurück.
 
-Soweit zum aktuellen Funktionsumfang von Mango. Es ist bei weitem noch nicht fertig, kann aber für kleine Projekte schon einsetzt werden. Ich verwende es selbst in der aktuellsten Version von CodrPress und es macht wesentlich mehr Spaß als MongoAppKit, ohne ein monströses Schlachtschiff wie Doctrine zu sein.
+Soweit zum aktuellen Funktionsumfang von Mango. Es ist bei weitem noch nicht fertig, kann aber für kleine Projekte schon eingesetzt werden. Ich verwende es selbst in der aktuellsten Version von CodrPress und es macht wesentlich mehr Spaß als MongoAppKit, ohne ein monströses Schlachtschiff wie Doctrine zu sein.
 
 Natürlich gibt's Mango auch bei [GitHub](https://github.com/WebCodr/Mango).

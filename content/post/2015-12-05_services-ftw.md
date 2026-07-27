@@ -12,7 +12,7 @@ So erging es mir mit Tools für Markdown-Rendering und server-basiertem Syntax-H
 
 Ich war mit beiden nie recht glücklich. Für Ruby und Python gibt es viel schönere, wesentlich umfangreichere Lösungen:
 
-- Pygments ist ein Python geschriebener Syntax-Highlighter, der nahezu jede relevante Sprache unterstützt -- selbst esoterische Merkwürdigkeiten wie Brainfuck.
+- Pygments ist ein in Python geschriebener Syntax-Highlighter, der nahezu jede relevante Sprache unterstützt -- selbst esoterische Merkwürdigkeiten wie Brainfuck.
 
 - Redcarpet wurde in Ruby verfasst und bietet einen sehr leicht erweiter- und modifizierbaren Markdown-Renderer.
 
@@ -40,6 +40,6 @@ Beide Dienste laufen auf der Cloud-Plattform Heroku.
 
 ## CodrPress-Integration
 
-Um beide Services in CodrPress nutzen können, habe ich in SilexMarkdown ein paar Umbauten vorgenommen. Beim Registrieren des Service-Providers in einer Silex-Applikation, lässt sich nun ganz einfach übergeben, ob der eingebaute Renderer samt Radiant oder Amplifyr genutzt werden soll. Eine entsprechende Anleitung findet sich in der ReadMe-Datei des SilexMarkdown-Repositories bei GitHub.
+Um beide Services in CodrPress nutzen zu können, habe ich in SilexMarkdown ein paar Umbauten vorgenommen. Beim Registrieren des Service-Providers in einer Silex-Applikation, lässt sich nun ganz einfach übergeben, ob der eingebaute Renderer samt Radiant oder Amplifyr genutzt werden soll. Eine entsprechende Anleitung findet sich in der ReadMe-Datei des SilexMarkdown-Repositories bei GitHub.
 
-Beide Dienste sind bei Heroku untergebracht und kosten mich keinen Cent. daher gebe ich die Nutzung für jeden frei. Viel Spaß!
+Beide Dienste sind bei Heroku untergebracht und kosten mich keinen Cent. Daher gebe ich die Nutzung für jeden frei. Viel Spaß!

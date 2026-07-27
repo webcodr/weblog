@@ -5,17 +5,17 @@ topics: [php, programming]
 description: Ein Vergleich mit Scala führt zu PHP-Collection-Klassen, die Array-Zugriffe, Listenoperationen und verkettete Methoden vereinen.
 language: de
 ---
-Wenn man sich zulange nur mit PHP beschäftigt vergisst man schnell, dass man oft Dinge tut, die kaum in andere Sprachen übertragbar sind.
+Wenn man sich zu lange nur mit PHP beschäftigt vergisst man schnell, dass man oft Dinge tut, die kaum in andere Sprachen übertragbar sind.
 
 Letztens habe ich mir Scala etwas näher angesehen. Kurz am Rande: eine schöne Sprache, wenn auch die verschiedenen Syntax-Modi etwas verwirrend oder zumindest recht gewöhnungsbedürftig sind.
 
 ## Vorteil PHP
 
-Scala bietet wie fast jede andere typisierte Sprache verschiedene Listen-Klassen für diverse Nutzungsfälle. In PHP gibt es das nicht. Man hat sein Array, das jederzeit veränderlich ist, jede noch so wilde Mischung von Datentypen akzeptiert und assoziative Schlüssel erlaubt. Es ist einfach umgemein praktisch.
+Scala bietet wie fast jede andere typisierte Sprache verschiedene Listen-Klassen für diverse Nutzungsfälle. In PHP gibt es das nicht. Man hat sein Array, das jederzeit veränderlich ist, jede noch so wilde Mischung von Datentypen akzeptiert und assoziative Schlüssel erlaubt. Es ist einfach ungemein praktisch.
 
 ## Vorteil Scala
 
-Da PHP leider weit davon entfernt ist vollständig objekt-orientiert zu sein und darum ein Array leider keine Objekt ist, kann man Arrays nur mit diversen Funktionen bearbeiten.
+Da PHP leider weit davon entfernt ist vollständig objekt-orientiert zu sein und darum ein Array leider kein Objekt ist, kann man Arrays nur mit diversen Funktionen bearbeiten.
 
 Zwar funktioniert das einwandfrei, ist aber umständlich. Ein Array-Objekt, das entsprechende Methoden bietet, die sich am besten auch noch verkettet aufrufen lassen, wäre doch toll.
 
@@ -53,17 +53,17 @@ Post::where()->each(function($document) use ($app) {
 });
 ```
 
-Die statische Methode `Post::where()` liefert ohne Quert alle Posts als MutableMap-Objekt zurück. Auf die Rückgabe lässt sich sofort `each()` anwenden, das alle Elemente der Liste iteriert und die definierte Closure auf jedes Element einzeln anwendet.
+Die statische Methode `Post::where()` liefert ohne Query alle Posts als MutableMap-Objekt zurück. Auf die Rückgabe lässt sich sofort `each()` anwenden, das alle Elemente der Liste iteriert und die definierte Closure auf jedes Element einzeln anwendet.
 
 In diesem Fall wird das rohe Markdown aus dem Feld `body` in HTML transformiert und im Feld `body_html` abgespeichert.
 
 ## Fazit
 
-`MutableMap` und seine Sub-Klassen sparen viel Schreibarbeit durch ein simples und komfortables Fluent Interface -- einer Vorgehensweise, der in PHP leider viel zu wenig Beachtung geschenkt wird.
+`MutableMap` und seine Sub-Klassen sparen viel Schreibarbeit durch ein simples und komfortables Fluent Interface -- eine Vorgehensweise, der in PHP leider viel zu wenig Beachtung geschenkt wird.
 
 ## Download
 
-Die drei Klassen sind nicht länger Teil von MongoAppKit. Ich habe sie in ein separates [GitHub-Repository][1] und [Composer-Paket][2] ausgelegt, um eine unkomplizierte Nutzung ohne MongoAppKit zu ermöglichen. Viel Spaß!
+Die drei Klassen sind nicht länger Teil von MongoAppKit. Ich habe sie in ein separates [GitHub-Repository][1] und [Composer-Paket][2] ausgelagert, um eine unkomplizierte Nutzung ohne MongoAppKit zu ermöglichen. Viel Spaß!
 
 [1]: https://github.com/WebCodr/Collection
 [2]: https://packagist.org/packages/webcodr/collection

@@ -14,7 +14,7 @@ Natürlich ist das wieder mal einfacher gesagt als getan, vor allem da es für d
 
 Mit [Redcarpet](https://github.com/vmg/redcarpet) und [CodeRay](https://github.com/rubychan/coderay) hat Ruby zwei wundervolle Gems, die sich um Markdown-Rendering bzw. Syntax-Highlighting kümmern.
 
-CodrPress basiert auf meinem Projekt [MongoAppKit](https://web.archive.org/web/20131210082258/https://github.com/MadCatme/mongoappkit), das widerrum auf [Silex](https://github.com/silexphp/Silex) sowie [Twig](https://twig.symfony.com/) setzt und seine Abhängigkeiten mit [Composer](http://getcomposer.org/) regelt. Keine der PHP-basierten Lösungen, um diese zwei Ruby Gems zu ersetzen, bietet Composer-Unterstützung an und die Strukturen sind z.T. auch nicht [PSR-0-kompatibel]({{< ref "2015-12-05_php-autoloader-nach-dem-psr-0-standard.md" >}}), so dass ein Autoloading der Klassen nicht möglich ist.
+CodrPress basiert auf meinem Projekt [MongoAppKit](https://web.archive.org/web/20131210082258/https://github.com/MadCatme/mongoappkit), das wiederum auf [Silex](https://github.com/silexphp/Silex) sowie [Twig](https://twig.symfony.com/) setzt und seine Abhängigkeiten mit [Composer](http://getcomposer.org/) regelt. Keine der PHP-basierten Lösungen, um diese zwei Ruby Gems zu ersetzen, bietet Composer-Unterstützung an und die Strukturen sind z.T. auch nicht [PSR-0-kompatibel]({{< ref "2015-12-05_php-autoloader-nach-dem-psr-0-standard.md" >}}), so dass ein Autoloading der Klassen nicht möglich ist.
 
 Daher habe ich zwei neue Projekte aus der Taufe gehoben, die genau diesen Mangel beseitigen:
 
@@ -22,9 +22,9 @@ Daher habe ich zwei neue Projekte aus der Taufe gehoben, die genau diesen Mangel
 
 Da ich keine Lust und Zeit habe, selbst einen Markdown-Renderer zu schreiben, basiert [SilexMarkdown](https://web.archive.org/web/20131210084926/https://github.com/MadCatme/SilexMarkdown) auf [php-markdown](https://github.com/michelf/php-markdown/) von Michel Fortin.
 
-Ich musste es erstmal in brauchbare Struktur bringen, da das Original leider weder Namespaces nutzt und sogar zwei Klassen in einer Datei besitzt.
+Ich musste es erstmal in eine brauchbare Struktur bringen, da das Original leider keine Namespaces nutzt und sogar zwei Klassen in einer Datei besitzt.
 
-SilexMarkdown stellt nun eine Service-Prodiver-Klasse für Silex und eine entsprechende Twig-Extension zur Verfügung. Dazu wurde es noch mit einer Unterstützung für Code-Blöcke angereichert, um Syntax Highlighting wie in GitHub nutzen zu können.
+SilexMarkdown stellt nun eine Service-Provider-Klasse für Silex und eine entsprechende Twig-Extension zur Verfügung. Dazu wurde es noch mit einer Unterstützung für Code-Blöcke angereichert, um Syntax Highlighting wie in GitHub nutzen zu können.
 
 ### Radiant
 
@@ -40,7 +40,7 @@ Alle genannten Projekte, also MongoAppKit, SilexMarkdown, Radiant und CodrPress 
 
 ## Style
 
-Aktuell ist CodrPress mit dem vollständigen [Twitter Bootstrap](https://getbootstrap.com/) versehen, um auch in der Entwicklunsphase ein halbwegs ahnsehnliches Design zu haben. Später werde ich nur ein paar Komponenten aus Bootstrap nutzen, z.B. das Grid und die responiven Fähigkeiten.
+Aktuell ist CodrPress mit dem vollständigen [Twitter Bootstrap](https://getbootstrap.com/) versehen, um auch in der Entwicklungsphase ein halbwegs ansehnliches Design zu haben. Später werde ich nur ein paar Komponenten aus Bootstrap nutzen, z.B. das Grid und die responsiven Fähigkeiten.
 
 Für das Syntax-Highlighting habe ich ein Farb-Theme basierend auf meinem Farbschema von PhpStorm geschrieben, das auch Radiant beiliegt. Dank einer recht einfachen Struktur kann man sich auch sehr schnell ein eigenes Theme zusammenstellen.
 
@@ -48,4 +48,4 @@ Für das Syntax-Highlighting habe ich ein Farb-Theme basierend auf meinem Farbsc
 
 Die Frontend-Funktionen von CodrPress sind mit einer gefüllten Datenbank (Schnitzelpress-kompatibel) schon nutzbar. Homepage, Einzeldarstellung von Einträgen, eigene Seiten und das Markdown-Rendering mit Syntax-Highlighting funktionieren soweit einwandfrei.
 
-Als nächstes werde ich einem Admin-Bereich und anschließend einem ansprechenden Design widmen.
+Als nächstes werde ich mich einem Admin-Bereich und anschließend einem ansprechenden Design widmen.

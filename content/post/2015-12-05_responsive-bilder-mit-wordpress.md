@@ -35,6 +35,6 @@ function removeImageDimensions($html) {
 }
 ~~~
 
-Die Funktion `removeImageDimensions()` entfernt per regulärem Ausdruck unsere unerwünchten Gäste `width` und `height`. Mittels `add_filter()` wird der WordPress-Funktion `the_content()` (gibt den Inhalt eines Beitrags aus) unsere neue Funktion als Ausgabefilter zugewiesen. WordPress führt nun bei jedem Aufruf von `the_content()` unsere neue Funktion `removeImageDimensions()` aus, die den Rückgabewert von `the_content()` entsprechend verändert.
+Die Funktion `removeImageDimensions()` entfernt per regulärem Ausdruck unsere unerwünschten Gäste `width` und `height`. Mittels `add_filter()` wird der WordPress-Funktion `the_content()` (gibt den Inhalt eines Beitrags aus) unsere neue Funktion als Ausgabefilter zugewiesen. WordPress führt nun bei jedem Aufruf von `the_content()` unsere neue Funktion `removeImageDimensions()` aus, die den Rückgabewert von `the_content()` entsprechend verändert.
 
 Damit steht responsiven Bildbreiten nun nichts mehr im Weg.

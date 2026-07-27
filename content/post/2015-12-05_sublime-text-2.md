@@ -11,7 +11,7 @@ Als Entwickler ist man ja immer auf der Suche nach noch besseren Werkzeugen, um 
 
 Leider wird TextMate kaum noch weiterentwickelt. Der letzte Release ist Monate her und TextMate 2 grenzt schon fast an Vaporware. Im Büro (sowohl früher als auch jetzt bei [Chip](http://www.chip.de/)) habe ich nun seit über einem halben Jahr auch einen Mac, daher kommt Notepad++ nicht als Alternative in Frage. Diverse Versuche mit Wine bzw. WineBottler haben sich als Schuss in den Ofen erwiesen.
 
-Zu meinem großem Glück bin ich dann zufällig über [Sublime Text 2](http://www.sublimetext.com/2) gestolpert. Zuerst dachte ich, es wäre nur ein billiger TextMate-Klon, aber weit gefehlt. Das Ding ist richtig toll.
+Zu meinem großen Glück bin ich dann zufällig über [Sublime Text 2](http://www.sublimetext.com/2) gestolpert. Zuerst dachte ich, es wäre nur ein billiger TextMate-Klon, aber weit gefehlt. Das Ding ist richtig toll.
 
 ### Warum? Darum
 
@@ -23,6 +23,6 @@ Zu meinem großem Glück bin ich dann zufällig über [Sublime Text 2](http://ww
 * Tabs (ja, die kann TextMate auch, aber nur innerhalb von Projekten).
 * Regelmäßige Updates.
 
-Wie effizient man mit Sublime Text und ein paar kleinen Tools entwickeln kann, zeigt Andrey Tarantsov in einem sehr schönen [Video](http://tarantsov.com/blog/2012/02/sublime-text-workflow-that-beats-coda-and-espresso/). Da zeigt sich auch mal wieder, dass für Web-Entwickler OS X immer noch die beste Plattform ist — viele Tools gibt es für Windows schlichtweg nicht. Mal davon abgesehen, dass Arbeiten mit einem Terminal immer noch eine Qual ist. [Cygwin](http://www.cygwin.com/) ist hier zwar ein Segen, aber auch nicht allmächtig, da es nicht für alles wichtige kompatible Versionen gibt (Stichwort Ruby Gems …).
+Wie effizient man mit Sublime Text und ein paar kleinen Tools entwickeln kann, zeigt Andrey Tarantsov in einem sehr schönen [Video](http://tarantsov.com/blog/2012/02/sublime-text-workflow-that-beats-coda-and-espresso/). Da zeigt sich auch mal wieder, dass für Web-Entwickler OS X immer noch die beste Plattform ist — viele Tools gibt es für Windows schlichtweg nicht. Mal davon abgesehen, dass Arbeiten mit einem Terminal immer noch eine Qual ist. [Cygwin](http://www.cygwin.com/) ist hier zwar ein Segen, aber auch nicht allmächtig, da es nicht für alles Wichtige kompatible Versionen gibt (Stichwort Ruby Gems …).
 
 Da Sublime Text 2 Shareware ist und beliebig lange getestet werden kann, rate ich jedem Entwickler ihn zumindest auszuprobieren — es lohnt sich. Und wer schon immer einen TextMate-ähnlichen Editor für Windows oder Linux gesucht hat: hier ist er!

@@ -12,7 +12,7 @@ Meine Fritzbox 6490 ging mir ja schon länger auf den Zeiger, aber seit ca. acht
 
 Die Internet-Verbindung wird über die Fritzbox 6490 aufgebaut, die sonst außer VoIP nichts tut. An der Fritte hängt ein Ubiquiti EdgeRouter X, der dann das eigentliche Netzwerk aufbaut. Das Netz verteilt sich vom Wohnzimmer aus über drei SoHo-Switches von Cisco und zwei Ubiquiti UniFi AC Lite Access Points an die jeweiligen Endgeräte.
 
-Diese Konstellation führt zu doppeltem NAT. Hässlich, aber auch nicht weiter tragisch. Der EdgeRouter X kann Hardware-NAT und kostet höchstens 400 - 500 µs. Ein geringer Aufpreis für wesentlich mehr Kontrolle über mein Netzwerk. Nur die IPv6-Konfiguration zwischen Fritbox und EdgeRouter wollte einfach nicht klappen -- diese unendliche Geschichte will ich hier aber nicht weiter ausbreiten, hat sich eh erledigt.
+Diese Konstellation führt zu doppeltem NAT. Hässlich, aber auch nicht weiter tragisch. Der EdgeRouter X kann Hardware-NAT und kostet höchstens 400 - 500 µs. Ein geringer Aufpreis für wesentlich mehr Kontrolle über mein Netzwerk. Nur die IPv6-Konfiguration zwischen Fritzbox und EdgeRouter wollte einfach nicht klappen -- diese unendliche Geschichte will ich hier aber nicht weiter ausbreiten, hat sich eh erledigt.
 
 ## Neues Netzwerk
 
@@ -28,7 +28,7 @@ Kommen wir zum Herzstück des Posts, denn die Konfiguration ist zwar grundsätzl
 
 Der gute Vigor wird bereits als Modem inkl. VLAN-Tagging für die Telekom vorkonfiguriert geliefert. Man muss eigentlich nur die neueste Firmware einspielen und das war's.
 
-Falls der Vigor wider erwarten doch nicht als Modem vorkonfiguriert geliefert wird, findet bei [iDomiX Hilfe (Text und Video)](https://idomix.de/draytek-vigor-130-als-vdsl-modem-einrichten).
+Falls der Vigor wider Erwarten doch nicht als Modem vorkonfiguriert geliefert wird, findet man bei [iDomiX Hilfe (Text und Video)](https://idomix.de/draytek-vigor-130-als-vdsl-modem-einrichten).
 
 ### Ubiquiti EdgeRouter
 
@@ -36,7 +36,7 @@ Ausgangsbasis ist der EdgeRouter X mit EdgeOS 1.9.1. Es sollte grundsätzlich ge
 
 #### Netzwerk-Setup
 
-Ich gehe hierbei davon aus, dass jemand, der diesen Post liest zumindest Grundkenntnisse im Umgang eines EdgeRouters hat, also Default-IP, Default-Login-Daten, Web-Interface-Zugang usw.
+Ich gehe hierbei davon aus, dass jemand, der diesen Post liest zumindest Grundkenntnisse im Umgang mit einem EdgeRouter hat, also Default-IP, Default-Login-Daten, Web-Interface-Zugang usw.
 
 Für die grundsätzliche Konfiguration bietet Ubiquiti zum Glück entsprechende Assistenten (Wizards) an, die den ganzen Vorgang vereinfachen und mir auch ersparen hier monströse Listings mit Firewall-Regeln zu posten.
 
@@ -46,7 +46,7 @@ Der Wizard "Basic Setup" macht grundsätzlich alles, was man braucht:
 
 Als WAN-Port habe ich mich für `eth0` entschieden. Die Einwahl erfolgt über PPPoE mit den entsprechenden Login-Daten der Telekom. VLAN-Tagging ist hier nicht nötig, das übernimmt der Vigor bereits (VLAN 7). Die Default-Firewall sollte auf jeden Fall aktiviert werden, genauso wie DHCPv6 PD. Die Prefix Length ist mit `/56` bereits korrekt voreingestellt und auch hier gilt, dass die Firewall an sein sollte.
 
-Die Option "Only use one LAN" wird deaktiviert. Anschließed wird das Netz für `eth1` konfiguriert. Ich nutze hier ein privates Klasse A-Netz. Für die Switching-Ports `eth2`, `eth3` und `eth4` gibt es ein separates Klasse A-Netz.
+Die Option "Only use one LAN" wird deaktiviert. Anschließend wird das Netz für `eth1` konfiguriert. Ich nutze hier ein privates Klasse A-Netz. Für die Switching-Ports `eth2`, `eth3` und `eth4` gibt es ein separates Klasse A-Netz.
 
 Unter "User Setup" verwende ich meine bestehenden User weiter. Sollte der EdgeRouter bisher nie konfiguriert worden sein, empfehle ich aber dringend einen neuen Nutzer mit eigenem Passwort anzulegen. Ein Router sollte nie über seine Standard-Zugangsdaten zugänglich sein.
 
@@ -54,7 +54,7 @@ Nach dem Speichern startet sich der EdgeRouter neu und ist anschließend über d
 
 Grundsätzlich ist's damit getan, wenn einem IPv4 ausreicht.
 
-Für mein privates Netzwerk nehme ich anschließend noch ein paar Einstellungen an der Firewall vor (Port-Weiterleitungen) und am DHCP-Server vor. Wenn man zufrieden ist, sollte man ein Backup der Konfiguration machen. Das geht unter "System" -> "Back Up Config".
+Für mein privates Netzwerk nehme ich anschließend noch ein paar Einstellungen an der Firewall (Port-Weiterleitungen) und am DHCP-Server vor. Wenn man zufrieden ist, sollte man ein Backup der Konfiguration machen. Das geht unter "System" -> "Back Up Config".
 
 #### IPv6
 
@@ -112,7 +112,7 @@ save
 Erläuterungen:
 
 - `configure` startet das Konfiguration-System von EdgeOS/Vyatta
-- `set interfaces ethernet eth1 ipv6 dup-addr-detect-transmits 1` legt die Anzahl fest, wie oft versucht wird doppelte IPv6-Addressen herauszufinden
+- `set interfaces ethernet eth1 ipv6 dup-addr-detect-transmits 1` legt die Anzahl fest, wie oft versucht wird doppelte IPv6-Adressen herauszufinden
 - `set interfaces ethernet eth0 pppoe 0 dhcpv6-pd pd 0 interface eth1 host-address '::dead:beef'` legt die Host-Adresse nach dem Adress-Prefix der Telekom fest. Ich finde `::dead:beef` ziemlich witzig, aber hier kann sich jeder selbst austoben, solange es im Hexadezimal-Bereich liegt.
 - `set interfaces ethernet eth0 pppoe 0 dhcpv6-pd pd 0 interface eth1 prefix-id 42` legt die Prefix-ID fest, die zusätzlich in die Adresse aufgenommen wird. Was außer 42 sollte es sonst sein? :D
 - `set interfaces ethernet eth0 pppoe 0 dhcpv6-pd pd 0 interface eth1 service slaac` SLAAC steht für Stateless Address Autoconfiguration -- damit erzeugt der Port seine IP-Adresse anhand des Prefixes selbst
@@ -143,7 +143,7 @@ Alle Geräte im Netzwerk sollten nun eine oder mehrere IPv6-Adressen besitzen un
 
 Da der Vigor auf der IP-Adresse `192.168.1.1` rumhängt, kommen wir nun leider erstmal nicht an sein Web-Interface ran. Das lässt sich aber recht einfach in EdgeOS ändern:
 
-Dazu muss `eth0` (über diesen Port der EdgeRouter ja am Vigor 130) eine IP-Adresse aus Netz des Vigors zugewiesen werden. Ich verwende hier `192.168.1.2/24`.
+Dazu muss `eth0` (über diesen Port hängt der EdgeRouter ja am Vigor 130) eine IP-Adresse aus dem Netz des Vigors zugewiesen werden. Ich verwende hier `192.168.1.2/24`.
 
 ![EdgeRouter Screenshot 2](/images/edgerouter/2.png)
 
@@ -155,4 +155,4 @@ Anschließend sollte der Zugriff über die IP-Adresse `192.168.1.1` auf den Vigo
 
 So, das war's dann eigentlich schon. Ich hoffe, diese kleine Anleitung konnte dem ein oder anderen etwas weiterhelfen.
 
-Da nicht alles davon auf meinem Mist gewachsen ist, möchte mich an dieser Stelle noch beim Autor des Blogs [TauSys](https://blog.tausys.de) bedanken. Falls jemand in og. Konfiguration noch Entertain miteinbeziehen möchte, sei ihm dieser [Post](https://blog.tausys.de/2016/02/22/edgerouter-am-telekom-internetanschluss-mit-entertain-und-ipv6/) wärmstens empfohlen.
+Da nicht alles davon auf meinem Mist gewachsen ist, möchte ich mich an dieser Stelle noch beim Autor des Blogs [TauSys](https://blog.tausys.de) bedanken. Falls jemand in og. Konfiguration noch Entertain miteinbeziehen möchte, sei ihm dieser [Post](https://blog.tausys.de/2016/02/22/edgerouter-am-telekom-internetanschluss-mit-entertain-und-ipv6/) wärmstens empfohlen.

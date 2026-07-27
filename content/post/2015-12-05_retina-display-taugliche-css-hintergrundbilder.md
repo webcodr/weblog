@@ -13,7 +13,7 @@ Da ich die [verwendeten Icons](http://www.iconarchive.com/show/farm-fresh-icons-
 
 ## Media-Queries?
 
-Ein Media-Query ermöglicht es, innerhalb eines Stylesheets diverse Informationen zum aktuellen Anzeigegerät abzufragen. Dazu gehören unter Anderem die Minimal-Breite, die Ausrichtung (Portrait, Landscape), der Gerätetyp (Screen, Projection etc.), das Bildverhältnis oder in diesem Fall besonders wichtig, das Verhältnis zwischen vorhandenen und tatsächlich dargestellten Pixeln.
+Ein Media-Query ermöglicht es, innerhalb eines Stylesheets diverse Informationen zum aktuellen Anzeigegerät abzufragen. Dazu gehören unter anderem die Minimal-Breite, die Ausrichtung (Portrait, Landscape), der Gerätetyp (Screen, Projection etc.), das Bildverhältnis oder in diesem Fall besonders wichtig, das Verhältnis zwischen vorhandenen und tatsächlich dargestellten Pixeln.
 
 ## Was machen eigentlich Retina-Displays?
 

@@ -5,7 +5,7 @@ topics: [php, web-development]
 description: Limonade wird als schlankes PHP-Microframework für Routing, Templates, Hooks und JSON vorgestellt.
 language: de
 ---
-Wer sich schon mal mit [Symfony](http://symfony.com/) oder ähnlichen PHP-Frameworks beschäftigt hat, kam sicher schnell zur Erkentnis, dass das die Dinger zwar viel können und generell eine tolle Sache sind, aber hohe Einstiegshürden haben bzw. viel Einarbeitungszeit benötigen, sowie für viele Projekte einfach überdimensioniert sind.
+Wer sich schon mal mit [Symfony](http://symfony.com/) oder ähnlichen PHP-Frameworks beschäftigt hat, kam sicher schnell zur Erkenntnis, dass die Dinger zwar viel können und generell eine tolle Sache sind, aber hohe Einstiegshürden haben bzw. viel Einarbeitungszeit benötigen, sowie für viele Projekte einfach überdimensioniert sind.
 
 In Ruby hätte man für solche Fälle z.B. [Sinatra](http://www.sinatrarb.com/): übersichtlich, klein, schnell und flexibel. Mit [Limonade](https://limonade-php.github.io/) gibt es so ein Micro-Framework nun endlich für PHP, mit dem sich auch ähnlich elegant entwickeln lässt.
 
