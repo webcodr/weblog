@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+{{/* Single posts carry their own language; list pages mix languages and
+     stay English, with per-post `lang` set on each article. */}}
+{{ $lang := "en" }}
+{{ if .IsPage }}{{ $lang = .Params.language | default "en" }}{{ end }}
+<html lang="{{ $lang }}">
 {{ partial "head.html" . }}
 
 <body>
