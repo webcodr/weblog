@@ -43,6 +43,7 @@ set firewall name WAN_IN rule 1 action accept
 set firewall name WAN_IN rule 1 description 'Allow IGMP'
 set firewall name WAN_IN rule 1 log disable
 set firewall name WAN_IN rule 1 protocol igmp
+set firewall name WAN_IN rule 2 action accept
 set firewall name WAN_IN rule 2 description 'Allow IPTV Multicast UDP'
 set firewall name WAN_IN rule 2 destination address 224.0.0.0/4
 set firewall name WAN_IN rule 2 log disable

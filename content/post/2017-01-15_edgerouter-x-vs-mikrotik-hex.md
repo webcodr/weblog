@@ -6,7 +6,7 @@ series: ["EdgeRouter & Telekom VDSL"]
 description: EdgeRouter X und MikroTik hEX im Vergleich mit Ausstattung, Bedienung und Routing-Leistung mit und ohne Hardware-NAT.
 language: de
 ---
-Da ich auch mal Router testen wollte und den EdgeRouter X (ER-X) eh schon besitze, habe ich mir ein vergleichbares Gerät von MikroTik besorgt, den hEX bzw. den RB350Gr3 (dritte Generation des hEX).
+Da ich auch mal Router testen wollte und den EdgeRouter X (ER-X) eh schon besitze, habe ich mir ein vergleichbares Gerät von MikroTik besorgt, den hEX bzw. den RB750Gr3 (dritte Generation des hEX).
 
 MikroTik ist ein Netzwerkausrüster aus Lettland. Wie Ubiquiti bieten sie professionelle Netzwerk-Hard- und Software zu bezahlbaren Preisen an. Man kann sogar Einzelteile wie Boards, Ports, Gehäuse usw. einzeln kaufen und sich damit seinen Traum-Router zusammenbauen.
 
