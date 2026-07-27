@@ -1234,11 +1234,33 @@ a[href]:focus-visible {
 
 .related-posts,
 .table-of-contents,
-.series-box {
+.series-box,
+.post-age-notice {
 	margin: 3rem var(--mobile-gutter);
 	padding: 1.25rem 1.5rem;
 	background-color: var(--code-background-color);
 	border-radius: 5px;
+}
+
+/* The post meta line above already contributes 3em of bottom margin. */
+.post-age-notice {
+	margin-top: -1.5em;
+	border-left: 4px solid var(--headline-tertiary-color);
+}
+
+.post-age-notice-label {
+	margin: 0;
+	padding: 0;
+	color: var(--headline-tertiary-color);
+	font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.post-age-notice-text {
+	margin: 0.5rem 0 0;
+	padding: 0;
 }
 
 .related-posts {
@@ -1364,7 +1386,8 @@ a[href]:focus-visible {
 
 	.series-box,
 	.table-of-contents,
-	.related-posts {
+	.related-posts,
+	.post-age-notice {
 		margin-left: 0;
 		margin-right: 0;
 	}

@@ -7,6 +7,7 @@
     {{ end }}
     {{ if and (eq .context.Type "post") (eq .location "single") }}
     {{ partial "post-meta.html" .context }}
+    {{ partial "post-age-notice.html" .context }}
     {{ partial "series.html" .context }}
     {{ partial "table-of-contents.html" .context }}
     {{ else }}

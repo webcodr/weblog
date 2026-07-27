@@ -1,0 +1,24 @@
+{{/* Warns readers that a post has aged past the freshness threshold.
+     The age is measured from the newer of the publication date and an
+     explicit `updated` front matter date, so revised posts reset the
+     clock. Git-based Lastmod is deliberately ignored — typo fixes and
+     template migrations touch files without changing the content. */}}
+{{ $threshold := 5 }}
+{{ $reference := .Date }}
+{{ with .Params.updated }}
+  {{ $updated := . | time.AsTime }}
+  {{ if gt $updated $reference }}{{ $reference = $updated }}{{ end }}
+{{ end }}
+{{ $years := math.Floor (div (sub now.Unix $reference.Unix) 31557600.0) }}
+{{ if ge $years $threshold }}
+<aside class="post-age-notice" aria-label="Post age notice" data-pagefind-ignore>
+  <p class="post-age-notice-label">
+    Heads up · {{ $years }} year{{ if ne $years 1.0 }}s{{ end }} old
+  </p>
+  <p class="post-age-notice-text">
+    This post was {{ if .Params.updated }}last updated{{ else }}published{{ end }}
+    in {{ $reference.Format "2006" }} and is kept online for reference. The tools,
+    versions and advice it describes have very likely moved on since then.
+  </p>
+</aside>
+{{ end }}
