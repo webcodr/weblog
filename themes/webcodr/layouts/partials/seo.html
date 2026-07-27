@@ -27,10 +27,20 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 {{ end }}
+{{/* Revision dates come from explicit `updated` front matter, never from
+     git Lastmod — see `updated-date.html`. A post that was never revised
+     reports its publication date as dateModified and omits
+     article:modified_time entirely. */}}
+{{ $updated := false }}
+{{ $modified := $page.Date }}
+{{ if $isPost }}
+  {{ $updated = partial "updated-date.html" $page }}
+  {{ with $updated }}{{ $modified = . }}{{ end }}
+{{ end }}
 {{ if $isPost }}
   <meta property="article:published_time" content="{{ $page.Date.Format "2006-01-02T15:04:05Z07:00" }}" />
-  {{ if ne ($page.Date.Format "2006-01-02") ($page.Lastmod.Format "2006-01-02") }}
-    <meta property="article:modified_time" content="{{ $page.Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+  {{ with $updated }}
+    <meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />
   {{ end }}
 {{ end }}
 <meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}" />
@@ -48,7 +58,7 @@
     "description": {{ .description }},
     "url": {{ .canonical }},
     "datePublished": {{ $page.Date.Format "2006-01-02T15:04:05Z07:00" }},
-    "dateModified": {{ $page.Lastmod.Format "2006-01-02T15:04:05Z07:00" }},
+    "dateModified": {{ $modified.Format "2006-01-02T15:04:05Z07:00" }},
     {{ with $imageURL }}"image": {{ . }},{{ end }}
     "author": { "@type": "Person", "name": "David Henning" }
   }

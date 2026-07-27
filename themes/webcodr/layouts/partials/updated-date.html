@@ -1,0 +1,16 @@
+{{/* Returns a post's explicit revision time, or false when it has never
+     been revised. Callers should use `with`.
+
+     Git-based Lastmod is deliberately not consulted: with enableGitInfo
+     it tracks commits, not content, so retagging or a typo fix would
+     mark a post as revised. Only an explicit `updated` front matter
+     date counts, and only when it lands on a later day than the
+     publication date. */}}
+{{ $updated := false }}
+{{ with .Params.updated }}
+  {{ $time := . | time.AsTime }}
+  {{ if gt ($time.Format "2006-01-02") ($.Date.Format "2006-01-02") }}
+    {{ $updated = $time }}
+  {{ end }}
+{{ end }}
+{{ return $updated }}

@@ -8,9 +8,6 @@
     </span>
   {{ end }}
 </p>
-{{ with .Params.updated }}
-  {{ $updated := . | time.AsTime }}
-  {{ if ne ($.Date.Format "2006-01-02") ($updated.Format "2006-01-02") }}
-    <p class="post-updated" data-pagefind-ignore>Updated <time datetime="{{ $updated.Format "2006-01-02T15:04:05Z07:00" }}">{{ $updated.Format "January 2, 2006" }}</time></p>
-  {{ end }}
+{{ with partial "updated-date.html" . }}
+  <p class="post-updated" data-pagefind-ignore>Updated <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ .Format "January 2, 2006" }}</time></p>
 {{ end }}
