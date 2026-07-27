@@ -3,11 +3,11 @@ title: About
 date: 2017-12-29T13:00:00+01:00
 description: Webcodr is a blog about command line tools, Linux on the desktop, and the languages and workflows that make development less annoying.
 ---
-I'm a software developer and this a my blog about command line tools, Macs, Linux, programming in Kotlin, Rust or Go and some other stuff like CLI tools I develop.
+I'm a software developer and this is my blog about command line tools, Macs, Linux, programming in Kotlin, Rust or Go and some other stuff like CLI tools I develop.
 
 ## What I write about
 
-Command line tools and terminal setups — shells, modern alternatives for classic shell commandos like `ls`, multiplexers like tmux and whatever else ends up in my daily workflow. Though I'm primarily a Mac user, I have a keen interest in Linux on the desktop. Besides my MacBook, I'm currently using a laptop with Omarchy (Arch with Hyprland setup from DHH). My programming posts are mainly about Kotlin, Rust and Go. With an occasional rant about a language features that deserve it.
+Command line tools and terminal setups — shells, modern alternatives for classic shell commands like `ls`, multiplexers like tmux and whatever else ends up in my daily workflow. Though I'm primarily a Mac user, I have a keen interest in Linux on the desktop. Besides my MacBook, I'm currently using a laptop with Omarchy (Arch with Hyprland setup from DHH). My programming posts are mainly about Kotlin, Rust and Go. With an occasional rant about language features that deserve it.
 
 I also write about my CLI tools: 
 
