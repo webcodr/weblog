@@ -2,7 +2,7 @@
 date: 2025-05-28T20:22:07+02:00
 title: "Please don't do this with switch statements"
 draft: false
-topics: [programming, kotlin, java]
+topics: [programming, kotlin]
 description: A subtle Java switch fall-through shows why deeply nested control flow can cause bugs during Kotlin migrations.
 ---
 

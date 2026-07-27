@@ -1,7 +1,7 @@
 ---
 date: 2018-04-19T20:00:00+02:00
 title: Let's Encrypt Wildcard Certificates with acme.sh and CloudFlare
-topics: [lets-encrypt, web-development]
+topics: [networking, web-development]
 description: Create and renew Let's Encrypt wildcard certificates automatically with acme.sh, DNS challenges, and the Cloudflare API.
 ---
 

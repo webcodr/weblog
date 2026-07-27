@@ -1,7 +1,7 @@
 ---
 date: 2018-01-24T20:00:00+01:00
 title: Synology DSM and Let's Encrypt Trouble
-topics: [lets-encrypt, networking]
+topics: [networking]
 description: How to resolve Synology DSM Let's Encrypt port 80 errors caused by IPv6 in a dual-stack network.
 displayLanguage: en
 ---

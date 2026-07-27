@@ -1,7 +1,7 @@
 ---
 date: 2017-01-14T16:00:00+01:00
 title: Ubiquiti EdgeRouter X vs. MikroTik hEX
-topics: [edgerouter, hardware, networking]
+topics: [networking, hardware]
 series: ["EdgeRouter & Telekom VDSL"]
 description: EdgeRouter X und MikroTik hEX im Vergleich mit Ausstattung, Bedienung und Routing-Leistung mit und ohne Hardware-NAT.
 language: de

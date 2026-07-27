@@ -1,7 +1,7 @@
 ---
 date: 2018-02-07T22:00:00+01:00
 title: Telekom EntertainTV mit Ubiquiti EdgeRouter X
-topics: [edgerouter, networking]
+topics: [networking]
 series: ["EdgeRouter & Telekom VDSL"]
 description: Anleitung für Telekom EntertainTV mit EdgeRouter und UniFi einschließlich IGMP Proxy, Firewall und Multicast.
 language: de

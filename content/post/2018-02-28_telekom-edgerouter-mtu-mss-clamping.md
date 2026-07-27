@@ -1,7 +1,7 @@
 ---
 date: 2018-02-28T18:00:00+01:00
 title: Telekom VDSL MTU und MSS Clamping für IPv4 und IPv6
-topics: [edgerouter, networking, vdsl]
+topics: [networking]
 series: ["EdgeRouter & Telekom VDSL"]
 description: MSS-Clamping für IPv4 und IPv6 behebt TLS- und Verbindungsprobleme auf EdgeRoutern an Telekom-VDSL-Anschlüssen.
 language: de

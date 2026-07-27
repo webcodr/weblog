@@ -1,7 +1,7 @@
 ---
 title: Hyprland Trackpad Tips & Tricks
 date: 2025-10-29T22:57:34+00:00
-topics: [linux, omarchy]
+topics: [linux]
 description: Configure Hyprland trackpad clicks, tapping, natural scrolling, and typing protection for a more comfortable laptop experience.
 ---
 

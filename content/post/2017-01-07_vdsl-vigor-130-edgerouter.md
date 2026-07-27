@@ -1,7 +1,7 @@
 ---
 date: 2017-01-07T16:00:00+01:00
 title: VDSL via Vigor 130 und EdgeRouter X
-topics: [edgerouter, networking, vdsl]
+topics: [networking]
 series: ["EdgeRouter & Telekom VDSL"]
 description: Anleitung zur Einrichtung eines Telekom-VDSL-Anschlusses mit Vigor 130, EdgeRouter X, PPPoE und IPv6.
 language: de
