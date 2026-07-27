@@ -5,7 +5,7 @@ description: Restore correct HDMI colors in macOS Catalina by installing a patch
 date: 2019-10-07T22:26:07+02:00
 draft: false
 ---
-HDMI connections from your Mac to monitor can be a pain in the ass. There is a chance that macOS
+HDMI connections from your Mac to a monitor can be a pain in the ass. There is a chance that macOS
 will detect your monitor as a TV and set the color space to YCbCr. You will get wrong colors
 and sometimes blurry fonts.
 
@@ -16,7 +16,7 @@ The installation of this EDID override could be tedious since the release of El 
 access the necessary system files. Just disable it in recovery mode, copy the file and enable
 it again. Sucks, but works just fine.
 
-Now, Catalina is out for a few hours and has a new way to annoy people who need EDID overrides.
+Now, Catalina has been out for a few hours and has a new way to annoy people who need EDID overrides.
 All system-related directories and files are read-only, regardless of the status of SIP.
 
 Fortunately Apple was not crazy enough to disable the write access completely.
@@ -44,8 +44,8 @@ cp -rf /Volumes/Macintosh\ HD/Users/webcodr/DisplayVendorID-5a63 .
 ## Dear Apple
 
 Just add a simple solution to select the HDMI color
-space. A simple shell commando with `sudo` would suffice or at least let us use an override directory
+space. A simple shell command with `sudo` would suffice or at least let us use an override directory
 within the user library as it was possible many years ago. It just sucks to do this after every
 macOS upgrade and every time you improve system security, it gets harder.
 
-Please, don't forget us powers users ...
+Please, don't forget us power users ...

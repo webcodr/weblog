@@ -7,7 +7,7 @@ draft: false
 ---
 
 Jest is a very neat JavaScript testing library from Facebook. It's mostly syntax-compatible with Jasmine and needs zero
-or very less configuration. Code coverage reports are there out-of-the-box and with sandboxed tests and snapshot testing
+or very little configuration. Code coverage reports are there out-of-the-box and with sandboxed tests and snapshot testing
 it has some unique features.
 
 ## Set-up Jest
@@ -70,7 +70,7 @@ The set-up is now complete. Let's write a test file!
 
 ## Writing tests
 
-Here is a litte example Vue component:
+Here is a little example Vue component:
 
 ~~~ html
 <template>
@@ -100,7 +100,7 @@ export default {
 </script>
 ~~~
 
-The component `Demo` will fetch some values after its creation and display them in an unordered list. This is example is quite
+The component `Demo` will fetch some values after its creation and display them in an unordered list. This example is quite
 simple, but testing is a little more complex due to the usage of `fetch`, `async` and `await`.
 
 Of course, there are some tools to help us:

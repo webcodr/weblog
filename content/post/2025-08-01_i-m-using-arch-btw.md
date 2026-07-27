@@ -15,11 +15,11 @@ A few days ago I discovered [Omarchy](https://omarchy.org/) from DHH (creator of
 
 Omarchy ships with Hyprland, a really efficient and fast tiling Wayland compositor that doesn't look like it's from the 1980s. There's all sorts of eyecandy, everything is customizable and there are also many cool plugins.
 
-Setting up Hyprland and plugins on your own can be daunting task and a very time-consuming one as well. Omarchy to the rescue! It ships with a really good default configuration and is perfectly useable from the get-go, but that's only the beginning of the journey. DHH considers Omarchy a starting point for you own configuration and therefore made it very easy to customize the configuration for your needs. There is even a special Omarchy configuration tool for switching the global color theme (for Hyprland, Alacritty, Neovim etc.) or setting up fingerprint sensors for biometric authentication (should be working very well with Framework devices). 
+Setting up Hyprland and plugins on your own can be a daunting task and a very time-consuming one as well. Omarchy to the rescue! It ships with a really good default configuration and is perfectly usable from the get-go, but that's only the beginning of the journey. DHH considers Omarchy a starting point for your own configuration and therefore made it very easy to customize the configuration for your needs. There is even a special Omarchy configuration tool for switching the global color theme (for Hyprland, Alacritty, Neovim etc.) or setting up fingerprint sensors for biometric authentication (should be working very well with Framework devices). 
 
 Omarchy also installs many useful terminal and GUI programs, like Alacritty (terminal emulator), Neovim, Spotify, Lazygit, `fd` etc. All GUI programs are mapped to intuitive hotkeys, f.e. `SUPER` + `M` for Spotify or `SUPER` + `B` for the browser (Chromium by default). `SUPER` + `Space` displays the application launcher (like a simple version of Spotlight or Raycast). There's much more for controlling the current window size to move the focus, switch virtual desktops, fullscreen etc.
 
-All hotkeys are easily customizable in `.config/hypr/bindings.conf`. You don't like Chromium? Just install your favorite browser with the Pacman (Arch's package manager) and update the variable `$browser` in the Hyprland config. That's it. The browser is also used for webapps mapped on hotkeys, ChatGPT f.e. is mapped on `SUPER` + `A`. 
+All hotkeys are easily customizable in `.config/hypr/bindings.conf`. You don't like Chromium? Just install your favorite browser with Pacman (Arch's package manager) and update the variable `$browser` in the Hyprland config. That's it. The browser is also used for webapps mapped on hotkeys, ChatGPT f.e. is mapped on `SUPER` + `A`. 
 
 A little example to change the music hotkey to Apple Music as webapp (there is no native Linux version).
 
@@ -35,7 +35,7 @@ According to DHH they will even ship an ISO file with Arch and a custom installe
 
 ## TL;DR
 
-If you're not afraid of Linux and want a decent base installation of Arch with many developer-focused feature, give Omarchy a chance!
+If you're not afraid of Linux and want a decent base installation of Arch with many developer-focused features, give Omarchy a chance!
 
 ### Updates
 

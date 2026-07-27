@@ -5,7 +5,7 @@ topics: [linux]
 description: Configure Hyprland trackpad clicks, tapping, natural scrolling, and typing protection for a more comfortable laptop experience.
 ---
 
-For first time in my life I bought a PC notebook. I didn't even consider to boot in the pre-installed Windows 11 and installed Omarchy right away.
+For the first time in my life I bought a PC notebook. I didn't even consider booting into the pre-installed Windows 11 and installed Omarchy right away.
 
 The HP ZBook has a quite good trackpad, even compared to MacBooks, but some things seemed off. No right-click with two fingers, instead it would only work in the lower right corner. And I absolutely hate tapping, I want real clicks.
 
@@ -17,7 +17,7 @@ Here are some handy options to tweak the settings:
 input {
   touchpad {
     # Enable two-finger clicks for right-clicking
-    clickfinger_behaviour = true
+    clickfinger_behavior = true
 
     # Disable tapping
     tap-to-click = false
@@ -31,4 +31,4 @@ input {
 }
 ~~~
 
-There is even more like tapping maps, middle button emulation etc. -- you can find all options [here](https://wiki.hypr.land/Configuring/Basics/Variables/#touchpad).
+There is even more like tap button maps, middle button emulation etc. -- you can find all options [here](https://wiki.hypr.land/Configuring/Basics/Variables/#touchpad).

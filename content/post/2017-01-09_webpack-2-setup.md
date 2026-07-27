@@ -7,11 +7,11 @@ displayLanguage: en
 ---
 Until now I used some Gulp tasks with Jade and SASS to create the HTML and CSS files as a base for the webcodr blog theme. A crude little setup, but it worked.
 
-I decided to write an replacement with Webpack 2 and to share it with you: [WebCodr/design GitHub repo](https://github.com/WebCodr/design)
+I decided to write a replacement with Webpack 2 and to share it with you: [WebCodr/design GitHub repo](https://github.com/WebCodr/design)
 
 ## First steps
 
-The original setup used the identend SASS syntax and Jade templates. Since the indented syntax is more trouble than it's worth, I had to convert to the SCSS syntax, a superset of the CSS syntax.
+The original setup used the indented SASS syntax and Jade templates. Since the indented syntax is more trouble than it's worth, I had to convert to the SCSS syntax, a superset of the CSS syntax.
 
 Unfortunately there was a copyright claim for "Jade" and they had to rename the project to Pug. The Jade Node module is still available but unmaintained. It's time to use Pug.
 
@@ -31,7 +31,7 @@ It depends on your templates how easy or complicated this step is. My template f
 
 ## Using Webpack 2
 
-Webpack 2 isn't finished yet. The current version is 2.2.0 RC3, but even the Beta version were stable enough to use it for production purposes.
+Webpack 2 isn't finished yet. The current version is 2.2.0 RC3, but even the Beta versions were stable enough to use it for production purposes.
 
 Here's my `package.json` file with all necessary modules:
 
@@ -163,7 +163,7 @@ Explanations:
 
 - `output`: Defines where to put the files and how to name them.
 
-- `module`: The module rules tell Webpack what to do with different file extensions. Since Webpack 2 is JavaScript module bundler it creates JavaScript files and we have to use a plug-in to get HTML and CSS files. The extract text plug-in looks for the content of the defined loaders and extracts it into the file you want.
+- `module`: The module rules tell Webpack what to do with different file extensions. Since Webpack 2 is a JavaScript module bundler it creates JavaScript files and we have to use a plug-in to get HTML and CSS files. The extract text plug-in looks for the content of the defined loaders and extracts it into the file you want.
   
     To convert Pug into HTML I had to use the Pug HTML loader and the HTML loader. The extract text plug-in now knows what to extract of the generated JavaScript files.
 
@@ -173,9 +173,9 @@ Explanations:
 
      After the configuration of the legacy loaders, I just had to add the extraction plug-in instances and that's it.
 
-When Webpack is started, it will iterate through the entry points and apply the appropriate rules based on the regular expressions in the property `test`. Each rule applies the loaders in reverse order, so the last loader will be applied first. The loaders itself obtain their configs from the query as the Pug HTML loader does or the from the loader options plug-in, only the extract text plug-in is an exception as it needs two configurations: the loaders and where to put the extracted content.
+When Webpack is started, it will iterate through the entry points and apply the appropriate rules based on the regular expressions in the property `test`. Each rule applies the loaders in reverse order, so the last loader will be applied first. The loaders themselves obtain their configs from the query as the Pug HTML loader does or from the loader options plug-in, only the extract text plug-in is an exception as it needs two configurations: the loaders and where to put the extracted content.
 
-After Webpack is finished, the files are located in the output directory. There are two files for each entry point: a HTML or CSS file and JavaScript file. As mentioned above, Webpack 2 is a JavaScript module bundler and can only create JavaScript files without help from plug-ins. Without extraction, this JavaScript files would contain the HTML or CSS code as a Webpack runtime module and could be used within JavaScript.
+After Webpack is finished, the files are located in the output directory. There are two files for each entry point: a HTML or CSS file and a JavaScript file. As mentioned above, Webpack 2 is a JavaScript module bundler and can only create JavaScript files without help from plug-ins. Without extraction, these JavaScript files would contain the HTML or CSS code as a Webpack runtime module and could be used within JavaScript.
 
 You could now open one of the HTML files in your browser, but there's a better way. You would have to manually start Webpack for each change to make ... meh.
 
@@ -218,9 +218,9 @@ I used Webpack to replace a rather large and complex collection of Gulp tasks to
 
 The same goes for Karma to run the Jasmine tests. Just add the Webpack plug-in for Karma, make some small adjustments to the Webpack config, let Webpack handle the rest and you're done.
 
-Compared to the old Gulp tasks, the Webpack setup is easier to understand, faster and much more fun to use. New team members have not to dig into a bunch of Gulp tasks and related helper methods. A quick introduction to the Webpack config is mostly enough to understand how it works.
+Compared to the old Gulp tasks, the Webpack setup is easier to understand, faster and much more fun to use. New team members do not have to dig into a bunch of Gulp tasks and related helper methods. A quick introduction to the Webpack config is mostly enough to understand how it works.
 
-If you have about 1,000 lines of code with Gulp tasks and helper functions or some really small tasks and a about 150 lines of Webpack config, what do you prefer?
+If you have about 1,000 lines of code with Gulp tasks and helper functions or some really small tasks and about 150 lines of Webpack config, what do you prefer?
 
 ## TL;DR
 

@@ -32,7 +32,7 @@ const getItems = async () => {
   } catch (e) {
     console.error(e.message)
     console.log('HTTP Status', e.response.status)
-    console.log('Response Body'. e.responseBody)
+    console.log('Response Body', e.responseBody)
   }
 }
 ~~~
@@ -50,13 +50,13 @@ If the server responds with a HTTP error, DeliveryGuy will throw an error.
 
 Due to the inheritance limitations of built-in classes with ES5 I mentioned in my [last post]({{< relref "2018-04-27_why-custom-errors-in-javascript-are-broken.md" >}}), it's only possible to set custom properties of a custom error class.
 
-DeliveryGuy provides additional two properties on an error object:
+DeliveryGuy provides two additional properties on an error object:
 
 - `response` has the original response object of a Fetch call.
 - `responseBody` contains the response body and will try to parse it as JSON. If `JSON.parse` fails, it will return the response body in its original state.
 
 ## TL;DR
 
-DeliveryGuy allows you comfortably call the Fetch API without a hassle on HTTP errors. Just use `try/catch` and you're done.
+DeliveryGuy allows you to comfortably call the Fetch API without a hassle on HTTP errors. Just use `try/catch` and you're done.
 
 Please let me know on [GitHub](https://github.com/WebCodr/delivery-guy) if you have feedback, a feature request or found a bug. Thank you!

@@ -7,7 +7,7 @@ date: 2023-05-15T19:22:14.215Z
 ---
 
 
-I﻿ always saw myself as a casual user of the terminal. I preferred zsh with the Prezto framework within in iTerm 2 with tabs and that's about it. No more! A colleague of mine introduced me to kitty as terminal emulator, together with tmux and Neovim. That's a lot to swallow. I was never a fan of the vi/vim user experience and more of a mouse guy. Well, what should I say? It's awesome if you're getting used to it. Let me explain ...
+I always saw myself as a casual user of the terminal. I preferred zsh with the Prezto framework within iTerm 2 with tabs and that's about it. No more! A colleague of mine introduced me to kitty as terminal emulator, together with tmux and Neovim. That's a lot to swallow. I was never a fan of the vi/vim user experience and more of a mouse guy. Well, what should I say? It's awesome if you're getting used to it. Let me explain ...
 
 ## JFYI
 
@@ -17,7 +17,7 @@ Be aware, that most examples contain some macOS-specific settings marked with co
 
 ## kitty
 
-iTerm 2 is a pretty good terminal emulator with many features and way better than Apple's sorry excuse of a terminal. To be fair, the macOS terminal app has gotten better over the years, but it still lacks essntial features like true color support. As good as iTerm 2 is, there's one catch: iTerm 2 is slow. GPU-accelerated alternatives like kitty render much faster. Don't get me wrong, iTerm 2 is no slouch and works well, but if you're on the way to a terminal power-user, you will notice it. Switching between tmux windows is much faster in kitty or other terminal emulators like Alacritty. The later is really nice app, but unfortunately has some trouble with macOS key bindings within tmux and I found no easy solution to that. Kitty works out of the box.
+iTerm 2 is a pretty good terminal emulator with many features and way better than Apple's sorry excuse of a terminal. To be fair, the macOS terminal app has gotten better over the years, but it still lacks essential features like true color support. As good as iTerm 2 is, there's one catch: iTerm 2 is slow. GPU-accelerated alternatives like kitty render much faster. Don't get me wrong, iTerm 2 is no slouch and works well, but if you're on the way to a terminal power-user, you will notice it. Switching between tmux windows is much faster in kitty or other terminal emulators like Alacritty. The latter is a really nice app, but unfortunately has some trouble with macOS key bindings within tmux and I found no easy solution to that. Kitty works out of the box.
 
 ### Taming the kitten
 
@@ -77,23 +77,23 @@ Want some color? No problem, there are hundreds of themes available just a Googl
 include ./theme.conf
 ```
 
-Add put the file `theme.conf` in the same directory as the kitty config and paste your theme of choice into the file.
+And put the file `theme.conf` in the same directory as the kitty config and paste your theme of choice into the file.
 
 ## tmux
 
-So, what the hell is tmux? If you need a terminal, tmux will be one of your best friends. Did you ever run something complex on the shell and accidently closed the terminal window or something similar happened during a SSH session? It sucks. 
+So, what the hell is tmux? If you need a terminal, tmux will be one of your best friends. Did you ever run something complex on the shell and accidentally closed the terminal window or something similar happened during an SSH session? It sucks. 
 
-tmux sessions to the rescue! A session will be open until you close it, so even if your internet connection breaks down during a SSH session, nothing will vanish. Just connect to the server again and re-join the tmux session. Everything will be as you left it. 
+tmux sessions to the rescue! A session will be open until you close it, so even if your internet connection breaks down during an SSH session, nothing will vanish. Just connect to the server again and re-join the tmux session. Everything will be as you left it. 
 
 Just type `tmux new` or if you want to give the session a name `tmux new -s my_new_session` . Of course tmux can handle multiple sessions. To list all open sessions use `tmux ls` and to join a session type `tmux a -t session_name` . 
 
-After opening a new session, tmux will display window 0. Need more windows? No problem. Need a window inside an window? No problem, they are called panes. Windows can be split in horizontal or vertical panes, as many and wild as you like.
+After opening a new session, tmux will display window 0. Need more windows? No problem. Need a window inside a window? No problem, they are called panes. Windows can be split in horizontal or vertical panes, as many and wild as you like.
 
 Inside a tmux session you can trigger commands via a so-called prefix key following one or more keys to tell tmux what you want to do. The default prefix key is `ctrl + b` . To split your current window into two horizontal panes press `ctrl + b` followed by `%` , for a vertical split use `ctrl + b` and `"`.
 
 To close a pane, just exit the shell of the pane with `exit`. You can switch panes with `ctrl + b` followed by an arrow key in the corresponding direction.
 
-Our new best friend `ctrl + b` is not the most intuitive key combination. I recommend using `ctrl + a` and map the caps lock key to ctrl (pro-tip: macOS can do this for you without tools or customizable keyboard firmware). It's way faster and easier to press. Of course, you can map what ever key combination you, just beware of conflicts with other combinations like `cmd + space`. 
+Our new best friend `ctrl + b` is not the most intuitive key combination. I recommend using `ctrl + a` and map the caps lock key to ctrl (pro-tip: macOS can do this for you without tools or customizable keyboard firmware). It's way faster and easier to press. Of course, you can map whatever key combination you want, just beware of conflicts with other combinations like `cmd + space`. 
 
 To change the command key, go to your tmux config in `~/.tmux.conf` and add the following lines:
 
@@ -149,13 +149,13 @@ With mouse support you can resize panes with drag & drop and even get a context 
 
 Why neo? Good old vim is extensible via vimscript. It works, but it's like bash: ugly as fuck. Neovim is a fork of vim and replaces vimscript with support for lua-based extensions. So it's still blazingly fast(tm) and much nicer to write extensions.
 
-You could setup Neovim and the necessary extensions yourself, but won't recommend it in the beginning. Pre-build configs like [AstroNvim](https://astronvim.com/) or [NvChad](https://github.com/NvChad/NvChad) will massively speed up the process and have great defaults. It can be very overwhelming to get used to vim/nvim, so I would recommend to wait with your own config until you get more familiar with a keyboard-based editor.
+You could setup Neovim and the necessary extensions yourself, but I won't recommend it in the beginning. Pre-built configs like [AstroNvim](https://astronvim.com/) or [NvChad](https://github.com/NvChad/NvChad) will massively speed up the process and have great defaults. It can be very overwhelming to get used to vim/nvim, so I would recommend to wait with your own config until you get more familiar with a keyboard-based editor.
 
 ### HELP! I can't quit vim!
 
-Don't worry, you are not the first and will certainly not be the last. vim is a so-called modal-based editor. It has different modes like command, insert, visual etc. As you may have noticed, typing will not add text to the buffer. You need to press certain keys like `i`  to enter insert mode to edit text. There are other keys to go in insert mode and everyone of them has slightly different, but pretty useful function, like `o` which creates a new line below the cursor and starts insert mode.
+Don't worry, you are not the first and will certainly not be the last. vim is a so-called modal-based editor. It has different modes like command, insert, visual etc. As you may have noticed, typing will not add text to the buffer. You need to press certain keys like `i`  to enter insert mode to edit text. There are other keys to go in insert mode and every one of them has a slightly different, but pretty useful function, like `o` which creates a new line below the cursor and starts insert mode.
 
-To exit vim you to leave the insert mode by pressing `esc`. Now you are in command mode and can quit by typing `:` to enter the command line mode and hit `q` for quit, followed by enter to execute the command.
+To exit vim you have to leave the insert mode by pressing `esc`. Now you are in command mode and can quit by typing `:` to enter the command line mode and hit `q` for quit, followed by enter to execute the command.
 
 If you want to save a file, enter command line mode and use `w` for write. It's possible to chain certain commands. `wq` will save the file and quit vim.
 
@@ -163,20 +163,20 @@ Congratulations, you now know how to exit vim!
 
 ### Navigation
 
-To move the cursor just use the arrow keys in most other editors. But there is more efficient key mapping in command mode: `h` (left), `j` (down), `k` (up) and `l` (right). No need to move your to the arrow keys anymore. To be honest, I'm still not comfortable with this way of navigation, but it's objectively more efficient than moving the right hand to the arrow keys.
+To move the cursor you would just use the arrow keys in most other editors. But there is a more efficient key mapping in command mode: `h` (left), `j` (down), `k` (up) and `l` (right). No need to move your hand to the arrow keys anymore. To be honest, I'm still not comfortable with this way of navigation, but it's objectively more efficient than moving the right hand to the arrow keys.
 
-Of course vim has way more navigation possibilities. For example, the cursor can jump forward by one word with `w` and backwards with `b`.  Press `$` to jump to the end of the current line or `0` to beginning. `G` navigates you to last line and `gg` jumps to the first line. And there is so much more to explore. I recommend a decent [vim cheat sheet](https://vim.rtorr.com/) to learn. But do yourself a favor and try not learn all keys at once. You will only become frustrated and give up more easily, it's just too much to learn everything in the beginning.
+Of course vim has way more navigation possibilities. For example, the cursor can jump forward by one word with `w` and backwards with `b`.  Press `$` to jump to the end of the current line or `0` to the beginning. `G` navigates you to the last line and `gg` jumps to the first line. And there is so much more to explore. I recommend a decent [vim cheat sheet](https://vim.rtorr.com/) to learn. But do yourself a favor and try not to learn all keys at once. You will only become frustrated and give up more easily, it's just too much to learn everything in the beginning.
 
-Netflix developer and Twitch Streamer [ThePrimagen](https://twitter.com/ThePrimeagen) designed a Neovim plug-in to learn the navigation commands as game. it's pretty good and fun: https://github.com/ThePrimeagen/vim-be-good
+Netflix developer and Twitch Streamer [ThePrimeagen](https://twitter.com/ThePrimeagen) designed a Neovim plug-in to learn the navigation commands as a game. It's pretty good and fun: https://github.com/ThePrimeagen/vim-be-good
 
-AstroNvim has many plug-in out of the box. Syntax highlighting, linting, auto-formatting etc. are all there, but you need to install the corresponding servers, parsers etc. 
+AstroNvim has many plug-ins out of the box. Syntax highlighting, linting, auto-formatting etc. are all there, but you need to install the corresponding servers, parsers etc. 
 
-To do this, enter command line mode and use `LspInstall` followed by the language name for installing a language server protocol. A language server for [Tree-Sitter](https://github.com/tree-sitter/tree-sitter) can be installed with `TSInstall` followed by the language name. If there nothing available, both commands will recommend plug-ins according to your input, if available.
+To do this, enter command line mode and use `LspInstall` followed by the language name for installing a language server protocol. A language server for [Tree-Sitter](https://github.com/tree-sitter/tree-sitter) can be installed with `TSInstall` followed by the language name. If there's nothing available, both commands will recommend plug-ins according to your input, if available.
 
-Be aware, that LSPs and Tree-Sitter will not bring the necessary tools with them. If you install tooling for Rust, rust-analyzer has to be installed on the system. Same goes for ESlint, Prettier, Kotlin, Java etc.
+Be aware, that LSPs and Tree-Sitter will not bring the necessary tools with them. If you install tooling for Rust, rust-analyzer has to be installed on the system. Same goes for ESLint, Prettier, Kotlin, Java etc.
 
 ## The End 
 
 ## ... for now
 
-That was a lot unpack, but there is so much more to show to you. I will be back with more productivity tools and tips in the near future. Stay tuned!
+That was a lot to unpack, but there is so much more to show you. I will be back with more productivity tools and tips in the near future. Stay tuned!

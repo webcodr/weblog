@@ -12,7 +12,7 @@ The creators of Jest (Facebook) have found a better way: Snapshot tests!
 
 ## How does it work?
 
-Take a look the following assertion:
+Take a look at the following assertion:
 
 ~~~ javascript
 it('should create a foo bar object', () => {
@@ -21,7 +21,7 @@ it('should create a foo bar object', () => {
 })
 ~~~ 
 
-`toMatchSnapshot()` takes what ever you give to `expect()`, serializes it and saves it into a file. The next test run will compare the expected value to the stored snapshot and will fail if they don't match. Jest shows a nicely formatted error message and diff view on failed tests.
+`toMatchSnapshot()` takes whatever you give to `expect()`, serializes it and saves it into a file. The next test run will compare the expected value to the stored snapshot and will fail if they don't match. Jest shows a nicely formatted error message and diff view on failed tests.
 
 This is really useful with generated HTML and/or testing UI behaviour. Just call the method and let it compare to the snapshot.
 
@@ -37,7 +37,7 @@ If you're using the Jest watcher it's even simpler. Just press `u` to update all
 
 ## What about objects with generated values?
 
-Here's an example with an randomized id:
+Here's an example with a randomized id:
 
 ~~~ javascript
 it('should fail every time', () => {
@@ -77,8 +77,8 @@ A call of `Date.now()` will call the mock method and always return the same valu
 
 ## Some advice
 
-1. Always commit your snapshots! If they are missing,CI systems will always create new snapshots and the tests will become useless.
+1. Always commit your snapshots! If they are missing, CI systems will always create new snapshots and the tests will become useless.
 
-2. Snapshot tests are an awesome tool, but don't be too lazy. They are no replacement for other assertion types, especially if you're working test-driven. Rather use them alongside with your other tests.
+2. Snapshot tests are an awesome tool, but don't be too lazy. They are no replacement for other assertion types, especially if you're working test-driven. Rather use them alongside your other tests.
 
-3. Write meaningful test names. Well, you heard that one before, didn't you? Really, it helps a a lot when tests fail or you have to look inside a snapshot file. Jest takes a test name as an id inside a snapshot file. That's why you have to update a snapshot after changing the name.
+3. Write meaningful test names. Well, you heard that one before, didn't you? Really, it helps a lot when tests fail or you have to look inside a snapshot file. Jest takes a test name as an id inside a snapshot file. That's why you have to update a snapshot after changing the name.

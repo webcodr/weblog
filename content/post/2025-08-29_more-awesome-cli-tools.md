@@ -6,7 +6,7 @@ series: ["Awesome CLI Tools"]
 description: More useful terminal tools for monitoring systems, inspecting Git changes, querying DNS, counting code, and managing processes.
 toc: true
 ---
-This a follow up article to [Awesome CLI tools]({{< ref "2024-03-06_cli-tools.md" >}}) with even more useful CLI tools. 
+This is a follow-up article to [Awesome CLI tools]({{< ref "2024-03-06_cli-tools.md" >}}) with even more useful CLI tools. 
 
 ## btop
 
@@ -32,7 +32,7 @@ A modern replacement for `ps` with colored output, keyword search, tree view and
 
 ## lazygit
 
-One of my favorites. Lazygit is a dead simple, yet powerful and elegant to use terminal UI for git. I'm not a fan of the git CLI and always preferred a GUI tool like Tower, but nowadays lazygit is my git client of choice. I don't think there is better git client out there. Even many NeoVim distributions support it out-of-the-box (Lazyvim with `LEADER` + `gg`).
+One of my favorites. Lazygit is a dead simple, yet powerful and elegant to use terminal UI for git. I'm not a fan of the git CLI and always preferred a GUI tool like Tower, but nowadays lazygit is my git client of choice. I don't think there is a better git client out there. Even many NeoVim distributions support it out-of-the-box (LazyVim with `LEADER` + `gg`).
 
 ## sd
 

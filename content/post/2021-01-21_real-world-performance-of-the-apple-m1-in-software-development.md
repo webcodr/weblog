@@ -9,13 +9,13 @@ There are enough videos on YouTube out there to show how awesome the new Macs ar
 
 About six weeks ago, I was too hyped not to buy an ARM-based Mac, so I ordered a basic MacBook Air with 8 GB RAM (16 GB was hard to get at this time). As strange as it sounds, I don’t regret buying only 8 GB of RAM. On an Intel-based Mac this would be an absolute pain in the ass, even my old 15” MacBook Pro Late 2017 with 16 GB struggles sometimes with RAM usage.
 
-It’s really amazing how good this small, passively cooled MacBook Air is keeping up. In many scenarios it even surpasses my MacBook Pro with ease. I never had an Intel-based MacBook Air, but the last time is used a dual-core CPU for development, was not pretty und that was a pretty decent i5 and not a ultra-low voltage i3.
+It’s really amazing how good this small, passively cooled MacBook Air is keeping up. In many scenarios it even surpasses my MacBook Pro with ease. I never had an Intel-based MacBook Air, but the last time I used a dual-core CPU for development was not pretty and that was a pretty decent i5 and not an ultra-low voltage i3.
 
 ## Speed, Speed, Speed
 
 Unfortunately I couldn’t really develop software on the MacBook Air for a while, since Java and IntelliJ were not available for aarch64-based Macs. Of course I tried Rosetta 2, but at least for these two, it’s quite slow. NodeJS on the other hand is incredibly fast.
 
-All this changed after my christmas vacation. IntelliJ was updated and thankfully Azul released a JDK 8 for ARM-Macs. A native version of Visual Studio Code is also available and quite fast.
+All this changed after my Christmas vacation. IntelliJ was updated and thankfully Azul released a JDK 8 for ARM-Macs. A native version of Visual Studio Code is also available and quite fast.
 
 So, no more introductions, here are some real-world scenarios and numbers.
 
@@ -83,10 +83,10 @@ Ah, yes, there is another thing: Meet does not cripple the performance anymore. 
 
 ## Conclusion
 
-I will make it short: if your tools and languages are already supported or at least quite usable with Rosetta, go for it.  I would recommend 16 GB or more (depending on future models), if you want to buy one. I’m surprised that a 8 GB MacBook Air is that capable and to be honest, I don’t feel like there a going to be a problem for a while, but no one regrets more RAM …
+I will make it short: if your tools and languages are already supported or at least quite usable with Rosetta, go for it.  I would recommend 16 GB or more (depending on future models), if you want to buy one. I’m surprised that an 8 GB MacBook Air is that capable and to be honest, I don’t feel like that’s going to be a problem for a while, but no one regrets more RAM …
 
 ### Air vs Pro
 
-The 13” MacBook Pro is little faster over longer periods of load due to active cooling, it has more GPU-cores, the love or hated Touch Bar and a bigger battery. If you need this, go for it, but if you can wait, I’d recommend to wait for the new 14” and 16” Pro models. 
+The 13” MacBook Pro is a little faster over longer periods of load due to active cooling, it has more GPU-cores, the loved or hated Touch Bar and a bigger battery. If you need this, go for it, but if you can wait, I’d recommend to wait for the new 14” and 16” Pro models. 
 
 They will be real power houses with 8 instead of 4 Firestorm cores, vastly more RAM and even bigger batteries. And hey, perhaps they come with MagSafe and some other ports we MacBook users didn’t see for a while.

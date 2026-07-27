@@ -26,9 +26,9 @@ if (preferColorSchemeResult && preferColorSchemeResult.matches === true) {
 The script will set the data attribute `theme` on the document element (html) with the possible values
 `dark` or `light` depending on the result of the media query.
 
-There's no need for a polyfill, even IE 10 supports `window.matchMedia()`
+There's no need for a polyfill, even IE 10 supports `window.matchMedia()`.
 
-Stylesheet changes is even simpler, since I already had introduced SCSS color variables a while ago. I just
+The stylesheet changes are even simpler, since I already had introduced SCSS color variables a while ago. I just
 had to replace them with CSS variables.
 
 ```scss
@@ -51,6 +51,6 @@ That's basically it. If you use SCSS, please take notice to use interpolations t
 variables to CSS variables. This change in SassScript expressions was necessary to provide full
 compatibility with plain CSS.
 
-Since the theme selection is fully automated, I will provide a toggle possibiliry in a future
+Since the theme selection is fully automated, I will provide a toggle possibility in a future
 release for those of you who prefer the light mode. This can be easily achieved with a flag in local
 storage and some minor changes in the JavaScript part.

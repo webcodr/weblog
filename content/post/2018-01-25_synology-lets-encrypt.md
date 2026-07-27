@@ -5,19 +5,19 @@ topics: [networking]
 description: How to resolve Synology DSM Let's Encrypt port 80 errors caused by IPv6 in a dual-stack network.
 displayLanguage: en
 ---
-This is just a quick note to all with problems to create Let's encrypt certificates with Synology DSM.
+This is just a quick note to all with problems to create Let's Encrypt certificates with Synology DSM.
 
-I had trouble for months with this. DSM returnd always that port 80 is closed, but my EdgeRouter config said otherwise and content from the Synology web server itself was accessible via port 80. So, no ISP issue either.
+I had trouble for months with this. DSM always returned that port 80 is closed, but my EdgeRouter config said otherwise and content from the Synology web server itself was accessible via port 80. So, no ISP issue either.
 
 After some research, I used [acme.sh][1] with a DNS-based challenge on macOS and imported the certificate. Well, it works, but I wanted a real solution.
 
-Again, after a little more than some reseach, I found a valuable hint. In dual-stack configurations with both, real IPv4 and IPv6 addresses, the Synology Let's Encrypt client uses IPv6 for the challenge. Of course port 80 was only opened for IPv4 connections. I opened the port and ... it didn't work. I'm not sure why, since I am no master of the CLI-based configuration of a router.
+Again, after a little more than some research, I found a valuable hint. In dual-stack configurations with both, real IPv4 and IPv6 addresses, the Synology Let's Encrypt client uses IPv6 for the challenge. Of course port 80 was only opened for IPv4 connections. I opened the port and ... it didn't work. I'm not sure why, since I am no master of the CLI-based configuration of a router.
 
 Next idea: turn off IPv6 in Synology's dynamic DNS service. Well, turns out, you can't configure which protocols the services will use. Turning off IPv6 in the network settings also didn't help.
 
 The solution: use a dynamic DNS service that can configure the protocols or does not have IPv6 support. After some fiddling around with the list of supported services in DSM, I decided to use [NoIP][2]. And? It works, finally!
 
-Why NoIP? Well, some of the supported services websites seemed ancient and frankly, I don't want to pay money just for creating a new certifacte every 90 days.
+Why NoIP? Well, some of the supported services' websites seemed ancient and frankly, I don't want to pay money just for creating a new certificate every 90 days.
 
 ## Dear Synology devs
 

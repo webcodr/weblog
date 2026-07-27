@@ -17,7 +17,7 @@ curl -fsSL https://raw.githubusercontent.com/webcodr/srchr/main/install.sh | sh
 
 I will also publish `srchr` on Homebrew, the AUR and perhaps some other package managers.
 
-Beware, it's still under development and the UI is functional, but not finished yet. At the moment there is just a hardcoded Tokyp Night inspired color theme, but this will also change in the near future.
+Beware, it's still under development and the UI is functional, but not finished yet. At the moment there is just a hardcoded Tokyo Night inspired color theme, but this will also change in the near future.
 
 [srchr on GitHub](https://github.com/webcodr/srchr)
 

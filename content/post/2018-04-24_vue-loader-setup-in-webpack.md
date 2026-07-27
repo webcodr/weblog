@@ -45,7 +45,7 @@ If you want to have a separate JavaScript file with your Vue application, you ca
 
 ~~~ javascript
 {
-  entry: {,
+  entry: {
     'current-application': [
       path.resolve(__dirname, 'js/current-application.js')
     ],

@@ -30,7 +30,7 @@ The main LAN consists of the three UniFi switches (US-8 and US-8 POE) and two Un
 
 Why private class A networks? Well, why not? And I like short IP addresses.
 
-But the management LAN is a private class C network? Yeah, I'm leaving the modem on it's default network configuration to avoid trouble, if I ever have to reset it's config. I like to experiment with other firmware versions. Currently I'm trying a firmware for australian ISPs. So far it's working great and it disables some the VDSL error corrections from my ISP that can cause higher latencies.
+But the management LAN is a private class C network? Yeah, I'm leaving the modem on its default network configuration to avoid trouble, if I ever have to reset its config. I like to experiment with other firmware versions. Currently I'm trying a firmware for Australian ISPs. So far it's working great and it disables some of the VDSL error corrections from my ISP that can cause higher latencies.
 
 ## Here we go
 
@@ -106,7 +106,7 @@ Direction `IN` means any traffic from `eth1.10` to any other of your EdgeRouter'
 
 ### Create firewall ruleset VLAN10_ISOLATION_LOCAL
 
-This ruleset will block any traffic to your EdgeRouters services, with the exception of DNS and DHCP.
+This ruleset will block any traffic to your EdgeRouter's services, with the exception of DNS and DHCP.
 
 Direction `LOCAL` means any traffic from `eth1.10` directly to your EdgeRouter and its services.
 
@@ -140,4 +140,4 @@ Direction `LOCAL` means any traffic from `eth1.10` directly to your EdgeRouter a
 
 If you're using custom NAT rules, you have to add your new network group to the rules to exclude the VLAN. Firewall rules alone will not isolate any networks from custom NAT rules.
 
-That's it. VLAN 10 is now fully isolated from all other networks. The firewall will drop all packages from `eth.10` to the network group and my custom NAT rule will only work from networks of the group.
+That's it. VLAN 10 is now fully isolated from all other networks. The firewall will drop all packets from `eth1.10` to the network group and my custom NAT rule will only work from networks of the group.

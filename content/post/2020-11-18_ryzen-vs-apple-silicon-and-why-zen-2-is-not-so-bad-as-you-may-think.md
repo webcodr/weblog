@@ -20,7 +20,7 @@ So what? The benchmarks are about single core performance and Ryzen needs 40 W m
 
 Right, but this says nothing about the efficiency of a single core. 
 
-I don‘t have a 5950X, but it‘s older brother, the 3950X. Same core count and about the same power usage. While monitoring with HWINFO64 on a single core run of Cinebench R20 the used core needs about 10 - 12 W.
+I don‘t have a 5950X, but its older brother, the 3950X. Same core count and about the same power usage. While monitoring with HWINFO64 on a single core run of Cinebench R20 the used core needs about 10 - 12 W.
 
 ## Okay, but what happened to the other 38 watts?
 
@@ -36,13 +36,13 @@ I hope AMD will improve the I/O die with Zen 4 (Ryzen 6000) dramatically. A mode
 
 15 more cores are also unaccounted for. 21 divided by 15: about 1.4 W per core average. Seems a bit high, but possible. It depends on background tasks from the OS, the current Windows power plan etc.
 
-To be fair, AMDs energy saving functions per core could a little bit better. They are not bad but there‘s room for improvements.
+To be fair, AMDs energy saving functions per core could be a little bit better. They are not bad but there‘s room for improvements.
 
 ## Process nodes
 
-For a fair comparison we also have to include the process nodes. As mentioned above, Ryzen cores are manufactured in TSMC‘s 7 nm node. Apple is one step ahead in this category. The M1 and it‘s little brother A14 are already on 5 nm, again from TSMC.
+For a fair comparison we also have to include the process nodes. As mentioned above, Ryzen cores are manufactured in TSMC‘s 7 nm node. Apple is one step ahead in this category. The M1 and its little brother A14 are already on 5 nm, again from TSMC.
 
-This alone could account for up to 30% less power usage. There are no exact numbers available, but 20 to 30% would reasonable.
+This alone could account for up to 30% less power usage. There are no exact numbers available, but 20 to 30% would be reasonable.
 
 ## Core architecture
 
@@ -54,25 +54,25 @@ Firestorm is an extremely wide core design with many processing units. This is c
 
 This allows Apple to lower the clock speed significantly without compromising performance. Lower clock speeds also mean lower voltage and power usage.
 
-But there‘s more: since the A13 (iPhone 11) Apple has quite many incremental power saving functions within every part their SoCs. They can lower the power usage to an absolute minimum or even turn parts of the silicon on and off quite fast, to be ready when the user needs more computational power and as fast they turn it off.
+But there‘s more: since the A13 (iPhone 11) Apple has quite many incremental power saving functions within every part of their SoCs. They can lower the power usage to an absolute minimum or even turn parts of the silicon on and off quite fast, to be ready when the user needs more computational power and as fast they turn it off.
 
-Modern x86 CPUs have similar functions but not quite as advanced or in as many parts as current Apple SoCs. Remember AMD‘s I/O which has basically the same power usage all the time.
+Modern x86 CPUs have similar functions but not quite as advanced or in as many parts as current Apple SoCs. Remember AMD‘s I/O die which has basically the same power usage all the time.
 
 ## Instruction set
 
 x86 is old and can be quite cumbersome to use. Apple's CPUs are based on ARM, a more modern instruction set. The same tasks can be achieved with fewer commands. This means faster computation and less power usage. 
 
-Under the hood current x86 CPUs have noting to do with their older cousins, but the instruction set is still the same. To be fair, over the years AMD and Intel added way more modern instructions like AVX for certain operations, but the core is still 40 years old.
+Under the hood current x86 CPUs have nothing to do with their older cousins, but the instruction set is still the same. To be fair, over the years AMD and Intel added way more modern instructions like AVX for certain operations, but the core is still 40 years old.
 
 ## Conclusion
 
-Taken all this into account, a Zen 3 is not that bad compared to a Firestorm core. Of course, Apple has advantages over x86, but they are more about the process node, different architecture or the instruction set, than about the efficiency of the cores itself.
+Taken all this into account, a Zen 3 is not that bad compared to a Firestorm core. Of course, Apple has advantages over x86, but they are more about the process node, different architecture or the instruction set, than about the efficiency of the cores themselves.
 
 Well, and then there‘s Intel. The quite slowly awakening giant is not without hope, but they are way behind Apple and AMD. As long as their high performance CPUs are stuck on 14 nm, they are ... to put it simply, fucked.
 
-10 nm is on it‘s way, but there a still problems. The next release of desktop- and server-class CPUs will still be on 14 nm, but with a more efficient architecture backported from 10 nm CPUs. It will help, but they need a better process node and they need it asap.
+10 nm is on its way, but there are still problems. The next release of desktop- and server-class CPUs will still be on 14 nm, but with a more efficient architecture backported from 10 nm CPUs. It will help, but they need a better process node and they need it asap.
 
-10 nm could be ready for the big guys in 2021. At least new Xeons in 10 nm were announced. But the question is: how good is the node? Some of the already released 10 nm notebook CPUs are quite good, so Intel could be back in year or two.
+10 nm could be ready for the big guys in 2021. At least new Xeons in 10 nm were announced. But the question is: how good is the node? Some of the already released 10 nm notebook CPUs are quite good, so Intel could be back in a year or two.
 
 They also plan to release Alder Lake in 2021, a BIG.little CPU design. That would be much appreciated on notebooks, but software has to be ready. Without a decent support of the operating systems, such a CPU will not work properly.
 

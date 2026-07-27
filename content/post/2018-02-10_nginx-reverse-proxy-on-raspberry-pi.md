@@ -23,7 +23,7 @@ Please make sure, to forward port 80 and 443 from your router to the Raspberry P
 
 ## Install nginx and Certbot
 
-This guide assumes that you're running the latest version of Raspian on your Pi. It's based on Debian Stretch. If you're using an older version based Jessie or even Wheezy, please consider a dist upgrade. This is not without risk, so back-up your current installation!
+This guide assumes that you're running the latest version of Raspbian on your Pi. It's based on Debian Stretch. If you're using an older version based on Jessie or even Wheezy, please consider a dist upgrade. This is not without risk, so back-up your current installation!
 
 If you're already running a web server on your Pi, you should disable it. Otherwise nginx will not be able to use port 80 and 443. If you need that other web server, you should configure it to run on other ports and use nginx to forward the connections.
 
@@ -113,7 +113,7 @@ sudo service nginx restart
 
 ## Certificate auto-renewal
 
-The certbot certificate renewal will renew all certificates you created with cerbot.
+The certbot certificate renewal will renew all certificates you created with certbot.
 
 Checking the renewal process:
 

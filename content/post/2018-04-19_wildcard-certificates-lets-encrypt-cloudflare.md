@@ -31,7 +31,7 @@ To issue a wildcard certificate ACME 2.0 allows only DNS-based challenges to ver
 
 Well, that sucks. But acme.sh has you covered. It supports the APIs of many DNS providers like CloudFlare, GoDaddy etc.
 
-The following guide will show you how to use the CloudFlare API to automatically update the DNS challenge token. No CloudFlare? No problem, you can find examples for all supported DNS providers within the ache.sh docs.
+The following guide will show you how to use the CloudFlare API to automatically update the DNS challenge token. No CloudFlare? No problem, you can find examples for all supported DNS providers within the acme.sh docs.
 
 ## Set-up CloudFlare
 
@@ -44,7 +44,7 @@ export CF_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
 export CF_Email="you@example.com"
 ~~~
 
-I recommend to put this environment variables into your `.bashrc`, `.zshrc` or in the respective file of your favorite shell.
+I recommend to put these environment variables into your `.bashrc`, `.zshrc` or in the respective file of your favorite shell.
 
 ## Issue a wildcard certificate
 
@@ -54,7 +54,7 @@ acme.sh --issue --dns dns_cf -d "*.webcodr.io" -w "/what/ever/dir/you/like/*.web
 
 Your new certificate will be ready soon and acme.sh will automatically renew it every 60 days. Just update your web-server configuration to the new path. I recommend also to create a cron-job reloading the web-server every night to load a renewed certificate.
 
-## Unclutter your ngnix config
+## Unclutter your nginx config
 
 If you manage multiple hosts within the same nginx, you can use `include` to put your TLS configuration in a separate file to avoid duplicates.
 
@@ -64,7 +64,7 @@ File: `/etc/nginx/tls-webcodr.io`
 
 ~~~ nginx
 ssl_certificate /home/webcodr/.acme.sh/*.webcodr.io/*.webcodr.io.cer;
-ssl_certificate_key /home/webcodr/pi/.acme.sh/*.webcodr.io/*.webcodr.io.key;
+ssl_certificate_key /home/webcodr/.acme.sh/*.webcodr.io/*.webcodr.io.key;
 ssl_trusted_certificate /home/webcodr/.acme.sh/*.webcodr.io/ca.cer;
 ssl_session_timeout 1d;
 ssl_session_cache shared:SSL:50m;
