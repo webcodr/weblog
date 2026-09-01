@@ -1,0 +1,10 @@
+# Single source of truth for build tool versions.
+# CI (.github/workflows/) installs exactly these via jdx/mise-action,
+# so local builds and production builds can never drift apart.
+min_version = "2025.1.0"
+
+[tools]
+# "matching = extended" pulls hugo_extended_*, which CI has always used.
+"github:gohugoio/hugo" = { version = "0.165.0", matching = "extended", exe = "hugo" }
+node = "26.7.0"
+"npm:pagefind" = "1.5.2"
