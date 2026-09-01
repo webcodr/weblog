@@ -6,8 +6,9 @@
 - `public/` is generated build output and is gitignored; do not edit or commit it.
 
 ## Commands
-- Requires the Hugo CLI on `PATH` for local verification; CI pins Hugo Extended `0.164.0` for production builds.
-- Build/verify the site locally with `hugo`.
+- Tool versions are pinned in `mise.toml` (Hugo Extended, Node, Pagefind); it is the single source of truth for local and CI builds, so bump versions there and nowhere else.
+- Install the toolchain with `mise install` (run `mise trust` once for this repo); CI installs the same versions via `jdx/mise-action`.
+- Build/verify the site locally with `hugo`, and the search index with `pagefind --site public`.
 - For local preview, use Hugo's dev server from the repo root: `hugo server`.
 - There is no configured lint, typecheck, formatter, or asset-bundler command in this repo.
 - `k6/load-test.js` is a standalone production URL load check, not part of CI or the Hugo build.
