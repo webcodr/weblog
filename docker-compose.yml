@@ -2,23 +2,46 @@ services:
   caddy:
     image: caddy:2.11.4-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
     restart: unless-stopped
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
     cap_drop:
       - ALL
-    cap_add:
-      - NET_BIND_SERVICE
     security_opt:
       - no-new-privileges:true
+    pids_limit: 256
+    mem_limit: 384m
+    memswap_limit: 384m
+    cpus: 1.5
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "5"
     ports:
       - "80:80"
       - "443:443"
       - "443:443/udp"
+    environment:
+      XDG_DATA_HOME: /data
+      XDG_CONFIG_HOME: /config
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./site:/srv:ro
-      - ./../../caddy_data:/data
-      - ./../../caddy_config:/config
+      - ${WEBLOG_SITE_DIR:-./site}:/srv:ro
+      - caddy_data:/data
+      - caddy_config:/config
     networks:
       - caddy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  caddy_data:
+  caddy_config:
 
 networks:
   caddy:
