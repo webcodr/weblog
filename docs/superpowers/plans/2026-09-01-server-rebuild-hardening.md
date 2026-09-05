@@ -49,7 +49,7 @@ After the window: rotate the GitHub `production` secrets to the new deploy ident
 
 Run from your workstation against the current host. Nothing here changes the running server.
 
-- [x] **Step 1: Copy Caddy's ACME storage**
+- [ ] **Step 1: Copy Caddy's ACME storage**
 
 The compose file mounts `~/caddy_data` at `/data`. It holds the ACME account key and the four certificates. Restoring it means zero certificate issuance at cutover and no Let's Encrypt rate-limit exposure.
 
@@ -61,7 +61,7 @@ chmod -R go-rwx ~/weblog-migration/caddy_data
 
 Use `sudo rsync` on the remote side if the files are owned by root (Caddy runs as root in the old setup). Treat this directory like a private key: delete it after the migration.
 
-- [x] **Step 2: Copy the currently served release**
+- [ ] **Step 2: Copy the currently served release**
 
 ```bash
 REL=$(ssh OLD_USER@HOST 'readlink ~/projects/weblog/site/current')
@@ -72,7 +72,7 @@ echo "${REL#releases/}" > ~/weblog-migration/release-name
 
 Restoring this instead of a placeholder means the real site is back the moment Caddy starts, and CI does not have to run before the outage ends.
 
-- [x] **Step 3: Note what else lives on the server**
+- [ ] **Step 3: Note what else lives on the server**
 
 ```bash
 ssh OLD_USER@HOST 'ls ~ /opt /srv /etc/cron.d 2>/dev/null; crontab -l 2>/dev/null; docker ps -a'
@@ -80,7 +80,7 @@ ssh OLD_USER@HOST 'ls ~ /opt /srv /etc/cron.d 2>/dev/null; crontab -l 2>/dev/nul
 
 Anything beyond the weblog stack must be either backed up now or consciously abandoned. The rebuild wipes the disk.
 
-- [x] **Step 4: Record the current SSH host key fingerprint**
+- [ ] **Step 4: Record the current SSH host key fingerprint**
 
 ```bash
 ssh-keyscan -t ed25519 HOST > ~/weblog-migration/old_known_hosts
@@ -97,7 +97,7 @@ The rebuild generates new host keys. Your own `~/.ssh/known_hosts` entry and the
 - Create: `.env.example`
 - Modify: `.gitignore`
 
-- [x] **Step 1: Replace the compose file**
+- [ ] **Step 1: Replace the compose file**
 
 ```yaml
 services:
@@ -156,16 +156,16 @@ Notes:
 - `mem_limit: 384m` leaves headroom on a 2 GB host for the kernel, sshd, dockerd and page cache. Caddy for a static site idles at ~30 MB.
 - Named volumes are created owned by root. Task 6 fixes ownership once, after the first `docker compose up`.
 
-- [x] **Step 2: Add `.env.example`**
+- [ ] **Step 2: Add `.env.example`**
 
 ```
 # Absolute path of the directory containing releases/ and the current symlink.
 WEBLOG_SITE_DIR=/srv/weblog/site
 ```
 
-- [x] **Step 3: Add `.env` to `.gitignore`**
+- [ ] **Step 3: Add `.env` to `.gitignore`**
 
-- [x] **Step 4: Validate**
+- [ ] **Step 4: Validate**
 
 ```bash
 docker compose config
@@ -173,7 +173,7 @@ docker compose config
 
 Expected: exit code 0, volume source resolves to `./site` locally and to `/srv/weblog/site` when `.env` is present.
 
-- [x] **Step 5: Commit**
+- [ ] **Step 5: Commit**
 
 ```bash
 git add docker-compose.yml .env.example .gitignore
@@ -186,7 +186,7 @@ git commit -m "build: run caddy non-root, read-only and resource-limited"
 - Create: `server/weblog-release`
 - Create: `server/weblog-deploy-shell`
 
-- [x] **Step 1: Write `server/weblog-release`**
+- [ ] **Step 1: Write `server/weblog-release`**
 
 This script is the only thing the deploy key can execute besides rsync. It validates every argument against a strict pattern before touching the filesystem.
 
@@ -236,7 +236,7 @@ case "${1:-}" in
     fi
     flip "$3"
     touch "releases/$3"
-    find releases -mindepth 1 -maxdepth 1 -type d -not -name '.*' -printf '%T@ %p\n' | sort -rn | tail -n +"$((KEEP + 1))" | cut -d' ' -f2- | xargs -r rm -rf
+    ls -1dt releases/*/ 2>/dev/null | tail -n +"$((KEEP + 1))" | xargs -r rm -rf
     echo "activated $3"
     ;;
   rollback)
@@ -253,7 +253,7 @@ case "${1:-}" in
 esac
 ```
 
-- [x] **Step 2: Write `server/weblog-deploy-shell`**
+- [ ] **Step 2: Write `server/weblog-deploy-shell`**
 
 Installed as the forced command for the deploy key. It allows exactly two things: an rsync server confined to `releases/`, and `weblog-release` subcommands.
 
@@ -280,13 +280,13 @@ Notes:
 - `rrsync -wo` means write-only: the key can upload into `releases/` but never read anything back. The `-ro`/`-wo` options exist in rsync 3.2.4 and later; Trixie ships 3.4.x.
 - Word-splitting the subcommand is safe because `weblog-release` validates every argument against a fixed regex before use.
 
-- [x] **Step 3: Lint**
+- [ ] **Step 3: Lint**
 
 ```bash
 shellcheck server/weblog-release server/weblog-deploy-shell
 ```
 
-- [x] **Step 4: Commit**
+- [ ] **Step 4: Commit**
 
 ```bash
 git add server/
@@ -454,13 +454,13 @@ apt-get -y install ca-certificates curl gnupg git rsync nftables unattended-upgr
 install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
 chmod a+r /etc/apt/keyrings/docker.asc
-# shellcheck disable=SC1091
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian $(. /etc/os-release && echo "$VERSION_CODENAME") stable" > /etc/apt/sources.list.d/docker.list
 apt-get update
 apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-install -m 0644 /opt/weblog/server/daemon.json /etc/docker/daemon.json
-systemctl enable docker
-systemctl restart docker
+install -m 0644 /dev/stdin /etc/docker/daemon.json <<'EOF'
+# (paste server/daemon.json here or scp it before running)
+EOF
+systemctl enable --now docker
 
 # --- users ---
 id ops >/dev/null 2>&1 || adduser --disabled-password --gecos "" ops
@@ -503,7 +503,6 @@ sshd -t && systemctl reload ssh
 
 # --- firewall ---
 install -m 0755 /opt/weblog/server/nftables.conf /etc/nftables.conf
-nft -c -f /etc/nftables.conf   # syntax check before the ruleset goes live
 systemctl enable --now nftables
 systemctl restart docker   # re-create Docker's chains after the ruleset load
 

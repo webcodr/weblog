@@ -6,4 +6,3 @@ resources/
 site/
 .hugo_build.lock
 .DS_Store
-.env
