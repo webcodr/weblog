@@ -7,12 +7,13 @@ function create_post
     set slug (echo $title | sed -e 's/[^A-Za-z0-9]/-/g' -e 's/-\+/-/g' -e 's/^-//' -e 's/-$//' | tr '[:upper:]' '[:lower:]')
     set filename "content/post/"$file_date"_"$slug".md"
 
-    echo "---" > $filename
-    echo "title: "$title"" >> $filename
-    echo "date: $date" >> $filename
-    echo "topics: []" >> $filename
-    echo 'description: ""' >> $filename
-    echo "---" >> $filename
+    set yaml_title (string replace --all "'" "''" -- "$title")
+    begin
+        printf '%s\n' '---'
+        printf "title: '%s'\n" "$yaml_title"
+        printf 'date: %s\n' "$date"
+        printf '%s\n' 'topics: []' 'description: ""' '---'
+    end >? "$filename"
 end
 
 create_post $argv

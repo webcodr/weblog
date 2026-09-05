@@ -1,7 +1,7 @@
 {{ $css := resources.Get "css/webcodr.css" | resources.Fingerprint "sha512"}} {{
 $js := resources.Get "js/webcodr.js" | resources.Fingerprint "sha512"}} {{
 $themeInit := resources.Get "js/theme-init.js" | resources.Fingerprint
-"sha512"}} {{ $permalink := .Permalink }} {{ $pageSuffix := "" }} {{ if .IsHome }} {{ $paginator :=
+"sha512"}} {{ $permalink := .RelPermalink }} {{ $pageSuffix := "" }} {{ if .IsHome }} {{ $paginator :=
 .Paginate (where .Site.RegularPages "Type" "post") }} {{ if ne $paginator.PageNumber 1 }} {{
 $permalink = print $permalink "page/" $paginator.PageNumber "/" }} {{
 $pageSuffix = print " · page " $paginator.PageNumber }} {{ end }} {{
@@ -13,12 +13,12 @@ end }} {{ $description := .Description | default site.Params.description }}
 <head>
   <title>{{ $title }}</title>
   <script
-    src="{{ $themeInit.Permalink }}"
+    src="{{ $themeInit.RelPermalink }}"
     integrity="{{ $themeInit.Data.Integrity }}"
   ></script>
   <link
     rel="stylesheet"
-    href="{{ $css.Permalink }}"
+    href="{{ $css.RelPermalink }}"
     integrity="{{ $css.Data.Integrity }}"
     media="screen"
   />
@@ -84,7 +84,7 @@ end }} {{ $description := .Description | default site.Params.description }}
     crossorigin
   />
   <script
-    src="{{ $js.Permalink }}"
+    src="{{ $js.RelPermalink }}"
     integrity="{{ $js.Data.Integrity }}"
     defer
   ></script>

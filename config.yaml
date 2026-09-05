@@ -1,4 +1,4 @@
-baseurl: "/"
+baseurl: "https://webcodr.io/"
 locale: "en-us"
 title: "webcodr"
 theme: "webcodr"

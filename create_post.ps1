@@ -8,17 +8,18 @@ function Create-Post {
     $fileDate = Get-Date -Format "yyyy-MM-dd"
     $slug = $Title -replace '[^A-Za-z0-9]', '-' -replace '-+', '-' -replace '^-|-$', '' | ForEach-Object { $_.ToLower() }
     $filename = "content/post/${fileDate}_${slug}.md"
+    $yamlTitle = $Title.Replace("'", "''")
 
     $content = @"
 ---
-title: $Title
+title: '$yamlTitle'
 date: $date
 topics: []
 description: ""
 ---
 "@
 
-    $content | Out-File -FilePath $filename -Encoding UTF8
+    $content | Out-File -FilePath $filename -Encoding UTF8 -NoClobber -ErrorAction Stop
 }
 
 # Call the function with command line arguments

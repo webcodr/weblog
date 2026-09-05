@@ -187,12 +187,15 @@ const setupSearch = () => {
 
 	let pagefindPromise = null;
 	const loadPagefind = () => {
-		pagefindPromise ??= import("/pagefind/pagefind.js").then(
-			async (pagefind) => {
+		pagefindPromise ??= import("/pagefind/pagefind.js")
+			.then(async (pagefind) => {
 				await pagefind.init();
 				return pagefind;
-			},
-		);
+			})
+			.catch((error) => {
+				pagefindPromise = null;
+				throw error;
+			});
 		return pagefindPromise;
 	};
 
@@ -232,36 +235,40 @@ const setupSearch = () => {
 	});
 
 	let debounceTimer = null;
+	let searchRequest = 0;
 	input.addEventListener("input", () => {
 		clearTimeout(debounceTimer);
+		const request = ++searchRequest;
+		const query = input.value.trim();
+		resultsList.replaceChildren();
+		status.textContent = "";
+
+		if (query.length < 2) {
+			return;
+		}
+
 		debounceTimer = setTimeout(async () => {
-			const query = input.value.trim();
-
-			if (query.length < 2) {
-				resultsList.replaceChildren();
-				status.textContent = "";
-				return;
-			}
-
-			let pagefind;
-
+			status.textContent = "Searching…";
 			try {
-				pagefind = await loadPagefind();
+				const pagefind = await loadPagefind();
+				const search = await pagefind.search(query);
+				const results = await Promise.all(
+					search.results.map((result) => result.data()),
+				);
+
+				if (request !== searchRequest) {
+					return;
+				}
+
+				renderResults(results, search.results.length);
 			} catch (_) {
+				if (request !== searchRequest) {
+					return;
+				}
+
+				resultsList.replaceChildren();
 				status.textContent = "Search is unavailable.";
-				return;
 			}
-
-			const search = await pagefind.search(query);
-			const results = await Promise.all(
-				search.results.slice(0, 10).map((result) => result.data()),
-			);
-
-			if (input.value.trim() !== query) {
-				return;
-			}
-
-			renderResults(results, search.results.length);
 		}, 150);
 	});
 };

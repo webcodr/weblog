@@ -1,9 +1,9 @@
 {{ $language := .context.Params.language | default "en" }}
 <article class="post" lang="{{ $language }}"{{ if and (eq .context.Type "post") (eq .location "single") }} data-pagefind-body{{ end }}>
     {{ if eq .location "single" }}
-    <h1 class="post-headline"><a href="{{ .context.Permalink }}" class="post-link--headline">{{ .context.Title }}</a></h1>
+    <h1 class="post-headline"><a href="{{ .context.RelPermalink }}" class="post-link--headline">{{ .context.Title }}</a></h1>
     {{ else }}
-    <h2 class="post-headline"><a href="{{ .context.Permalink }}" class="post-link--headline">{{ .context.Title }}</a></h2>
+    <h2 class="post-headline"><a href="{{ .context.RelPermalink }}" class="post-link--headline">{{ .context.Title }}</a></h2>
     {{ end }}
     {{ if and (eq .context.Type "post") (eq .location "single") }}
     {{ partial "post-meta.html" .context }}
@@ -16,7 +16,14 @@
     </p>
     {{ end }}
     <div class="post-content">
+        {{ if eq .location "list" }}
+        {{/* Posts can share heading IDs. Namespace embedded IDs and local
+             fragment links; heading links still target the article itself. */}}
+        {{ $prefix := print "post-" .context.File.UniqueID "-" }}
+        {{ .context.Content | replaceRE ` id="([^"]+)"` (printf ` id="%s${1}"` $prefix) | replaceRE `href="#([^"]+)"` (printf `href="#%s${1}"` $prefix) | safeHTML }}
+        {{ else }}
         {{ .context.Content }}
+        {{ end }}
     </div>
     {{ if and (eq .context.Type "post") (eq .location "single") }}
     {{ partial "related-posts.html" .context }}
