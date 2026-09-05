@@ -20,11 +20,11 @@ jobs:
       contents: read
 
     steps:
-      - name: Compute release paths
+      - name: Compute release names
         run: |
           TIMESTAMP=$(date -u +%Y%m%d%H%M%S)
-          echo "RELEASE_PATH=releases/${TIMESTAMP}-${{ github.sha }}" >> "$GITHUB_ENV"
-          echo "TEMP_RELEASE_PATH=releases/.${TIMESTAMP}-${{ github.sha }}.${{ github.run_id }}.tmp" >> "$GITHUB_ENV"
+          echo "RELEASE=${TIMESTAMP}-${{ github.sha }}" >> "$GITHUB_ENV"
+          echo "TEMP_RELEASE=.${TIMESTAMP}-${{ github.sha }}.${{ github.run_id }}.tmp" >> "$GITHUB_ENV"
 
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -65,23 +65,14 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
         run: |
-          REMOTE="${SSH_USERNAME}@${SSH_HOST}"
-          ssh -i ~/.ssh/deploy_key "$REMOTE" "bash -s -- '$TEMP_RELEASE_PATH'" <<'REMOTE_SCRIPT'
-          set -eu
-          TEMP_RELEASE_PATH=$1
-          mkdir -p ~/projects/weblog/site/releases
-          cd ~/projects/weblog/site
-          find releases -mindepth 1 -maxdepth 1 -name '.*.tmp' -exec rm -rf {} +
-          mkdir -p "$TEMP_RELEASE_PATH"
-          REMOTE_SCRIPT
+          ssh -i ~/.ssh/deploy_key "${SSH_USERNAME}@${SSH_HOST}" "weblog-release prepare $TEMP_RELEASE"
 
       - name: Upload built site
         env:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
         run: |
-          REMOTE="${SSH_USERNAME}@${SSH_HOST}"
-          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key" public/ "${REMOTE}:~/projects/weblog/site/${TEMP_RELEASE_PATH}/"
+          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key" public/ "${SSH_USERNAME}@${SSH_HOST}:${TEMP_RELEASE}/"
 
       - name: Activate release
         id: activate
@@ -90,29 +81,12 @@ jobs:
           SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
         run: |
           REMOTE="${SSH_USERNAME}@${SSH_HOST}"
-          PREVIOUS_RELEASE=$(ssh -i ~/.ssh/deploy_key "$REMOTE" "readlink ~/projects/weblog/site/current 2>/dev/null || true")
-          case "$PREVIOUS_RELEASE" in
-            releases/*) echo "PREVIOUS_RELEASE=$PREVIOUS_RELEASE" >> "$GITHUB_ENV" ;;
+          PREVIOUS=$(ssh -i ~/.ssh/deploy_key "$REMOTE" "weblog-release current")
+          case "$PREVIOUS" in
+            releases/*) echo "PREVIOUS_RELEASE=${PREVIOUS#releases/}" >> "$GITHUB_ENV" ;;
             *) echo "no previous release to roll back to" ;;
           esac
-          ssh -i ~/.ssh/deploy_key "$REMOTE" "bash -s -- '$TEMP_RELEASE_PATH' '$RELEASE_PATH'" <<'REMOTE_SCRIPT'
-          set -eu
-          TEMP_RELEASE_PATH=$1
-          RELEASE_PATH=$2
-          cd ~/projects/weblog/site
-          test -f "$TEMP_RELEASE_PATH/index.html"
-          if [ -e "$RELEASE_PATH" ]; then
-            test -f "$RELEASE_PATH/index.html"
-            rm -rf "$TEMP_RELEASE_PATH"
-          else
-            mv "$TEMP_RELEASE_PATH" "$RELEASE_PATH"
-          fi
-          ln -sfn "$RELEASE_PATH" current-new
-          mv -Tf current-new current
-          test "$(readlink current)" = "$RELEASE_PATH"
-          touch "$RELEASE_PATH"
-          (ls -1dt releases/* 2>/dev/null | tail -n +6 | xargs -r rm -rf) || true
-          REMOTE_SCRIPT
+          ssh -i ~/.ssh/deploy_key "$REMOTE" "weblog-release activate $TEMP_RELEASE $RELEASE"
 
       - name: Smoke test production
         id: smoke
@@ -126,20 +100,7 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
         run: |
-          REMOTE="${SSH_USERNAME}@${SSH_HOST}"
-          ssh -i ~/.ssh/deploy_key "$REMOTE" "bash -s -- '$PREVIOUS_RELEASE'" <<'REMOTE_SCRIPT'
-          set -eu
-          PREVIOUS_RELEASE=$1
-          case "$PREVIOUS_RELEASE" in
-            releases/*) ;;
-            *) echo "refusing to roll back to '$PREVIOUS_RELEASE'" >&2; exit 1 ;;
-          esac
-          cd ~/projects/weblog/site
-          test -f "$PREVIOUS_RELEASE/index.html"
-          ln -sfn "$PREVIOUS_RELEASE" current-new
-          mv -Tf current-new current
-          test "$(readlink current)" = "$PREVIOUS_RELEASE"
-          REMOTE_SCRIPT
+          ssh -i ~/.ssh/deploy_key "${SSH_USERNAME}@${SSH_HOST}" "weblog-release rollback $PREVIOUS_RELEASE"
           curl -fsS https://webcodr.io/ >/dev/null
           curl -fsS https://webcodr.dev/ >/dev/null
           echo "Rolled back to $PREVIOUS_RELEASE"
