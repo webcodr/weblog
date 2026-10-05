@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install build tools
-        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+        uses: jdx/mise-action@9149ea85001c7435d5a66bb127d6a1b6227cb0a5 # v5.0.0
         env:
           GITHUB_TOKEN: ${{ github.token }}
           MISE_TRUSTED_CONFIG_PATHS: ${{ github.workspace }}
@@ -49,7 +49,7 @@ jobs:
       - name: Find existing link-rot issue
         if: steps.lychee.outputs.exit_code != 0
         id: existing
-        uses: micalevisk/last-issue-action@0d40124cc99ac8601c2516007f0c98ef3d27537b # v2.3.0
+        uses: micalevisk/last-issue-action@010dfff63530f63c7a9fd54211bde51cc38cff73 # v2.4.0
         with:
           state: open
           labels: link-rot
